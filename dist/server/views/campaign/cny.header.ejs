@@ -1,0 +1,20 @@
+<header class="christmas-header-section">
+    <% include ../include/header.ejs %>
+    <div class="overlay-header">
+        <h1 class="hidden"><%= translations['campaign.cny.title'] %></h1>
+    </div>
+    <div class="section-background">
+        <div class="overlay-content">
+            <div class="bg-container">
+                <% if (locale == 'zh-hk') { %>
+                <img src="/images/campaign/cny/banner_tc.jpg" class="bg except-mobile-v">
+                <img src="/images/campaign/cny/banner_4x3_tc.jpg" class="bg mobile-v">
+                <% } else { %>
+                <img src="/images/campaign/cny/banner_en.jpg" class="bg except-mobile-v">
+                <img src="/images/campaign/cny/banner_4x3_en.jpg" class="bg mobile-v">
+                <% } %>
+            </div>
+        </div>
+    </div>
+</header>
+

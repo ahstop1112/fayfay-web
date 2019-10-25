@@ -1,0 +1,16 @@
+<header class="visa-header-section">
+    <% include ../include/header.ejs %>
+    <div class="section-background">
+        <div class="overlay-content">
+            <div class="bg-container">
+                <% if (locale == 'zh-hk' || locale == 'zh-cn') { %>
+                    <img src="/images/banner_visa_tc.jpg" class="bg except-mobile-v">
+                    <img src="/images/banner_visa_mobile_tc.jpg" class="bg mobile-v">
+                <% } else { %>
+                    <img src="/images/banner_visa_en.jpg" class="bg except-mobile-v">
+                    <img src="/images/banner_visa_mobile_en.jpg" class="bg mobile-v">
+                <% } %>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['join.us'] %>">
+    <meta name="keywords" content="<%= translations['join.us'] %>">
+    <title><%= translations['join.us'] %> | Fayfay.com</title>
+
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/indexog.jpg"/>
+    <meta property="og:image:alt" content="<%= translations['home.og.image.alt']  %>"/>
+    <meta property="og:title" content="<%= translations['home.og.title'] %>"/>
+    <meta property="og:description" content="<%= translations['home.og.desc'] %>"/>
+
+    <% include include/gtm.header.ejs %>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/joinus.css">
+</head>
+
+<body class="<%= locale%>">
+<% include include/gtm.body.ejs %>
+
+    <div id="page">
+        <% include joinus/joinus.header.ejs %>
+        <% include joinus/joinus.content.ejs %>
+
+        <% include include/footer.ejs %>
+    </div>
+
+    <% include include/js.ejs %>
+</body>
+</html>

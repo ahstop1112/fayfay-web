@@ -1,0 +1,41 @@
+<% if(f1Activities && f1Activities.length) { %>
+    <section name="f1" id="f1">
+        <div class="container-fluid">
+            <div class="main-logo-container destination">
+                <div class="main-logo">
+                    <img src="/images/icons/icon-f1.png">
+                </div>
+                <h2><%= translations['home.f1'] %></h2>
+                <p class="hidden-xs"><%= translations['home.f1.desc'] %></p>
+            </div>
+            <div class="drag-content">
+                <ul class="drag-list">
+                    <% f1Activities.slice(-4).forEach(function(activity){ %>
+                        <li class="list-item">
+                            <a href="<%= langUrl %>/experience/<%= activity.id %>-<%= activity.slug %>"
+                               title="<%= activity.title %>" target="_blank">
+                                <div class="list-content">
+                                    <%- include('components/overlay.soldout.ejs', { packageAvailabilityDate : activity.packageAvailabilityDate, paymentFlow: activity.paymentFlow }); %>
+                                    <div class="banner">
+                                        <img
+                                            data-src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640/<%= activity.thumbnailKey %>"
+                                            alt="<%= activity.title %>" class="lazy bg">
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="title-s"><%= activity.title.truncate(60) %></h3>
+                                    </div>
+                                    <%- include('components/price.ejs', { displayPrice : activity.displayPrice, displaySpecialPrice: activity.displaySpecialPrice }); %>
+                                    <div class="bottom">
+                                        <%- include('components/location.ejs', { location : activity.location }); %>
+                                        <%- include('components/rating.ejs', { ratingAverage: activity.ratingAverage }); %>
+                                        <%- include('components/bookedCount.ejs', { bookedCount: activity.bookedCount }); %>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    <% }); %>
+                </ul>
+            </div>
+        </div>
+    </section>
+<% } %>

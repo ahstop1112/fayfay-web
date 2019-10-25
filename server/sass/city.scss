@@ -1,0 +1,250 @@
+@import 'include/variable';
+
+.bg-container{
+    max-height: 400px;
+}
+
+.city-breadcrumb-section {
+
+    .container-fluid {
+        border-bottom: 1px solid $main-color;
+    }
+
+    @media screen and (max-width: $tablet-v) {
+        padding: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+
+        &.scroll {
+            position: fixed;
+            top: 60px;
+            z-index: 999;
+            .container-fluid {
+                border-bottom: 1px solid $border-grey;
+                border-top: 1px solid $border-grey;
+            }
+        }
+    }
+}
+
+#city-main-button-section {
+
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+
+    .main-button-container {
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+
+        width: 96%;
+        background-color: $white;
+        padding: 0;
+
+        @media screen and (max-width: $mobile-h) {
+            -ms-flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .home-button {
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            padding: 10px 20px;
+            width: 33.3333%;
+            text-align: center;
+
+            @media screen and (min-width: $highRes) {
+                padding: 20px 100px;
+            }
+            @media screen and (max-width: $tablet-h) {
+                padding: 10px 20px;
+            }
+            @media screen and (max-width: $tablet-v) {
+                padding: 5px 10px;
+            }
+            @media screen and (max-width: $mobile-h) {
+                -ms-flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap;
+                width: 100%;
+                padding: 0;
+            }
+            h1{
+                font-size: 1.25em;
+            }
+        }
+
+        .home-button:first-child,
+        .home-button:nth-child(2) {
+
+            border-right: 0;
+        }
+        .home-icon {
+            height: 60px;
+            margin: 0 20px;
+            width: 25%;
+
+            @media screen and (max-width: $tablet-h) {
+                height: 60px;
+            }
+            @media screen and (max-width: $mobile-h) {
+                margin: 0 10px;
+                height: 50px;
+            }
+            @media screen and (max-width: $mobile-v) {
+                margin: 10px  0;
+            }
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+        .home-title{
+            text-align: left;
+            width: 70%;
+
+            p{
+                text-align: left;
+            }
+        }
+    }
+}
+
+#city-popular-activities-section{
+    padding: 10px 0;
+}
+
+#city-vietnam-must-have-section, #city-travel-deals-section{
+    padding: 10px 0;
+
+    .drag-list {
+        margin-top: 0;
+
+        @media screen and (max-width: $tablet-h) {
+            width: auto;
+            flex-wrap: nowrap;
+            padding-top: 7px;
+        }
+
+        .list-item {
+            flex: 0 0 25%;
+
+            padding-right: 15px;
+
+            @media screen and (max-width: $tablet-h) {
+                min-width: 230px;
+            }
+            @media screen and (max-width: $tablet-v) {
+                flex: 0 0 50%;
+            }
+            @media screen and (max-width: $mobile-h) {
+                flex: 0 0 100%;
+            }
+
+            .price del {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.main-logo-container{
+    @media screen and (max-width: $mobile-h) {
+        margin-bottom: 0;
+    }
+
+    p{
+        margin-bottom: 0;
+    }
+}
+
+#city-adventure-section, .section-4-big-items {
+
+    .drag-content{
+        @media screen and (max-width: $mobile-h) {
+            overflow-x: auto;
+        }
+    }
+
+    .drag-list{
+
+        @media screen and (max-width: $tablet-v) {
+            width: auto;
+            flex-wrap: nowrap;
+            padding-top: 7px;
+
+            .list-item{
+                flex: 0 0 80%;
+                padding: 8px 0.5%;
+            }
+        }
+
+        .overlay-soldout{
+
+            z-index: $lv4;
+
+            @media screen and (max-width: $tablet-v){
+                width: calc(100% - 10px);
+            }
+
+            @media screen and (max-width: $mobile-h){
+                width: calc(100% - 6px);
+            }
+
+            @media screen and (max-width: $mobile-v){
+                width: 100%;
+                z-index: $lv5;
+            }
+
+            .banner{
+                &:before {
+                    padding-top: 150%;
+
+                    @media screen and (max-width: $tablet-v){
+                        padding-top: 56.25%;
+                    }
+                }
+
+                img.soldout{
+
+                    @media screen and (max-width: $tablet-v){
+                        width: 40%;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .result-container{
+        b{
+            color: $main-color;
+        }
+
+        .bg{
+            min-width: 100%;
+        }
+    }
+
+    .price, .price span, .price .currency{
+        color: $main-color !important;
+    }
+
+    .list-content{
+        display: block !important;
+    }
+}

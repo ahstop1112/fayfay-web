@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><%= translations['common.power.title'] %> | <%= tplData.title %> | Fayfay.com</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['common.power.title'] %> - <%- tplData.brief %>">
+    <meta name="keywords" content="<%= translations['common.power.title'] %>, <%= tplData.title %>">
+    <% if (tplData.medias && Array.isArray(tplData.medias)) {%>
+        <% if (tplData.medias[0].format == 'mp4'){ %>
+            <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_300/<%= tplData.medias[0].thumbnail.key %>.<%= tplData.medias[0].thumbnail.format %>"/>
+        <% }else { %>
+            <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_300/<%= tplData.medias[0].key %>.<%= tplData.medias[0].format %>"/>
+        <% } %>
+    <% } %>
+    <meta property="og:title" content="<%= tplData.title %>"/>
+    <meta property="og:description" content="<%- tplData.brief %>"/>
+
+    <% include include/gtm.header.ejs %>
+    <script>
+        fbq('track', 'ViewContent');
+    </script>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/activity.css">
+</head>
+
+<body class="<%=locale%>">
+<% include include/gtm.body.ejs %>
+
+    <div id="page">
+        <% include activity/activity.header.ejs %>
+        <% include activity/activity.breadcrumb.ejs %>
+        <div id="activity-container"><%- activityContainerHtml %></div>
+        <% include include/footer.ejs %>
+
+
+    </div>
+
+    <% include include/js.ejs %>
+    <script src="/js/components/ActivityContainer-bundle.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= GOOGLE_API_KEY_TRAVEL %>&callback=initMap"></script>
+</body>
+
+</html>

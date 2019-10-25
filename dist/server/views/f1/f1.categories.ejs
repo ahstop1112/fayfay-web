@@ -1,0 +1,1194 @@
+<section class="f1-section categories go-section section3">
+    <div class="container-fluid">
+        <div class="categories-container">
+            <h2 class="title one-line"><div><%= translations['f1.categories'] %></div></h2>
+            <div class="title-deco"></div>
+            <div class="drag-content">
+                <ul class="drag-list recommend-list ticketType-slider">
+                    <li class="list-item">
+                            <div class="list-content">
+                                <div class="overlay-text">
+                                    <h3><%= translations['f1.general.admission'] %></h3>
+                                    <p class="price">
+                                        <% if (locale == 'en-us' || locale == 'vi-vn') { %>
+                                            <span><%= translations['f1.from'] %></span>
+                                        <% } %>
+                                        <% switch (ccy) {
+                                        case 'HKD' : %>
+                                            HK$ 238
+                                        <% break;
+                                        case 'TWD' : %>
+                                            NT$ 910
+                                        <% break;
+                                        case 'VND' : %>
+                                            ₫ 700,000
+                                        <% break;
+                                        case 'USD' : %>
+                                            US$ 30.1
+                                        <% break;
+                                        case 'CNY' : %>
+                                            ¥ 203
+                                        <% break;
+                                        case 'SGD' : %>
+                                            S$ 41.3
+                                        <% break;
+                                        case 'MYR' : %>
+                                            RM 126
+                                        <% break;
+                                        } %>
+                                        <% if (locale == 'zh-hk' || locale == 'zh-cn') { %>
+                                            <span><%= translations['f1.from'] %></span>
+                                        <% } %>
+                                    </p>
+                                </div>
+                                <div class="banner">
+                                    <img data-lazy="/images/f1-ticket-1.jpg" alt="<%= translations['f1.general.admission.title'] %>" class="bg current">
+                                    <img src="/images/f1-ticket-1-ori.jpg" alt="<%= translations['f1.general.admission.title'] %>" class="bg hover">
+                                </div>
+                                <div class="content">
+                                    <% if (useragent.isDesktop) { %>
+                                        <p class="desc"><%- translations['f1.general.admission.desc'] %></p>
+                                    <% }else{ %>
+                                        <p class="desc"><%- translations['f1.general.admission.mobile.desc'] %></p>
+                                    <% } %>
+                                </div>
+                                <div class="bottom">
+                                    <div class="details">
+                                        <a class="go-general-admission">
+                                            <%= translations['f1.see.more'] %>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="list-item">
+                        <div class="list-content">
+                            <div class="overlay-text">
+                                <h3><%= translations['f1.grandstand'] %></h3>
+                                <p class="price">
+                                    <span><%= translations['f1.from'] %></span>
+                                    <% switch (ccy) {
+                                      case 'HKD' : %>
+                                          HK$ 530
+                                      <% break;
+                                      case 'TWD' : %>
+                                          NT$ 2,028
+                                      <% break;
+                                      case 'VND' : %>
+                                          ₫ 1,560,000
+                                      <% break;
+                                      case 'USD' : %>
+                                          US$ 67.1
+                                      <% break;
+                                      case 'CNY' : %>
+                                          ¥ 452
+                                      <% break;
+                                      case 'SGD' : %>
+                                          S$ 92
+                                      <% break;
+                                      case 'MYR' : %>
+                                          RM 281
+                                      <% break;
+                                      } %>
+                                </p>
+                            </div>
+                            <div class="banner">
+                                <img data-lazy="/images/f1-ticket-2.jpg" alt="<%= translations['f1.grandstand'] %>" class="bg current">
+                                <img src="/images/f1-ticket-2-ori.jpg" alt="<%= translations['f1.grandstand'] %>" class="bg hover">
+                            </div>
+                            <div class="content">
+                                <% if (useragent.isDesktop) { %>
+                                    <p class="desc"><%- translations['f1.grandstand.desc'] %></p>
+                                <% }else{ %>
+                                    <p class="desc"><%- translations['f1.grandstand.mobile.desc'] %></p>
+                                <% } %>
+                            </div>
+                            <div class="bottom">
+                                <div class="details">
+                                    <a class="go-grandstand">
+                                        <%= translations['f1.see.more'] %>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list-item">
+                        <div class="list-content">
+                            <div class="overlay-text">
+                                <h3><%= translations['f1.hospitality'] %></h3>
+                                <p class="price">
+                                    <span><%= translations['f1.from'] %></span>
+                                    <% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 6,712
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 25,662
+                                        <% break;
+                                        case 'VND' : %>
+                                         ₫ 19,740,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 848.8
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 5,725
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 1,164.7
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 3,553
+                                        <% break;
+                                        } %>
+                                </p>
+                            </div>
+                            <div class="banner">
+                                <img data-lazy="/images/f1-ticket-3.jpg" alt="<%= translations['f1.hospitality'] %>" class="bg current">
+                                <img src="/images/f1-ticket-3-ori.jpg" alt="<%= translations['f1.hospitality'] %>" class="bg hover">
+                            </div>
+                            <div class="content">
+                               <% if (useragent.isDesktop) { %>
+                                    <p class="desc"><%- translations['f1.hospitality.desc'] %></p>
+                                <% }else{ %>
+                                    <p class="desc"><%- translations['f1.hospitality.mobile.desc'] %></p>
+                                <% } %>
+                            </div>
+                            <div class="bottom">
+                                <div class="details">
+                                    <a class="go-hospitality">
+                                        <%= translations['f1.see.more'] %>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="event-details-container general-admission">
+                <div class="event-details-showMore">
+                     <img src="/images/f1-arrow-btn.png">
+                </div>
+                <div class="event-details-wrapper">
+                    <h2 class="container-title"><%= translations['f1.general.admission'] %></h2>
+                    <div class="event showTitle">
+                        <div class="event-details-header">
+                            <div class="header-title"><%= translations['f1.3.day.combo'] %></div>
+                        </div>
+                        <div class="event-details-body">
+                            <div class="event-details-row">
+                                <div class="event-details">
+                                <h6>
+                                    <%= translations['f1.general.admission'] %>
+                                    <% if (locale.indexOf('zh') > -1) { %>
+                                        <br>General Admission
+                                    <% } %>
+                                </h6></div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                          case 'HKD' : %>
+                                              HK$ 595
+                                          <% break;
+                                          case 'TWD' : %>
+                                              NT$ 2,275
+                                          <% break;
+                                          case 'VND' : %>
+                                              ₫ 1,750,000
+                                          <% break;
+                                          case 'USD' : %>
+                                              US$ 75.3
+                                          <% break;
+                                          case 'CNY' : %>
+                                              ¥ 508
+                                          <% break;
+                                          case 'SGD' : %>
+                                              S$ 103.3
+                                          <% break;
+                                          case 'MYR' : %>
+                                              RM 315
+                                          <% break;
+                                          } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10859-general-admission-ticket-formula-1-vietnam-grand-prix-2020?packageId=3499" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+
+                    <div class="event">
+                        <div class="event-details-header">
+                            <div class="header-title"><%= translations['f1.friday'] %></div>
+                        </div>
+                        <div class="event-details-body">
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.general.admission'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>General Admission
+                                        <% } %>
+                                    </h6></div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                       case 'HKD' : %>
+                                           HK$ 238
+                                       <% break;
+                                       case 'TWD' : %>
+                                           NT$ 910
+                                       <% break;
+                                       case 'VND' : %>
+                                           ₫ 700,000
+                                       <% break;
+                                       case 'USD' : %>
+                                           US$ 30.1
+                                       <% break;
+                                       case 'CNY' : %>
+                                           ¥ 203
+                                       <% break;
+                                       case 'SGD' : %>
+                                           S$ 41.3
+                                       <% break;
+                                       case 'MYR' : %>
+                                           RM 126
+                                       <% break;
+                                       } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10859-general-admission-ticket-formula-1-vietnam-grand-prix-2020?packageId=3516" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-details-header">
+                            <div class="header-title"><%= translations['f1.saturday'] %></div>
+                        </div>
+                        <div class="event-details-body">
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.general.admission'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>General Admission
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                          case 'HKD' : %>
+                                              HK$ 357
+                                          <% break;
+                                          case 'TWD' : %>
+                                              NT$ 1,365
+                                          <% break;
+                                          case 'VND' : %>
+                                              ₫ 1,050,000
+                                          <% break;
+                                          case 'USD' : %>
+                                              US$ 45.2
+                                          <% break;
+                                          case 'CNY' : %>
+                                              ¥ 305
+                                          <% break;
+                                          case 'SGD' : %>
+                                              S$ 62
+                                          <% break;
+                                          case 'MYR' : %>
+                                              RM 189
+                                          <% break;
+                                          } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10859-general-admission-ticket-formula-1-vietnam-grand-prix-2020?packageId=3517" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event-details-header">
+                            <div class="header-title"><%= translations['f1.saturdayNsunday'] %></div>
+                        </div>
+                        <div class="event-details-body">
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.general.admission'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>General Admission
+                                        <% } %>
+                                    </h6>
+                                </div>
+
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                      case 'HKD' : %>
+                                          HK$ 544
+                                      <% break;
+                                      case 'TWD' : %>
+                                          NT$ 2,160
+                                      <% break;
+                                      case 'VND' : %>
+                                          ₫ 1,600,000
+                                      <% break;
+                                      case 'USD' : %>
+                                          US$ 68.8
+                                      <% break;
+                                      case 'CNY' : %>
+                                          ¥ 485
+                                      <% break;
+                                      case 'SGD' : %>
+                                          S$ 94.4
+                                      <% break;
+                                      case 'MYR' : %>
+                                          RM 288
+                                      <% break;
+                                      } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10859-general-admission-ticket-formula-1-vietnam-grand-prix-2020?packageId=3518" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-details-container grandstand">
+                <div class="event-details-showMore">
+                     <img src="/images/f1-arrow-btn.png">
+                </div>
+                <div class="event-details-wrapper">
+                    <h2 class="container-title"><%= translations['f1.grandstand'] %></h2>
+                    <div class="event showTitle">
+                        <div class="event-details-header">
+                            <div class="header-title"><%= translations['f1.3.day.combo'] %></div>
+                        </div>
+                        <div class="event-details-body">
+                            <div class="event-details-row">
+                                <div class="event-details">
+                                    <h6><%= translations['f1.unreserved.grandstand'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Unreserved Grandstand
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                      case 'HKD' : %>
+                                          HK$ 1,319
+                                      <% break;
+                                      case 'TWD' : %>
+                                          NT$ 5,044
+                                      <% break;
+                                      case 'VND' : %>
+                                          ₫ 3,880,000
+                                      <% break;
+                                      case 'USD' : %>
+                                          US$ 166.8
+                                      <% break;
+                                      case 'CNY' : %>
+                                          ¥ 1,125
+                                      <% break;
+                                      case 'SGD' : %>
+                                          S$ 228.9
+                                      <% break;
+                                      case 'MYR' : %>
+                                          RM 698
+                                      <% break;
+                                      } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10861-Unreserved-grandstand-formula-1-vietnam-grand-prix-2020?packageId=3523" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                            <div class="event-details-row">
+                                <div class="event-details">
+                                    <h6>
+                                        <%= translations['f1.standard.grandstand'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Standard Grandstand
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                    case 'HKD' : %>
+                                        HK$ 2,200
+                                    <% break;
+                                    case 'TWD' : %>
+                                        NT$ 8,411
+                                    <% break;
+                                    case 'VND' : %>
+                                        ₫ 6,470,000
+                                    <% break;
+                                    case 'USD' : %>
+                                        US$ 278.2
+                                    <% break;
+                                    case 'CNY' : %>
+                                        ¥ 1,876
+                                    <% break;
+                                    case 'SGD' : %>
+                                        S$ 381.7
+                                    <% break;
+                                    case 'MYR' : %>
+                                        RM 1,165
+                                    <% break;
+                                    } %></p>
+                                <a class="btn buy" href="/<%=locale%>/experience/10862-standard-grandstand-formula-1-vietnam-grand-prix-2020?packageId=3527" target="_blank">
+                                <%= translations['f1.buy.now'] %></a>
+
+                                </div>
+                            </div>
+                            <div class="event-details-row">
+                                <div class="event-details">
+                                    <h6><%= translations['f1.premium.grandstand'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Premium Grandstand
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 3,091
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 11,817
+                                        <% break;
+                                        case 'VND' : %>
+                                         ₫ 9,090,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 390.9
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 2,636
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 536.3
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 1,636
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10860-premium-grandstand-formula-1-vietnam-grand-prix-2020?packageId=3519" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event-details-header">
+                            <div class="header-title"><%= translations['f1.friday'] %></div>
+                        </div>
+                        <div class="event-details-body">
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.unreserved.grandstand'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Unreserved Grandstand
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                      case 'HKD' : %>
+                                          HK$ 530
+                                      <% break;
+                                      case 'TWD' : %>
+                                          NT$ 2,028
+                                      <% break;
+                                      case 'VND' : %>
+                                          ₫ 1,560,000
+                                      <% break;
+                                      case 'USD' : %>
+                                          US$ 67.1
+                                      <% break;
+                                      case 'CNY' : %>
+                                          ¥ 452
+                                      <% break;
+                                      case 'SGD' : %>
+                                          S$ 92
+                                      <% break;
+                                      case 'MYR' : %>
+                                          RM 281
+                                      <% break;
+                                      } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10861-Unreserved-grandstand-formula-1-vietnam-grand-prix-2020?packageId=3524" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.standard.grandstand'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Standard Grandstand
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                            HK$ 881
+                                        <% break;
+                                        case 'TWD' : %>
+                                            NT$ 3,367
+                                        <% break;
+                                        case 'VND' : %>
+                                            ₫ 2,590,000
+                                        <% break;
+                                        case 'USD' : %>
+                                            US$ 111.4
+                                        <% break;
+                                        case 'CNY' : %>
+                                            ¥ 751
+                                        <% break;
+                                        case 'SGD' : %>
+                                            S$ 152.8
+                                        <% break;
+                                        case 'MYR' : %>
+                                            RM 466
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10862-standard-grandstand-formula-1-vietnam-grand-prix-2020?packageId=3528" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.premium.grandstand'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Premium Grandstand
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 1,236
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 4,727
+                                        <% break;
+                                        case 'VND' : %>
+                                         ₫ 3,636,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 156.3
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 1,054
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 214.5
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 655
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10860-premium-grandstand-formula-1-vietnam-grand-prix-2020?packageId=3520" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="event">
+                        <div class="event-details-header">
+                            <div class="header-title"><%= translations['f1.saturday'] %></div>
+                        </div>
+                        <div class="event-details-body">
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.unreserved.grandstand'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Unreserved Grandstand
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                      case 'HKD' : %>
+                                          HK$ 792
+                                      <% break;
+                                      case 'TWD' : %>
+                                          NT$ 3,029
+                                      <% break;
+                                      case 'VND' : %>
+                                          ₫ 2,330,000
+                                      <% break;
+                                      case 'USD' : %>
+                                          US$ 100.2
+                                      <% break;
+                                      case 'CNY' : %>
+                                          ¥ 676
+                                      <% break;
+                                      case 'SGD' : %>
+                                          S$ 137.5
+                                      <% break;
+                                      case 'MYR' : %>
+                                          RM 419
+                                      <% break;
+                                      } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10861-Unreserved-grandstand-formula-1-vietnam-grand-prix-2020?packageId=3525" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.standard.grandstand'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Standard Grandstand
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 1,323
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 5,057
+                                        <% break;
+                                        case 'VND' : %>
+                                          ₫ 3,890,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 167.3
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 1,128
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 229.5
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 700
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10862-standard-grandstand-formula-1-vietnam-grand-prix-2020?packageId=3529" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.premium.grandstand'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Premium Grandstand
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 1,854
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 7,090
+                                        <% break;
+                                        case 'VND' : %>
+                                         ₫ 5,454,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 234.5
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 1,582
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 321.8
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 982
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10860-premium-grandstand-formula-1-vietnam-grand-prix-2020?packageId=3521" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="event">
+                        <div class="event-details-header">
+                            <div class="header-title"><%= translations['f1.saturdayNsunday'] %></div>
+                        </div>
+                        <div class="event-details-body">
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.unreserved.grandstand'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Unreserved Grandstand
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                     case 'HKD' : %>
+                                         HK$ 1,190
+                                     <% break;
+                                     case 'TWD' : %>
+                                         NT$ 4,725
+                                     <% break;
+                                     case 'VND' : %>
+                                         ₫ 3,500,000
+                                     <% break;
+                                     case 'USD' : %>
+                                         US$ 150.5
+                                     <% break;
+                                     case 'CNY' : %>
+                                         ¥ 1,061
+                                     <% break;
+                                     case 'SGD' : %>
+                                         S$ 206.5
+                                     <% break;
+                                     case 'MYR' : %>
+                                         RM 630
+                                     <% break;
+                                     } %></p>
+                                   <a class="btn buy" href="/<%=locale%>/experience/10861-Unreserved-grandstand-formula-1-vietnam-grand-prix-2020?packageId=3526" target="_blank">
+                                   <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.standard.grandstand'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Standard Grandstand
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 1,982
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 7,871
+                                        <% break;
+                                        case 'VND' : %>
+                                         ₫ 5,830,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 250.7
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 1,766
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 344
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 1,049
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10862-standard-grandstand-formula-1-vietnam-grand-prix-2020?packageId=3530" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.premium.grandstand'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Premium Grandstand
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 2,805
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 11,138
+                                        <% break;
+                                        case 'VND' : %>
+                                         ₫ 8,250,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 354.8
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 2,500
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 486.8
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 1,485
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn buy" href="/<%=locale%>/experience/10860-premium-grandstand-formula-1-vietnam-grand-prix-2020?packageId=3522" target="_blank">
+                                    <%= translations['f1.buy.now'] %></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-details-container hospitality">
+                <div class="event-details-showMore">
+                     <img src="/images/f1-arrow-btn.png">
+                </div>
+                <div class="event-details-wrapper">
+                    <h2 class="container-title"><%= translations['f1.hospitality'] %></h2>
+                    <div class="event showTitle">
+                        <div class="event-details-header">
+                            <div class="header-title"><%= translations['f1.3.day.combo'] %></div>
+                        </div>
+                        <div class="event-details-body">
+                            <div class="event-details-row">
+                                <div class="event-details">
+                                    <h6><%= translations['f1.hospitality.gold.lounge'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Gold Lounge
+                                        <% } %>
+                                    </h6>
+                                </div>
+
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 16,772
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 64,129
+                                        <% break;
+                                        case 'VND' : %>
+                                         ₫ 49,330,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 2,121.2
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 14,306
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 2,910.5
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 8,880
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn details" href="/<%=locale%>/experience/10864-gold-lounge-formula-1-vietnam-grand-prix-2020?packageId=3535" target="_blank">
+                                    <%= translations['f1.details'] %></a>
+                                </div>
+                            </div>
+                            <div class="event-details-row long">
+                                <div class="event-details">
+                                    <h6><%= translations['f1.hospitality.platinum.suite'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Platinum Champions Club
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 27,166
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 103,870
+                                        <% break;
+                                        case 'VND' : %>
+                                         ₫ 79,900,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 3,435.7
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 23,171
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 4,714.1
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 14,382
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn details" href="/<%=locale%>/experience/10865-platinum-champion-club-formula-1-vietnam-grand-prix-2020?packageId=3539" target="_blank">
+                                    <%= translations['f1.details'] %></a>
+                                </div>
+                            </div>
+                            <div class="event-details-row">
+                                  <div class="event-details">
+                                      <h6><%= translations['f1.hospitality.diamond.suite'] %>
+                                          <% if (locale.indexOf('zh') > -1) { %>
+                                              <br>Diamond Suite
+                                          <% } %>
+                                      </h6>
+                                  </div>
+                                  <div class="event-details">
+                                      <p><% switch (ccy) {
+                                          case 'HKD' : %>
+                                            HK$ 32,810
+                                          <% break;
+                                          case 'TWD' : %>
+                                            NT$ 125,450
+                                          <% break;
+                                          case 'VND' : %>
+                                           ₫ 96,500,000
+                                          <% break;
+                                          case 'USD' : %>
+                                            US$ 4,149.5
+                                          <% break;
+                                          case 'CNY' : %>
+                                            ¥ 27,985
+                                          <% break;
+                                          case 'SGD' : %>
+                                            S$ 5,693.5
+                                          <% break;
+                                          case 'MYR' : %>
+                                            RM 17,370
+                                          <% break;
+                                          } %></p>
+                                      <a class="btn details" href="/<%=locale%>/experience/10866-diamond-suite-formula-1-vietnam-grand-prix-2020?packageId=3543" target="_blank">
+                                      <%= translations['f1.details'] %></a>
+                                  </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-details-header">
+                            <div class="header-title"><%= translations['f1.friday'] %></div>
+                        </div>
+                        <div class="event-details-body">
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.hospitality.gold.lounge'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Gold Lounge
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 6,712
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 25,662
+                                        <% break;
+                                        case 'VND' : %>
+                                         ₫ 19,740,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 848.8
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 5,725
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 1,164.7
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 3,553
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn details" href="/<%=locale%>/experience/10864-gold-lounge-formula-1-vietnam-grand-prix-2020?packageId=3536" target="_blank">
+                                    <%= translations['f1.details'] %></a>
+                                </div>
+                            </div>
+                            <div class="event-details-row long">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.hospitality.platinum.suite'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Platinum Champions Club
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 10,866
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 41,548
+                                        <% break;
+                                        case 'VND' : %>
+                                         ₫ 31,960,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 1,374.3
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 9,268
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 1,885.6
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 5,753
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn details" href="/<%=locale%>/experience/10865-platinum-champion-club-formula-1-vietnam-grand-prix-2020?packageId=3540" target="_blank">
+                                    <%= translations['f1.details'] %></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-details-header">
+                            <div class="header-title"><%= translations['f1.saturday'] %></div>
+                        </div>
+                        <div class="event-details-body">
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.hospitality.gold.lounge'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Gold Lounge
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 10,064
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 38,480
+                                        <% break;
+                                        case 'VND' : %>
+                                         ₫ 29,600,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 1,272.8
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 8,584
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 1,746.4
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 5,328
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn details" href="/<%=locale%>/experience/10864-gold-lounge-formula-1-vietnam-grand-prix-2020?packageId=3537" target="_blank">
+                                    <%= translations['f1.details'] %></a>
+                                </div>
+                            </div>
+                            <div class="event-details-row long">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.hospitality.platinum.suite'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Platinum Champions Club
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 16,300
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 62,322
+                                        <% break;
+                                        case 'VND' : %>
+                                         ₫ 47,940,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 2,061.4
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 13,903
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 2,828.5
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 8,629
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn details" href="/<%=locale%>/experience/10865-platinum-champion-club-formula-1-vietnam-grand-prix-2020?packageId=3541" target="_blank">
+                                    <%= translations['f1.details'] %></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="event-details-header">
+                            <div class="header-title"><%= translations['f1.saturdayNsunday'] %></div>
+                        </div>
+                        <div class="event-details-body">
+                            <div class="event-details-row">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.hospitality.gold.lounge'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Gold Lounge
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                    <p><% switch (ccy) {
+                                        case 'HKD' : %>
+                                          HK$ 15,096
+                                        <% break;
+                                        case 'TWD' : %>
+                                          NT$ 59,940
+                                        <% break;
+                                        case 'VND' : %>
+                                         ₫ 44,400,000
+                                        <% break;
+                                        case 'USD' : %>
+                                          US$ 1,909.2
+                                        <% break;
+                                        case 'CNY' : %>
+                                          ¥ 13,453
+                                        <% break;
+                                        case 'SGD' : %>
+                                          S$ 2,619.6
+                                        <% break;
+                                        case 'MYR' : %>
+                                          RM 7,992
+                                        <% break;
+                                        } %></p>
+                                    <a class="btn details" href="/<%=locale%>/experience/10864-gold-lounge-formula-1-vietnam-grand-prix-2020?packageId=3538" target="_blank">
+                                    <%= translations['f1.details'] %></a>
+                                </div>
+                            </div>
+                            <div class="event-details-row long">
+                                <div class="event-details xs-only">
+                                    <h6><%= translations['f1.hospitality.platinum.suite'] %>
+                                        <% if (locale.indexOf('zh') > -1) { %>
+                                            <br>Platinum Champions Club
+                                        <% } %>
+                                    </h6>
+                                </div>
+                                <div class="event-details">
+                                  <p><% switch (ccy) {
+                                      case 'HKD' : %>
+                                        HK$ 24,446
+                                      <% break;
+                                      case 'TWD' : %>
+                                        NT$ 97,065
+                                      <% break;
+                                      case 'VND' : %>
+                                       ₫ 71,900,000
+                                      <% break;
+                                      case 'USD' : %>
+                                        US$ 3,091.7
+                                      <% break;
+                                      case 'CNY' : %>
+                                        ¥ 21,786
+                                      <% break;
+                                      case 'SGD' : %>
+                                        S$ 4,242.1
+                                      <% break;
+                                      case 'MYR' : %>
+                                        RM 12,942
+                                      <% break;
+                                      } %></p>
+                                  <a class="btn details" href="/<%=locale%>/experience/10865-platinum-champion-club-formula-1-vietnam-grand-prix-2020?packageId=3542" target="_blank">
+                                  <%= translations['f1.details'] %></a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= cityData.metaDescription %>">
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_300/<%= cityData.headers[0].key %>.<%= cityData.headers[0].format %>"/>
+    <meta property="og:title" content="<%= cityData.metaTitle %>"/>
+    <meta property="og:description" content="<%= cityData.metaDescription %>"/>
+    <title><%= cityData.metaTitle %> | Fayfay.com</title>
+
+    <% include include/gtm.header.ejs %>
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/city.css">
+    <link rel="stylesheet" type="text/css" href="/css/search.css">
+    <style>
+        #map{
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body class="<%= locale%>">
+<% include include/gtm.body.ejs %>
+
+    <div id="page">
+        <% include city/city.header.ejs %>
+        <% include city/city.breadcrumb.ejs %>
+        <% include city/city.main.buttons.ejs %>
+
+        <%if (cityData.sections){ %>
+            <% for(var i = 0; i < cityData.sections.length; i++) { %>
+                <% include city/city.layout.horizontal.4.items.ejs %>
+                <% include city/city.layout.horizontal.4.big.items.ejs %>
+                <% include city/city.layout.slider.ejs %>
+            <% } %>
+        <% } %>
+
+        <div id="search-container" class="city-search"><%- searchContainerHtml %></div>
+        <div style="display: none">
+            <div id="inline_content">
+                <div id="map" data-lat="<%= cityData.latitude %>" data-lng="<%= cityData.longitude %>"></div>
+            </div>
+        </div>
+        <% include home/home.destinations.ejs %>
+        <% include include/footer.ejs %>
+    </div>
+    <% include include/js.ejs %>
+    <script>
+    var map;
+    var map_container = document.getElementById('map');
+
+    var latitiude = parseFloat(map_container.getAttribute('data-lat'));
+    var longitude = parseFloat(map_container.getAttribute('data-lng'));
+
+    var myLatLng = {
+        lat: latitiude,
+        lng: longitude
+    }
+
+    function initMap() {
+
+        map =  new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            zoom: 13
+        });
+
+        var icon = {
+            url: "/images/backtotop.png", // url
+            scaledSize: new google.maps.Size(50, 50), // scaled size
+            origin: new google.maps.Point(0,0), // origin
+            anchor: new google.maps.Point(35, 50) // anchor
+        };
+        var beachMarker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            icon: icon
+        });
+    }
+</script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= GOOGLE_API_KEY_TRAVEL %>&callback=initMap"
+            async defer></script>
+    <script>
+        $(document).ready(function(){
+
+            $(".cboxElement").colorbox({
+                inline:true,
+                width:"80%",
+            });
+        });
+    </script>
+    <script src="/js/components/SearchContainer-bundle.js"></script>
+</body>
+
+</html>

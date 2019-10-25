@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['visa.desc'] %>">
+    <meta name="keywords" content="<%= translations['visa.title'] %>">
+    <title><%= translations['visa.title'] %> | Fayfay.com</title>
+        <% if (locale == 'zh-hk' || locale == 'zh-cn'){ %>
+            <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/visa-og-tc.jpg"/>
+        <%  }else{ %>
+            <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/visa-og-en.jpg"/>
+        <% } %>
+    <meta property="og:image:alt" content="<%= translations['visa.title']  %>"/>
+    <meta property="og:title" content="<%= translations['visa.title'] %>"/>
+    <meta property="og:description" content="<%= translations['visa.desc'] %>"/>
+
+    <% include include/gtm.header.ejs %>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/visa.css">
+</head>
+
+<body class="<%= locale%>">
+<% include include/gtm.body.ejs %>
+
+    <div id="visa">
+        <% include visa/visa.header.ejs %>
+        <% include visa/visa.flow.ejs %>
+        <% include visa/visa.products.ejs %>
+        <% include visa/visa.add-ons.ejs %>
+        <% include visa/visa.combo.ejs %>
+        <% include visa/visa.customer.reviews.ejs %>
+        <% include visa/visa.faq.ejs %>
+        <% include include/footer.ejs %>
+    </div>
+    <% include include/js.ejs %>
+    <script src="/js/visa-bundle.js"></script>
+</body>
+</html>

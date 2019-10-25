@@ -1,0 +1,285 @@
+.icon, .icon-brand{
+  display: inline-block;
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 300 !important;
+  font-style: normal;
+  margin-right: 5px;
+  font-size: 1em !important;
+  cursor: pointer;
+  float: none;
+
+  &.bold-400{
+     font-weight: 400 !important;
+  }
+
+  &.bold-500{
+     font-weight: 500 !important;
+  }
+
+  &.bold-800{
+    font-weight: 800 !important;
+  }
+
+  &:hover{
+    opacity: .6;
+  }
+
+  &.orange:before {
+    color: $main-color;
+  }
+  &.arrow-right:before {
+      content: "\f0da";
+  }
+  &.arrow-left:before{
+      content: "\f104";
+  }
+  &.home:before{
+    content: "\f015";
+  }
+  &.lock:before{
+    content: "\f023";
+  }
+  &.question:before{
+    content: "\f059";
+  }
+  &.phone:before{
+    content: "\f095";
+  }
+  &.cart:before{
+    content: "\f07a";
+  }
+  &.bars:before{
+    content: "\f0c9";
+  }
+  &.check:before{
+    content: "\f058";
+  }
+  &.check-circle:before{
+    content: "\f058";
+  }
+  &.check-square:before{
+    content: "\F14A";
+  }
+  &.user:before{
+    content: "\f007";
+  }
+  &.setting:before{
+    content: "\f013";
+  }
+  &.sign-out:before{
+    content: "\f2f5";
+  }
+  &.wishlist:before{
+    content: "\f004";
+  }
+  &.coupons:before{
+    content: "\f4b9";
+  }
+  &.booking:before{
+    content: "\f02d";
+  }
+  &.comments:before{
+    content: "\f27a";
+  }
+  &.close:before{
+    content: "\f00d";
+  }
+  &.clock:before{
+    content: "\f017";
+  }
+  &.angle-right:before{
+    content: "\f105";
+  }
+  &.angle-up:before{
+    content: "\f106";
+  }
+  &.angle-down:before{
+    content: "\f107";
+  }
+  &.dollar-sign:before{
+    content: "\f155";
+  }
+  &.globe:before{
+    content: "\f0ac";
+  }
+  &.sorting:before{
+    content: "\F161";
+  }
+  &.icon-brand{
+    font-family: Font Awesome\ 5 Brands;
+  }
+  &.facebook:before{
+    content: "\f39e";
+  }
+  &.instagram:before{
+    content: "\F16D";
+  }
+  &.wechat:before{
+    content: "\f1d7";
+  }
+  &.google:before{
+    content: "\f0d5";
+  }
+  &.map:before{
+    content: "\f3c5";
+  }
+  &.exclamation-circle:before{
+    content: "\f06a";
+  }
+  &.search:before{
+    content: "\f002";
+  }
+  &.clock:before{
+    content: "\f017";
+  }
+  &.heart:before{
+    content: "\f004";
+  }
+  &.heart-active:before{
+    content: "\f004";
+  }
+  &.delete:before{
+    content: '\F057';
+  }
+  &.minus:before{
+    content: "\f068";
+  }
+  &.plus:before{
+    content: "\f067";
+  }
+  &.sliders:before{
+    content: "\F1DE";
+  }
+  &.map-marker-alt:before {
+      content: "\F3C5";
+  }
+  &.language:before{
+      content: "\F0AC";
+  }
+  &.flag:before{
+      content: "\F024";
+  }
+  &.ticket:before{
+      content: "\F145"
+  }
+  &.wifi:before{
+      content: "\F1EB";
+  }
+  &.car:before{
+      content: "\F1B9";
+  }
+  &.smile:before{
+      content: "\F118";
+  }
+  &.suitcase:before{
+      content: "\f0f2";
+  }
+  &.stars:before{
+      content: "\F762";
+  }
+  &.badge-precent:before{
+      content: "\F646";
+  }
+  &.pennant:before{
+      content: "\F456";
+  }
+  &.quote-left:before{
+      content: "\F10D";
+  }
+  &.quote-right:before{
+      content: "\F10E";
+  }
+}
+
+
+.icon-png{
+  width: 60px;
+  margin-right: $padding;
+    margin-top: 5px;
+
+  @media screen and (max-width: $mobile-v) {
+    width: 50px;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+}
+
+.fas{
+  display: inline-block;
+  &:before {
+    margin-right: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: $main-font-color;
+  }
+  &.orange:before {
+    color: $main-color;
+  }
+
+  &.fa-walk {
+    position: relative;
+    &:before {
+      margin-left: 8px;
+      font-size: 1.4em;
+    }
+    &:after {
+      background: $white;
+      bottom: 0;
+      content: '';
+      height: .435em;
+      position: absolute;
+      right: 0;
+      width: 1em;
+    }
+  }
+  &.fa-bolt:before {
+    padding-left: 5px;
+  }
+}
+
+.far, .fab{
+  color: $main-color;
+
+    &:before {
+        font-size: 1.2em;
+        margin-right: 10px;
+    }
+}
+
+.fas-active{
+    color: $main-color;
+}
+
+.fa {
+  &.fa-circle-o-notch:before {
+    content: '\f1ce';
+  }
+}
+
+.icon-priceRange{
+    display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+    margin-bottom: -6px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &:before{
+        display: block;
+        content: "";
+        padding-top: 100%;
+    }
+
+    &.BUDGET{
+        background-image: url('/images/icons/budget_selected.png');
+    }
+
+    &.STANDARD{
+        background-image: url('/images/icons/standard_selected.png');
+    }
+
+    &.LUXURY{
+        background-image: url('/images/icons/luxury_selected.png');
+    }
+}
+

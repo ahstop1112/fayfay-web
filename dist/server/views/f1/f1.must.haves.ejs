@@ -1,0 +1,148 @@
+<section class="f1-section must-haves">
+    <div class="container-fluid">
+        <div class="must-haves-container">
+            <h2 class="title one-line"><div><%= translations['f1.travel.must.haves'] %></div></h2>
+            <div class="title-deco"></div>
+            <div class="drag-content">
+                <ul class="drag-list recommend-list mustHave-slider">
+                    <li class="list-item">
+                        <a href="/<%=locale%>/vietnam-visa" title="<%= translations['f1.travel.must.haves.one.title'] %>" target="_blank">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img data-lazy="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640/fayfay-media/prod/hltk7aws0edz1t4griph.jpg" alt="<%= translations['f1.travel.must.haves.one.title'] %>" class="bg ">
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['f1.travel.must.haves.one.title'] %></h3>
+                                    <p class="desc"><%- translations['f1.travel.must.haves.one.desc'] %></p>
+                                </div>
+                                <div class="bottom">
+                                    <div class="price">
+                                        <% switch (ccy) {
+                                        case 'HKD' : %>
+                                        HK$ 44<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'TWD' : %>
+                                        NT$ 168<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'VND' : %>
+                                        <span>Từ</span> ₫ 129,525
+                                        <% break;
+                                        case 'USD' : %>
+                                        US$ 5.6<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'CNY' : %>
+                                        ¥ 38<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'SGD' : %>
+                                        S$ 7.6<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'MYR' : %>
+                                        RM 23<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        } %>
+                                    </div>
+                                    <div class="details">
+                                        <%= translations['f1.details'] %>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="list-item">
+                        <a href="/<%=locale %>/faysim" title="<%= translations['f1.travel.must.haves.two.title'] %>" target="_blank">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <% if (locale == 'zh-hk' || locale == 'zh-cn') { %>
+                                        <img data-lazy="/images/faysim_buynow_tc.jpg" class="bg ">
+                                    <% } else { %>
+                                        <img data-lazy="/images/faysim_buynow_en.jpg" class="bg ">
+                                    <% } %>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['f1.travel.must.haves.two.title'] %></h3>
+                                    <p class="desc"><%- translations['f1.travel.must.haves.two.desc'] %> </p>
+                                </div>
+                                <div class="bottom">
+                                    <div class="price">
+                                        <% switch (ccy) {
+                                        case 'HKD' : %>
+                                        HK$ 53<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'TWD' : %>
+                                        NT$ 203<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'VND' : %>
+                                        <span>Từ</span> ₫ 155,885
+                                        <% break;
+                                        case 'USD' : %>
+                                        US$ 6.7<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'CNY' : %>
+                                        ¥ 45.2<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'SGD' : %>
+                                        S$ 9.2<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'MYR' : %>
+                                        RM 28.1<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        } %>
+                                    </div>
+                                    <div class="details">
+                                        <%= translations['f1.details'] %>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="list-item">
+                        <a href="/<%=locale %>/category/transportation" title="<%= translations['f1.travel.must.haves.three.title'] %>" target="_blank">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img data-lazy="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640/fayfay-media/prod/ebkzhxzdxtf2z504ovtv.jpg" alt="<%= translations['f1.travel.must.haves.three.title'] %>" class="bg ">
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['f1.travel.must.haves.three.title'] %></h3>
+                                    <p class="desc"><%- translations['f1.travel.must.haves.three.desc'] %></p>
+                                </div>
+                                <div class="bottom">
+                                    <div class="price">
+                                        <% switch (ccy) {
+                                        case 'HKD' : %>
+                                            HK$ 43<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'TWD' : %>
+                                            NT$ 163<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'VND' : %>
+                                            <span>Từ</span> ₫ 125,000
+                                        <% break;
+                                        case 'USD' : %>
+                                            US$ 5.4<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'CNY' : %>
+                                            ¥ 36<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'SGD' : %>
+                                            S$ 7.4<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'MYR' : %>
+                                            RM 23<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        } %>
+
+                                    </div>
+                                    <div class="details">
+                                        <%= translations['f1.details'] %>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

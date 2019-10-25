@@ -1,0 +1,172 @@
+@import 'include/variable';
+.help-header-section {
+    overflow: hidden;
+    background-color: $white;
+
+    .header-text img{
+        max-width: 700px;
+
+        @media screen and (max-width: $tablet-h) {
+            max-width: 450px;
+        }
+    }
+
+    .bg{
+        top: 0 !important;
+
+        @media screen and (max-width: $mobile-v) {
+            top: -10% !important;
+            height: 100%;
+            width: auto;
+        }
+    }
+}
+
+.help-section{
+    padding: 30px 0;
+    padding-top: 10px;
+
+    .help-heading h4{
+        color: $light-grey;
+        font-weight: 400;
+    }
+
+    .leftmenu {
+        &.nav-tabs{
+            margin-left: 0;
+            border: 0;
+
+            li{
+                width: 100%;
+                border: 0;
+                background: none;
+                border-radius: 0;
+                text-align: left;
+                color: $main-font-color;
+                padding: 10px 0;
+                font-size: 1em;
+
+                a{
+                    color: $main-font-color;
+                    background: none;
+                    border: none;
+                    padding: 0;
+                    font-weight: 400;
+                    text-transform: capitalize;
+
+                    .icon{
+                        color: $main-color;
+                        &:before{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                &.active{
+                    a{
+                        color: $main-color;
+                        background: none;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .icon-graph{
+        height: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        content: "";
+        padding-left: 15px;
+        margin-right: 10px;
+
+
+        &.booking{
+            background-image: url('/images/icons/book.png');
+        }
+        &.payment{
+            background-image: url('/images/icons/card.png');
+        }
+        &.coupons{
+            background-image: url('/images/icons/ticket.png');
+        }
+        &.changes{
+            background-image: url('/images/icons/return.png');
+        }
+        &.settings{
+            background-image: url('/images/icons/user.png');
+        }
+    }
+
+    .help-content{
+        h3{
+            color: $main-color;
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+
+        .tab-content>.tab-pane{
+            @media screen and (max-width: $tablet-v) {
+                display: block !important;
+                opacity: 1 !important;
+            }
+        }
+
+        .panel-default{
+            border: 0;
+            border-bottom: 1px solid $disable-grey;
+
+            &>.panel-heading{
+                background: none;
+                border: 0;
+                border-radius: 0;
+
+                padding: $padding 0;
+
+                .panel-title{
+                    font-size: 1em;
+                }
+
+                a{
+                    text-decoration: none;
+
+                    &:before {
+                        font-family: 'Glyphicons Halflings';
+                        content: "\e114";
+                        float: right;
+                        transition: all 0.5s;
+                        margin-right: $padding;
+
+                        @media screen and (max-width: $mobile-h) {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                &.active{
+                    a:before {
+                        -webkit-transform: rotate(180deg);
+                        -moz-transform: rotate(180deg);
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+
+
+            .panel-body{
+                border: 0;
+                font-size: 1em;
+                background-color: $bg-grey;
+                padding: $padding;
+                margin-bottom: $padding;
+
+                ul{
+
+                }
+            }
+        }
+    }
+}

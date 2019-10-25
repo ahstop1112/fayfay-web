@@ -1,0 +1,33 @@
+<header id="home" class="home-header-section">
+    <% include ../include/header.ejs %>
+    <div class="section-background">
+        <div class="overlay-header">
+            <div class="header-text <%=locale%>">
+                <% if (locale.indexOf('zh') > -1) { %>
+                <img src="/images/header_text_zh.png" alt="<%= translations['home.og.title'] %>">
+                <% } else { %>
+                <img src="/images/header_text.png" alt="<%= translations['home.og.title'] %>">
+                <% } %>
+            </div>
+             <div id="search-box-home" class="searchbox-container"><%- searchBoxContainerHtml %></div>
+        </div>
+        <% if(topSlider && topSlider.length) { %>
+            <div class="overlay-video">
+                <div class="index-slick hidden">
+                     <% topSlider.slice(-5).forEach(function(banner){ %>
+                        <div class="item">
+                            <div class="bg-container">
+                                <% if (useragent.isDesktop) { %>
+                                    <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= banner.image.key %>.<%= banner.image.format %>" data-speed="-0.5" class="bg">
+                                <% }else{ %>
+                                    <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= banner.mobileImage.key %>.<%= banner.mobileImage.format %>" data-speed="-0.5" class="bg">
+                                <% } %>
+
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        <% }; %>
+    </div>
+</header>

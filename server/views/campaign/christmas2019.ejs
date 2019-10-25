@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <% if (campaignData.name) { %>
+        <title><%= campaignData.name %> | Fayfay.com</title>
+        <meta name="title" content="<%= campaignData.name %>">
+        <meta name="keywords" content="<%= campaignData.name %>">
+    <% } %>
+    <% if (campaignData.headerDescription) { %>
+        <meta name="description" content="<%= campaignData.headerDescription %>">
+        <meta property="og:description" content="<%= campaignData.headerDescription %>"/>
+    <% } %>
+    <% if (campaignData.ogMedia && campaignData.ogTitle) { %>
+        <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= campaignData.ogMedia ? (campaignData.ogMedia.key+'.'+campaignData.ogMedia.format) : '' %>"/>
+        <meta property="og:image:alt" content="<%= campaignData.ogTitle  %>"/>
+    <% } %>
+
+    <% include ../include/gtm.header.ejs %>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/christmas2019.css">
+</head>
+
+<body class="<%= locale%>">
+<% include ../include/gtm.body.ejs %>
+    <div id="christmas2019">
+        <% include christmas2019.header.ejs %>
+        <% include christmas2019.coupon.ejs %>
+        <section class="section experiences bg-grey">
+            <div class="container-fluid">
+                <% if (campaignData.sections) { %>
+                    <% include dynamic-circle.icons.ejs %>
+                    <% campaignData.sections.forEach(function (section, index) { %>
+                        <div class="section-experience  section<%=index%>">
+                            <div class="experience-bg-left"></div>
+                                <div class="experience-title">
+                                    <div class="title-bg-left"></div>
+                                    <div class="title-bg">
+                                        <h2><%= section.name %></h2>
+                                    </div>
+                                    <div class="title-bg-right"></div>
+                                </div>
+                            <div class="experience-bg-right"></div>
+                            <% section.subSections.forEach(function (child, subIndex) { %>
+                                <% switch (child.layout) {
+                                    case 'VERTICAL_LIST' : %>
+                                        <% include dynamic-vertical.list.ejs %>
+                                    <% break;
+                                    case 'HORIZONTAL_LIST' : %>
+                                        <% include dynamic-horizontal.list.ejs %>
+                                    <% break;
+                                    case '4_PLUS_1_HIGHLIGHTED_LEFT' : %>
+                                        <% include dynamic-4plus1_highlighted_left.ejs %>
+                                    <% break;
+                                    case '4_PLUS_1_HIGHLIGHTED_RIGHT' : %>
+                                        <% include dynamic-4plus1_highlighted_right.ejs %>
+                                    <% break;
+                                } %>
+                            <% })%>
+                        </div>
+                    <% })%>
+                <% } %>
+            </div>
+        </section>
+
+        <% if (campaignData.footerDescription && useragent.isDesktop) { %>
+            <p class="desc terms hidden-xs">
+            <b><%-translations['campaign.common.terms.title']%></b><br>
+            <%- campaignData.footerDescription %>
+            </p>
+        <% } %>
+
+        <% if (campaignData.footerDescriptionMobile && !useragent.isDesktop) { %>
+            <p class="desc terms">
+            <b><%-translations['campaign.common.terms.title']%></b><br>
+            <%- campaignData.footerDescriptionMobile %>
+            </p>
+        <% } %>
+
+        <% if (campaignData.sections) { %>
+            <div class="floating-icons">
+                <% campaignData.sections.forEach(function (section, index) { %>
+                 <div class="section<%=index%> <%=index===0 ? 'active' : ''%>">
+                    <% if (section.iconMedia) { %>
+                        <div class="address-icon" style="background-image: url('<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%=section.iconMedia.key%>.<%=section.iconMedia.format%>')"></div>
+                    <% } %>
+                    <h6><%=section.name %></h6>
+                </div>
+                <% })%>
+            </div>
+        <% } %>
+
+        <% include ../include/footer.ejs %>
+    </div>
+    <% include ../include/js.ejs %>
+    <script src="/js/christmas2019-bundle.js"></script>
+    <script>
+        var clipboard = new ClipboardJS('.copy-btn');
+
+        clipboard.on('success', function(e) {
+            $('.tooltiptext').addClass("show");
+
+            setTimeout(function() {
+                $('.tooltiptext').removeClass("show");
+            }, 3000);
+        });        
+        
+        $.fn.snowit({
+            speed: $(document).height() / 70,
+            total: 300, minSize : 30,
+            maxSize : 50,
+        });
+     </script>
+</body>
+</html>

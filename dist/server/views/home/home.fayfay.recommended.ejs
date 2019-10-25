@@ -1,0 +1,50 @@
+<% if(recommendedActivities && recommendedActivities.length) { %>
+<section name="recommendations" id="recommendations">
+    <div class="container-fluid">
+        <div class="main-logo-container destination">
+            <div class="main-logo">
+                <img src="/images/icons/recommend.png">
+            </div>
+            <h2><%= translations['home.fayfayRecommended'] %></h2>
+            <p class="hidden-xs"><%= translations['home.fayfayRecommended.description'] %></p>
+        </div>
+        <div class="drag-content">
+            <ul class="drag-list recommend-list">
+                    <% recommendedActivities.slice(-4).forEach(function(activity){ %>
+                        <li class="list-item">
+                            <div class="list-content">
+                                <%- include('components/overlay.soldout.ejs', { packageAvailabilityDate : activity.packageAvailabilityDate, paymentFlow: activity.paymentFlow }); %>
+                                <div class="overlay-content hover-normal">
+                                    <a href="<%= langUrl %>/experience/<%= activity.id %>-<%= activity.slug %>" target="_blank">
+                                        <div class="banner">
+                                            <img
+                                                class="lazy bg" data-src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640/<%= activity.thumbnailKey %>.<%= activity.thumbnailFormat %>"
+                                                alt="<%= activity.title %>">
+                                        </div>
+
+                                        <div class="overlay-wrap">
+                                            <div class="overlay">
+                                                <div class="new-activity"></div>
+                                                <h4 class="title-location"><%= activity.location%></h4>
+                                                <h3 class="title-s"><%= activity.title.truncate(60) %></h3>
+                                                <%- include('components/price.ejs', { displayPrice : activity.displayPrice, displaySpecialPrice: activity.displaySpecialPrice }); %>
+                                                <div class="nobg">
+                                                    <%- include('components/rating.ejs', { ratingAverage: activity.ratingAverage }); %>
+                                                    <%- include('components/bookedCount.ejs', { bookedCount: activity.bookedCount }); %>
+                                                </div>
+                                                <div class="btn-container">
+                                                    <button class="search-btn btn btn-lg"><%= translations['common.lets.fly'] %></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </li>
+                    <% }); %>
+                </ul>
+        </div>
+    </div>
+</section>
+<% }; %>

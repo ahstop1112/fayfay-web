@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><%= translations['common.home-title'] %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['home.og.desc'] %>">
+    <meta property="og:image" content="<%= cloudinaryUrl %>/fayfay-media/common/indexog.jpg"/>
+    <meta property="og:image:alt" content="<%= translations['home.og.image.alt']  %>"/>
+    <meta property="og:title" content="<%= translations['home.og.title'] %>"/>
+    <meta property="og:description" content="<%= translations['home.og.desc'] %>"/>
+
+    <% include include/gtm.header.ejs %>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
+
+<body class="<%=locale%>">
+<% include include/gtm.body.ejs %>
+
+    <div id="page">
+        <% include home/home.header.ejs %>
+        <% include home/home.main.buttons.ejs %>
+        <% include home/home.destinations.ejs %>
+        <% include home/home.hot.promotions.ejs %>
+        <% include home/home.popular.ejs %>
+        <% include home/home.categories.ejs %>
+        <% include home/home.f1.ejs %>
+        <% include home/home.fayfay.recommended.ejs %>
+        <section name="promotion" id="promotion">
+            <div class="container-fluid">
+                <% include home/home.promotion.ejs %>
+            </div>
+        </section>
+        <% include home/home.partnership.ejs %>
+        <% include home/home.media.ejs %>
+        <% include include/footer.ejs %>
+    </div>
+    <% if (isChat == 1) { %>
+        <div id="leadAdChatPopup" class="hide">
+            <div class="banner-container">
+                <% if (locale == 'zh-hk'  || locale == 'zh-cn') { %>
+                    <img src="/images/lead_tc.png" />
+                <% }else { %>
+                    <img src="/images/lead_en.png" />
+                <% } %>
+            </div>
+        </div>
+        <script>
+            setTimeout(function () {
+                document.getElementById('leadAdChatPopup').classList.remove("hide");
+            }, 500);
+        </script>
+    <% } %>
+    <% if (popupBanner && !isChat) { %>
+    <div id="indexPopupBanner" class="hide">
+        <div class="banner-container">
+            <div class="close-btn">
+                <i class="icon fal fa-times"></i>
+            </div>
+            <a href="<%=popupBanner.link%>" target="<%=popupBanner.target || '_blank' %>">
+                <% if (useragent.isDesktop) { %>
+                    <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= popupBanner.image.key %>.<%= popupBanner.image.format %>" class="except-mobile-v" alt="<%=popupBanner.name%>"/>
+                <% }else{ %>
+                    <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= popupBanner.mobileImage.key %>.<%= popupBanner.mobileImage.format %>" class="mobile-v" alt="<%=popupBanner.name%>"/>
+                <% } %>
+            </a>
+        </div>
+    </div>
+    <script>
+        setTimeout(function () {
+            document.getElementById('indexPopupBanner').classList.remove('hide');
+        }, <%=popupBanner.duration*1000 %>);
+    </script>
+    <% } %>
+    <% include include/js.ejs %>
+    <script src="/js/components/HomeContainer-bundle.js"></script>
+</body>
+</html>

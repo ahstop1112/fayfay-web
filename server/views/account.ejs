@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['account.my.account'] %>">
+    <meta name="keywords" content="<%= translations['account.my.account'] %>">
+    <title><%= pageTitle %> | Fayfay.com</title>
+
+    <% include include/gtm.header.ejs %>
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/account.css">
+</head>
+
+<body>
+<% include include/gtm.body.ejs %>
+<div id="page">
+    <% include account/account.header.ejs %>
+    <section class="account-section">
+
+        <div class="container-fluid">
+            <div class="row displayFlex">
+                <div class="col-md-3 col-sm-4 col-xs-12 hidden-sm hidden-xs myaccount-menu">
+                    <% include account/account.menu.ejs %>
+                </div>
+                <div class="col-md-9 col-sm-12 col-xs-12 myaccount-content">
+                    <div id="account-info-container"><%- accountInfoContainerHtml %></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <% include include/footer.ejs %>
+</div>
+
+<% include include/js.ejs %>
+<script src="/js/components/AccountContainer-bundle.js"></script>
+</body>
+</html>

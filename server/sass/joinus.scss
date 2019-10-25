@@ -1,0 +1,90 @@
+@import 'include/variable';
+
+.joinus-header-section {
+    overflow: hidden;
+    background-color: $white;
+
+    .bg{
+        top: 0 !important;
+
+        @media screen and (max-width: $mobile-v) {
+            top: -10% !important;
+            height: 100%;
+            width: auto;
+        }
+    }
+}
+
+.joinus-section {
+    border: 1px solid #eee;
+    box-shadow: $shadow;
+    padding-bottom: 0;
+
+    @media screen and (max-width: $mobile-h) {
+        padding-bottom: 10px;
+    }
+
+    p{
+        margin-bottom: 20px;
+    }
+
+    h1{
+        color: $main-color;
+        font-size: 1.75em;
+        font-weight: 400;
+    }
+
+    .row, .col-md-4{
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: $mobile-h) {
+            display: block;
+        }
+
+        .whitebox{
+            border: 1px solid $main-color;
+            border-left: 5px solid $main-color;
+            width: 100%;
+
+            h5 {
+                color: $main-color;
+            }
+
+            .location{
+                color: $main-color;
+                margin-bottom: 15px;
+            }
+
+            b{
+                color: $main-font-color;
+            }
+
+            p{
+                margin: 10px 0;
+                color: $light-grey;
+                text-align: left;
+            }
+            ul, li{
+                color: $light-grey;
+            }
+        }
+
+    }
+
+    h2{
+        color: $main-color;
+    }
+
+    a.btn{
+        height: auto;
+        line-height: 2;
+    }
+}

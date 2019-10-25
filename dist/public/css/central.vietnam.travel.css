@@ -1,0 +1,704 @@
+@charset "UTF-8";
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+#central-vietnam-travel {
+  color: #163A4D;
+  background-image: url("/images/campaign/centralvntravel/bg.jpg");
+  background-size: cover;
+  background-position: top; }
+  #central-vietnam-travel header .header-top-area {
+    position: static;
+    box-shadow: none;
+    background-color: #fff;
+    color: #163A4D;
+    border: 0; }
+    #central-vietnam-travel header .header-top-area .header-container {
+      width: 100%;
+      padding: 0 2%; }
+    #central-vietnam-travel header .header-top-area.scroll {
+      position: fixed; }
+  #central-vietnam-travel header .section-background {
+    padding-top: 0;
+    z-index: 0; }
+    #central-vietnam-travel header .section-background .overlay {
+      justify-content: flex-start; }
+      #central-vietnam-travel header .section-background .overlay .header-text {
+        text-align: left; }
+        @media screen and (max-width: 550px) {
+          #central-vietnam-travel header .section-background .overlay .header-text {
+            display: none; } }
+        #central-vietnam-travel header .section-background .overlay .header-text img {
+          position: static;
+          margin: 0;
+          margin-top: 15px;
+          top: 10px;
+          left: 0;
+          max-width: 150px;
+          transform: initial; }
+    @media screen and (max-width: 1440px) {
+      #central-vietnam-travel header .section-background .bg-container:before {
+        padding-top: 28%; } }
+    @media screen and (max-width: 550px) {
+      #central-vietnam-travel header .section-background .bg-container:before {
+        padding-top: 100%; } }
+    #central-vietnam-travel header .section-background .bg-container .bg {
+      top: -100%; }
+      #central-vietnam-travel header .section-background .bg-container .bg.expect-mobile-v {
+        display: none; }
+        @media screen and (min-width: 550px) {
+          #central-vietnam-travel header .section-background .bg-container .bg.expect-mobile-v {
+            display: block; } }
+      #central-vietnam-travel header .section-background .bg-container .bg.mobile-v {
+        display: none; }
+        @media screen and (max-width: 550px) {
+          #central-vietnam-travel header .section-background .bg-container .bg.mobile-v {
+            display: block; } }
+  #central-vietnam-travel section#all {
+    padding: 15px 0; }
+    #central-vietnam-travel section#all > .container-fluid {
+      background-color: #fff;
+      margin-top: 20px; }
+    #central-vietnam-travel section#all p.content_p {
+      margin: 0 auto;
+      margin-bottom: 20px;
+      padding-top: 30px;
+      color: #039ce5;
+      width: 90%;
+      text-align: center;
+      font-size: 1em; }
+    #central-vietnam-travel section#all .btn-address {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      width: 80%;
+      margin: 0px auto;
+      margin-bottom: 15px;
+      justify-content: center; }
+      @media screen and (max-width: 991px) {
+        #central-vietnam-travel section#all .btn-address {
+          width: 100%;
+          flex-wrap: nowrap;
+          overflow-x: scroll;
+          justify-content: flex-start; } }
+      #central-vietnam-travel section#all .btn-address .list-item {
+        flex: 0 0 calc(100% / 6);
+        text-align: center;
+        background: none;
+        cursor: pointer;
+        min-width: 0; }
+        @media screen and (max-width: 991px) {
+          #central-vietnam-travel section#all .btn-address .list-item {
+            flex: 0 0 calc(100% / 4);
+            min-width: 0;
+            font-size: 1.1em; } }
+        @media screen and (max-width: 550px) {
+          #central-vietnam-travel section#all .btn-address .list-item {
+            flex: 0 0 calc(100% / 2.5);
+            min-width: 0; } }
+        @media screen and (max-width: 320px) {
+          #central-vietnam-travel section#all .btn-address .list-item {
+            font-size: 0.8em; } }
+        #central-vietnam-travel section#all .btn-address .list-item .list-content {
+          box-shadow: none; }
+        #central-vietnam-travel section#all .btn-address .list-item .banner-bg {
+          width: 80%;
+          margin: 0 auto;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          padding: 5px;
+          overflow: hidden !important;
+          display: block;
+          position: relative;
+          background-image: linear-gradient(-30deg, #039ee5, #88e7d2, #5cc7f3); }
+        #central-vietnam-travel section#all .btn-address .list-item .banner {
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          overflow: hidden;
+          background-size: cover; }
+          #central-vietnam-travel section#all .btn-address .list-item .banner:before {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            content: "";
+            padding-top: 100%;
+            display: block; }
+          #central-vietnam-travel section#all .btn-address .list-item .banner:after {
+            content: "";
+            padding-top: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1; }
+          #central-vietnam-travel section#all .btn-address .list-item .banner .bg {
+            display: none; }
+        #central-vietnam-travel section#all .btn-address .list-item h3.title-s {
+          font-size: 1.5em;
+          text-transform: uppercase;
+          font-weight: 500;
+          color: #039ce5; }
+          @media screen and (max-width: 767px) {
+            #central-vietnam-travel section#all .btn-address .list-item h3.title-s {
+              font-size: 1.2em; } }
+      #central-vietnam-travel section#all .btn-address.items-5 .list-item {
+        flex: 0 0 calc(100% / 5); }
+      #central-vietnam-travel section#all .btn-address.items-6 .list-item {
+        flex: 0 0 calc(100% / 6); }
+      #central-vietnam-travel section#all .btn-address.items-7 .list-item {
+        flex: 0 0 calc(100% / 7); }
+    #central-vietnam-travel section#all a.banner {
+      text-align: center;
+      margin-bottom: 15px; }
+      #central-vietnam-travel section#all a.banner img {
+        width: 96%;
+        margin: 0 auto; }
+        #central-vietnam-travel section#all a.banner img.except-mobile-v {
+          display: none; }
+          @media screen and (min-width: 550px) {
+            #central-vietnam-travel section#all a.banner img.except-mobile-v {
+              display: block; } }
+        #central-vietnam-travel section#all a.banner img.mobile-v {
+          display: none; }
+          @media screen and (max-width: 550px) {
+            #central-vietnam-travel section#all a.banner img.mobile-v {
+              display: block; } }
+    #central-vietnam-travel section#all .section-experience {
+      background-image: linear-gradient(#ccf8f9, #ccf1fe);
+      padding: 30px 0;
+      margin: 0 5% 30px 5%;
+      width: 90%;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      flex-wrap: wrap;
+      align-items: center; }
+      @media screen and (max-width: 991px) {
+        #central-vietnam-travel section#all .section-experience {
+          width: 100%;
+          margin: 0 0 30px 0;
+          padding: 0 0 30px 0; } }
+      #central-vietnam-travel section#all .section-experience .experience-title {
+        flex: 0 0 60%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 15px 0;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        justify-content: center;
+        align-items: center; }
+        @media screen and (max-width: 991px) {
+          #central-vietnam-travel section#all .section-experience .experience-title {
+            flex: 0 0 70%; } }
+        @media screen and (max-width: 550px) {
+          #central-vietnam-travel section#all .section-experience .experience-title {
+            flex: 0 0 100%; } }
+        #central-vietnam-travel section#all .section-experience .experience-title .title-bg-left {
+          flex: 0 0 20%;
+          background-image: url("/images/campaign/centralvntravel/flower.png");
+          background-size: contain;
+          background-position: bottom;
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1); }
+          #central-vietnam-travel section#all .section-experience .experience-title .title-bg-left:before {
+            content: "";
+            display: block;
+            padding-top: 42%; }
+          @media screen and (max-width: 991px) {
+            #central-vietnam-travel section#all .section-experience .experience-title .title-bg-left {
+              flex: 0 0 20%;
+              margin-top: 0; } }
+          @media screen and (max-width: 550px) {
+            #central-vietnam-travel section#all .section-experience .experience-title .title-bg-left {
+              margin-top: 0px;
+              margin-right: -20px; } }
+        #central-vietnam-travel section#all .section-experience .experience-title .title-bg-right {
+          flex: 0 0 20%;
+          background-image: url("/images/campaign/centralvntravel/flower.png");
+          background-size: contain; }
+          #central-vietnam-travel section#all .section-experience .experience-title .title-bg-right:before {
+            content: "";
+            display: block;
+            padding-top: 42%; }
+          @media screen and (max-width: 991px) {
+            #central-vietnam-travel section#all .section-experience .experience-title .title-bg-right {
+              flex: 0 0 20%;
+              margin-top: 0; } }
+          @media screen and (max-width: 550px) {
+            #central-vietnam-travel section#all .section-experience .experience-title .title-bg-right {
+              margin-top: 0px;
+              margin-left: -20px; } }
+        #central-vietnam-travel section#all .section-experience .experience-title .title-bg {
+          flex: 0 0 40%; }
+          @media screen and (max-width: 550px) {
+            #central-vietnam-travel section#all .section-experience .experience-title .title-bg {
+              flex: 0 0 60%; } }
+        #central-vietnam-travel section#all .section-experience .experience-title h2 {
+          color: #039ce5;
+          font-family: city-font;
+          font-size: 3.5em;
+          font-weight: 900;
+          margin: 0; }
+          @media screen and (max-width: 991px) {
+            #central-vietnam-travel section#all .section-experience .experience-title h2 {
+              font-size: 1.75em; } }
+          @media screen and (max-width: 550px) {
+            #central-vietnam-travel section#all .section-experience .experience-title h2 {
+              font-size: 2.5em; } }
+      #central-vietnam-travel section#all .section-experience .title-desc {
+        flex: 0 0 90%;
+        text-align: center;
+        color: #039ce5;
+        font-size: 1em;
+        margin: 0 auto;
+        margin-bottom: 20px; }
+      #central-vietnam-travel section#all .section-experience .experience-title-s {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 1.25em;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 60%; }
+        #central-vietnam-travel section#all .section-experience .experience-title-s.subSection0 {
+          margin-top: 0; }
+        @media screen and (max-width: 1025px) {
+          #central-vietnam-travel section#all .section-experience .experience-title-s {
+            margin-top: 10px;
+            margin-bottom: 10px; } }
+        @media screen and (max-width: 550px) {
+          #central-vietnam-travel section#all .section-experience .experience-title-s {
+            flex: 0 0 95%; } }
+        #central-vietnam-travel section#all .section-experience .experience-title-s h5 {
+          color: #039ce5;
+          font-size: 1.25em; }
+          @media screen and (max-width: 991px) {
+            #central-vietnam-travel section#all .section-experience .experience-title-s h5 {
+              font-size: 1.5em; } }
+          @media screen and (max-width: 767px) {
+            #central-vietnam-travel section#all .section-experience .experience-title-s h5 {
+              font-size: 1.15em;
+              text-align: left; } }
+        #central-vietnam-travel section#all .section-experience .experience-title-s .address-icon {
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 8%;
+          margin-right: 2%; }
+          #central-vietnam-travel section#all .section-experience .experience-title-s .address-icon:before {
+            content: "";
+            display: block;
+            padding-top: 100%; }
+          @media screen and (max-width: 991px) {
+            #central-vietnam-travel section#all .section-experience .experience-title-s .address-icon {
+              width: 15%;
+              margin-right: 1%; } }
+      #central-vietnam-travel section#all .section-experience .experience-list-container {
+        flex: 0 0 100%;
+        overflow: hidden; }
+        @media screen and (max-width: 767px) {
+          #central-vietnam-travel section#all .section-experience .experience-list-container {
+            overflow-x: scroll; }
+            #central-vietnam-travel section#all .section-experience .experience-list-container::-webkit-scrollbar {
+              display: none; } }
+        #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list {
+          margin: 0 auto;
+          width: 96%;
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;
+          /* OLD - Firefox 19- (buggy but mostly works) */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Chrome */
+          display: flex;
+          /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+          @media screen and (max-width: 991px) {
+            #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list {
+              width: 100%; } }
+          #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list.reverse {
+            flex-flow: row-reverse; }
+            @media screen and (max-width: 767px) {
+              #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list.reverse {
+                flex-flow: row; } }
+          #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col {
+            width: 50%;
+            display: -webkit-box;
+            /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;
+            /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;
+            /* TWEENER - IE 10 */
+            display: -webkit-flex;
+            /* NEW - Chrome */
+            display: flex;
+            /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-flow: row wrap; }
+            @media screen and (max-width: 767px) {
+              #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col {
+                width: 90%;
+                margin-right: 1%;
+                flex-wrap: nowrap; } }
+            #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item {
+              background: none;
+              list-style: none;
+              flex: 1 1 49.5%;
+              margin-right: 0.5%; }
+              @media screen and (max-width: 767px) {
+                #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item {
+                  min-width: 300px;
+                  margin-right: 1%; } }
+              #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content {
+                position: relative;
+                display: block; }
+                #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content:before {
+                  padding-top: 50%; }
+                #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .banner {
+                  width: 100%;
+                  overflow: hidden;
+                  position: relative; }
+                  #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .banner:before {
+                    content: "";
+                    padding-top: 100%;
+                    display: block; }
+                  #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .banner .bg {
+                    top: -100%;
+                    left: 0;
+                    right: 0;
+                    bottom: -100%;
+                    margin: auto;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                    width: auto;
+                    height: 100%;
+                    position: absolute; }
+                #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  z-index: 999;
+                  width: 100%;
+                  height: 100%;
+                  background-color: rgba(0, 0, 0, 0.2);
+                  display: -webkit-box;
+                  /* OLD - iOS 6-, Safari 3.1-6 */
+                  display: -moz-box;
+                  /* OLD - Firefox 19- (buggy but mostly works) */
+                  display: -ms-flexbox;
+                  /* TWEENER - IE 10 */
+                  display: -webkit-flex;
+                  /* NEW - Chrome */
+                  display: flex;
+                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                  justify-content: center;
+                  -webkit-justify-content: center;
+                  flex-wrap: wrap;
+                  -webkit-flex-wrap: wrap;
+                  align-content: center;
+                  align-items: center;
+                  transition: all 0.4s ease-out;
+                  -webkit-transition: all 0.4s ease-out;
+                  padding: 15px 30px; }
+                  #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content:hover {
+                    background-color: rgba(0, 0, 0, 0); }
+                  @media screen and (max-width: 991px) {
+                    #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                      padding: 10px; } }
+                  @media screen and (max-width: 550px) {
+                    #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                      padding: 15px; } }
+                  #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                    font-weight: 500;
+                    color: #fff;
+                    font-size: 1.5em;
+                    line-height: 1.2;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    text-shadow: rgba(0, 0, 0, 0.5) 0.1em 0.1em 0.1em;
+                    width: 100%; }
+                    @media screen and (max-width: 1025px) {
+                      #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                        font-size: 1.2em; } }
+                    @media screen and (max-width: 767px) {
+                      #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                        font-size: 1.5em;
+                        width: 100%; } }
+                  #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .desc {
+                    font-size: 1em;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    text-align: left;
+                    padding: 0;
+                    margin: 0;
+                    width: 100%; }
+                  #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .price {
+                    font-weight: 500;
+                    font-size: 1.25em;
+                    color: #fff;
+                    width: 100%;
+                    text-shadow: rgba(0, 0, 0, 0.5) 0.1em 0.1em 0.1em; }
+                  #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    display: -webkit-box;
+                    /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box;
+                    /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox;
+                    /* TWEENER - IE 10 */
+                    display: -webkit-flex;
+                    /* NEW - Chrome */
+                    display: flex;
+                    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                    flex-wrap: wrap; }
+                    @media screen and (max-width: 1025px) {
+                      #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                        margin-top: 0; } }
+                    @media screen and (max-width: 767px) {
+                      #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                        padding-top: 0; } }
+                    #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container {
+                      display: -webkit-box;
+                      /* OLD - iOS 6-, Safari 3.1-6 */
+                      display: -moz-box;
+                      /* OLD - Firefox 19- (buggy but mostly works) */
+                      display: -ms-flexbox;
+                      /* TWEENER - IE 10 */
+                      display: -webkit-flex;
+                      /* NEW - Chrome */
+                      display: flex;
+                      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                      flex-wrap: wrap;
+                      width: 100%;
+                      display: none !important; }
+                      #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                        font-size: 0.8em;
+                        color: #75cee2;
+                        margin-right: 10px; }
+                        @media screen and (max-width: 550px) {
+                          #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                            font-size: 0.8em; } }
+                    #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .location, #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .price {
+                      display: none; }
+                #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container {
+                  background-image: linear-gradient(90deg, #00e2e6, #06b5f4);
+                  color: #fff;
+                  padding: 5px 15px;
+                  margin-top: 10px;
+                  text-align: center; }
+                  #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price {
+                    font-size: 1.2em; }
+                    @media screen and (max-width: 550px) {
+                      #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price {
+                        font-size: 1em; } }
+                    @media screen and (max-width: 320px) {
+                      #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price {
+                        font-size: 0.8em; } }
+                    #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price .ori-price {
+                      font-size: 0.8em;
+                      color: #fff;
+                      opacity: .5;
+                      text-decoration: line-through; }
+              #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item.highlight {
+                margin-bottom: 4px; }
+                @media screen and (max-width: 767px) {
+                  #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item.highlight {
+                    margin-bottom: 0; } }
+                #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item.highlight .content h3 {
+                  font-size: 1.8em;
+                  line-height: 1.5; }
+                  @media screen and (max-width: 767px) {
+                    #central-vietnam-travel section#all .section-experience .experience-list-container .experience-list .list-col .list-item.highlight .content h3 {
+                      font-size: 1.5em;
+                      width: 100%; } }
+        #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-1-items .list-col, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-2-items .list-col, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-3-items .list-col, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-4-items .list-col {
+          width: 100%; }
+          #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-1-items .list-col .list-item, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-2-items .list-col .list-item, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-3-items .list-col .list-item, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-4-items .list-col .list-item {
+            flex: 1 1 24.5%;
+            margin-right: 0.5%;
+            padding: 15px;
+            background-color: #e6f8ff; }
+            #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-1-items .list-col .list-item:last-child, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-2-items .list-col .list-item:last-child, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-3-items .list-col .list-item:last-child, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-4-items .list-col .list-item:last-child {
+              margin-right: 0%; }
+            #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-1-items .list-col .list-item .list-content, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-2-items .list-col .list-item .list-content, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-3-items .list-col .list-item .list-content, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-4-items .list-col .list-item .list-content {
+              height: calc(100% - 42px); }
+        #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-1-items.row-with-1-items .list-item, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-2-items.row-with-1-items .list-item, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-3-items.row-with-1-items .list-item, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-4-items.row-with-1-items .list-item {
+          flex: 1 1 100%;
+          margin-right: 0; }
+        #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-1-items.row-with-2-items .list-item, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-2-items.row-with-2-items .list-item, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-3-items.row-with-2-items .list-item, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-4-items.row-with-2-items .list-item {
+          flex: 1 1 49%; }
+        #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-1-items.row-with-3-items .list-item, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-2-items.row-with-3-items .list-item, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-3-items.row-with-3-items .list-item, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-4-items.row-with-3-items .list-item {
+          flex: 1 1 32.33%; }
+        #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-1-items .price, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-2-items .price, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-3-items .price, #central-vietnam-travel section#all .section-experience .experience-list-container.row-with-4-items .price {
+          display: none; }
+      #central-vietnam-travel section#all .section-experience .see-more {
+        background-image: linear-gradient(90deg, #00e2e6, #06b5f4);
+        color: #fff;
+        padding: 5px 15px;
+        margin: 0 auto;
+        text-align: center; }
+    #central-vietnam-travel section#all .banner-container {
+      width: 90%;
+      margin: 0 auto; }
+      @media screen and (max-width: 550px) {
+        #central-vietnam-travel section#all .banner-container {
+          width: 100%; } }
+      #central-vietnam-travel section#all .banner-container .except-mobile-v {
+        display: block; }
+        @media screen and (min-width: 550px) {
+          #central-vietnam-travel section#all .banner-container .except-mobile-v {
+            display: none !important; } }
+      #central-vietnam-travel section#all .banner-container .mobile-v {
+        display: none; }
+        @media screen and (max-width: 550px) {
+          #central-vietnam-travel section#all .banner-container .mobile-v {
+            display: block !important; } }
+  #central-vietnam-travel .terms {
+    color: #039ce5;
+    font-size: 0.86em;
+    line-height: 1.5;
+    word-break: break-word;
+    word-wrap: break-word;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0 50px 0; }
+    @media screen and (max-width: 1025px) {
+      #central-vietnam-travel .terms {
+        width: 90%; } }
+    @media screen and (max-width: 767px) {
+      #central-vietnam-travel .terms {
+        width: 90%; } }
+    #central-vietnam-travel .terms b {
+      color: #039ce5; }
+  #central-vietnam-travel .floating-icons {
+    font-size: 1.2em;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+    z-index: 100000;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out; }
+    #central-vietnam-travel .floating-icons.show {
+      opacity: 1; }
+    @media screen and (max-width: 767px) {
+      #central-vietnam-travel .floating-icons {
+        display: none !important; } }
+    #central-vietnam-travel .floating-icons .address-icon {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: contain;
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+      display: none !important; }
+      @media screen and (max-width: 767px) {
+        #central-vietnam-travel .floating-icons .address-icon {
+          width: 30px;
+          height: 30px; } }
+    #central-vietnam-travel .floating-icons > div {
+      display: block;
+      background-color: rgba(163, 235, 224, 0.8);
+      color: #fff;
+      padding: 5px 30px 5px 15px;
+      box-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+      #central-vietnam-travel .floating-icons > div h6 {
+        font-size: 1em;
+        color: #fff; }
+      #central-vietnam-travel .floating-icons > div.active {
+        background-color: #039ce5; }
+  #central-vietnam-travel section#spotlight {
+    margin-bottom: 50px; }
+    #central-vietnam-travel section#spotlight .list-item.slick-current .list-content, #central-vietnam-travel section#spotlight .list-item:hover .list-content, #central-vietnam-travel section#spotlight .destinations .list-item .list-content {
+      background-color: #039ce5; }
+    @media screen and (max-width: 767px) {
+      #central-vietnam-travel section#spotlight .main-logo-container {
+        justify-content: center;
+        text-align: center; }
+      #central-vietnam-travel section#spotlight .drag-content {
+        width: 96%;
+        margin: 0 auto; } }
+
+body.zh-hk .experience-title h2 {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", "PingFang TC", "\5FAE\8F6F\6B63\9ED1", "Microsoft JhengHei", "\534E\6587\7EC6\9ED1", "STHeiti", sans-serif !important;
+  font-size: 2.5em !important; }
+  @media screen and (max-width: 991px) {
+    body.zh-hk .experience-title h2 {
+      font-size: 1.75em; } }
+  @media screen and (max-width: 550px) {
+    body.zh-hk .experience-title h2 {
+      font-size: 2em !important; } }

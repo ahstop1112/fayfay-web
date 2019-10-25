@@ -1,0 +1,618 @@
+@import 'include/variable';
+
+.breadcrumb-section{
+    margin-top: 90px;
+
+    @media screen and (max-width: $mobile-h) {
+        margin-top: 60px;
+    }
+}
+
+.cart-section {
+
+    .table-title, .table-activity, .table-expired{
+
+        .greyborderbox, .bg-light-grey {
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            -webkit-justify-content: flex-start;
+            justify-content: flex-start;
+
+            -webkit-align-items: flex-start;
+            align-items: flex-start;
+
+            margin-bottom: 0;
+
+            padding: $padding;
+            border-left: 0;
+            border-right: 0;
+
+            @media screen and (max-width: $tablet-v) {
+                -ms-flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+
+            @media screen and (max-width: $mobile-h) {
+                -webkit-align-items: flex-start;
+                align-items: flex-start;
+
+                padding: 15px 0;
+            }
+
+            .photo{
+                width: 20%;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+
+
+
+                @media screen and (max-width: $tablet-h) {
+                    width: 15%;
+                }
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 25%;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 90%;
+                    margin-left: 10%;
+                    margin-bottom: 10px;
+                    margin-top: -15px;
+                }
+
+                img{
+                    position: absolute;
+                    top:-100%; left:0; right: 0; bottom:-100%;
+                    margin: auto;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .name{
+                width: 36%;
+                padding-left: 2%;
+
+                &.name-th{
+                    line-height: 2.5;
+                }
+
+                .content{
+                    color: $main-color;
+                    margin-left: 5px;
+                    font-weight: 500;
+
+                    @media screen and (max-width: $tablet-h) {
+                        margin-left: 0;
+                    }
+                }
+
+                h5{
+                    margin-top: 0;
+                    margin-bottom: 5px;
+                }
+
+                p.desc{
+                    color: $light-grey;
+                }
+
+                b{
+                    font-weight: 500;
+
+                    @media screen and (max-width: $tablet-h) {
+                        display: block;
+                    }
+                }
+
+                @media screen and (max-width: $tablet-h) {
+                    width: 33%;
+                }
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 45%;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    width: 64%;
+
+
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 90%;
+                    padding-left: 10%;
+
+                    b{ display: block;}
+                }
+
+                h5{
+                    margin-right: 5px;
+
+
+                    @media screen and (max-width: $tablet-v) {
+                        font-size: 1.2em;
+                        line-height: 1.5;
+                        margin-bottom: 5px;
+                        font-weight: 700;
+
+                    }
+                }
+
+                .desc {
+
+                    @media screen and (max-width: $tablet-v) {
+                        margin: 5px 5px 5px 0;
+                    }
+                }
+
+                a {
+                    color: $main-font-color;
+                };
+            }
+            .date {
+                width: 14%;
+                padding-right: 1%;
+
+                //color: $dark-grey;
+                line-height: 1.8;
+
+                @media screen and (max-width: $tablet-h) {
+                    width: 18%;
+                }
+
+                &.date-th{
+                    line-height: 2.5;
+                }
+                &.date-tr{
+                    font-size: 1.1em;
+                    text-align: center;
+                }
+
+                p{
+                    margin: 0;
+                }
+
+                @media screen and (max-width: $tablet-v) {
+                    line-height: 1.5;
+                    margin-top: 0;
+                    width: 22%;
+                }
+            }
+            .price-tr {
+                width: 15%;
+            }
+            .input-group {
+                width: 14%;
+                padding-right: 1%;
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 15%;
+                    //margin-top: 0;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    width: 30%;
+                    margin-left: 35%;
+                    margin-top: -25px;
+                    //margin-top: 0;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 50%;
+                    margin-left: 40%;
+                    margin-top: -25px;
+                    //margin-top: 0;
+                }
+
+                .input-group-btn, .input-number {
+                    font-size: 1em;
+                    text-align: center;
+
+                    button.number{
+                        font-size: 1em;
+                        text-align: center;
+                        padding: 5px;
+                    }
+                }
+
+                .fix-zindex{
+                    z-index: inherit !important
+                }
+            }
+            .hr{
+                border-top: 1px solid $border-grey;
+                margin: 10px 0;
+                width: 100%;
+            }
+            .price-th {
+                color: $main-font-color;
+                text-align: center;
+                line-height: 1.8;
+
+                &.price-th{
+                    line-height: 2.5;
+                }
+
+                &.price-tr{
+                    font-size: 1.1em;
+                }
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 65%;
+                    padding-left: 32%;
+                    text-align: left;
+                }
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 65%;
+                    padding-left: 27%;
+                    text-align: left;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 60%;
+                    padding-left: 40%;
+                    text-align: left;
+                }
+
+                .currency{
+                    color: $main-color;
+                    margin-right: 0;
+                }
+
+                b{
+                    font-weight: 500;
+                    font-size: 0.93em;
+
+                    @media screen and (max-width: $tablet-h) {
+                        display: block;
+                    }
+                }
+            }
+            .reviews{
+                width: 50%;
+                text-align: left;
+                padding-left: 2%;
+                padding-bottom: $padding;
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 100%;
+                    margin-top: $padding;
+                    border-top: 1px solid $border-grey;
+                }
+
+                .bottom{
+                    -webkit-justify-content: flex-start;
+                    justify-content: flex-start;
+                    margin: 0;
+
+                    @media screen and (max-width: $tablet-v) {
+                        width: 100%;
+                        margin-bottom: $padding;
+                        border-bottom: 1px solid $border-grey;
+                    }
+                }
+
+                textarea{
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 100px;
+                    border: 1px solid $border-grey;
+                    resize: none;
+                    padding: 5px;
+
+                    &::placeholder {
+                        color: $border-grey;
+                        font-weight: normal;
+                    }
+                }
+            }
+            .edit-delete{
+                text-align: right;
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 100%;
+                    margin: 10px 0;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    width: 100%;
+                    text-align: right;
+                    margin: 0;
+                }
+
+                .btn{
+                    font-size: 0.9em;
+                    padding: 5px 15px;
+                }
+
+                a{
+                    color: #aaa;
+                    padding: 0 15px;
+                    cursor: pointer;
+
+                    @media screen and (max-width: $mobile-h) {
+                        padding: 0 5px;
+                    }
+                }
+
+                .popup-details{
+                    width: 25%;
+
+                    background-color: $bg-grey;
+                    position: absolute;
+                    z-index: 999;
+                    margin-top: -3%;
+                    margin-left: -17.5%;
+                    display: none;
+                    box-shadow: $shadow;
+                    text-align: left;
+                    //display: none;
+
+                    @media screen and (max-width: $tablet-v) {
+                        width: 42%;
+                        margin-top: -5.5%;
+                        margin-left: 28%;
+                    }
+
+                    //@media screen and (max-width: $mobile-h) {
+                    //    width: 70%;
+                    //    margin-top: -20%;
+                    //    margin-left: 10%;
+                    //}
+
+                    /*iphone x*/
+                    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation:  landscape){
+                        width: 100%;
+                        height: 100%;
+                        max-height: 100%;
+                        position: fixed;
+                        //border: 1px solid red;
+                        //min-height: 100%;
+                        overflow-x: hidden;
+                        overflow-y: scroll;
+                        margin-top: 0;
+                        margin-left: 0;
+                        top: 0;
+                        left: 0;
+                        z-index: 9999;
+                        padding: 0;
+                    }
+
+                    @media screen and (max-width: $mobile-h) {
+                        width: 100%;
+                        height: 100%;
+                        max-height: 100%;
+                        position: fixed;
+                        //border: 1px solid red;
+                        //min-height: 100%;
+                        overflow-x: hidden;
+                        overflow-y: scroll;
+                        margin-top: 0;
+                        margin-left: 0;
+                        top: 0;
+                        left: -100%;
+                        opacity: 1;
+                        z-index: 100003;
+                        padding: 0;
+                        -webkit-transition: $fadeIn;
+                        transition: $fadeIn;
+                    }
+
+                    .popup-header{
+                        background-color: $white;
+                        width: 100%;
+                        padding: 0;
+                        display: none;
+
+                        @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation:  landscape) {
+                            display: block;
+                        }
+
+                        @media screen and (max-width: $mobile-h) {
+                            display: block;
+                        }
+
+                        .icon{
+                            margin: $padding;
+                        }
+
+                        h5{
+                            line-height: 30px;
+                        }
+                    }
+
+                    .popup-body{
+                        padding: $padding;
+                        color: $main-font-color;
+
+                        h6{
+                            width: 50%;
+                        }
+
+                        h6, .price{
+                            display: inline-block;
+
+
+
+                            &.price, &.price .currency{
+                                font-size: 1em;
+                                color: $main-font-color;
+
+                            }
+
+                            del{
+                                display: none;
+                            }
+                        }
+
+                        .input-group{
+                            width: 40%;
+                            padding-top: 15px;
+                            padding-right: 10px;
+
+                            @media screen and (max-width: $tablet-v) {
+                                width: 45%;
+                                padding-top: 15px;
+                                margin-top: 0;
+                            }
+                        }
+
+                        .price{
+                            margin: 0; padding: 0;
+                        }
+
+                        .arrow{
+                            width: 0;
+                            height: 0;
+                            position: absolute;
+                            top: 20px;
+                            right: -10px;
+
+                            border-top: 10px solid transparent;
+                            border-bottom: 10px solid transparent;
+
+                            border-left: 10px solid $bg-grey;
+
+                            @media screen and (max-width: $mobile-h) {
+                                top: 28%;
+                            }
+                        }
+
+                        .desc{
+                            margin-bottom: $padding;
+                        }
+
+                        .btn{
+                            width: 100%;
+                        }
+                    }
+
+                    &.opened{
+                        display: block;
+
+                        @media screen and (max-width: $mobile-h) {
+                            left: 0;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .table-title {
+        font-size: 1.1em;
+        line-height: 1.5;
+        vertical-align: middle;
+        border: 1px solid #f5f5f5;
+        border-bottom: 0;
+
+        .bg-light-grey{
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            display: none;
+        }
+
+        .photo{
+            height: auto !important;
+        }
+
+        .radio-group .checkmark {
+            background-color: $white;
+        }
+
+        .price{
+            font-size: 1em;
+        }
+
+        .reviews{
+            padding-bottom: 0 !important;
+        }
+    }
+
+    .table-activity{
+        .photo:before {
+            content: "";
+            padding-top: 56.25%;
+            display: block;
+        }
+    }
+
+    .table-expired{
+
+        .greyborderbox{
+            background-color: $bg-grey;
+        }
+
+        input[type=radio], .checkmark{
+            display: none;
+        }
+
+        .input-group, .edit-delete{
+            opacity: .5;
+        }
+
+        h5, .desc, .date,.price, .mobile-date, span, a{
+            color: $light-grey !important;
+        }
+        .alert{
+            padding: 0;
+            margin: 0;
+            color: #f00;
+            font-size: 0.9em;
+            line-height: 1.2em;
+        }
+    }
+
+    .total-box{
+
+        &.greyborderbox > div{
+            line-height: 40px;
+            font-size: 1em;
+
+            @media screen and (max-width: $mobile-h) {
+                line-height: 2;
+            }
+        }
+
+        a{
+            line-height: 2;
+            padding-right: 15px;
+            cursor: pointer;
+            color: $main-font-color;
+
+            @media screen and (max-width: $mobile-v) {
+                float: right;
+            }
+        }
+
+        .btn-s{
+
+            @media screen and (max-width: $mobile-v) {
+                width: 100%;
+            }
+        }
+
+    }
+    .form-control[disabled] {
+        background-color: $white;
+        cursor: pointer;
+    }
+}
+
+.section-4-big-items{
+    .list-content{
+        display: block;
+    }
+}

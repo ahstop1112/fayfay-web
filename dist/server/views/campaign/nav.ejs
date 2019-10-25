@@ -1,0 +1,50 @@
+<%
+const currencyList = ['USD', 'VND', 'HKD', 'TWD', 'CNY', 'SGD', 'MYR'];
+const languageList = [{ name: 'English', locale: 'en-us' }, { name: '繁體中文', locale: 'zh-hk' }, { name: 'Tiếng Việt', locale: 'vi-vn' }];
+%>
+<nav class="navigation-menu hidden-xs hidden-sm">
+    <div class="navbar">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-right">
+                <li>
+                    <a class="dropdown-item"
+                       href="/change-lang/zh-hk">中</a>
+                </li>|
+                <li>
+                    <a class="dropdown-item"
+                       href="/change-lang/en-us">EN</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<nav id="mainNav-mobile">
+    <ul>
+        <li>
+            <a href="<%= langUrl %>/"><i class="icon home"></i><%= translations['common.home'] %></a>
+        </li>
+        <li>
+            <a href="#"><i class="icon globe"></i><%= translations['common.language.list'] %> <span
+                    class="menu-right"><%= languageText %></span></a>
+            <ul class="Vertical">
+                <% languageList.forEach(function (language) {
+                if (language.locale !== locale ) { %>
+                    <li><a href="/change-lang/<%= language.locale %>"><%= language.name %></a></li>
+                <% } }); %>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div class="header-menu-mobile visible-xs visible-sm">
+    <a id="btn-menu-mobile" href="#mainNav-mobile">
+        <i class="icon bars"></i>
+    </a>
+</div>

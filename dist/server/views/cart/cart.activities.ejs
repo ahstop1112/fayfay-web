@@ -1,0 +1,438 @@
+<h4 class="visible-xs">Shopping Cart</h4>
+    <div class="table-title">
+        <div class="bg-light-grey">
+            <div class="radio-photo">
+                <div class="form-group radio-group">
+                    <label><input type="radio" name="payment_type" value="all">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="photo">All</div>
+            <div class="name">Activity Description</div>
+            <div class="date hidden-xs">Activity Date</div>
+            <div class="price hidden-xs">Subtotal</div>
+            <div class="edit-delete hidden-sm"></div>
+        </div>
+    </div>
+    <div class="table-activity">
+        <div class="greyborderbox">
+            <div class="radio-photo">
+                <div class="form-group radio-group">
+                    <label><input type="radio" name="payment_type" value="all">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="/images/danang.jpg">
+            </div>
+            <div class="name">
+                <h5>Da Dang Day Trip (Pick Up)</h5>
+                <p class="desc">
+                    with hotel pickup<br>
+                    Adult x 1, Child x 1
+                </p>
+                <p class="mobile-date visible-xs">
+                    <b>Activity Date :</b> <span>14 March 2018</span>
+                </p>
+            </div>
+            <div class="date visible-sm visible-md visible-lg"> 14 March 2018</div>
+            <div class="hr visible-xs"></div>
+            <div class="price">HKD $4,500</div>
+            <div class="hr visible-sm"></div>
+            <div class="edit-delete">
+                <a class="popup-edit" id="popup-edit-1">Edit</a> | <a data-toggle="modal" data-target="#delete-package-1">Delete</a>
+                <div id="popup-edit-container-1" class="popup-details">
+                    <div class="popup-header">
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <i class="icon arrow-left close-popup-details"></i>
+                            </div>
+                            <div class="col-xs-7">
+                                <h4>Edit</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-body">
+                        <h5 class="visible-xs">Da Dang Day Trip (Pick Up)</h5>
+                        <p class="desc visible-xs">
+                            with hotel pickup
+                        </p>
+                        <hr class="visible-xs">
+                        <div class="form-group  package-date">
+                            <label htmlFor="package-select-date"><%= translations['common.select.date']%></label>
+                            <select class="selectpicker" id="package-select-date">
+                                <option value=""><%= translations['common.please.select']%></option>
+                            </select>
+                        </div>
+                        <div class="form-group  package-time">
+                            <label htmlFor="package-select-time"><%= translations['common.select.time']%></label>
+                            <select class="selectpicker" id="package-select-time">
+                                <option value="0"><%= translations['common.please.select']%></option>
+                            </select>
+                        </div>
+                        <div class="form-group package-qty-row">
+                            <label htmlFor="package-select-time"><%= translations['package.quantity']%></label>
+                            <div class="row">
+                                <div class="col-md-7 col-sm-6 col-xs-6">
+                                    <h6>Adult</h6>
+                                    <span class="price">HKD$ 250</span>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6 txt-right input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn number" data-type="minus" data-field="quant[1]">
+                                    <span class="fas fa-minus"></span>
+                                </button>
+                            </span>
+                                    <input type="text" name="quant[1]" class="form-control input-number" value="100" min="100" max="100">
+                                    <span class="input-group-btn">
+                                <button type="button" class="btn number" disabled data-type="plus" data-field="quant[1]">
+                                    <span class="fas fa-plus"></span>
+                                </button>
+                            </span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-7 col-sm-6 col-xs-6 ">
+                                    <h6>Child</h6>
+                                    <span class="price">HKD$ 200</span>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6 txt-right input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn number" data-type="minus" data-field="quant[1]">
+                                    <span class="fas fa-minus"></span>
+                                </button>
+                            </span>
+                                    <input type="text" name="quant[1]" class="form-control input-number" value="100" min="100" max="100">
+                                    <span class="input-group-btn">
+                                <button type="button" class="btn number" disabled data-type="plus" data-field="quant[1]">
+                                    <span class="fas fa-plus"></span>
+                                </button>
+                            </span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 txt-right">
+                                    <button class="btn btn-s grey close-popup-details">Cancel</button>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 ">
+                                    <button class="btn btn-s">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="delete-package-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Do you wanna delete this package?</h5>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="row">
+                                    <div class="col-md-offset-2 col-md-4 col-xs-6">
+                                        <button type="button" class="btn btn-lg grey" data-dismiss="modal">Close</button>
+                                    </div>
+                                    <div class="col-md-4 col-xs-6">
+                                        <button type="button" class="btn btn-lg ">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="greyborderbox">
+            <div class="radio-photo">
+                <div class="form-group radio-group">
+                    <label><input type="radio" name="payment_type" value="all">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="/images/danang.jpg">
+            </div>
+            <div class="name">
+                <h5>Da Dang Day Trip (Pick Up)</h5>
+                <p class="desc">
+                    with hotel pickup<br>
+                    Adult x 1, Child x 1
+                </p>
+                <p class="mobile-date visible-xs">
+                    <b>Activity Date :</b> <span>14 March 2018</span>
+                </p>
+            </div>
+            <div class="date visible-sm visible-md visible-lg"> 14 March 2018</div>
+            <div class="hr visible-xs"></div>
+            <div class="price">HKD $4,500</div>
+            <div class="hr visible-sm"></div>
+            <div class="edit-delete">
+                <a class="popup-edit" id="popup-edit-2">Edit</a> | <a data-toggle="modal" data-target="#delete-package-1">Delete</a>
+                <div id="popup-edit-container-2" class="popup-details">
+                    <div class="popup-header">
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <i class="icon arrow-left close-popup-details"></i>
+                            </div>
+                            <div class="col-xs-7">
+                                <h4>Edit</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-body">
+                        <h5 class="visible-xs">Da Dang Day Trip (Pick Up)</h5>
+                        <p class="desc visible-xs">
+                        with hotel pickup
+                        </p>
+                        <hr class="visible-xs">
+                        <div class="form-group  package-date">
+                            <label htmlFor="package-select-date"><%= translations['common.select.date']%></label>
+                            <select class="selectpicker" id="package-select-date">
+                                <option value=""><%= translations['common.please.select']%></option>
+                            </select>
+                        </div>
+                        <div class="form-group  package-time">
+                            <label htmlFor="package-select-time"><%= translations['common.select.time']%></label>
+                            <select class="selectpicker" id="package-select-time">
+                                <option value="0"><%= translations['common.please.select']%></option>
+                            </select>
+                        </div>
+                        <div class="form-group package-qty-row">
+                            <label htmlFor="package-select-time"><%= translations['package.quantity']%></label>
+                            <div class="row">
+                                <div class="col-md-7 col-sm-6 col-xs-6">
+                                    <h6>Adult</h6>
+                                    <span class="price">HKD$ 250</span>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6 txt-right input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn number" data-type="minus" data-field="quant[1]">
+                                    <span class="fas fa-minus"></span>
+                                </button>
+                            </span>
+                                    <input type="text" name="quant[1]" class="form-control input-number" value="100" min="100" max="100">
+                                    <span class="input-group-btn">
+                                <button type="button" class="btn number" disabled data-type="plus" data-field="quant[1]">
+                                    <span class="fas fa-plus"></span>
+                                </button>
+                            </span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-7 col-sm-6 col-xs-6 ">
+                                    <h6>Child</h6>
+                                    <span class="price">HKD$ 200</span>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6 txt-right input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn number" data-type="minus" data-field="quant[1]">
+                                    <span class="fas fa-minus"></span>
+                                </button>
+                            </span>
+                                    <input type="text" name="quant[1]" class="form-control input-number" value="100" min="100" max="100">
+                                    <span class="input-group-btn">
+                                <button type="button" class="btn number" disabled data-type="plus" data-field="quant[1]">
+                                    <span class="fas fa-plus"></span>
+                                </button>
+                            </span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 txt-right">
+                                    <button class="btn btn-s grey close-popup-details">Cancel</button>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 ">
+                                    <button class="btn btn-s">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="delete-package-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Do you wanna delete this package?</h5>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="row">
+                                    <div class="col-md-offset-2 col-md-4 col-xs-6">
+                                        <button type="button" class="btn btn-lg grey" data-dismiss="modal">Close</button>
+                                    </div>
+                                    <div class="col-md-4 col-xs-6">
+                                        <button type="button" class="btn btn-lg ">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="greyborderbox">
+            <div class="radio-photo">
+                <div class="form-group radio-group">
+                    <label><input type="radio" name="payment_type" value="all">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="/images/danang.jpg">
+            </div>
+            <div class="name">
+                <h5>Da Dang Day Trip (Pick Up)</h5>
+                <p class="desc">
+                    with hotel pickup<br>
+                    Adult x 1, Child x 1
+                </p>
+                <p class="mobile-date visible-xs">
+                    <b>Activity Date :</b> <span>14 March 2018</span>
+                </p>
+            </div>
+            <div class="date visible-sm visible-md visible-lg"> 14 March 2018</div>
+            <div class="hr visible-xs"></div>
+            <div class="price">HKD $4,500</div>
+            <div class="hr visible-sm"></div>
+            <div class="edit-delete">
+                <a class="popup-edit" id="popup-edit-3">Edit</a> | <a data-toggle="modal" data-target="#delete-package-1">Delete</a>
+                <div id="popup-edit-container-3" class="popup-details">
+                    <div class="popup-header">
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <i class="icon arrow-left close-popup-details"></i>
+                            </div>
+                            <div class="col-xs-7">
+                                <h4>Edit</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-body">
+                        <h5 class="visible-xs">Da Dang Day Trip (Pick Up)</h5>
+                        <p class="desc visible-xs">
+                        with hotel pickup
+                        </p>
+                        <hr class="visible-xs">
+                        <div class="form-group  package-date">
+                            <label htmlFor="package-select-date"><%= translations['common.select.date']%></label>
+                            <select class="selectpicker" id="package-select-date">
+                                <option value=""><%= translations['common.please.select']%></option>
+                            </select>
+                        </div>
+                        <div class="form-group  package-time">
+                            <label htmlFor="package-select-time"><%= translations['common.select.time']%></label>
+                            <select class="selectpicker" id="package-select-time">
+                                <option value="0"><%= translations['common.please.select']%></option>
+                            </select>
+                        </div>
+                        <div class="form-group package-qty-row">
+                            <label htmlFor="package-select-time"><%= translations['package.quantity']%></label>
+                            <div class="row">
+                                <div class="col-md-7 col-sm-6 col-xs-6">
+                                    <h6>Adult</h6>
+                                    <span class="price">HKD$ 250</span>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6 txt-right input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn number" data-type="minus" data-field="quant[1]">
+                                    <span class="fas fa-minus"></span>
+                                </button>
+                            </span>
+                                    <input type="text" name="quant[1]" class="form-control input-number" value="100" min="100" max="100">
+                                    <span class="input-group-btn">
+                                <button type="button" class="btn number" disabled data-type="plus" data-field="quant[1]">
+                                    <span class="fas fa-plus"></span>
+                                </button>
+                            </span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-7 col-sm-6 col-xs-6 ">
+                                    <h6>Child</h6>
+                                    <span class="price">HKD$ 200</span>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6 txt-right input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn number" data-type="minus" data-field="quant[1]">
+                                    <span class="fas fa-minus"></span>
+                                </button>
+                            </span>
+                                    <input type="text" name="quant[1]" class="form-control input-number" value="100" min="100" max="100">
+                                    <span class="input-group-btn">
+                                <button type="button" class="btn number" disabled data-type="plus" data-field="quant[1]">
+                                    <span class="fas fa-plus"></span>
+                                </button>
+                            </span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6 txt-right">
+                                    <button class="btn btn-s grey close-popup-details">Cancel</button>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6 ">
+                                    <button class="btn btn-s">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="delete-package-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Do you wanna delete this package?</h5>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="row">
+                                    <div class="col-md-offset-2 col-md-4 col-xs-6">
+                                        <button type="button" class="btn btn-lg grey" data-dismiss="modal">Close</button>
+                                    </div>
+                                    <div class="col-md-4 col-xs-6">
+                                        <button type="button" class="btn btn-lg ">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<br>

@@ -1,0 +1,217 @@
+@import 'include/variable';
+.terms-header-section {
+    padding-top: 80px;
+
+    @media screen and (max-width: $mobile-h) {
+        padding-top: 60px;
+    }
+}
+
+//
+
+.terms-tabs-section {
+    border: 1px solid #eee;
+    box-shadow: $shadow;
+    padding-bottom: 0;
+
+    @media screen and (max-width: $mobile-h) {
+        padding-bottom: 10px;
+    }
+
+    .nav-pills {
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+        justify-content: center;
+        border-spacing: 0;
+
+        li {
+            width: auto;
+            border: 0;
+            border-radius: 0;
+            font-size: 1em;
+            text-transform: inherit;
+            text-align: center;
+            a{
+                padding: 10px 15px;
+            }
+            &.active {
+                a {
+                    border-radius: 0;
+                    background: none;
+                    color: $main-color;
+                    border-bottom: 2px solid $main-color;
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+
+    &.scroll {
+        position: fixed;
+        top: 80px;
+        z-index: $lv3;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+
+        /* transitions */
+        -webkit-transition: $fadeIn;
+        -moz-transition: $fadeIn;
+        -ms-transition: $fadeIn;
+        -o-transition: $fadeIn;
+        transition: $fadeIn;
+
+        .nav-pills {
+            li{
+                background: none;
+            }
+        }
+
+    }
+
+    .bootstrap-select{
+        border: 1px solid $border-grey;
+        padding: 10px;
+        font-size: 1.1em;
+
+    }
+}
+
+.terms-tabs-content-section {
+    background-color: #eee;
+    padding: 30px 0;
+    padding-top: 10px;
+
+    h3{
+        color: $main-font-color;
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+
+    .tab-pane{
+        padding: 0 30px;
+
+        @media screen and (max-width: $tablet-v) {
+            padding: 0 15px;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            padding: 0 ;
+        }
+    }
+
+    b{color: $main-font-color; font-weight: 500;}
+
+    p{margin-bottom: 10px;}
+
+    .row{
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: $mobile-h) {
+            display: block;
+        }
+    }
+
+    .whitebox{
+
+        .img{
+            border-bottom: 2px solid $main-color;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+
+            img{
+                height: 120px;
+                width: auto;
+                max-width: 100%;
+
+                @media screen and (max-width: $tablet-v) {
+                    height: 80px;
+                }
+            }
+        }
+        .date{
+            font-size: 1.1em;
+            color: $main-color;
+        }
+        h5{
+            color: $main-font-color;
+        }
+    }
+
+    .release-news{
+        ul.listing-terms{
+            margin: 0;
+
+            li{
+                padding: 20px;
+                margin-bottom: 10px;
+                background-color: $white;
+
+                .date{
+                    font-size: 1.1em;
+                    color: $main-color;
+                    width: 25%;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+
+    ol.listing-terms {
+        margin: 0 20px;
+
+        font-size: 1em;
+        font-weight: normal;
+
+        @media screen and (max-width: $mobile-h) {
+            margin-left: 0;
+        }
+
+       li {
+            display: block;
+            padding-bottom: 5px;
+            text-align: justify;
+
+            &:before {
+                font-weight: bold;
+            }
+
+           p{
+               margin-left: 10px;
+            }
+
+            ol{
+                margin-left: 20px;
+                list-style-position:outside;
+
+                @media screen and (max-width: $mobile-h) {
+                    margin-left: 10px;
+                }
+
+                li {
+                    display: block;
+                    padding-bottom: 5px;
+                    padding-left: 20px;
+
+                    &:before {
+                        margin-left: -28px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

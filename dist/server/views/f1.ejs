@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['f1.desc'] %>">
+    <meta name="keywords" content="<%= translations['f1.title'] %>, Vietnam Grand Prix, Vietnam F1, Vietnam Formula 1, Vietnam grand prix, Formula 1 Vietnam, 越南F1, 河內F1, 河內一級方程式, 越南一級方程式, 感受河內F1街頭賽車的風馳電掣, Experience the excitement of street racing in Hanoi F1, Trải nghiệm sức nóng của chặng đua tại thủ đô Hà Nội với Hanoi F1,f1, formula 1, grand prix, formula one, , đua xe f1, đua xe công thức 1, xe f1, giải đua xe f1, đua xe f1 việt nam, giải đua f1 hà nội, xe đua f1, hà nội f1, f1 hanoi, xe đua f1, đua f1, 一級 方程式, 陳恩能, 2019 f1, 一級 方程式 賽車, 一級 方程式 直播, 2019 年 世界 一級 方程式 錦標賽, vietnam f1, 一級 方程式 車手, f1 賽車 2019, f1 賽車 規格, hanoi f1, vietnam formula 1, vietnam grand prix, 一級 方程式 賽車 2019, 越南 f1, 一級方程式2019, 河內f1">
+    <title><%= translations['f1.title'] %> | Fayfay.com</title>
+    <%
+        if (locale == 'zh-hk' || locale == 'zh-cn'){
+    %>
+        <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/v1563518065/fayfay-media/common/f1-og-tc.jpg"/>
+    <%
+        }else{
+    %>
+        <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/v1563518065/fayfay-media/common/f1-og-en.jpg"/>
+    <% } %>
+    <meta property="og:image:alt" content="<%= translations['f1.title']  %>"/>
+    <meta property="og:title" content="<%= translations['f1.title'] %>"/>
+    <meta property="og:description" content="<%= translations['f1.desc'] %>"/>
+
+    <% include include/gtm.header.ejs %>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/f1.css">
+</head>
+
+<body class="f1-campaign-bg <%= locale%>">
+<% include include/gtm.body.ejs %>
+
+    <div id="f1">
+        <% include f1/f1.header.ejs %>
+        <% include f1/f1.big.title.ejs %>
+        <% include f1/f1.video.ejs %>
+        <% include f1/f1.countdown.ejs %>
+        <% include f1/f1.anticipated.ejs %>
+        <% include f1/f1.tickets.ejs %>
+        <% include f1/f1.timetable.ejs %>
+        <% include f1/f1.categories.ejs %>
+        <% include f1/f1.form.ejs %>
+        <% include f1/f1.grid.ejs %>
+        <% include f1/f1.must.haves.ejs %>
+        <% include f1/f1.authentic.exp.ejs %>
+        <% include f1/f1.subscribe.ejs %>
+        <% include f1/f1.faq.ejs %>
+        <% include f1/f1.partner.with.us.ejs %>
+
+        <div class="floating-icons">
+            <div class="section0 active"><div class="address-icon"></div><h6><%= translations['f1.top'] %></h6></div>
+            <div class="section1"><div class="address-icon"></div><h6><%= translations['f1.vietnam.gp'] %></h6></div>
+            <div class="section2"><div class="address-icon"></div><h6><%= translations['f1.timetable'] %></h6></div>
+            <div class="section3"><div class="address-icon"></div><h6><%= translations['f1.ticket'] %></h6></div>
+            <div class="section4"><div class="address-icon"></div><h6><%= translations['f1.faq'] %></h6></div>
+        </div>
+
+        <% include f1/f1.footer.ejs %>
+    </div>
+    <% include include/js.ejs %>
+    <script src="/js/f1-bundle.js"></script>
+    <script src="/js/components/F1FormContainer-bundle.js"></script>
+</body>
+</html>

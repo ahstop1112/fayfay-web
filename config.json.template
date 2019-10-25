@@ -1,0 +1,64 @@
+{
+    "clientPath": "/public",
+    "fayfay": {
+        "webUrl": "https://localhost:8080",
+        "merchantUrl": "http://localhost:3001/merchant/login",
+        "travelWebUrl": "https://staging-travel.fayfay.com",
+        "propertyWebUrl": "https://staging-property.fayfay.com"
+    },
+    "api": {
+        "defaultApiUrl": "http://192.168.33.33:8090",
+        "username": "user",
+        "password": "pass"
+    },
+    "log": {
+        "level": "debug",
+        "info_filepath": "logs/ff-info.log",
+        "error_filepath": "logs/ff-error.log"
+    },
+    "redis": {
+        "host": "192.168.33.33",
+        "port": 6379,
+        "logErrors": true
+    },
+    "socialMedia": {
+        "facebookId": "452872071836002",
+        "googleId": "1016251920688-v1l16nobsk6334gvp3bo6o35t807np56.apps.googleusercontent.com"
+    },
+    "reCaptcha": {
+        "siteKey": "6LfmWVsUAAAAAMpN5jsuNZhG6lnKp3R44g6NvV71"
+    },
+    "google": {
+         "tagManager": "GTM-MFWRRPL",
+         "analytics": "UA-136700271-1",
+         "apiKeyTravel": "AIzaSyAODW1M0WEdRo4CjNQWxeD5jRpfo2iUr70",
+         "tagManagerTravel": "GTM-PLNSRSB",
+         "analyticsTravel": "UA-146895906-1",
+         "optimizeTravel": "GTM-TGW3GFK"
+    },
+    "facebook": {
+        "pixelID": "710675119298771"
+    },
+    "yahoo": {
+        "pixelID": "10070470",
+        "bingID": "25034915"
+    },
+    "cloudinary": {
+        "imageUrlPrefix": "https://res.cloudinary.com/fayfay-dev/image/upload/q_auto,f_auto",
+        "cloud_name": "fayfay-dev",
+        "api_key": "527132371585765",
+        "api_secret": "YDfPeQKlKeIqmhyz1VOGBEMLKEk",
+        "assetUrlPrefix": "https://res.cloudinary.com/fayfay-dev/raw/upload/q_auto,f_auto",
+        "assetFolder": "fayfay-web/assets"
+    },
+    "paypal": {
+        "env": "sandbox"
+    },
+    "pap": {
+        "host": "",
+        "accountId": ""
+    },
+    "cityIds": {
+        "vietnam": 22
+    }
+}

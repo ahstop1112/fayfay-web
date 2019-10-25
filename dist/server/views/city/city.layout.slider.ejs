@@ -1,0 +1,51 @@
+<% if (cityData.sections[i].layout == 'CITY_LAYOUT_SLIDER'){ %>
+    <section>
+        <div class="container-fluid">
+            <div class="main-logo-container">
+                <% if (cityData.sections[i].iconUrl) {%>
+                    <div class="main-logo">
+                        <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= cityData.sections[i].iconUrl %>"
+                             alt="<%= cityData.sections[i].title %>"/>
+                    </div>
+                <% } %>
+                <h2><%= cityData.sections[i].title %></h2>
+                <p class="hidden-xs"><%= cityData.sections[i].introduction %></p>
+            </div>
+        </div>
+        <div class="bg-slick-container">
+            <ul class="bg-slick">
+                <% cityData.sections[i].activities.slice(-4).forEach(function(activity){ %>
+                    <li class="list-item col-3 fullwidth-slick">
+                        <div class="list-content">
+                            <div class="overlay-content hover-fullwidth">
+                                <a href="<%= langUrl %>/experience/<%= activity.activityId %>-<%= activity.slug %>"
+                                   title="<%= activity.title %>" target="_blank">
+                                    <div class="banner">
+                                        <div class="blackbg"></div>
+                                        <img
+                                                src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1440/<%= activity.thumbnailKey %>.<%= activity.thumbnailFormat %>"
+                                                alt="<%= activity.title %>" data-speed="-0.3" class="bg">
+                                    </div>
+                                    <div class="overlay-wrap">
+                                        <div class="overlay">
+                                            <p>
+                                            <h3 class="title-s"><%= activity.title.truncate(60) %></h3>
+                                            <%- include('components/price.ejs', { displayPrice : activity.displayPrice, displaySpecialPrice: activity.displaySpecialPrice }); %>
+                                            <div class="nobg">
+                                                <%- include('components/location.ejs', { location : activity.location }); %>
+                                                <%- include('components/rating.ejs', { ratingAverage: activity.ratingAverage }); %>
+                                                <%- include('components/bookedCount.ejs', { bookedCount: activity.bookedCount }); %>
+                                            </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            </a>
+                        </div>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </section>
+<% } %>

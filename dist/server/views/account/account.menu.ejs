@@ -1,0 +1,13 @@
+<div class="row ">
+    <div class="col-md-12">
+        <ul class="leftmenu">
+            <li class="<%= pageName == 'account' ? 'active': ''%>"><a href="<%= langUrl %>/my-account"><i class="icon user"></i><%=translations['account.my.account']%><i class="visible-xs icon angle-right"></i></a></li>
+            <li class="<%= pageName == 'bookings' ? 'active': ''%>"><a href="<%= langUrl %>/my-bookings"><i class="icon booking"></i><%=translations['account.my.bookings']%><i class="visible-xs icon angle-right"></i></a></li>
+            <li class="<%= pageName == 'wish-list' ? 'active': ''%>"><a href="<%= langUrl %>/wish-list"><i class="icon wishlist"></i><%=translations['account.wish.list']%><i class="visible-xs icon angle-right"></i></a></li>
+            <li class="<%= pageName == 'coupons' ? 'active': ''%>"><a href="<%= langUrl %>/my-coupons"><i class="icon coupons"></i><%=translations['account.coupons']%><i class="visible-xs icon angle-right"></i></a></li>
+            <li class="<%= pageName == 'reviews' ? 'active': ''%>"><a href="<%= langUrl %>/my-reviews"><i class="icon comments"></i><%=translations['common.reviews']%><i class="visible-xs icon angle-right"></i></a></li>
+            <li class="<%= pageName == 'settings' ? 'active': ''%>"><a href="<%= langUrl %>/settings"><i class="icon setting"></i><%=translations['common.settings']%><i class="visible-xs icon angle-right"></i></a></li>
+            <li><a href="<%= langUrl %>/logout"><i class="icon sign-out"></i><%=translations['common.log.out']%><i class="visible-xs icon angle-right"></i></a></li>
+        </ul>
+    </div>
+</div>

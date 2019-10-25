@@ -1,0 +1,33 @@
+<section class="faysim-section about section1">
+    <div class="container-fluid">
+        <h2 class="title"><%= translations['about.faysim'] %></h2>
+        <div class="faysim-table">
+            <div class="header">
+                <div><%- translations['faysim.about.table.title1'] %> * </div>
+                <div><%- translations['faysim.about.table.title2'] %></div>
+                <div><%- translations['faysim.about.table.title3'] %></div>
+            </div>
+            <div class="content">
+                <ul><%- translations['faysim.about.table.content'] %></ul>
+                <p class="remarks"> * <%- translations['faysim.about.table.title1.remarks'] %></p>
+            </div>
+        </div>
+
+        <h2 class="title"><%= translations['faysim.top.up'] %></h2>
+        <div class="topup-table">
+            <div class="content-left">
+                <ul><%- translations['faysim.top.up.content'] %></ul>
+            </div>
+            <div class="content-right">
+                <div>
+                    <% if (locale == 'zh-hk' || locale == 'zh-cn') { %>
+                        <a href='https://tvb.vietnamobile.com.vn/index-CN.html' target='_blank'>
+                    <% } else { %>
+                        <a href='https://tvb.vietnamobile.com.vn/index-EN.html' target='_blank'>
+                    <% } %>
+                        <img src="/images/icons/tvb.png">
+                </a></div>
+            </div>
+        </div>
+    </div>
+</section>

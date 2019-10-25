@@ -1,0 +1,644 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+.activity-header-section {
+  overflow: hidden;
+  background-color: #fff; }
+  @media screen and (max-width: 1025px) {
+    .activity-header-section .city-title {
+      width: 80%; } }
+  @media screen and (max-width: 991px) {
+    .activity-header-section .city-title {
+      width: 80%; } }
+  @media screen and (max-width: 767px) {
+    .activity-header-section {
+      overflow: hidden; } }
+  @media screen and (max-width: 550px) {
+    .activity-header-section {
+      overflow: hidden; } }
+  .activity-header-section.scroll {
+    background-color: #000; }
+  @media screen and (max-width: 1025px) {
+    .activity-header-section .overlay-video {
+      height: 100%; } }
+  @media screen and (max-width: 991px) {
+    .activity-header-section .overlay-video {
+      height: 80%;
+      margin-top: 0; } }
+  @media screen and (max-width: 767px) {
+    .activity-header-section .overlay-video {
+      margin-top: 0; } }
+  @media screen and (max-width: 550px) {
+    .activity-header-section .overlay-video {
+      margin-top: 0; } }
+
+.tab-content .reviews-header {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f4f4f4; }
+  @media screen and (max-width: 550px) {
+    .tab-content .reviews-header {
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      flex-wrap: wrap; } }
+  @media screen and (max-width: 550px) {
+    .tab-content .reviews-header h4 {
+      display: block;
+      width: 100%; } }
+  .tab-content .reviews-header .header {
+    margin: 0;
+    padding: 0; }
+    @media screen and (max-width: 550px) {
+      .tab-content .reviews-header .header {
+        width: 100%;
+        justify-content: flex-start; } }
+    .tab-content .reviews-header .header .rating-num {
+      font-size: 3.8em;
+      padding: 0 15px;
+      line-height: 1; }
+    .tab-content .reviews-header .header .rating-container p {
+      color: #999;
+      font-size: 1em;
+      padding: 5px 0; }
+    @media screen and (max-width: 550px) {
+      .tab-content .reviews-header .header .rating-num {
+        padding-left: 0; } }
+
+.recent-view, .reviews {
+  list-style: none;
+  margin: 0;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -ms-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  border-bottom: 1px solid #f4f4f4;
+  padding-bottom: 15px;
+  margin-bottom: 15px; }
+  @media screen and (max-width: 991px) {
+    .recent-view, .reviews {
+      -webkit-justify-content: flex-start;
+      justify-content: flex-start; } }
+  .recent-view .user-photo, .reviews .user-photo {
+    min-width: 100px;
+    padding-right: 10px;
+    width: 15%; }
+    @media screen and (max-width: 1025px) {
+      .recent-view .user-photo, .reviews .user-photo {
+        width: 20%; } }
+    @media screen and (max-width: 550px) {
+      .recent-view .user-photo, .reviews .user-photo {
+        min-width: auto;
+        padding-top: 10px; } }
+    @media screen and (max-width: 767px) {
+      .recent-view .user-photo, .reviews .user-photo {
+        width: 28%; } }
+    .recent-view .user-photo .img-container, .reviews .user-photo .img-container {
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+      margin: auto; }
+      .recent-view .user-photo .img-container img, .reviews .user-photo .img-container img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        border: 1px solid #ddd; }
+      @media screen and (max-width: 550px) {
+        .recent-view .user-photo .img-container, .reviews .user-photo .img-container {
+          width: 60px;
+          height: 60px; } }
+    .recent-view .user-photo .user-name, .reviews .user-photo .user-name {
+      font-size: 0.9em;
+      line-height: 1.5;
+      word-break: break-all;
+      text-align: center;
+      margin-top: 5px; }
+      @media screen and (max-width: 767px) {
+        .recent-view .user-photo .user-name, .reviews .user-photo .user-name {
+          padding-bottom: 0; } }
+      @media screen and (max-width: 550px) {
+        .recent-view .user-photo .user-name, .reviews .user-photo .user-name {
+          width: 100%;
+          padding-left: 0;
+          padding-bottom: 5px; } }
+  .recent-view .user-comment, .reviews .user-comment {
+    width: 82%; }
+    @media screen and (max-width: 1025px) {
+      .recent-view .user-comment, .reviews .user-comment {
+        width: 80%; } }
+    @media screen and (max-width: 767px) {
+      .recent-view .user-comment, .reviews .user-comment {
+        width: 70%; } }
+    .recent-view .user-comment .header, .reviews .user-comment .header {
+      margin: 0;
+      padding-top: 0; }
+    .recent-view .user-comment .content p, .reviews .user-comment .content p {
+      word-wrap: break-word;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical; }
+      .recent-view .user-comment .content p.showAll, .reviews .user-comment .content p.showAll {
+        display: block;
+        overflow: visible; }
+    .recent-view .user-comment .content .div-photos .photos-container > div, .reviews .user-comment .content .div-photos .photos-container > div {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .recent-view .user-comment .content .div-photos .photos-container > div a, .reviews .user-comment .content .div-photos .photos-container > div a {
+        list-style-type: none;
+        flex: 0 0 16.66%;
+        margin: 0 0.5%;
+        margin-bottom: 20px;
+        overflow: hidden;
+        width: 100%;
+        position: relative; }
+        @media screen and (max-width: 550px) {
+          .recent-view .user-comment .content .div-photos .photos-container > div a, .reviews .user-comment .content .div-photos .photos-container > div a {
+            flex: 0 0 32.33%; } }
+        .recent-view .user-comment .content .div-photos .photos-container > div a:before, .reviews .user-comment .content .div-photos .photos-container > div a:before {
+          content: "";
+          display: block;
+          padding-top: 100%; }
+        .recent-view .user-comment .content .div-photos .photos-container > div a img, .reviews .user-comment .content .div-photos .photos-container > div a img {
+          position: absolute;
+          top: -100%;
+          left: 0;
+          right: 0;
+          bottom: -100%;
+          margin: auto;
+          margin-left: 50%;
+          transform: translateX(-50%);
+          min-width: 100%;
+          min-height: 100%; }
+    .recent-view .user-comment .comment-date, .reviews .user-comment .comment-date {
+      width: 35%;
+      font-size: 1em;
+      color: #999;
+      text-align: right;
+      padding-top: 10px; }
+  .recent-view.recent-view .content p, .reviews.recent-view .content p {
+    word-wrap: break-word;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; }
+  .recent-view .star, .reviews .star {
+    width: 25px;
+    height: 25px;
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url(/images/rate_icon2.png);
+    background-size: contain;
+    background-repeat: no-repeat; }
+    @media screen and (max-width: 991px) {
+      .recent-view .star, .reviews .star {
+        width: 20px;
+        height: 20px; } }
+  .recent-view .fay, .reviews .fay {
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url(/images/rate_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat; }
+
+.review-mobile-container .header {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start; }
+
+.review-mobile-container .review-grade {
+  font-size: 3.5em;
+  vertical-align: top;
+  width: 12%;
+  font-weight: 600; }
+  @media screen and (max-width: 767px) {
+    .review-mobile-container .review-grade {
+      width: 28%; } }
+
+.review-mobile-container .review-rating {
+  vertical-align: middle;
+  color: #999; }
+  @media screen and (max-width: 991px) {
+    .review-mobile-container .review-rating {
+      width: 50%;
+      padding-top: 20px; } }
+  .review-mobile-container .review-rating .rating-num {
+    visibility: hidden !important; }
+  .review-mobile-container .review-rating .rating {
+    width: 180px;
+    font-size: 1.2em;
+    margin-bottom: 5px; }
+    .review-mobile-container .review-rating .rating .star {
+      width: 28px;
+      height: 28px; }
+
+.activity-highlight-section .activity-title {
+  margin-top: 0;
+  font-size: 1.8em; }
+  @media screen and (max-width: 991px) {
+    .activity-highlight-section .activity-title {
+      font-size: 1.5em; } }
+
+.activity-highlight-section .whitebox {
+  padding: 0; }
+
+.activity-highlight-section .price {
+  font-size: 1.6em; }
+  .activity-highlight-section .price del, .activity-highlight-section .price del .currency {
+    font-size: 14rem;
+    color: #999;
+    margin-left: 5px; }
+
+.activity-highlight-section .title-remark {
+  margin-left: 0; }
+
+.activity-highlight-section ul {
+  *list-style: none; }
+
+.activity-highlight-section #activity-description ul {
+  margin-left: 15px; }
+
+.activity-highlight-section #booking-price-container .booking-price-container {
+  transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out; }
+
+@media screen and (max-width: 991px) {
+  .activity-highlight-section #booking-price-container {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.8); } }
+
+.activity-highlight-section #booking-price-container .greybox {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+  @media screen and (max-width: 991px) {
+    .activity-highlight-section #booking-price-container .greybox {
+      margin-bottom: 0;
+      align-items: center;
+      background: none;
+      box-shadow: none; }
+      .activity-highlight-section #booking-price-container .greybox .btn {
+        width: 90%; } }
+  .activity-highlight-section #booking-price-container .greybox .bottom {
+    width: 100%; }
+
+.add-to-wish-list {
+  color: #163A4D;
+  cursor: pointer; }
+  .add-to-wish-list:hover {
+    color: #EE7E31; }
+  .add-to-wish-list .far:before {
+    color: #163A4D; }
+  .add-to-wish-list .fas:before {
+    color: #EE7E31; }
+
+.activity-tabs-section {
+  border: 1px solid #eee;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px;
+  padding-bottom: 0; }
+  .activity-tabs-section .nav-pills {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    border-spacing: 0; }
+    .activity-tabs-section .nav-pills li {
+      width: auto;
+      border: 0;
+      border-radius: 0;
+      font-size: 1em;
+      text-transform: inherit;
+      text-align: center; }
+      .activity-tabs-section .nav-pills li a {
+        padding: 10px 15px;
+        font-size: 1em; }
+      .activity-tabs-section .nav-pills li.active a {
+        border-radius: 0;
+        background: none;
+        color: #EE7E31;
+        border-bottom: 2px solid #EE7E31; }
+  .activity-tabs-section.scroll {
+    position: fixed;
+    top: 80px;
+    z-index: 999;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* transitions */
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out; }
+    .activity-tabs-section.scroll .nav-pills {
+      margin: 0; }
+      .activity-tabs-section.scroll .nav-pills li {
+        background: none; }
+        .activity-tabs-section.scroll .nav-pills li a {
+          padding: 10px 15px;
+          font-size: 1em; }
+
+.activity-tabs-content-section {
+  background-color: #eee; }
+  .activity-tabs-content-section .form-group, .activity-tabs-content-section h6 {
+    margin: 0; }
+  .activity-tabs-content-section h4 {
+    margin-top: 0; }
+  .activity-tabs-content-section h6, .activity-tabs-content-section ul {
+    margin: 8px 0; }
+  .activity-tabs-content-section .package-header {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 100%;
+    vertical-align: top; }
+    .activity-tabs-content-section .package-header h6, .activity-tabs-content-section .package-header .fas:before {
+      color: #999; }
+    .activity-tabs-content-section .package-header .fas:before {
+      padding-left: 5px; }
+    .activity-tabs-content-section .package-header .package-title-price,
+    .activity-tabs-content-section .package-header .package-select {
+      vertical-align: middle;
+      margin-top: 5px;
+      padding-right: 15px; }
+      .activity-tabs-content-section .package-header .package-title-price .btn.disabled, .activity-tabs-content-section .package-header .package-title-price .btn[disabled],
+      .activity-tabs-content-section .package-header .package-select .btn.disabled,
+      .activity-tabs-content-section .package-header .package-select .btn[disabled] {
+        opacity: 1; }
+    .activity-tabs-content-section .package-header .package-price {
+      font-size: 1em;
+      padding-right: 10px;
+      display: flex; }
+      .activity-tabs-content-section .package-header .package-price .inquiry-from {
+        font-size: 1.2em;
+        color: #163A4D;
+        margin-right: 10px; }
+      .activity-tabs-content-section .package-header .package-price .discount-price {
+        font-size: 1.2em;
+        color: #163A4D; }
+        .activity-tabs-content-section .package-header .package-price .discount-price del, .activity-tabs-content-section .package-header .package-price .discount-price del .currency {
+          font-size: 14rem;
+          color: #999;
+          margin-left: 5px; }
+      .activity-tabs-content-section .package-header .package-price .ori-price {
+        color: #999;
+        text-decoration: line-through;
+        display: none; }
+    .activity-tabs-content-section .package-header.soldout h4,
+    .activity-tabs-content-section .package-header.soldout .discount-price {
+      color: #999; }
+    .activity-tabs-content-section .package-header.soldout .btn {
+      background-color: #ddd;
+      border: 1px solid #fff;
+      color: #fff;
+      text-transform: initial; }
+  .activity-tabs-content-section .package-details-header {
+    cursor: pointer; }
+  .activity-tabs-content-section .package-details h5 {
+    font-size: 1.14em; }
+  .activity-tabs-content-section .package-details h6, .activity-tabs-content-section .package-details li, .activity-tabs-content-section .package-details p {
+    font-size: 1em; }
+  .activity-tabs-content-section .package-details li {
+    margin-left: 15px; }
+  .activity-tabs-content-section .package-details .fas:before {
+    padding-left: 5px;
+    color: #999; }
+  .activity-tabs-content-section #activity-info h4 {
+    margin: 20px 0; }
+  .activity-tabs-content-section #activity-info .yellowbox {
+    background-color: #fffae7;
+    padding: 15px; }
+  .activity-tabs-content-section .package-qty-row h6 {
+    font-size: 1em;
+    margin: 5px 0; }
+  .activity-tabs-content-section .package-qty-row .price {
+    font-size: 1.1em; }
+  .activity-tabs-content-section .package-qty-row .input-group {
+    padding: 7px 10px; }
+  .activity-tabs-content-section .package-qty-row .form-control[disabled] {
+    background-color: #fff;
+    cursor: pointer; }
+  .activity-tabs-content-section .tab-content > .tab-pane {
+    display: block;
+    opacity: 1; }
+  .activity-tabs-content-section #what-to-expect .photo p {
+    display: inline-block; }
+  .activity-tabs-content-section #cancellation-policy ul, .activity-tabs-content-section #FAQs ul, .activity-tabs-content-section #highlights ul, .activity-tabs-content-section #experience-info ul, .activity-tabs-content-section #how-to-use ul {
+    margin: 8px 0 15px 20px; }
+
+.booking-price-container.scroll {
+  position: fixed;
+  top: 150px;
+  z-index: 99;
+  width: 31%;
+  max-width: 400px; }
+  @media screen and (max-width: 991px) {
+    .booking-price-container.scroll {
+      position: static;
+      width: 100%;
+      max-width: none; } }
+
+#booking-details-container {
+  z-index: 100; }
+
+.booking-details-container.scroll {
+  position: fixed;
+  top: 150px;
+  z-index: 99;
+  width: 31%;
+  max-width: 400px; }
+  @media screen and (max-width: 991px) {
+    .booking-details-container.scroll {
+      position: static; } }
+
+@media screen and (max-width: 991px) {
+  .booking-details {
+    position: fixed;
+    left: 5%;
+    bottom: -1px;
+    margin: 0;
+    padding: 0;
+    width: 95%;
+    z-index: 999;
+    background: none; } }
+
+.booking-details .tooltiptext {
+  background-color: #EE7E31;
+  color: #fff;
+  text-align: center;
+  padding: 5px 30px;
+  margin-left: 5.5%;
+  border-radius: 6px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  font-size: 1em;
+  transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out; }
+  .booking-details .tooltiptext.show {
+    opacity: 1; }
+
+@media screen and (max-width: 550px) {
+  .booking-details {
+    width: 90%;
+    left: 10%; } }
+
+.booking-details .buttons {
+  display: table;
+  width: 100%; }
+  .booking-details .buttons .btn-icon {
+    display: table-cell;
+    font-size: 1.5em;
+    padding-left: 5px; }
+    .booking-details .buttons .btn-icon .fas:before {
+      padding-top: 10px;
+      color: #EE7E31; }
+  .booking-details .buttons .btn-div {
+    display: table-cell;
+    width: 45%;
+    text-align: center; }
+    .booking-details .buttons .btn-div button {
+      width: 90%;
+      margin: 5px 0;
+      line-height: 1.8; }
+
+#map {
+  height: 400px;
+  width: 100%; }
+
+.empty-dates .react-datepicker__day--today {
+  font-weight: normal;
+  color: #999;
+  background-color: #fff; }
+
+@media screen and (max-width: 991px) {
+  #gotoTop {
+    bottom: 110px; } }
+
+@media screen and (max-width: 767px) {
+  #gotoTop {
+    bottom: 70px; } }
+
+.instant-icon {
+  background-image: url("/images/instant.png");
+  width: 20px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding-right: 28px; }
+
+@media screen and (max-width: 767px) {
+  .fb_dialog {
+    bottom: 35px !important;
+    right: 15px !important; } }
+
+.markdown {
+  margin-bottom: 15px; }
+  .markdown p {
+    margin-bottom: 15px; }
+  .markdown ol {
+    margin: 0 15px; }
+    .markdown ol li {
+      list-style: decimal; }
+
+body.vi-vn .activity-tabs-section .nav-pills li a {
+  font-size: 0.9em; }
+  @media screen and (max-width: 1025px) {
+    body.vi-vn .activity-tabs-section .nav-pills li a {
+      font-size: 0.8em; } }
+
+.drag-list.related-experiences-slider .list-item {
+  padding: 8px 0.2%; }
+
+.related-activities-section {
+  z-index: 999;
+  position: relative;
+  background-color: #fff; }
+  @media screen and (max-width: 1025px) {
+    .related-activities-section .drag-content .drag-list .slick-dots {
+      position: relative;
+      bottom: 0; }
+      .related-activities-section .drag-content .drag-list .slick-dots li button:before {
+        background-color: #f4f4f4; }
+      .related-activities-section .drag-content .drag-list .slick-dots li.slick-active button:before {
+        background-color: #EE7E31; }
+    .related-activities-section .drag-content .drag-list .slick-prev:before {
+      color: #999 !important; }
+    .related-activities-section .drag-content .drag-list .slick-next:before {
+      color: #999 !important; } }

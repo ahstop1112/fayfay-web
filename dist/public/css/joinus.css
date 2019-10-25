@@ -1,0 +1,80 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+.joinus-header-section {
+  overflow: hidden;
+  background-color: #fff; }
+  .joinus-header-section .bg {
+    top: 0 !important; }
+    @media screen and (max-width: 550px) {
+      .joinus-header-section .bg {
+        top: -10% !important;
+        height: 100%;
+        width: auto; } }
+
+.joinus-section {
+  border: 1px solid #eee;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px;
+  padding-bottom: 0; }
+  @media screen and (max-width: 767px) {
+    .joinus-section {
+      padding-bottom: 10px; } }
+  .joinus-section p {
+    margin-bottom: 20px; }
+  .joinus-section h1 {
+    color: #EE7E31;
+    font-size: 1.75em;
+    font-weight: 400; }
+  .joinus-section .row, .joinus-section .col-md-4 {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    @media screen and (max-width: 767px) {
+      .joinus-section .row, .joinus-section .col-md-4 {
+        display: block; } }
+    .joinus-section .row .whitebox, .joinus-section .col-md-4 .whitebox {
+      border: 1px solid #EE7E31;
+      border-left: 5px solid #EE7E31;
+      width: 100%; }
+      .joinus-section .row .whitebox h5, .joinus-section .col-md-4 .whitebox h5 {
+        color: #EE7E31; }
+      .joinus-section .row .whitebox .location, .joinus-section .col-md-4 .whitebox .location {
+        color: #EE7E31;
+        margin-bottom: 15px; }
+      .joinus-section .row .whitebox b, .joinus-section .col-md-4 .whitebox b {
+        color: #163A4D; }
+      .joinus-section .row .whitebox p, .joinus-section .col-md-4 .whitebox p {
+        margin: 10px 0;
+        color: #999;
+        text-align: left; }
+      .joinus-section .row .whitebox ul, .joinus-section .row .whitebox li, .joinus-section .col-md-4 .whitebox ul, .joinus-section .col-md-4 .whitebox li {
+        color: #999; }
+  .joinus-section h2 {
+    color: #EE7E31; }
+  .joinus-section a.btn {
+    height: auto;
+    line-height: 2; }

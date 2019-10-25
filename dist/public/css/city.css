@@ -1,0 +1,201 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+.bg-container {
+  max-height: 400px; }
+
+.city-breadcrumb-section .container-fluid {
+  border-bottom: 1px solid #EE7E31; }
+
+@media screen and (max-width: 991px) {
+  .city-breadcrumb-section {
+    padding: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); }
+    .city-breadcrumb-section.scroll {
+      position: fixed;
+      top: 60px;
+      z-index: 999; }
+      .city-breadcrumb-section.scroll .container-fluid {
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd; } }
+
+#city-main-button-section {
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+  width: 100%; }
+  #city-main-button-section .main-button-container {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    width: 96%;
+    background-color: #fff;
+    padding: 0; }
+    @media screen and (max-width: 767px) {
+      #city-main-button-section .main-button-container {
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%; } }
+    #city-main-button-section .main-button-container .home-button {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      padding: 10px 20px;
+      width: 33.3333%;
+      text-align: center; }
+      @media screen and (min-width: 1920px) {
+        #city-main-button-section .main-button-container .home-button {
+          padding: 20px 100px; } }
+      @media screen and (max-width: 1025px) {
+        #city-main-button-section .main-button-container .home-button {
+          padding: 10px 20px; } }
+      @media screen and (max-width: 991px) {
+        #city-main-button-section .main-button-container .home-button {
+          padding: 5px 10px; } }
+      @media screen and (max-width: 767px) {
+        #city-main-button-section .main-button-container .home-button {
+          -ms-flex-wrap: wrap;
+          -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+          width: 100%;
+          padding: 0; } }
+      #city-main-button-section .main-button-container .home-button h1 {
+        font-size: 1.25em; }
+    #city-main-button-section .main-button-container .home-button:first-child,
+    #city-main-button-section .main-button-container .home-button:nth-child(2) {
+      border-right: 0; }
+    #city-main-button-section .main-button-container .home-icon {
+      height: 60px;
+      margin: 0 20px;
+      width: 25%; }
+      @media screen and (max-width: 1025px) {
+        #city-main-button-section .main-button-container .home-icon {
+          height: 60px; } }
+      @media screen and (max-width: 767px) {
+        #city-main-button-section .main-button-container .home-icon {
+          margin: 0 10px;
+          height: 50px; } }
+      @media screen and (max-width: 550px) {
+        #city-main-button-section .main-button-container .home-icon {
+          margin: 10px  0; } }
+      #city-main-button-section .main-button-container .home-icon img {
+        height: 100%;
+        width: auto; }
+    #city-main-button-section .main-button-container .home-title {
+      text-align: left;
+      width: 70%; }
+      #city-main-button-section .main-button-container .home-title p {
+        text-align: left; }
+
+#city-popular-activities-section {
+  padding: 10px 0; }
+
+#city-vietnam-must-have-section, #city-travel-deals-section {
+  padding: 10px 0; }
+  #city-vietnam-must-have-section .drag-list, #city-travel-deals-section .drag-list {
+    margin-top: 0; }
+    @media screen and (max-width: 1025px) {
+      #city-vietnam-must-have-section .drag-list, #city-travel-deals-section .drag-list {
+        width: auto;
+        flex-wrap: nowrap;
+        padding-top: 7px; } }
+    #city-vietnam-must-have-section .drag-list .list-item, #city-travel-deals-section .drag-list .list-item {
+      flex: 0 0 25%;
+      padding-right: 15px; }
+      @media screen and (max-width: 1025px) {
+        #city-vietnam-must-have-section .drag-list .list-item, #city-travel-deals-section .drag-list .list-item {
+          min-width: 230px; } }
+      @media screen and (max-width: 991px) {
+        #city-vietnam-must-have-section .drag-list .list-item, #city-travel-deals-section .drag-list .list-item {
+          flex: 0 0 50%; } }
+      @media screen and (max-width: 767px) {
+        #city-vietnam-must-have-section .drag-list .list-item, #city-travel-deals-section .drag-list .list-item {
+          flex: 0 0 100%; } }
+      #city-vietnam-must-have-section .drag-list .list-item .price del, #city-travel-deals-section .drag-list .list-item .price del {
+        margin-left: 0; }
+
+@media screen and (max-width: 767px) {
+  .main-logo-container {
+    margin-bottom: 0; } }
+
+.main-logo-container p {
+  margin-bottom: 0; }
+
+@media screen and (max-width: 767px) {
+  #city-adventure-section .drag-content, .section-4-big-items .drag-content {
+    overflow-x: auto; } }
+
+@media screen and (max-width: 991px) {
+  #city-adventure-section .drag-list, .section-4-big-items .drag-list {
+    width: auto;
+    flex-wrap: nowrap;
+    padding-top: 7px; }
+    #city-adventure-section .drag-list .list-item, .section-4-big-items .drag-list .list-item {
+      flex: 0 0 80%;
+      padding: 8px 0.5%; } }
+
+#city-adventure-section .drag-list .overlay-soldout, .section-4-big-items .drag-list .overlay-soldout {
+  z-index: 9999; }
+  @media screen and (max-width: 991px) {
+    #city-adventure-section .drag-list .overlay-soldout, .section-4-big-items .drag-list .overlay-soldout {
+      width: calc(100% - 10px); } }
+  @media screen and (max-width: 767px) {
+    #city-adventure-section .drag-list .overlay-soldout, .section-4-big-items .drag-list .overlay-soldout {
+      width: calc(100% - 6px); } }
+  @media screen and (max-width: 550px) {
+    #city-adventure-section .drag-list .overlay-soldout, .section-4-big-items .drag-list .overlay-soldout {
+      width: 100%;
+      z-index: 99999; } }
+  #city-adventure-section .drag-list .overlay-soldout .banner:before, .section-4-big-items .drag-list .overlay-soldout .banner:before {
+    padding-top: 150%; }
+    @media screen and (max-width: 991px) {
+      #city-adventure-section .drag-list .overlay-soldout .banner:before, .section-4-big-items .drag-list .overlay-soldout .banner:before {
+        padding-top: 56.25%; } }
+  @media screen and (max-width: 991px) {
+    #city-adventure-section .drag-list .overlay-soldout .banner img.soldout, .section-4-big-items .drag-list .overlay-soldout .banner img.soldout {
+      width: 40%; } }
+
+#city-adventure-section .result-container b, .section-4-big-items .result-container b {
+  color: #EE7E31; }
+
+#city-adventure-section .result-container .bg, .section-4-big-items .result-container .bg {
+  min-width: 100%; }
+
+#city-adventure-section .price, #city-adventure-section .price span, #city-adventure-section .price .currency, .section-4-big-items .price, .section-4-big-items .price span, .section-4-big-items .price .currency {
+  color: #EE7E31 !important; }
+
+#city-adventure-section .list-content, .section-4-big-items .list-content {
+  display: block !important; }

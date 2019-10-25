@@ -1,0 +1,943 @@
+@import '../include/variable';
+
+$deep-blue: #039ce5;
+
+#central-vietnam-travel {
+
+    color: $main-font-color;
+    background-image: url('/images/campaign/centralvntravel/bg.jpg');
+    background-size: cover;
+    background-position: top;
+
+    header {
+        .header-top-area {
+            position: static;
+            box-shadow: none;
+            background-color: $white;
+            color: $main-font-color;
+            border: 0;
+
+            .header-container {
+                width: 100%;
+                padding: 0 2%;
+            }
+
+            &.scroll {
+                position: fixed;
+            }
+        }
+
+        .section-background {
+            padding-top: 0;
+            z-index: 0;
+
+            .overlay{
+                justify-content: flex-start;
+
+                .header-text{
+                    text-align: left;
+
+                    @media screen and (max-width: $mobile-v) {
+                        display: none;
+                    }
+
+                    img{
+                        position: static;
+                        margin: 0;
+                        margin-top: $padding;
+                        top: 10px;
+                        left: 0;
+                        max-width: 150px;
+                        transform: initial;
+                    }
+                }
+            }
+
+            .bg-container {
+
+                &:before {
+
+                    @media screen and (max-width: $desktop) {
+                        padding-top: 28%;
+                    }
+
+                    @media screen and (max-width: $mobile-v) {
+                        padding-top: 100%;
+                    }
+                }
+
+                .bg {
+                    top: -100%;
+
+                    &.expect-mobile-v {
+                        display: none;
+
+                        @media screen and (min-width: $mobile-v) {
+                            display: block;
+                        }
+                    }
+
+                    &.mobile-v {
+                        display: none;
+
+                        @media screen and (max-width: $mobile-v) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#all {
+        padding: $padding 0;
+
+        &>.container-fluid{
+            background-color: $white;
+            margin-top: 20px;
+        }
+
+        p.content_p {
+            margin: 0 auto;
+            margin-bottom: 20px;
+            padding-top: 30px;
+            color: $deep-blue;
+            width: 90%;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        .btn-address {
+            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox; /* TWEENER - IE 10 */
+            display: -webkit-flex; /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            width: 80%;
+            margin: 0px auto;
+            margin-bottom: $padding;
+            justify-content: center;
+
+            @media screen and (max-width: $tablet-v) {
+                width: 100%;
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+                justify-content: flex-start;
+            }
+
+            .list-item {
+                flex: 0 0 calc(100% / 6);
+                text-align: center;
+                background: none;
+                cursor: pointer;
+                min-width: 0;
+
+                @media screen and (max-width: $tablet-v) {
+                    flex: 0 0 calc(100% / 4);
+                    min-width: 0;
+                    font-size: 1.1em;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    flex: 0 0 calc(100% / 2.5);
+                    min-width: 0;
+                }
+
+                @media screen and (max-width: $mobile-xs) {
+                    font-size: 0.8em;
+                }
+
+                .list-content {
+                    box-shadow: none;
+                }
+
+                .banner-bg {
+                    width: 80%;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+
+                    padding: 5px;
+
+                    overflow: hidden !important;
+
+                    display: block;
+                    position: relative;
+
+                    background-image: linear-gradient(-30deg, #039ee5, #88e7d2, #5cc7f3);
+
+                }
+
+                .banner {
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+
+                    overflow: hidden;
+                    background-size: cover;
+
+                    &:before {
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+
+                        content: "";
+                        padding-top: 100%;
+                        display: block;
+                    }
+
+                    &:after {
+                        content: "";
+                        padding-top: 100%;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        position: absolute;
+                        z-index: -1;
+                    }
+
+                    .bg{
+                        display: none;
+                    }
+                }
+
+                h3.title-s {
+                    font-size: 1.5em;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    color: #039ce5;
+
+                    @media screen and (max-width: $mobile-h) {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+
+            &.items-5{
+                .list-item {
+                    flex: 0 0 calc(100% / 5);
+                }
+            }
+
+            &.items-6{
+                .list-item {
+                    flex: 0 0 calc(100% / 6);
+                }
+            }
+
+            &.items-7{
+                .list-item {
+                    flex: 0 0 calc(100% / 7);
+                }
+            }
+        }
+
+        a.banner{
+            text-align: center;
+            margin-bottom: $padding;
+
+            img{
+                width: 96%;
+                margin: 0 auto;
+
+                &.except-mobile-v {
+                    display: none;
+
+                    @media screen and (min-width: $mobile-v) {
+                        display: block;
+                    }
+                }
+
+                &.mobile-v {
+                    display: none;
+
+                    @media screen and (max-width: $mobile-v) {
+                        display: block;
+                    }
+                }
+            }
+
+        }
+
+        .section-experience {
+
+            background-image: linear-gradient(#ccf8f9, #ccf1fe);
+            padding: 30px 0;
+            margin: 0 5% 30px 5%;
+            width: 90%;
+
+            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox; /* TWEENER - IE 10 */
+            display: -webkit-flex; /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            flex-wrap: wrap;
+            align-items: center;
+
+
+
+            @media screen and (max-width: $tablet-v) {
+                width: 100%;
+                margin: 0 0 30px 0;
+                padding: 0 0 30px 0;
+            }
+
+            .experience-title {
+
+                flex: 0 0 60%;
+
+                text-align: center;
+                margin: 0 auto;
+
+                padding: $padding 0;
+
+                display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox; /* TWEENER - IE 10 */
+                display: -webkit-flex; /* NEW - Chrome */
+                display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                justify-content: center;
+                align-items: center;
+
+                @media screen and (max-width: $tablet-v) {
+                    flex: 0 0 70%;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    flex: 0 0 100%;
+                }
+
+                .title-bg-left {
+                    flex: 0 0 20%;
+
+                    background-image: url("/images/campaign/centralvntravel/flower.png");
+                    background-size: contain;
+                    background-position: bottom;
+                    -moz-transform: scaleX(-1);
+                    -o-transform: scaleX(-1);
+                    -webkit-transform: scaleX(-1);
+                    transform: scaleX(-1);
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        padding-top: 42%;
+                    }
+
+                    @media screen and (max-width: $tablet-v) {
+                        flex: 0 0 20%;
+                        margin-top: 0;
+                    }
+
+                    @media screen and (max-width: $mobile-v) {
+                        margin-top: 0px;
+                        margin-right: -20px;
+                    }
+                }
+
+                .title-bg-right {
+                    flex: 0 0 20%;
+
+                    background-image: url("/images/campaign/centralvntravel/flower.png");
+                    background-size: contain;
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        padding-top: 42%;
+                    }
+
+                    @media screen and (max-width: $tablet-v) {
+                        flex: 0 0 20%;
+                        margin-top: 0;
+                    }
+
+                    @media screen and (max-width: $mobile-v) {
+                        margin-top: 0px;
+                        margin-left: -20px;
+                    }
+                }
+
+                .title-bg {
+                    flex: 0 0 40%;
+
+                    @media screen and (max-width: $mobile-v) {
+                        flex: 0 0 60%;
+                    }
+                }
+
+                h2 {
+                    color: $deep-blue;
+                    font-family: $city-font;
+                    font-size: 3.5em;
+                    font-weight: 900;
+                    margin: 0;
+
+                    @media screen and (max-width: $tablet-v) {
+                        font-size: 1.75em;
+                    }
+
+                    @media screen and (max-width: $mobile-v) {
+                        font-size: 2.5em;
+
+                    }
+                }
+            }
+            .title-desc{
+                flex: 0 0 90%;
+                text-align: center;
+                color: $deep-blue;
+                font-size: 1em;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+
+            .experience-title-s {
+
+                text-align: center;
+                margin: 0 auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                font-size: 1.25em;
+
+                display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox; /* TWEENER - IE 10 */
+                display: -webkit-flex; /* NEW - Chrome */
+                display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                justify-content: center;
+                align-items: center;
+                flex: 0 0 60%;
+
+                &.subSection0{
+                    margin-top: 0;
+                }
+
+                @media screen and (max-width: $tablet-h) {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    flex: 0 0 95%;
+                }
+
+                h5 {
+                    color: $deep-blue;
+                    font-size: 1.25em;
+
+                    @media screen and (max-width: $tablet-v) {
+                        font-size: 1.5em;
+                    }
+
+                    @media screen and (max-width: $mobile-h) {
+                        font-size: 1.15em;
+                        text-align: left;
+                    }
+
+                }
+
+                .address-icon {
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 8%;
+                    margin-right: 2%;
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        padding-top: 100%;
+                    }
+
+                    @media screen and (max-width: $tablet-v) {
+                        width: 15%;
+                        margin-right: 1%;
+                    }
+                }
+            }
+
+            .experience-list-container {
+                flex: 0 0 100%;
+                overflow: hidden;
+
+                @media screen and (max-width: $mobile-h) {
+                    overflow-x: scroll;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+
+                .experience-list {
+                    margin: 0 auto;
+                    width: 96%;
+
+                    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox; /* TWEENER - IE 10 */
+                    display: -webkit-flex; /* NEW - Chrome */
+                    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                    @media screen and (max-width: $tablet-v) {
+                        width: 100%;
+                    }
+
+                    &.reverse {
+                        flex-flow: row-reverse;
+
+                        @media screen and (max-width: $mobile-h) {
+                            flex-flow: row;
+                        }
+                    }
+
+                    .list-col {
+                        width: 50%;
+                        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                        display: -ms-flexbox; /* TWEENER - IE 10 */
+                        display: -webkit-flex; /* NEW - Chrome */
+                        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        flex-flow: row wrap;
+
+                        @media screen and (max-width: $mobile-h) {
+                            width: 90%;
+                            margin-right: 1%;
+                            flex-wrap: nowrap;
+                        }
+
+                        .list-item {
+                            background: none;
+                            list-style: none;
+
+                            flex: 1 1 49.5%;
+                            margin-right: 0.5%;
+
+                            @media screen and (max-width: $mobile-h) {
+                                min-width: 300px;
+                                margin-right: 1%;
+                            }
+
+                            .list-content {
+                                position: relative;
+                                display: block;
+
+                                &:before {
+                                    padding-top: 50%;
+                                }
+
+                                .banner {
+                                    width: 100%;
+                                    overflow: hidden;
+                                    position: relative;
+
+                                    &:before {
+                                        content: "";
+                                        padding-top: 100%;
+                                        display: block;
+                                    }
+
+                                    .bg {
+                                        top: -100%;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: -100%;
+                                        margin: auto;
+                                        margin-left: 50%;
+                                        transform: translateX(-50%);
+                                        opacity: 0;
+                                        width: auto;
+                                        height: 100%;
+                                        position: absolute;
+                                    }
+                                }
+                                .content {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    z-index: 999;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: rgba(0, 0, 0, 0.2);
+
+                                    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                                    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                                    display: -ms-flexbox; /* TWEENER - IE 10 */
+                                    display: -webkit-flex; /* NEW - Chrome */
+                                    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                                    justify-content: center;
+                                    -webkit-justify-content: center;
+
+                                    flex-wrap: wrap;
+                                    -webkit-flex-wrap: wrap;
+
+                                    align-content: center;
+                                    align-items: center;
+
+                                    transition: $fadeIn;
+                                    -webkit-transition: $fadeIn;
+
+                                    padding: $padding 30px;
+
+                                    &:hover{
+                                        background-color: rgba(0, 0, 0, 0);
+                                    }
+
+                                    @media screen and (max-width: $tablet-v) {
+                                        padding: 10px;
+                                    }
+
+                                    @media screen and (max-width: $mobile-v) {
+                                        padding: $padding;
+                                    }
+
+                                    h3 {
+                                        font-weight: 500;
+                                        color: $white;
+                                        font-size: 1.5em;
+                                        line-height: 1.2;
+                                        overflow: hidden;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 5;
+                                        -webkit-box-orient: vertical;
+                                        text-shadow: rgba(0, 0, 0, 0.5) 0.1em 0.1em 0.1em;
+
+                                        width: 100%;
+
+                                        @media screen and (max-width: $tablet-h) {
+                                            font-size: 1.2em;
+                                        }
+
+                                        @media screen and (max-width: $mobile-h) {
+                                            font-size: 1.5em;
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    .desc {
+                                        font-size: 1em;
+                                        overflow: hidden;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 2;
+                                        -webkit-box-orient: vertical;
+                                        text-align: left;
+                                        padding: 0;
+                                        margin: 0;
+                                        width: 100%;
+                                    }
+
+                                    .price{
+                                        font-weight: 500;
+                                        font-size: 1.25em;
+                                        color: $white;
+                                        width: 100%;
+                                        text-shadow: rgba(0, 0, 0, 0.5) 0.1em 0.1em 0.1em;
+                                    }
+
+                                    .bottom {
+                                        width: 100%;
+                                        margin: 0;
+                                        padding: 0;
+
+                                        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                                        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                                        display: -ms-flexbox; /* TWEENER - IE 10 */
+                                        display: -webkit-flex; /* NEW - Chrome */
+                                        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                                        flex-wrap: wrap;
+
+                                        @media screen and (max-width: $tablet-h) {
+                                            margin-top: 0;
+                                        }
+
+                                        @media screen and (max-width: $mobile-h) {
+                                            padding-top: 0;
+                                        }
+
+                                        .hashtag-container {
+                                            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                                            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                                            display: -ms-flexbox; /* TWEENER - IE 10 */
+                                            display: -webkit-flex; /* NEW - Chrome */
+                                            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                                            flex-wrap: wrap;
+                                            width: 100%;
+                                            display: none !important;
+
+                                            .hashtag {
+                                                font-size: 0.8em;
+                                                color: #75cee2;
+                                                margin-right: 10px;
+
+                                                @media screen and (max-width: $mobile-v) {
+                                                    font-size: 0.8em;
+                                                }
+                                            }
+                                        }
+
+                                        .location, .price {
+                                            display: none;
+
+                                        }
+                                    }
+                                }
+
+                                .price-container {
+                                    background-image: linear-gradient(90deg, #00e2e6, #06b5f4);
+                                    color: $white;
+                                    padding: 5px $padding;
+                                    margin-top: 10px;
+                                    text-align: center;
+
+                                    .discount-price {
+                                        font-size: 1.2em;
+
+                                        @media screen and (max-width: $mobile-v) {
+                                            font-size: 1em;
+                                        }
+
+                                        @media screen and (max-width: $mobile-xs) {
+                                            font-size: 0.8em;
+                                        }
+
+                                        .ori-price {
+                                            font-size: 0.8em;
+                                            color: $white;
+                                            opacity: .5;
+                                            text-decoration: line-through;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.highlight {
+                                margin-bottom: 4px;
+
+                                @media screen and (max-width: $mobile-h) {
+                                    margin-bottom: 0;
+                                }
+                                .content {
+
+                                    h3 {
+                                        font-size: 1.8em;
+                                        line-height: 1.5;
+
+                                        @media screen and (max-width: $mobile-h) {
+                                            font-size: 1.5em;
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.row-with-1-items, &.row-with-2-items, &.row-with-3-items, &.row-with-4-items {
+                    .list-col {
+                        width: 100%;
+
+                        .list-item {
+                            flex: 1 1 24.5%;
+                            margin-right: 0.5%;
+                            padding: $padding;
+                            background-color: #e6f8ff;
+
+                            &:last-child {
+                                margin-right: 0%;
+                            }
+
+                            .list-content{
+                                height: calc(100% - 42px);
+                            }
+                        }
+                    }
+
+                    &.row-with-1-items .list-item{
+                        flex: 1 1 100%;
+                        margin-right: 0;
+                    }
+
+                    &.row-with-2-items .list-item{
+                        flex: 1 1 49%;
+                    }
+
+                    &.row-with-3-items .list-item{
+                        flex: 1 1 32.33%;
+                    }
+
+                    .price{
+                        display: none;
+                    }
+                }
+            }
+
+            .see-more{
+                background-image: linear-gradient(90deg, #00e2e6, #06b5f4);
+                color: #fff;
+                padding: 5px 15px;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+
+        .banner-container{
+            width: 90%;
+            margin: 0 auto;
+
+            @media screen and (max-width: $mobile-v) {
+                width: 100%;
+            }
+
+            .except-mobile-v {
+                display: block;
+
+                @media screen and (min-width: $mobile-v) {
+                    display: none !important;
+                }
+            }
+
+            .mobile-v {
+                display: none;
+
+                @media screen and (max-width: $mobile-v) {
+                    display: block !important;
+                }
+            }
+        }
+    }
+
+    .terms {
+        color: $deep-blue;
+        font-size: 0.86em;
+        line-height: 1.5;
+        word-break: break-word;
+        word-wrap: break-word;
+
+
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 0 50px 0;
+
+        @media screen and (max-width: $tablet-h) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            width: 90%;
+        }
+
+        b {
+            color: $deep-blue;
+        }
+    }
+
+    .floating-icons {
+        font-size: 1.2em;
+        position: fixed;
+        right: 0;
+        top: 50%;
+        cursor: pointer;
+        z-index: 100000;
+        opacity: 0;
+        -webkit-transition: $fadeIn;
+        transition: $fadeIn;
+
+        &.show {
+            opacity: 1;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            display: none !important;
+        }
+
+        .address-icon {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: contain;
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+            display: none !important;
+
+            @media screen and (max-width: $mobile-h) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        & > div {
+            display: block;
+            background-color: rgba(163,235,224,0.8);
+            color: $white;
+            padding: 5px 30px 5px 15px;
+            box-shadow: $shadow;
+
+            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox; /* TWEENER - IE 10 */
+            display: -webkit-flex; /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            h6 {
+                font-size: 1em;
+                color: $white;
+            }
+
+            &.active {
+                background-color: $deep-blue;
+            }
+
+
+        }
+    }
+
+    section#spotlight{
+        margin-bottom: 50px;
+
+        h2,p{
+        }
+
+        .list-item.slick-current .list-content, .list-item:hover .list-content, .destinations .list-item .list-content {
+            background-color: $deep-blue;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            .main-logo-container{
+                justify-content: center;
+                text-align: center;
+            }
+
+            .drag-content{
+                width: 96%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+body.zh-hk .experience-title{
+    h2 {
+        font-family: $main-font !important;
+        font-size: 2.5em !important;
+
+        @media screen and (max-width: $tablet-v) {
+            font-size: 1.75em;
+        }
+
+        @media screen and (max-width: $mobile-v) {
+            font-size: 2em !important;
+
+        }
+    }
+}

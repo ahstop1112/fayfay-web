@@ -1,0 +1,27 @@
+<div class="tab-content">
+    <div id="booking" class="tab-pane fade in active">
+        <h3><%= translations['help.experience.booking'] %></h3>
+        <hr />
+        <% include help.booking.ejs %>
+    </div>
+    <div id="payment" class="tab-pane fade">
+        <h3><%= translations['help.payment'] %></h3>
+        <hr />
+        <% include help.payment.ejs %>
+    </div>
+    <div id="coupon" class="tab-pane fade">
+        <h3><%= translations['help.promo.codes'] %></h3>
+        <hr />
+        <% include help.coupon.ejs %>
+    </div>
+    <div id="changes" class="tab-pane fade">
+        <h3><%= translations['help.changes.refunds'] %></h3>
+        <hr />
+        <% include help.changes.ejs %>
+    </div>
+    <div id="settings" class="tab-pane fade">
+        <h3><%= translations['help.account.settings'] %></h3>
+        <hr />
+        <% include help.settings.ejs %>
+    </div>
+</div>

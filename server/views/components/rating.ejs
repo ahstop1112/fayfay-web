@@ -1,0 +1,19 @@
+<% if (typeof ratingAverage !== 'undefined') { %>
+    <% if (ratingAverage >= 4.4 && ratingAverage<= 4.7) { %>
+        <ul class="rating num-4half">
+    <% }else if (ratingAverage >= 3.4 && ratingAverage<= 3.7) { %>
+        <ul class="rating num-3half">
+    <% }else if (ratingAverage >= 2.4 && ratingAverage<= 2.7) { %>
+        <ul class="rating num-2half">
+    <% }else if (ratingAverage >= 1.4 && ratingAverage<= 1.7) { %>
+        <ul class="rating num-1half">
+    <% }else{ %>
+        <ul class="rating num-<%=Math.round(ratingAverage)%>">
+    <% } %>
+        <li class="star"></li>
+        <li class="star"></li>
+        <li class="star"></li>
+        <li class="star"></li>
+        <li class="star"></li>
+    </ul>
+<% }; %>

@@ -1,0 +1,150 @@
+<section class="section add-ons">
+    <div class="container-fluid">
+        <div class="add-ons-container">
+            <h2 class="title one-line"><div><%= translations['property.tour.add.ons'] %></div></h2>
+            <div class="title-deco"></div>
+            <div class="drag-content">
+                <ul class="drag-list recommend-list">
+                    <li class="list-item">
+                        <a href="/<%=locale%>/experience/10754-vip-fast-track-arrival-and-departure-for-vietnam" title="<%= translations['visa.add.ons.one.title'] %>" target="_blank">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640/fayfay-media/prod/mx3we2zab7eeqo3odisj.jpg" alt="<%= translations['visa.add.ons.one.title'] %>" class="bg">
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['visa.add.ons.one.title'] %></h3>
+                                    <p class="desc"><%- translations['visa.add.ons.one.desc'] %></p>
+                                </div>
+                                <div class="bottom">
+                                    <div class="price">
+                                        <% switch (ccy) {
+                                        case 'HKD' : %>
+                                            HK$ 408<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'TWD' : %>
+                                            NT$ 1,560<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'VND' : %>
+                                            <span>Từ</span> ₫ 1,200,000
+                                        <% break;
+                                        case 'USD' : %>
+                                            US$ 51.6<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'CNY' : %>
+                                            ¥ 348<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'SGD' : %>
+                                            S$ 71<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'MYR' : %>
+                                            RM 216<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        } %>
+
+                                    </div>
+                                    <div class="details">
+                                        <%= translations['visa.add.ons.details'] %>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="list-item">
+                        <a href="/<%=locale %>/faysim" title="<%= translations['visa.add.ons.two.title'] %>" target="_blank">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <% if (locale == 'zh-hk' || locale == 'zh-cn') { %>
+                                        <img src="/images/faysim_buynow_tc.jpg" class="bg">
+                                    <% } else { %>
+                                        <img src="/images/faysim_buynow_en.jpg" class="bg">
+                                    <% } %>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['visa.add.ons.two.title'] %></h3>
+                                    <p class="desc"><%- translations['visa.add.ons.two.desc'] %> </p>
+                                </div>
+                                <div class="bottom">
+                                    <div class="price">
+                                        <% switch (ccy) {
+                                        case 'HKD' : %>
+                                            HK$ 28<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'TWD' : %>
+                                            NT$ 107<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'VND' : %>
+                                            <span>Từ</span> ₫ 82,353
+                                        <% break;
+                                        case 'USD' : %>
+                                            US$ 3.5<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'CNY' : %>
+                                            ¥ 24<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'SGD' : %>
+                                            S$ 4.9<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'MYR' : %>
+                                            RM 15<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        } %>
+
+                                    </div>
+                                    <div class="details">
+                                        <%= translations['visa.add.ons.details'] %>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="list-item">
+                        <a href="/<%=locale %>/category/transportation" title="<%= translations['visa.add.ons.three.title'] %>" target="_blank">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640/fayfay-media/prod/ebkzhxzdxtf2z504ovtv.jpg" alt="<%= translations['visa.add.ons.three.title'] %>" class="bg">
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['visa.add.ons.three.title'] %></h3>
+                                    <p class="desc"><%- translations['visa.add.ons.three.desc'] %></p>
+                                </div>
+                                <div class="bottom">
+                                    <div class="price">
+                                        <% switch (ccy) {
+                                        case 'HKD' : %>
+                                            HK$ 43<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'TWD' : %>
+                                            NT$ 163<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'VND' : %>
+                                            <span>Từ</span> ₫ 125,000
+                                        <% break;
+                                        case 'USD' : %>
+                                            US$ 5.4<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'CNY' : %>
+                                            ¥ 36<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'SGD' : %>
+                                            S$ 7.4<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        case 'MYR' : %>
+                                            RM 23<span><%= translations['common.up'] %></span>
+                                        <% break;
+                                        } %>
+
+                                    </div>
+                                    <div class="details">
+                                        <%= translations['visa.add.ons.details'] %>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

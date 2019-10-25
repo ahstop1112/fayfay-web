@@ -1,0 +1,44 @@
+<header class="double11-header-section">
+    <div class="header-top-area">
+        <div class="header-container">
+
+            <div class="logo">
+                <a href="<%= langUrl %>/">
+                    <img src="/images/space.png" alt="Fayfay">
+                </a>
+            </div>
+            <div class="menu">
+                <% include nav.ejs %>
+            </div>
+            <% if (flash.message) { %>
+            <div id="notification">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-md-10 col-xs-10">
+                            <%= flash.message%>
+                        </div>
+                        <div class="col-md-2 col-md-2 col-xs-2">
+                            <a class="btn-close" id="close-notify"><i class="icon close"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+
+    <div class="section-background">
+        <div class="overlay-content">
+            <div class="bg-container">
+                <% if (locale == 'zh-hk') { %>
+                    <img src="/images/campaign/double11/banner_zh-hk.jpg" class="bg except-mobile-v">
+                    <img src="/images/campaign/double11/banner_zh-hk_4x3.jpg" class="bg mobile-v">
+                <% } else { %>
+                    <img src="/images/campaign/double11/banner_en-us.jpg" class="bg except-mobile-v">
+                    <img src="/images/campaign/double11/banner_en-us_4x3.jpg" class="bg mobile-v">
+                <% } %>
+
+            </div>
+        </div>
+    </div>
+</header>

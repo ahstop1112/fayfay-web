@@ -1,0 +1,41 @@
+<div class="header-top-area">
+    <div class="header-container">
+        <div class="logo">
+            <a href="<%= langUrl %>">
+                <img src="/images/space.png" alt="Fayfay">
+            </a>
+        </div>
+        <% if (userInfo) { %>
+            <div class="cart-container hidden-lg" id="shopping-cart-mobile-container"><%- shoppingCartMobileContainerHtml %></div>
+        <% } else { %>
+            <div class="cart-container hidden-lg">
+                <a href="<%= langUrl %>/cart">
+                    <i class="icon cart"></i>
+                </a>
+            </div>
+        <% } %>
+        <div class="menu">
+            <% include ../include/nav.ejs %>
+        </div>
+        <div id="search-box-container"><%- searchBoxContainerHtml %></div>
+        <div class="header-menu-mobile visible-xs visible-sm visible-md">
+            <a id="btn-menu-mobile" href="#mainNav-mobile">
+                <i class="icon bars"></i>
+            </a>
+        </div>
+        <% if (flash.message) { %>
+            <div id="notification">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-md-10 col-xs-10">
+                            <%= flash.message %>
+                        </div>
+                        <div class="col-md-2 col-md-2 col-xs-2">
+                            <a class="btn-close" id="close-notify"><i class="icon close"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['campaign.musthaves.desc'] %>">
+    <meta name="keywords" content="<%= translations['campaign.musthaves.title'] %>">
+    <title><%= translations['campaign.musthaves.title'] %> | Fayfay.com</title>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/campaign/<%= translations['campaign.musthaves.ogimage']%>"/>
+    <meta property="og:image:alt" content="<%= translations['campaign.musthaves.title']  %>"/>
+    <meta property="og:title" content="<%= translations['campaign.musthaves.title'] %>"/>
+    <meta property="og:description" content="<%= translations['campaign.musthaves.desc'] %>"/>
+
+    <% include ../include/gtm.header.ejs %>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/musthaves.css">
+</head>
+
+<body class="<%= locale%>">
+<% include ../include/gtm.body.ejs %>
+    <div id="musthaves">
+        <% include musthaves.header.ejs %>
+        <% include musthaves.all.ejs %>
+        <% include campaign.destinations.ejs %>
+
+        <div class="floating-icons">
+            <div class="hcmc active"><div class="address-icon"></div><h6><%= translations['activity.hcmc']  %></h6></div>
+            <div class="hanoi"><div class="address-icon"></div><h6><%= translations['activity.hanoi'] %></h6></div>
+            <div class="daNang"><div class="address-icon"></div><h6><%= translations['campaign.musthaves.daNang.hoian'] %></h6></div>
+            <div class="nhaTrang"><div class="address-icon"></div><h6><%= translations['activity.nhaTrang'] %></h6></div>
+        </div>
+        <% include ../include/footer.ejs %>
+    </div>
+
+    <% include ../include/js.ejs %>
+    <script src="/js/musthaves-bundle.js"></script>
+</body>
+</html>

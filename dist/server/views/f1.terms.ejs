@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['f1.og.desc'] %>">
+    <meta name="keywords" content="<%= translations['f1.og.title'] %>">
+    <title><%= translations['f1.title'] %> | Fayfay.com</title>
+    <%
+        if (locale == 'zh-hk' || locale == 'zh-cn'){
+    %>
+        <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/f1-og-tc.jpg"/>
+    <%
+        }else{
+    %>
+        <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/f1-og-en.jpg"/>
+    <% } %>
+    <meta property="og:image:alt" content="<%= translations['f1.title']  %>"/>
+    <meta property="og:title" content="<%= translations['f1.title'] %>"/>
+    <meta property="og:description" content="<%= translations['f1.desc'] %>"/>
+
+    <% include include/gtm.header.ejs %>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/f1.css">
+</head>
+
+<body class="f1-campaign-bg <%= locale%>">
+<% include include/gtm.body.ejs %>
+
+    <div id="f1">
+        <% include f1/f1.terms.header.ejs %>
+        <% include f1/f1.terms.body.ejs %>
+        <% include f1/f1.footer.ejs %>
+    </div>
+    <% include include/js.ejs %>
+    <script src="/js/f1-bundle.js"></script>
+</body>
+</html>

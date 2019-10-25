@@ -1,0 +1,35 @@
+<section id="city-main-button-section">
+    <div class="container-fluid main-button-container">
+        <a class="home-button inline cboxElement" href="#inline_content">
+            <div class="home-icon">
+                <img src="/images/icons/location.gif">
+            </div>
+            <div class="home-title">
+                <h1><%= translations['common.location'] %></h1>
+                <p><%= translations[cityData.region] %></p>
+            </div>
+        </a>
+        <% if (cityData.icons && cityData.icons[0]) { %>
+        <div class="home-button">
+            <div class="home-icon">
+                <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= cityData.icons[0].iconName %>">
+            </div>
+            <div class="home-title">
+                <h1><%= cityData.icons[0].title %></h1>
+                <p><%= cityData.icons[0].description %></p>
+            </div>
+        </div>
+        <% } %>
+        <% if (cityData.icons && cityData.icons[1]) { %>
+        <div class="home-button">
+            <div class="home-icon">
+                <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= cityData.icons[1].iconName %>">
+            </div>
+            <div class="home-title">
+                <h1><%= cityData.icons[1].title %></h1>
+                <p><%= cityData.icons[1].description %></p>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</section>

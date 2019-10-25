@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['common.thankyou'] %>">
+    <meta name="keywords" content="<%= translations['common.thankyou'] %>">
+    <title><%= translations['common.thankyou'] %> | Fayfay.com</title>
+
+    <% include include/gtm.header.ejs %>
+
+    <% if(PAP_HOST && PAP_ACCOUNT_ID) { %>
+        <script id="pap_x2s6df8d" src="<%= PAP_HOST %>/scripts/trackjs.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            PostAffTracker.setAccountId('<%= PAP_ACCOUNT_ID %>');
+            var sale = PostAffTracker.createSale();
+            sale.setTotalCost('<%= order.paymentAmountVND %>');
+            sale.setOrderID('<%= order.id %>');
+            sale.setProductID('<%= order.items.map(orderItem => orderItem.activityId).join(',') %>');
+            sale.setCurrency('VND');
+            <% if (order.couponCode) { %>
+            sale.setCoupon('<%= order.couponCode %>');
+            <% } %>
+
+            PostAffTracker.register();
+        </script>
+    <% } %>
+    <!--- Google Analytics Key --->
+    <script>
+        ga('create', '<%=GOOGLE_ANALYTICS_KEY_TRAVEL%>', {
+            'cookieDomain': 'none'
+        });
+
+        ga('require', 'ecommerce', 'ecommerce.js');
+
+        ga('ecommerce:addTransaction', {
+            'id': '<%= order.id %>',
+            'affiliation': 'Fayfay.com',
+            'revenue': <%= order.paymentAmount %>,
+            'currency': '<%= ccy %>'
+        });
+
+        <% order.items.forEach(function(activity){ %>
+        ga('ecommerce:addItem', {
+            'id': '<%= order.id %>',
+            'name': '<%= activity.activityName %>',
+            'sku': '<%= activity.id %>',
+            'price': <%= activity.amount %>,
+            'quantity': '1'
+        });
+        <% }); %>
+
+        ga('ecommerce:send');
+    </script>
+
+    <!--- YAHOO Native ad PIXEL ID --->
+    <script type="application/javascript">
+        window.dotq = window.dotq || [];
+        window.dotq.push({
+            'projectId': '10000',
+            'properties': {
+                'pixelId': '<%= YAHOO_PIXEL_ID %>',
+                'qstrings': {
+                    'et': 'custom',
+                    'gv': '<%= order.paymentAmount %>'
+                }
+
+            }
+        });
+     </script>
+
+    <!--- YAHOO BING ad PIXEL ID --->
+    <script>
+        window.uetq = window.uetq || [];
+        window.uetq.push ({
+            event_value: '<%= order.paymentAmount %>'
+        });
+    </script>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/thankyou.css">
+</head>
+
+<body>
+<% include include/gtm.body.ejs %>
+
+    <div id="page">
+        <% include thankyou/thankyou.header.ejs %>
+        <% include thankyou/thankyou.breadcrumb.ejs %>
+        <% include thankyou/thankyou.activities.ejs %>
+        <% include home/home.destinations.ejs %>
+
+        <% include include/footer.ejs %>
+    </div>
+    <% include include/js.ejs %>
+</body>
+</html>

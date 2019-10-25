@@ -1,0 +1,382 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+.breadcrumb-section {
+  margin-top: 90px; }
+
+.thankyou-section .bg-light-grey {
+  margin-top: 0;
+  margin-bottom: 20px; }
+
+.thankyou-section h3 {
+  color: #EE7E31; }
+
+.thankyou-section .payment-highlight {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-top: 20px; }
+
+.thankyou-section span {
+  color: #EE7E31; }
+
+.thankyou-section .table-title .greyborderbox, .thankyou-section .table-title .bg-light-grey, .thankyou-section .table-activity .greyborderbox, .thankyou-section .table-activity .bg-light-grey {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 10px 15px; }
+  @media screen and (max-width: 991px) {
+    .thankyou-section .table-title .greyborderbox, .thankyou-section .table-title .bg-light-grey, .thankyou-section .table-activity .greyborderbox, .thankyou-section .table-activity .bg-light-grey {
+      -ms-flex-wrap: wrap;
+      -webit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-align-items: center;
+      align-items: center; } }
+  .thankyou-section .table-title .greyborderbox .photo, .thankyou-section .table-title .bg-light-grey .photo, .thankyou-section .table-activity .greyborderbox .photo, .thankyou-section .table-activity .bg-light-grey .photo {
+    width: 19%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 120px; }
+    @media screen and (max-width: 991px) {
+      .thankyou-section .table-title .greyborderbox .photo, .thankyou-section .table-title .bg-light-grey .photo, .thankyou-section .table-activity .greyborderbox .photo, .thankyou-section .table-activity .bg-light-grey .photo {
+        width: 15%;
+        height: 100px; } }
+    @media screen and (max-width: 767px) {
+      .thankyou-section .table-title .greyborderbox .photo, .thankyou-section .table-title .bg-light-grey .photo, .thankyou-section .table-activity .greyborderbox .photo, .thankyou-section .table-activity .bg-light-grey .photo {
+        width: 30%;
+        padding-right: 2%; } }
+    @media screen and (max-width: 550px) {
+      .thankyou-section .table-title .greyborderbox .photo, .thankyou-section .table-title .bg-light-grey .photo, .thankyou-section .table-activity .greyborderbox .photo, .thankyou-section .table-activity .bg-light-grey .photo {
+        width: 30%;
+        height: 100px;
+        margin-top: -100px; } }
+    .thankyou-section .table-title .greyborderbox .photo img, .thankyou-section .table-title .bg-light-grey .photo img, .thankyou-section .table-activity .greyborderbox .photo img, .thankyou-section .table-activity .bg-light-grey .photo img {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      right: 0;
+      bottom: -100%;
+      margin: auto;
+      margin-left: 50%;
+      /* Move to the left by 50% of own width */
+      transform: translateX(-50%);
+      width: auto;
+      height: 100%; }
+  .thankyou-section .table-title .greyborderbox .name, .thankyou-section .table-title .bg-light-grey .name, .thankyou-section .table-activity .greyborderbox .name, .thankyou-section .table-activity .bg-light-grey .name {
+    width: 38%;
+    padding: 1%;
+    padding-left: 2%; }
+    .thankyou-section .table-title .greyborderbox .name b, .thankyou-section .table-title .bg-light-grey .name b, .thankyou-section .table-activity .greyborderbox .name b, .thankyou-section .table-activity .bg-light-grey .name b {
+      font-weight: 500; }
+    @media screen and (max-width: 1025px) {
+      .thankyou-section .table-title .greyborderbox .name, .thankyou-section .table-title .bg-light-grey .name, .thankyou-section .table-activity .greyborderbox .name, .thankyou-section .table-activity .bg-light-grey .name {
+        width: 33%; } }
+    @media screen and (max-width: 991px) {
+      .thankyou-section .table-title .greyborderbox .name, .thankyou-section .table-title .bg-light-grey .name, .thankyou-section .table-activity .greyborderbox .name, .thankyou-section .table-activity .bg-light-grey .name {
+        width: 43%; } }
+    @media screen and (max-width: 767px) {
+      .thankyou-section .table-title .greyborderbox .name, .thankyou-section .table-title .bg-light-grey .name, .thankyou-section .table-activity .greyborderbox .name, .thankyou-section .table-activity .bg-light-grey .name {
+        width: 64%; } }
+    @media screen and (max-width: 550px) {
+      .thankyou-section .table-title .greyborderbox .name, .thankyou-section .table-title .bg-light-grey .name, .thankyou-section .table-activity .greyborderbox .name, .thankyou-section .table-activity .bg-light-grey .name {
+        width: 65%;
+        padding-left: 5%; }
+        .thankyou-section .table-title .greyborderbox .name b, .thankyou-section .table-title .bg-light-grey .name b, .thankyou-section .table-activity .greyborderbox .name b, .thankyou-section .table-activity .bg-light-grey .name b {
+          display: block; } }
+    @media screen and (max-width: 991px) {
+      .thankyou-section .table-title .greyborderbox .name h5, .thankyou-section .table-title .bg-light-grey .name h5, .thankyou-section .table-activity .greyborderbox .name h5, .thankyou-section .table-activity .bg-light-grey .name h5 {
+        font-size: 1.2em;
+        line-height: 1.5;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-weight: 700; } }
+    .thankyou-section .table-title .greyborderbox .name .desc, .thankyou-section .table-title .bg-light-grey .name .desc, .thankyou-section .table-activity .greyborderbox .name .desc, .thankyou-section .table-activity .bg-light-grey .name .desc {
+      color: #aaa; }
+      @media screen and (max-width: 991px) {
+        .thankyou-section .table-title .greyborderbox .name .desc, .thankyou-section .table-title .bg-light-grey .name .desc, .thankyou-section .table-activity .greyborderbox .name .desc, .thankyou-section .table-activity .bg-light-grey .name .desc {
+          margin: 0; } }
+  .thankyou-section .table-title .greyborderbox .date, .thankyou-section .table-title .bg-light-grey .date, .thankyou-section .table-activity .greyborderbox .date, .thankyou-section .table-activity .bg-light-grey .date {
+    width: 14%;
+    padding-right: 1%;
+    line-height: 2.5; }
+    .thankyou-section .table-title .greyborderbox .date p, .thankyou-section .table-title .bg-light-grey .date p, .thankyou-section .table-activity .greyborderbox .date p, .thankyou-section .table-activity .bg-light-grey .date p {
+      margin: 0; }
+    @media screen and (max-width: 991px) {
+      .thankyou-section .table-title .greyborderbox .date, .thankyou-section .table-title .bg-light-grey .date, .thankyou-section .table-activity .greyborderbox .date, .thankyou-section .table-activity .bg-light-grey .date {
+        line-height: 1.5;
+        margin-top: 0;
+        width: 18%; } }
+  .thankyou-section .table-title .greyborderbox .input-group, .thankyou-section .table-title .bg-light-grey .input-group, .thankyou-section .table-activity .greyborderbox .input-group, .thankyou-section .table-activity .bg-light-grey .input-group {
+    width: 14%;
+    padding-right: 1%; }
+    @media screen and (max-width: 991px) {
+      .thankyou-section .table-title .greyborderbox .input-group, .thankyou-section .table-title .bg-light-grey .input-group, .thankyou-section .table-activity .greyborderbox .input-group, .thankyou-section .table-activity .bg-light-grey .input-group {
+        width: 20%; } }
+    @media screen and (max-width: 767px) {
+      .thankyou-section .table-title .greyborderbox .input-group, .thankyou-section .table-title .bg-light-grey .input-group, .thankyou-section .table-activity .greyborderbox .input-group, .thankyou-section .table-activity .bg-light-grey .input-group {
+        width: 30%;
+        margin-left: 35%;
+        margin-top: -25px; } }
+    @media screen and (max-width: 550px) {
+      .thankyou-section .table-title .greyborderbox .input-group, .thankyou-section .table-title .bg-light-grey .input-group, .thankyou-section .table-activity .greyborderbox .input-group, .thankyou-section .table-activity .bg-light-grey .input-group {
+        width: 50%;
+        margin-left: 40%;
+        margin-top: -25px; } }
+  .thankyou-section .table-title .greyborderbox .hr, .thankyou-section .table-title .bg-light-grey .hr, .thankyou-section .table-activity .greyborderbox .hr, .thankyou-section .table-activity .bg-light-grey .hr {
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+    width: 100%; }
+  .thankyou-section .table-title .greyborderbox .price, .thankyou-section .table-title .bg-light-grey .price, .thankyou-section .table-activity .greyborderbox .price, .thankyou-section .table-activity .bg-light-grey .price {
+    width: 15%;
+    color: #EE7E31;
+    font-size: 1.1em;
+    text-align: center; }
+    @media screen and (max-width: 991px) {
+      .thankyou-section .table-title .greyborderbox .price, .thankyou-section .table-title .bg-light-grey .price, .thankyou-section .table-activity .greyborderbox .price, .thankyou-section .table-activity .bg-light-grey .price {
+        width: 20%;
+        text-align: center; } }
+    @media screen and (max-width: 767px) {
+      .thankyou-section .table-title .greyborderbox .price, .thankyou-section .table-title .bg-light-grey .price, .thankyou-section .table-activity .greyborderbox .price, .thankyou-section .table-activity .bg-light-grey .price {
+        width: 30%;
+        margin-left: 5%;
+        text-align: left; } }
+    @media screen and (max-width: 550px) {
+      .thankyou-section .table-title .greyborderbox .price, .thankyou-section .table-title .bg-light-grey .price, .thankyou-section .table-activity .greyborderbox .price, .thankyou-section .table-activity .bg-light-grey .price {
+        margin-left: 0;
+        width: 40%; } }
+  .thankyou-section .table-title .greyborderbox .edit-delete, .thankyou-section .table-title .bg-light-grey .edit-delete, .thankyou-section .table-activity .greyborderbox .edit-delete, .thankyou-section .table-activity .bg-light-grey .edit-delete {
+    width: 15%;
+    text-align: right; }
+    @media screen and (max-width: 991px) {
+      .thankyou-section .table-title .greyborderbox .edit-delete, .thankyou-section .table-title .bg-light-grey .edit-delete, .thankyou-section .table-activity .greyborderbox .edit-delete, .thankyou-section .table-activity .bg-light-grey .edit-delete {
+        width: 100%;
+        margin: 10px 0; } }
+    @media screen and (max-width: 767px) {
+      .thankyou-section .table-title .greyborderbox .edit-delete, .thankyou-section .table-title .bg-light-grey .edit-delete, .thankyou-section .table-activity .greyborderbox .edit-delete, .thankyou-section .table-activity .bg-light-grey .edit-delete {
+        width: 60%; } }
+    .thankyou-section .table-title .greyborderbox .edit-delete a, .thankyou-section .table-title .bg-light-grey .edit-delete a, .thankyou-section .table-activity .greyborderbox .edit-delete a, .thankyou-section .table-activity .bg-light-grey .edit-delete a {
+      color: #aaa;
+      padding: 0 15px;
+      cursor: pointer; }
+      @media screen and (max-width: 767px) {
+        .thankyou-section .table-title .greyborderbox .edit-delete a, .thankyou-section .table-title .bg-light-grey .edit-delete a, .thankyou-section .table-activity .greyborderbox .edit-delete a, .thankyou-section .table-activity .bg-light-grey .edit-delete a {
+          padding: 0 5px; } }
+    .thankyou-section .table-title .greyborderbox .edit-delete .popup-details, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details {
+      width: 25%;
+      background-color: #f4f4f4;
+      position: absolute;
+      z-index: 999;
+      margin-top: -3%;
+      margin-left: -21%;
+      opacity: 0;
+      box-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px;
+      text-align: left;
+      /*iphone x*/ }
+      @media screen and (max-width: 991px) {
+        .thankyou-section .table-title .greyborderbox .edit-delete .popup-details, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details {
+          width: 42%;
+          margin-top: -4.5%;
+          margin-left: -38%; } }
+      @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+        .thankyou-section .table-title .greyborderbox .edit-delete .popup-details, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details {
+          width: 100%;
+          height: 100%;
+          max-height: 100%;
+          position: fixed;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          margin-top: 0;
+          margin-left: 0;
+          top: 0;
+          left: 0;
+          z-index: 9999;
+          padding: 0; } }
+      @media screen and (max-width: 767px) {
+        .thankyou-section .table-title .greyborderbox .edit-delete .popup-details, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details {
+          width: 100%;
+          height: 100%;
+          max-height: 100%;
+          position: fixed;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          margin-top: 0;
+          margin-left: 0;
+          top: 0;
+          left: -100%;
+          opacity: 1;
+          z-index: 9999;
+          padding: 0;
+          -webkit-transition: all 0.4s ease-out;
+          transition: all 0.4s ease-out; } }
+      .thankyou-section .table-title .greyborderbox .edit-delete .popup-details .popup-header, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details .popup-header, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details .popup-header, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details .popup-header {
+        background-color: #fff;
+        width: 100%;
+        padding: 0;
+        display: none; }
+        @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+          .thankyou-section .table-title .greyborderbox .edit-delete .popup-details .popup-header, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details .popup-header, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details .popup-header, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details .popup-header {
+            display: block; } }
+        @media screen and (max-width: 767px) {
+          .thankyou-section .table-title .greyborderbox .edit-delete .popup-details .popup-header, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details .popup-header, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details .popup-header, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details .popup-header {
+            display: block; } }
+        .thankyou-section .table-title .greyborderbox .edit-delete .popup-details .popup-header .icon, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details .popup-header .icon, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details .popup-header .icon, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details .popup-header .icon {
+          margin: 15px; }
+      .thankyou-section .table-title .greyborderbox .edit-delete .popup-details .popup-body, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details .popup-body, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details .popup-body, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details .popup-body {
+        padding: 15px;
+        color: #163A4D; }
+        .thankyou-section .table-title .greyborderbox .edit-delete .popup-details .popup-body .input-group, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details .popup-body .input-group, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details .popup-body .input-group, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details .popup-body .input-group {
+          width: 40%;
+          padding-top: 15px; }
+          @media screen and (max-width: 991px) {
+            .thankyou-section .table-title .greyborderbox .edit-delete .popup-details .popup-body .input-group, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details .popup-body .input-group, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details .popup-body .input-group, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details .popup-body .input-group {
+              width: 45%;
+              padding-top: 15px;
+              margin-top: 0; } }
+        .thankyou-section .table-title .greyborderbox .edit-delete .popup-details .popup-body .price, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details .popup-body .price, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details .popup-body .price, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details .popup-body .price {
+          margin: 0;
+          padding: 0; }
+        .thankyou-section .table-title .greyborderbox .edit-delete .popup-details .popup-body .arrow, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details .popup-body .arrow, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details .popup-body .arrow, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details .popup-body .arrow {
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 20px;
+          right: -10px;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-left: 10px solid #f4f4f4; }
+          @media screen and (max-width: 767px) {
+            .thankyou-section .table-title .greyborderbox .edit-delete .popup-details .popup-body .arrow, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details .popup-body .arrow, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details .popup-body .arrow, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details .popup-body .arrow {
+              display: none; } }
+        .thankyou-section .table-title .greyborderbox .edit-delete .popup-details .popup-body .desc, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details .popup-body .desc, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details .popup-body .desc, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details .popup-body .desc {
+          margin-bottom: 15px; }
+        .thankyou-section .table-title .greyborderbox .edit-delete .popup-details .popup-body .btn, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details .popup-body .btn, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details .popup-body .btn, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details .popup-body .btn {
+          width: 100%; }
+      .thankyou-section .table-title .greyborderbox .edit-delete .popup-details.opened, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details.opened, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details.opened, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details.opened {
+        opacity: 1; }
+        @media screen and (max-width: 767px) {
+          .thankyou-section .table-title .greyborderbox .edit-delete .popup-details.opened, .thankyou-section .table-title .bg-light-grey .edit-delete .popup-details.opened, .thankyou-section .table-activity .greyborderbox .edit-delete .popup-details.opened, .thankyou-section .table-activity .bg-light-grey .edit-delete .popup-details.opened {
+            left: 0; } }
+
+.thankyou-section .table-title {
+  font-size: 1.1em;
+  line-height: 2.5;
+  color: #aaa;
+  vertical-align: middle;
+  margin-bottom: 20px; }
+  @media screen and (max-width: 550px) {
+    .thankyou-section .table-title {
+      display: none; } }
+  .thankyou-section .table-title .photo {
+    height: auto !important; }
+  .thankyou-section .table-title .radio-group .checkmark {
+    background-color: #fff; }
+  .thankyou-section .table-title .price {
+    color: #aaa !important; }
+
+.thankyou-section .total-box .greyborderbox .order-price {
+  text-align: right;
+  margin-right: 0; }
+
+@media screen and (max-width: 550px) {
+  .thankyou-section .total-box {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 900;
+    margin: 0; }
+    .thankyou-section .total-box .greyborderbox {
+      margin-bottom: 0;
+      box-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px; } }
+
+.thankyou-section .total-box .checkmark {
+  margin-top: 15px; }
+
+@media screen and (max-width: 991px) {
+  .thankyou-section .total-box .price {
+    font-size: 1.5em; } }
+
+.thankyou-section .total-box a {
+  line-height: 4;
+  color: #333333;
+  padding: 0 15px;
+  cursor: pointer; }
+  @media screen and (max-width: 991px) {
+    .thankyou-section .total-box a {
+      padding: 0 5px; } }
+
+.thankyou-section .total-box .btn-lg {
+  margin: 0; }
+  @media screen and (max-width: 767px) {
+    .thankyou-section .total-box .btn-lg {
+      margin: 5px 0; } }
+
+.destination-slick {
+  outline: 0;
+  display: none; }
+  .destination-slick .slick-prev, .destination-slick .slick-next, .destination-slick a {
+    outline: 0;
+    text-decoration: none; }
+  .destination-slick .slick-slide {
+    outline: 0; }
+  .destination-slick .list-item {
+    opacity: 0.8;
+    transition: all 0.4s ease-out;
+    padding: 10px;
+    min-width: 0; }
+    .destination-slick .list-item .list-content {
+      background-color: #ccc; }
+    .destination-slick .list-item .banner:before {
+      padding-top: 100%; }
+    .destination-slick .list-item .banner .bg {
+      height: 100%;
+      width: auto; }
+    .destination-slick .list-item h3 {
+      color: #163A4D;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: 400;
+      margin: 5px 0; }
+      @media screen and (max-width: 320px) {
+        .destination-slick .list-item h3 {
+          font-size: 1em; } }
+    .destination-slick .list-item .list-content {
+      display: block; }
+    .destination-slick .list-item.slick-current {
+      opacity: 1;
+      transform: scale(1.05); }
+      .destination-slick .list-item.slick-current .list-content {
+        background-color: #EE7E31; }
+      .destination-slick .list-item.slick-current h3 {
+        color: #fff;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: 400; }
+        @media screen and (max-width: 320px) {
+          .destination-slick .list-item.slick-current h3 {
+            font-size: 1em; } }

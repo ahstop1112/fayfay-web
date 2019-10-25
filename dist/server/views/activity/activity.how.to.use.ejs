@@ -1,0 +1,77 @@
+<!-- How to Use -->
+<div class="whitebox">
+    <h4><%= translations['package.how.to.use'] %></h4>
+    <%- converter.makeHtml(tplData.howToUse) %>
+    <!--<ul class="listing point">
+        <li>You can present either a printed or mobile voucher for regular admission.</li>
+        <li>You can enter the attraction directly with this voucher.</li>
+        <li>Please see package details for ticket validity</li>
+        <li>You can enter the attraction directly with this voucher</li>
+
+    </ul>
+    <h5><%= translations['package.opening.hours'] %>:</h5>
+    <ul class="listing point">
+        <li>10:00am-6:00pm (Pleaes refer to Ocean Park official website for latest arrangement)</li>
+    </ul>-->
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+                                        * element that contains the map. */
+
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <div id="map" data-lat="<%= tplData.latitude%>" data-lng="<%= tplData.longitude %>"></div>
+    <script>
+        function initMap() {
+            var map_container = document.getElementById('map');
+            var latitiude = parseFloat(map_container.getAttribute('data-lat'));
+            var longitude = parseFloat(map_container.getAttribute('data-lng'));
+
+            var overlay;
+            USGSOverlay.prototype = new google.maps.OverlayView();
+
+            var myLatLng = {
+                lat: latitiude,
+                lng: longitude
+            };
+
+            var map = new google.maps.Map(map_container, {
+                zoom: 13,
+                center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map
+            });
+
+            // The photograph is courtesy of the U.S. Geological Survey.
+            var srcImage = 'https://developers.google.com/maps/documentation/' +
+                'javascript/examples/full/images/talkeetna.png';
+
+            // The custom USGSOverlay object contains the USGS image,
+            // the bounds of the image, and a reference to the map.
+            overlay = new USGSOverlay(bounds, srcImage, map);
+        }
+
+        function USGSOverlay(bounds, image, map) {
+
+            // Initialize all properties.
+            this.bounds_ = bounds;
+            this.image_ = image;
+            this.map_ = map;
+
+            // Define a property to hold the image's div. We'll
+            // actually create this div upon receipt of the onAdd()
+            // method so we'll leave it null for now.
+            this.div_ = null;
+
+            // Explicitly call setMap on this overlay.
+            this.setMap(map);
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= GOOGLE_API_KEY_TRAVEL %>&callback=initMap">
+    </script>
+</div>

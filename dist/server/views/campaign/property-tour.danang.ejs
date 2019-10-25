@@ -1,0 +1,105 @@
+<div class="section-experience-city section2">
+    <div class="bg-slick-container">
+        <ul class="bg-slick">
+            <li class="list-item col-3 fullwidth-slick">
+                <div class="list-content">
+                    <div class="overlay-content hover-fullwidth">
+                        <div class="banner">
+                            <img data-src="/images/campaign/propertytour/danang-bg.jpg" alt="<%= translations['activity.hoChiMinh'] %>" data-speed="-0.3" class="lazy bg"/>
+                        </div>
+                        <div class="overlay-wrap">
+                            <div class="overlay">
+                                <h3 class="title-s"><%= translations['activity.daNang'] %></h3>
+                                <p class="desc"><%= translations['property.tour.danang.desc'] %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="drag-content">
+        <h4><%= translations['property.tour.featured.property'] %></h4>
+        <ul class="drag-list recommend-list">
+            <li class="list-item">
+                <div class="list-content text">
+                    <div class="overlay-content hover-normal">
+                        <div class="text-area">
+                            <h5><%= translations['property.tour.danang.property.name'] %></h5>
+                            <p>
+                                <b><%= translations['property.tour.location'] %></b> : <%= translations['property.tour.phu.loc.district'] %> <br/>
+                                <b><%= translations['property.tour.unit.size'] %></b> : 2,105 <%= translations['property.tour.sq.ft.short'] %><br/>
+                                <b><%= translations['property.tour.unit.type'] %></b> : <%= translations['property.tour.townhouse'] %> %><br/>
+                                <b>
+                                    <%
+                                        switch (ccy) {
+                                            case 'HKD' : %>
+                                                <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '2,483,200' }) %></b>
+                                            <% break;
+                                            case 'TWD' : %>
+                                                <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '9,859,765' }) %></b>
+                                            <% break;
+                                            case 'VND' : %>
+                                                <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '7,303,529,412' }) %></b>
+                                            <% break;
+                                            case 'USD' : %>
+                                               <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '314,052' }) %></b>
+                                            <% break;
+                                            case 'CNY' : %>
+                                                <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '2,212,969' }) %></b>
+                                            <% break;
+                                            case 'SGD' : %>
+                                                <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '430,908' }) %></b>
+                                            <% break;
+                                            case 'MYR' : %>
+                                                 <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '1,314,635' }) %></b>
+                                            <% break;
+                                         }
+                                     %>
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-content">
+                    <div class="overlay-content hover-normal">
+                        <div class="banner">
+                            <img
+                                class="lazy bg" data-src="/images/campaign/propertytour/danang-1.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-content">
+                    <div class="overlay-content hover-normal">
+                        <div class="banner">
+                            <img
+                                class="lazy bg" data-src="/images/campaign/propertytour/danang-2.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-content">
+                    <div class="overlay-content hover-normal">
+                        <div class="banner">
+                            <img
+                                class="lazy bg" data-src="/images/campaign/propertytour/danang-3.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="desc-container">
+        <p class="desc"><%= translations['property.tour.let.us.know'] %></p>
+        <a href="/<%=locale%>/experience/10958-exploring-da-nang-property-half-day-private-tour" target="_blank" class="btn">
+            <%= translations['property.tour.book.now'].format({ 'city': translations['activity.daNang'] }) %></a>
+    </div>
+</div>

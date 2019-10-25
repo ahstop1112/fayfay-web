@@ -1,0 +1,205 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+.review-header-section {
+  padding-top: 80px; }
+  @media screen and (max-width: 767px) {
+    .review-header-section {
+      padding-top: 70px; } }
+
+.breadcrumb-section {
+  margin-top: 90px; }
+
+.review-section > .container-fluid {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.review-section h4 {
+  color: #EE7E31;
+  margin-bottom: 20px; }
+  @media screen and (max-width: 767px) {
+    .review-section h4 {
+      margin-bottom: 10px; } }
+
+.review-section h5 {
+  color: #163A4D;
+  margin-top: 15px;
+  margin-bottom: 10px; }
+  .review-section h5 span {
+    color: #EE7E31; }
+  .review-section h5 b {
+    font-size: 0.86em;
+    font-weight: normal;
+    color: #163A4D !important; }
+
+.review-section .header {
+  display: none; }
+
+.review-section .desc {
+  color: #999;
+  margin-bottom: 0;
+  font-size: 1.1em; }
+
+.review-section .whitebox .btn-lg {
+  margin: 10px 0; }
+
+.review-section .review-content .whitebox, .review-section .review-content .bg-light-grey {
+  margin-bottom: 0;
+  padding: 25px 15px;
+  border-left: 0;
+  border-right: 0; }
+  .review-section .review-content .whitebox .photo, .review-section .review-content .bg-light-grey .photo {
+    width: 20%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 120px; }
+    @media screen and (max-width: 1025px) {
+      .review-section .review-content .whitebox .photo, .review-section .review-content .bg-light-grey .photo {
+        width: 15%;
+        height: 80px; } }
+    @media screen and (max-width: 991px) {
+      .review-section .review-content .whitebox .photo, .review-section .review-content .bg-light-grey .photo {
+        width: 25%;
+        height: 120px; } }
+    @media screen and (max-width: 550px) {
+      .review-section .review-content .whitebox .photo, .review-section .review-content .bg-light-grey .photo {
+        width: 35%;
+        height: 100px; } }
+    .review-section .review-content .whitebox .photo img, .review-section .review-content .bg-light-grey .photo img {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      right: 0;
+      bottom: -100%;
+      margin: auto;
+      margin-left: 50%;
+      /* Move to the left by 50% of own width */
+      transform: translateX(-50%);
+      width: auto;
+      height: 100%; }
+  .review-section .review-content .whitebox .name, .review-section .review-content .bg-light-grey .name {
+    color: #999;
+    padding-left: 5px; }
+    .review-section .review-content .whitebox .name h5, .review-section .review-content .bg-light-grey .name h5 {
+      margin-top: 0;
+      margin-bottom: 5px; }
+    .review-section .review-content .whitebox .name b, .review-section .review-content .bg-light-grey .name b {
+      font-weight: normal;
+      color: #999;
+      margin-right: 10px; }
+    @media screen and (max-width: 991px) {
+      .review-section .review-content .whitebox .name h5, .review-section .review-content .bg-light-grey .name h5 {
+        font-size: 1.2em;
+        line-height: 1.5;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-weight: 700; } }
+    @media screen and (max-width: 991px) {
+      .review-section .review-content .whitebox .name .desc, .review-section .review-content .bg-light-grey .name .desc {
+        margin: 0; } }
+  .review-section .review-content .whitebox .date, .review-section .review-content .bg-light-grey .date {
+    width: 14%;
+    padding-right: 1%;
+    line-height: 1.8; }
+    @media screen and (max-width: 1025px) {
+      .review-section .review-content .whitebox .date, .review-section .review-content .bg-light-grey .date {
+        width: 20%; } }
+    .review-section .review-content .whitebox .date.date-th, .review-section .review-content .bg-light-grey .date.date-th {
+      line-height: 2.5; }
+    .review-section .review-content .whitebox .date.date-tr, .review-section .review-content .bg-light-grey .date.date-tr {
+      font-size: 1.1em;
+      text-align: center; }
+    .review-section .review-content .whitebox .date p, .review-section .review-content .bg-light-grey .date p {
+      margin: 0; }
+    @media screen and (max-width: 991px) {
+      .review-section .review-content .whitebox .date, .review-section .review-content .bg-light-grey .date {
+        line-height: 1.5;
+        margin-top: 0;
+        width: 20%;
+        text-align: center; } }
+  .review-section .review-content .whitebox .price, .review-section .review-content .bg-light-grey .price {
+    width: 15%;
+    color: #163A4D;
+    text-align: center;
+    line-height: 1.8; }
+    .review-section .review-content .whitebox .price.price-th, .review-section .review-content .bg-light-grey .price.price-th {
+      line-height: 2.5; }
+    .review-section .review-content .whitebox .price.price-tr, .review-section .review-content .bg-light-grey .price.price-tr {
+      font-size: 1.1em; }
+    @media screen and (max-width: 991px) {
+      .review-section .review-content .whitebox .price, .review-section .review-content .bg-light-grey .price {
+        width: 65%;
+        padding-left: 32%;
+        text-align: left; } }
+    @media screen and (max-width: 991px) {
+      .review-section .review-content .whitebox .price, .review-section .review-content .bg-light-grey .price {
+        width: 65%;
+        padding-left: 27%;
+        text-align: left; } }
+    @media screen and (max-width: 550px) {
+      .review-section .review-content .whitebox .price, .review-section .review-content .bg-light-grey .price {
+        width: 60%;
+        padding-left: 40%;
+        text-align: left; } }
+    .review-section .review-content .whitebox .price .currency, .review-section .review-content .bg-light-grey .price .currency {
+      color: #EE7E31;
+      margin-right: 0; }
+    .review-section .review-content .whitebox .price b, .review-section .review-content .bg-light-grey .price b {
+      font-weight: 500;
+      font-size: 0.93em; }
+      @media screen and (max-width: 1025px) {
+        .review-section .review-content .whitebox .price b, .review-section .review-content .bg-light-grey .price b {
+          display: block; } }
+  .review-section .review-content .whitebox .whitebox-banner, .review-section .review-content .whitebox .whitebox-content, .review-section .review-content .bg-light-grey .whitebox-banner, .review-section .review-content .bg-light-grey .whitebox-content {
+    margin-bottom: 15px; }
+    @media screen and (max-width: 767px) {
+      .review-section .review-content .whitebox .whitebox-banner, .review-section .review-content .whitebox .whitebox-content, .review-section .review-content .bg-light-grey .whitebox-banner, .review-section .review-content .bg-light-grey .whitebox-content {
+        width: 50%; } }
+    @media screen and (max-width: 550px) {
+      .review-section .review-content .whitebox .whitebox-banner, .review-section .review-content .whitebox .whitebox-content, .review-section .review-content .bg-light-grey .whitebox-banner, .review-section .review-content .bg-light-grey .whitebox-content {
+        width: 100%; } }
+  .review-section .review-content .whitebox b, .review-section .review-content .bg-light-grey b {
+    color: #EE7E31; }
+  .review-section .review-content .whitebox textarea, .review-section .review-content .bg-light-grey textarea {
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ddd;
+    resize: none;
+    padding: 5px; }
+    .review-section .review-content .whitebox textarea::placeholder, .review-section .review-content .bg-light-grey textarea::placeholder {
+      color: #ddd;
+      font-weight: normal; }
+  .review-section .review-content .whitebox .nobg, .review-section .review-content .bg-light-grey .nobg {
+    margin-left: 0; }
+    .review-section .review-content .whitebox .nobg .rating, .review-section .review-content .bg-light-grey .nobg .rating {
+      width: 175px;
+      margin-left: 10px; }
+      .review-section .review-content .whitebox .nobg .rating .star, .review-section .review-content .bg-light-grey .nobg .rating .star {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        min-height: 30px; }
+
+@media screen and (max-width: 767px) {
+  .review-section {
+    padding: 0; }
+    .review-section .greyborderbox {
+      padding: 5px;
+      border: 0;
+      margin-bottom: 0; } }

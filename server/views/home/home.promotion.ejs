@@ -1,0 +1,20 @@
+<% if(campaignBanners && campaignBanners.length) { %>
+    <div class="bg-slick-container">
+        <ul class="promotion-slider">
+            <% campaignBanners.forEach(function(banner){ %>
+                <li class="list-item col-3 fullwidth-slick">
+                    <div class="list-content">
+                        <a href="<%=banner.link%>" target="<%=banner.target%>">
+                            <div class="overlay-content hover-fullwidth">
+                                <div class="banner">
+                                    <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= banner.image.key %>.<%= banner.image.format %>" class="bg expect-mobile-v" alt="<%=banner.name%>"/>
+                                    <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= banner.mobileImage.key %>.<%= banner.mobileImage.format %>" class="bg mobile-v" alt="<%=banner.name%>"/>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+<% }; %>

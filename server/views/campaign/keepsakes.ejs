@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['campaign.keepsakes.terms1'] %>">
+    <meta name="keywords" content="<%= translations['campaign.keepsakes.title'] %>">
+    <title><%= translations['campaign.keepsakes.title'] %> | Fayfay.com</title>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/campaign/<%= translations['campaign.keepsakes.ogimage']%>"/>
+    <meta property="og:image:alt" content="<%= translations['campaign.keepsakes.title']  %>"/>
+    <meta property="og:title" content="<%= translations['campaign.keepsakes.title'] %>"/>
+    <meta property="og:description" content="<%= translations['campaign.keepsakes.terms1'] %>"/>
+
+    <% include ../include/gtm.header.ejs %>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/keepsakes.css">
+</head>
+
+<body class="<%= locale%>">
+<% include ../include/gtm.body.ejs %>
+    <div id="keepsakes">
+        <% include keepsakes.header.ejs %>
+        <% include keepsakes.experiences.ejs %>
+        <% include campaign.destinations.ejs %>
+
+        <div class="floating-icons">
+            <div class="best active"><div class="address-icon"></div></div>
+            <div class="workshop"><div class="address-icon"></div></div>
+            <div class="photography"><div class="address-icon"></div></div>
+        </div>
+        <% include ../include/footer.ejs %>
+    </div>
+
+    <% include ../include/js.ejs %>
+    <script src="/js/keepsakes-bundle.js"></script>
+
+</body>
+</html>

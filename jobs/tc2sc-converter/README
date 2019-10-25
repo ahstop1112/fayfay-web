@@ -1,0 +1,15 @@
+node tc2sc ActivityGallery 1 9999999
+
+node tc2sc ActivityTranslation 1 9999999
+
+node tc2sc ArticleTranslation 1 9999999
+
+node tc2sc CityIconTranslation 1 9999999
+
+node tc2sc CitySectionTranslation 1 9999999
+
+node tc2sc CityTranslation 1 9999999
+
+node tc2sc CouponTranslation 1 9999999
+
+node tc2sc PackageTranslation 1 9999999

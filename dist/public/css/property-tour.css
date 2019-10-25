@@ -1,0 +1,800 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+body {
+  overflow-x: hidden;
+  width: 100%; }
+
+#property-tour {
+  bbackground-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background: #fff;
+  color: #163A4D; }
+  #property-tour header {
+    height: 100%; }
+    #property-tour header .header-top-area {
+      box-shadow: none;
+      background: #fff;
+      border: 0;
+      position: static; }
+      #property-tour header .header-top-area .header-container {
+        width: 100%;
+        padding: 0 2%; }
+        #property-tour header .header-top-area .header-container .badge-notify {
+          position: absolute; }
+      #property-tour header .header-top-area .top-search-box {
+        right: 30px !important;
+        z-index: -99 !important; }
+        #property-tour header .header-top-area .top-search-box.open {
+          z-index: 99 !important; }
+      #property-tour header .header-top-area .badge-notify {
+        position: absolute; }
+      #property-tour header .header-top-area.scroll {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        background-color: rgba(255, 255, 255, 0.9); }
+        #property-tour header .header-top-area.scroll .logo {
+          background-image: url("/images/logo_nobird.png"); }
+        #property-tour header .header-top-area.scroll .navbar-right {
+          color: #163A4D; }
+          #property-tour header .header-top-area.scroll .navbar-right li a {
+            color: #163A4D; }
+    #property-tour header .section-background {
+      padding-top: 0;
+      z-index: 0; }
+      #property-tour header .section-background .bg-container:before {
+        padding-top: 28% !important; }
+        @media screen and (max-width: 550px) {
+          #property-tour header .section-background .bg-container:before {
+            padding-top: 75% !important; } }
+      #property-tour header .section-background .bg-container .except-mobile-v {
+        display: block; }
+        @media screen and (max-width: 550px) {
+          #property-tour header .section-background .bg-container .except-mobile-v {
+            display: none !important; } }
+      #property-tour header .section-background .bg-container .mobile-v {
+        display: none; }
+        @media screen and (max-width: 550px) {
+          #property-tour header .section-background .bg-container .mobile-v {
+            display: block !important; } }
+      #property-tour header .section-background .bg-container .bg {
+        top: -100%; }
+  #property-tour section {
+    padding: 20px 0; }
+    #property-tour section h2 {
+      background: -webkit-linear-gradient(#4c8fe9, #2e5f9b, #42acd3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      text-align: center; }
+    #property-tour section .drag-list {
+      width: 88%;
+      margin: 0 auto;
+      justify-content: center; }
+      @media screen and (max-width: 991px) {
+        #property-tour section .drag-list {
+          width: 100%; } }
+  #property-tour .content_p {
+    padding: 30px 0;
+    width: 86%;
+    margin: 0 auto; }
+    @media screen and (max-width: 991px) {
+      #property-tour .content_p {
+        width: 100%; } }
+    #property-tour .content_p p {
+      text-align: center; }
+  #property-tour section.tours .drag-list .list-item {
+    flex: 0 0 32.33%;
+    width: 32.33%;
+    text-align: center; }
+    @media screen and (max-width: 991px) {
+      #property-tour section.tours .drag-list .list-item {
+        flex: 0 0 49.5%;
+        width: 49.5%; } }
+    @media screen and (max-width: 550px) {
+      #property-tour section.tours .drag-list .list-item {
+        flex: 0 0 100%;
+        width: 100%; } }
+    #property-tour section.tours .drag-list .list-item h6 {
+      min-height: 30px;
+      font-weight: 700; }
+      @media screen and (max-width: 991px) {
+        #property-tour section.tours .drag-list .list-item h6 {
+          min-height: 0; } }
+    #property-tour section.tours .drag-list .list-item p.desc {
+      font-size: 0.86em;
+      text-align: center;
+      min-height: 35px; }
+  #property-tour section.experiences {
+    background-color: #f4f4f4; }
+    #property-tour section.experiences .btn-address {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      justify-content: center; }
+      @media screen and (max-width: 991px) {
+        #property-tour section.experiences .btn-address {
+          width: 100%;
+          flex-wrap: nowrap;
+          overflow-x: scroll;
+          justify-content: flex-start; } }
+      #property-tour section.experiences .btn-address .list-item {
+        flex: 0 0 19%;
+        width: 19%;
+        text-align: center;
+        background: none;
+        cursor: pointer;
+        min-width: 0; }
+        @media screen and (max-width: 991px) {
+          #property-tour section.experiences .btn-address .list-item {
+            flex: 0 0 calc(100% / 4);
+            min-width: 0;
+            font-size: 1.1em; } }
+        @media screen and (max-width: 550px) {
+          #property-tour section.experiences .btn-address .list-item {
+            flex: 0 0 calc(100% / 2.5);
+            min-width: 0; } }
+        @media screen and (max-width: 320px) {
+          #property-tour section.experiences .btn-address .list-item {
+            font-size: 0.8em; } }
+        #property-tour section.experiences .btn-address .list-item .list-content {
+          box-shadow: none; }
+        #property-tour section.experiences .btn-address .list-item .banner-bg {
+          width: 80%;
+          margin: 0 auto;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          padding: 5px;
+          overflow: hidden !important;
+          display: block;
+          position: relative;
+          background: #43aa97; }
+        #property-tour section.experiences .btn-address .list-item .banner {
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          overflow: hidden;
+          background-size: cover;
+          background-repeat: no-repeat; }
+          #property-tour section.experiences .btn-address .list-item .banner .bg {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            right: 0;
+            bottom: -100%;
+            margin: auto;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            max-width: 200%;
+            max-height: 120px;
+            width: auto;
+            transition: all 0.4s ease-out;
+            -webkit-transition: all 0.4s ease-out; }
+            @media screen and (max-width: 767px) {
+              #property-tour section.experiences .btn-address .list-item .banner .bg {
+                max-width: 80px; } }
+          #property-tour section.experiences .btn-address .list-item .banner:before {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            content: "";
+            padding-top: 100%;
+            display: block; }
+          #property-tour section.experiences .btn-address .list-item .banner:after {
+            content: "";
+            padding-top: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1; }
+        #property-tour section.experiences .btn-address .list-item h3.title-s {
+          font-size: 1.25em;
+          text-transform: uppercase;
+          font-style: italic;
+          font-weight: 600;
+          color: #13716c; }
+          @media screen and (max-width: 767px) {
+            #property-tour section.experiences .btn-address .list-item h3.title-s {
+              font-size: 0.7em; } }
+    @media screen and (max-width: 991px) {
+      #property-tour section.experiences .section-experience {
+        width: 100%; } }
+    #property-tour section.experiences .section-experience .experience-title {
+      text-align: center; }
+    #property-tour section.experiences .section-experience .experience-title-s {
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 25px;
+      margin-bottom: 25px;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      justify-content: center;
+      align-items: center;
+      width: 40%; }
+      @media screen and (max-width: 991px) {
+        #property-tour section.experiences .section-experience .experience-title-s {
+          width: 70%; } }
+      #property-tour section.experiences .section-experience .experience-title-s h5 {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.75em; }
+        @media screen and (max-width: 767px) {
+          #property-tour section.experiences .section-experience .experience-title-s h5 {
+            font-size: 1.5em; } }
+      #property-tour section.experiences .section-experience .experience-title-s .address-icon {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 17%;
+        margin-right: 3%; }
+        #property-tour section.experiences .section-experience .experience-title-s .address-icon:before {
+          content: "";
+          display: block;
+          padding-top: 100%; }
+        @media screen and (max-width: 767px) {
+          #property-tour section.experiences .section-experience .experience-title-s .address-icon {
+            width: 12%;
+            margin-right: 3%; } }
+    @media screen and (max-width: 767px) {
+      #property-tour section.experiences .section-experience .experience-list-container {
+        overflow-x: scroll; }
+        #property-tour section.experiences .section-experience .experience-list-container::-webkit-scrollbar {
+          display: none; } }
+    #property-tour section.experiences .section-experience .experience-list-container .drag-list {
+      margin: 0 auto;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+      @media screen and (max-width: 991px) {
+        #property-tour section.experiences .section-experience .experience-list-container .drag-list {
+          width: 100%; } }
+      @media screen and (max-width: 550px) {
+        #property-tour section.experiences .section-experience .experience-list-container .drag-list {
+          width: auto;
+          overflow-x: auto;
+          flex-wrap: nowrap;
+          -webkit-flex-wrap: nowrap;
+          justify-content: flex-start; } }
+      #property-tour section.experiences .section-experience .experience-list-container .drag-list.reverse {
+        flex-flow: row-reverse; }
+        @media screen and (max-width: 767px) {
+          #property-tour section.experiences .section-experience .experience-list-container .drag-list.reverse {
+            flex-flow: row; } }
+      #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-item {
+        flex: 0 0 32.33%;
+        width: 32.33%; }
+        @media screen and (max-width: 550px) {
+          #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-item {
+            flex: 0 0 calc(100%/1.5);
+            width: calc(100%/1.5);
+            padding-right: 1%; } }
+      #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col {
+        width: 50%;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-flow: row wrap; }
+        @media screen and (max-width: 767px) {
+          #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col {
+            width: 90%;
+            margin-right: 1%;
+            flex-wrap: nowrap; } }
+        #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item {
+          background: none;
+          list-style: none;
+          flex: 1 1 49.5%;
+          margin-right: 0.5%; }
+          @media screen and (max-width: 767px) {
+            #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item {
+              min-width: 300px;
+              margin-right: 1%; } }
+          #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content {
+            position: relative;
+            display: block; }
+            #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content:before {
+              padding-top: 50%; }
+            #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .badge-container {
+              width: 20%;
+              position: absolute;
+              right: 0;
+              top: 5px;
+              margin-bottom: 5px;
+              z-index: 99; }
+              #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .badge-container .priceRange-icon {
+                width: 100%;
+                display: -webkit-box;
+                /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;
+                /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;
+                /* TWEENER - IE 10 */
+                display: -webkit-flex;
+                /* NEW - Chrome */
+                display: flex;
+                /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                -ms-flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap; }
+                #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .badge-container .priceRange-icon .priceRange-type-img {
+                  width: 100%;
+                  background-size: 50%;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-image: url("/images/campaign/oneyearanniversary/icon-discount.png"); }
+                  @media screen and (max-width: 767px) {
+                    #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .badge-container .priceRange-icon .priceRange-type-img {
+                      background-size: 50%; } }
+                  #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .badge-container .priceRange-icon .priceRange-type-img:before {
+                    content: "";
+                    display: block;
+                    padding-top: 60%; }
+                #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .badge-container .priceRange-icon .priceRange-type-text {
+                  width: 100%;
+                  font-size: 0.78em;
+                  color: #fff;
+                  text-align: center;
+                  text-transform: capitalize;
+                  text-shadow: rgba(0, 0, 0, 0.5) 0.05em 0.05em 0.1em; }
+            #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .banner {
+              width: 100%;
+              overflow: hidden;
+              position: relative; }
+              #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .banner:before {
+                content: "";
+                padding-top: 75%;
+                display: block; }
+              #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .banner .bg {
+                top: -100%;
+                left: 0;
+                right: 0;
+                bottom: -100%;
+                margin: auto;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                width: auto;
+                height: 100%;
+                position: absolute; }
+            #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content {
+              display: -webkit-box;
+              /* OLD - iOS 6-, Safari 3.1-6 */
+              display: -moz-box;
+              /* OLD - Firefox 19- (buggy but mostly works) */
+              display: -ms-flexbox;
+              /* TWEENER - IE 10 */
+              display: -webkit-flex;
+              /* NEW - Chrome */
+              display: flex;
+              /* NEW, Spec - Opera 12.1, Firefox 20+ */
+              flex-wrap: wrap;
+              -webkit-flex-wrap: wrap;
+              align-content: center;
+              align-items: center;
+              transition: all 0.4s ease-out;
+              -webkit-transition: all 0.4s ease-out;
+              padding: 15px; }
+              @media screen and (max-width: 991px) {
+                #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content {
+                  padding: 10px; } }
+              @media screen and (max-width: 550px) {
+                #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content {
+                  padding: 15px; } }
+              #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content h3 {
+                font-weight: 500;
+                color: #fff;
+                font-size: 1.2em;
+                line-height: 1.2;
+                min-height: 46px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                width: 100%; }
+                @media screen and (max-width: 767px) {
+                  #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content h3 {
+                    font-size: 1.4em;
+                    width: 100%;
+                    -webkit-line-clamp: 3;
+                    min-height: 75px; } }
+              #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .desc {
+                font-size: 1em;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                text-align: left;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                display: none; }
+                @media screen and (max-width: 1025px) {
+                  #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .desc {
+                    font-size: 1em; } }
+                @media screen and (max-width: 550px) {
+                  #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .desc {
+                    font-size: 1em;
+                    display: none; } }
+              #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .price {
+                text-align: left;
+                color: #fff;
+                font-size: 1.5em;
+                font-weight: 700; }
+                #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .price .ori-price {
+                  font-size: 0.8em;
+                  color: #fff;
+                  opacity: .5;
+                  text-decoration: line-through; }
+              #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .bottom {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                display: -webkit-box;
+                /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;
+                /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;
+                /* TWEENER - IE 10 */
+                display: -webkit-flex;
+                /* NEW - Chrome */
+                display: flex;
+                /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                flex-wrap: wrap; }
+                @media screen and (max-width: 1025px) {
+                  #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .bottom {
+                    margin-top: 0; } }
+                @media screen and (max-width: 767px) {
+                  #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .bottom {
+                    padding-top: 0; } }
+                #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .bottom .hashtag-container {
+                  display: -webkit-box;
+                  /* OLD - iOS 6-, Safari 3.1-6 */
+                  display: -moz-box;
+                  /* OLD - Firefox 19- (buggy but mostly works) */
+                  display: -ms-flexbox;
+                  /* TWEENER - IE 10 */
+                  display: -webkit-flex;
+                  /* NEW - Chrome */
+                  display: flex;
+                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                  flex-wrap: wrap;
+                  width: 100%; }
+                  #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                    font-size: 0.8em;
+                    color: #999;
+                    margin-right: 10px; }
+                    @media screen and (max-width: 550px) {
+                      #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                        font-size: 0.8em; } }
+                #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .bottom .location, #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .bottom .btn-container {
+                  color: #fff;
+                  flex: 0 0 50%;
+                  width: 50%; }
+                  #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .bottom .location.btn-container, #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .bottom .btn-container.btn-container {
+                    text-align: right; }
+                    #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .bottom .location.btn-container .btn, #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .content .bottom .btn-container.btn-container .btn {
+                      background: #43aa97;
+                      border: 1px solid #43aa97; }
+            #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .price-container {
+              background-color: #13716c;
+              color: #fff;
+              padding: 5px 15px;
+              margin-top: 10px;
+              text-align: center;
+              display: none; }
+              #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .price-container .discount-price {
+                font-size: 1.2em; }
+                @media screen and (max-width: 550px) {
+                  #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .price-container .discount-price {
+                    font-size: 1em; } }
+                @media screen and (max-width: 320px) {
+                  #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .price-container .discount-price {
+                    font-size: 0.8em; } }
+                #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item .list-content .price-container .discount-price .ori-price {
+                  font-size: 0.8em;
+                  color: #fff;
+                  opacity: .5;
+                  text-decoration: line-through; }
+          #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item.highlight .content h3 {
+            font-size: 1.8em;
+            line-height: 1.5; }
+            @media screen and (max-width: 767px) {
+              #property-tour section.experiences .section-experience .experience-list-container .drag-list .list-col .list-item.highlight .content h3 {
+                font-size: 1.5em;
+                width: 100%; } }
+    #property-tour section.experiences .see-more-container {
+      margin: 0 auto;
+      text-align: center; }
+      #property-tour section.experiences .see-more-container .see-more {
+        background: #43aa97;
+        margin-bottom: 50px; }
+  #property-tour section.cities h4 {
+    text-align: center;
+    margin-bottom: 20px; }
+  #property-tour section.cities .btn-address {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center; }
+    @media screen and (max-width: 991px) {
+      #property-tour section.cities .btn-address {
+        width: 100%; } }
+    #property-tour section.cities .btn-address .list-item {
+      flex: 0 0 31.33%;
+      width: 31.33%;
+      margin-right: 1%;
+      background: #0169a1;
+      padding: 10px 0;
+      text-align: center; }
+      #property-tour section.cities .btn-address .list-item:hover {
+        background: #41a8d0;
+        cursor: pointer; }
+      #property-tour section.cities .btn-address .list-item:last-child {
+        flex: 0 0 33.33%;
+        margin-right: 0; }
+      #property-tour section.cities .btn-address .list-item .address-text {
+        color: #fff; }
+  #property-tour section.cities .bg-slick-container {
+    width: 88%;
+    margin: 0 auto; }
+    @media screen and (max-width: 991px) {
+      #property-tour section.cities .bg-slick-container {
+        width: 100%; } }
+    #property-tour section.cities .bg-slick-container .banner {
+      background: #fff; }
+      #property-tour section.cities .bg-slick-container .banner:before {
+        padding-top: 25%; }
+        @media screen and (max-width: 767px) {
+          #property-tour section.cities .bg-slick-container .banner:before {
+            padding-top: 42%; } }
+        @media screen and (max-width: 550px) {
+          #property-tour section.cities .bg-slick-container .banner:before {
+            padding-top: 75%; } }
+      #property-tour section.cities .bg-slick-container .banner .bg {
+        top: 0;
+        height: 140%;
+        width: auto; }
+    #property-tour section.cities .bg-slick-container .overlay-wrap {
+      background: none; }
+      #property-tour section.cities .bg-slick-container .overlay-wrap h3 {
+        margin-bottom: 15px;
+        text-shadow: rgba(0, 0, 0, 0.2) 0.05em 0.05em 0.1em; }
+        @media screen and (max-width: 991px) {
+          #property-tour section.cities .bg-slick-container .overlay-wrap h3 {
+            width: 100%; } }
+      #property-tour section.cities .bg-slick-container .overlay-wrap .desc {
+        font-size: 1em;
+        text-shadow: rgba(0, 0, 0, 0.2) 0.05em 0.05em 0.1em; }
+        @media screen and (max-width: 991px) {
+          #property-tour section.cities .bg-slick-container .overlay-wrap .desc {
+            display: flex !important;
+            width: 100%; } }
+  #property-tour section.cities .drag-list.reverse {
+    flex-flow: row-reverse; }
+    @media screen and (max-width: 991px) {
+      #property-tour section.cities .drag-list.reverse {
+        flex-flow: wrap; } }
+  @media screen and (max-width: 991px) {
+    #property-tour section.cities .drag-list .list-item {
+      flex: 0 0 49.5%;
+      width: 49.5%; } }
+  @media screen and (max-width: 550px) {
+    #property-tour section.cities .drag-list .list-item {
+      flex: 0 0 100%;
+      width: 100%; } }
+  #property-tour section.cities .drag-list .list-item .list-content {
+    display: block; }
+    #property-tour section.cities .drag-list .list-item .list-content.text {
+      border-width: 2px;
+      border-style: solid;
+      -moz-border-image: -moz-linear-gradient(right, #4c8fe9 30%, #2e5f9b 70%, #42acd3 100%);
+      -webkit-border-image: -webkit-linear-gradient(right, #4c8fe9 30%, #2e5f9b 70%, #42acd3 100%);
+      border-image: linear-gradient(to right bottom, #4c8fe9 30%, #2e5f9b 70%, #42acd3 100%);
+      -webkit-border-image-slice: 2;
+      border-image-slice: 2;
+      padding-top: 35%; }
+      @media screen and (max-width: 991px) {
+        #property-tour section.cities .drag-list .list-item .list-content.text {
+          padding-top: 25%; } }
+      @media screen and (max-width: 550px) {
+        #property-tour section.cities .drag-list .list-item .list-content.text {
+          padding-top: 0; } }
+    @media screen and (max-width: 991px) {
+      #property-tour section.cities .drag-list .list-item .list-content .overlay-content {
+        width: 100%; } }
+    #property-tour section.cities .drag-list .list-item .list-content .overlay-content .text-area {
+      padding: 15px; }
+      @media screen and (max-width: 991px) {
+        #property-tour section.cities .drag-list .list-item .list-content .overlay-content .text-area {
+          width: 86%;
+          margin: auto; } }
+      @media screen and (max-width: 550px) {
+        #property-tour section.cities .drag-list .list-item .list-content .overlay-content .text-area {
+          width: 96%;
+          margin: auto; } }
+      #property-tour section.cities .drag-list .list-item .list-content .overlay-content .text-area h5, #property-tour section.cities .drag-list .list-item .list-content .overlay-content .text-area p {
+        text-align: left; }
+        @media screen and (max-width: 991px) {
+          #property-tour section.cities .drag-list .list-item .list-content .overlay-content .text-area h5, #property-tour section.cities .drag-list .list-item .list-content .overlay-content .text-area p {
+            width: 100%; } }
+      #property-tour section.cities .drag-list .list-item .list-content .overlay-content .text-area h5 {
+        background: -webkit-linear-gradient(#4c8fe9, #2e5f9b, #42acd3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
+    @media screen and (max-width: 1025px) {
+      #property-tour section.cities .drag-list .list-item .list-content .overlay-content .banner:before {
+        padding-top: 150%; } }
+    @media screen and (max-width: 991px) {
+      #property-tour section.cities .drag-list .list-item .list-content .overlay-content .banner:before {
+        padding-top: 100%; } }
+  #property-tour section.cities .desc-container {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center; }
+    @media screen and (max-width: 550px) {
+      #property-tour section.cities .desc-container {
+        width: 100%; } }
+    #property-tour section.cities .desc-container p {
+      text-align: center; }
+    #property-tour section.cities .desc-container .btn {
+      background: #0169a1;
+      padding: 10px 30px;
+      font-size: 1.2em; }
+  #property-tour section.cities .banner-container {
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 86%; }
+    @media screen and (max-width: 550px) {
+      #property-tour section.cities .banner-container {
+        display: none; } }
+  #property-tour section.add-ons .add-ons-container .title {
+    text-align: center; }
+  @media screen and (max-width: 550px) {
+    #property-tour section.add-ons .add-ons-container .drag-content .drag-list {
+      width: auto;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      -webkit-flex-wrap: nowrap;
+      justify-content: flex-start; } }
+  #property-tour section.add-ons .add-ons-container .drag-content .drag-list .list-item {
+    flex: 0 0 32.33%;
+    width: 32.33%; }
+    @media screen and (max-width: 550px) {
+      #property-tour section.add-ons .add-ons-container .drag-content .drag-list .list-item {
+        flex: 0 0 calc(100%/1.5);
+        width: calc(100%/1.5);
+        padding-right: 2%; } }
+    #property-tour section.add-ons .add-ons-container .drag-content .drag-list .list-item p.desc {
+      min-height: 100px; }
+      @media screen and (max-width: 550px) {
+        #property-tour section.add-ons .add-ons-container .drag-content .drag-list .list-item p.desc {
+          min-height: 150px; } }
+    #property-tour section.add-ons .add-ons-container .drag-content .drag-list .list-item .price span {
+      font-size: .8em;
+      margin-left: 5px; }
+  #property-tour #promotion, #property-tour #promotion-mobile {
+    text-align: center;
+    display: block; }
+    #property-tour #promotion#promotion-mobile, #property-tour #promotion-mobile#promotion-mobile {
+      padding: 0; }
+    #property-tour #promotion#promotion .bg-slick-container, #property-tour #promotion-mobile#promotion .bg-slick-container {
+      margin: 7px; }
+    #property-tour #promotion .bg-slick-container, #property-tour #promotion-mobile .bg-slick-container {
+      margin: 0 auto !important;
+      width: 86%; }
+      @media screen and (max-width: 991px) {
+        #property-tour #promotion .bg-slick-container, #property-tour #promotion-mobile .bg-slick-container {
+          width: 100%; } }
+      #property-tour #promotion .bg-slick-container .promotion-slider, #property-tour #promotion-mobile .bg-slick-container .promotion-slider {
+        margin: 0;
+        display: none; }
+      #property-tour #promotion .bg-slick-container .banner, #property-tour #promotion-mobile .bg-slick-container .banner {
+        max-height: none; }
+        #property-tour #promotion .bg-slick-container .banner:before, #property-tour #promotion-mobile .bg-slick-container .banner:before {
+          padding-top: 38.7%; }
+          @media screen and (max-width: 550px) {
+            #property-tour #promotion .bg-slick-container .banner:before, #property-tour #promotion-mobile .bg-slick-container .banner:before {
+              padding-top: 75%; } }
+      #property-tour #promotion .bg-slick-container .bg, #property-tour #promotion-mobile .bg-slick-container .bg {
+        top: -100%;
+        height: 100%;
+        min-width: 0;
+        min-height: 0; }
+        #property-tour #promotion .bg-slick-container .bg.expect-mobile-v, #property-tour #promotion-mobile .bg-slick-container .bg.expect-mobile-v {
+          display: none; }
+          @media screen and (min-width: 550px) {
+            #property-tour #promotion .bg-slick-container .bg.expect-mobile-v, #property-tour #promotion-mobile .bg-slick-container .bg.expect-mobile-v {
+              display: block; } }
+        #property-tour #promotion .bg-slick-container .bg.mobile-v, #property-tour #promotion-mobile .bg-slick-container .bg.mobile-v {
+          display: none; }
+          @media screen and (max-width: 550px) {
+            #property-tour #promotion .bg-slick-container .bg.mobile-v, #property-tour #promotion-mobile .bg-slick-container .bg.mobile-v {
+              display: block; } }
+  #property-tour section.terms {
+    width: 100%; }
+    #property-tour section.terms div.terms {
+      width: 80%;
+      margin: 0 auto; }
+      @media screen and (max-width: 550px) {
+        #property-tour section.terms div.terms {
+          width: 100%; } }
+    #property-tour section.terms p {
+      line-height: 1.5;
+      word-break: break-word;
+      word-wrap: break-word;
+      font-size: 0.86em;
+      text-align: left;
+      font-weight: 400; }
+
+body.zh-hk #property-tour section.tours .drag-list .list-item h6, body.zh-hk #property-tour section.tours .drag-list .list-item .desc, body.zh-cn #property-tour section.tours .drag-list .list-item h6, body.zh-cn #property-tour section.tours .drag-list .list-item .desc {
+  font-size: 1.1em;
+  min-height: 0; }
+
+body.zh-hk #property-tour section.cities .btn-address .list-item .address-text, body.zh-cn #property-tour section.cities .btn-address .list-item .address-text {
+  font-size: 1.1em; }
+
+body.zh-hk #property-tour section.cities .overlay-wrap .desc, body.zh-cn #property-tour section.cities .overlay-wrap .desc {
+  font-size: 1.1em; }

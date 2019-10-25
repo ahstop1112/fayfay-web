@@ -1,0 +1,22 @@
+<section id="error-section" class="bg-light-grey">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+        <div class="display-table">
+          <h1 class="display-table-cell"><%= translations['error.oops']%>!</h1>
+          <img src="/images/error_bird.png" class="display-table-cell">
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 txt-center">
+        <h3><%= translations['error.page.title']%></h3>
+        <p><%= translations['error.page.content'] %></p>
+      </div>
+    </div>
+    <div class="marginTop-15px txt-center">
+      <button class="btn btn-lg" onclick="location.href='<%= langUrl %>/'"><%= translations['common.back.to.home']%></button>
+    </div>
+  </div>
+</section>

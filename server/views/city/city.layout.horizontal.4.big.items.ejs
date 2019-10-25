@@ -1,0 +1,63 @@
+<% if (cityData.sections[i].layout == 'CITY_LAYOUT_HORIZONTAL_4_BIG_ITEMS' && cityData.sections[i].activities && cityData.sections[i].activities.length >= 4){
+    const numExpsPerRow = 4;
+    const rows = Math.floor(cityData.sections[i].activities.length / numExpsPerRow);
+    const list = cityData.sections[i].activities.slice(0, numExpsPerRow * rows);
+%>
+<section class="section-4-big-items">
+    <div class="container-fluid">
+        <div class="main-logo-container">
+            <% if (cityData.sections[i].iconUrl) {%>
+                <div class="main-logo">
+                    <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= cityData.sections[i].iconUrl %>"
+                     alt="<%= cityData.sections[i].title %>"/>
+                </div>
+            <% } %>
+            <h2><%= cityData.sections[i].title %></h2>
+            <p class="hidden-xs"><%= cityData.sections[i].introduction %></p>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="drag-content">
+                    <ul class="drag-list recommend-list">
+                        <% list.forEach(function(activity){ %>
+                            <li class="list-item">
+                                <div class="list-content">
+                                    <%- include('components/overlay.soldout.ejs', { packageAvailabilityDate : activity.packageAvailabilityDate, paymentFlow: activity.paymentFlow }); %>
+                                    <div class="overlay-content hover-normal">
+                                        <a href="<%= langUrl %>/experience/<%= activity.activityId %>-<%= activity.slug %>"
+                                           target="_blank">
+                                            <div class="banner">
+                                                <img
+                                                        class="lazy bg"
+                                                        data-src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640/<%= activity.thumbnailKey %>.<%= activity.thumbnailFormat %>"
+                                                        alt="<%= activity.title %>">
+                                            </div>
+                                            <div class="overlay-wrap">
+                                                <div class="overlay">
+                                                    <div class="new-activity"></div>
+                                                    <h4 class="title-location"><%= activity.location %></h4>
+                                                    <h3 class="title-s"><%= activity.title.truncate(60) %></h3>
+                                                    <%- include('components/price.ejs', { displayPrice : activity.displayPrice, displaySpecialPrice: activity.displaySpecialPrice }); %>
+                                                    <div class="nobg">
+                                                        <%- include('components/rating.ejs', { ratingAverage: activity.ratingAverage }); %>
+                                                        <%- include('components/bookedCount.ejs', { bookedCount: activity.bookedCount }); %>
+                                                    </div>
+                                                    <div class="btn-container">
+                                                        <button
+                                                                class="search-btn btn btn-lg"><%= translations['common.lets.fly'] %></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </li>
+                        <% }); %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<% } %>

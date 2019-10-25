@@ -1,0 +1,91 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+.contactus-header-section {
+  overflow: hidden;
+  background-color: #fff; }
+  .contactus-header-section .bg {
+    top: 0 !important; }
+    @media screen and (max-width: 550px) {
+      .contactus-header-section .bg {
+        top: -10% !important;
+        height: 100%;
+        width: auto; } }
+
+.contactus-section {
+  padding: 30px 0;
+  padding-top: 10px; }
+  .contactus-section .contactus-heading h4 {
+    color: #999;
+    font-weight: 400; }
+  .contactus-section .icon-graph {
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+    padding-left: 15px;
+    margin-right: 10px; }
+    .contactus-section .icon-graph.booking {
+      background-image: url("/images/icons/book.png"); }
+    .contactus-section .icon-graph.payment {
+      background-image: url("/images/icons/card.png"); }
+    .contactus-section .icon-graph.coupons {
+      background-image: url("/images/icons/ticket.png"); }
+    .contactus-section .icon-graph.changes {
+      background-image: url("/images/icons/return.png"); }
+    .contactus-section .icon-graph.settings {
+      background-image: url("/images/icons/user.png"); }
+  .contactus-section .contactus-content h1 {
+    color: #EE7E31;
+    font-size: 1.75em;
+    font-weight: 400; }
+  @media screen and (max-width: 991px) {
+    .contactus-section .contactus-content .tab-content > .tab-pane {
+      display: block !important;
+      opacity: 1 !important; } }
+  .contactus-section .contactus-content .panel-default {
+    border: 0;
+    border-bottom: 1px solid #eee; }
+    .contactus-section .contactus-content .panel-default > .panel-heading {
+      background: none;
+      border: 0;
+      border-radius: 0;
+      padding: 15px 0; }
+      .contactus-section .contactus-content .panel-default > .panel-heading .panel-title {
+        font-size: 1em; }
+      .contactus-section .contactus-content .panel-default > .panel-heading a {
+        text-decoration: none; }
+        .contactus-section .contactus-content .panel-default > .panel-heading a:before {
+          font-family: 'Glyphicons Halflings';
+          content: "\E114";
+          float: right;
+          transition: all 0.5s;
+          margin-right: 15px; }
+          @media screen and (max-width: 767px) {
+            .contactus-section .contactus-content .panel-default > .panel-heading a:before {
+              margin-right: 0; } }
+      .contactus-section .contactus-content .panel-default > .panel-heading.active a:before {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        transform: rotate(180deg); }
+    .contactus-section .contactus-content .panel-default .panel-body {
+      border: 0;
+      font-size: 1em;
+      background-color: #f4f4f4;
+      padding: 15px;
+      margin-bottom: 15px; }

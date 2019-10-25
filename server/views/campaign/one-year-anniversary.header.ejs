@@ -1,0 +1,17 @@
+<header class="header-section <%=useragent.isDesktop%>">
+    <% include ../include/header.ejs %>
+    <div class="section-background">
+        <div class="overlay-content">
+            <div class="bg-container">
+                <% if (locale == 'zh-hk' || locale == 'zh-cn') { %>
+                        <img src="/images/campaign/oneyearanniversary/banner_tc.jpg" class="bg except-mobile-v"/>
+                        <img src="/images/campaign/oneyearanniversary/banner_mobile_tc.jpg" class="bg mobile-v"/>
+                <% } else { %>
+                        <img src="/images/campaign/oneyearanniversary/banner_en.jpg" class="bg except-mobile-v"/>
+                        <img src="/images/campaign/oneyearanniversary/banner_mobile_en.jpg" class="bg mobile-v"/>
+                <% } %>
+
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['campaign.cny.desc'] %>">
+    <meta name="keywords" content="<%= translations['campaign.cny.title'] %>">
+    <title><%= translations['campaign.cny.title'] %> | Fayfay.com</title>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/campaign/<%= translations['campaign.cny.ogimage']%>"/>
+    <meta property="og:image:alt" content="<%= translations['campaign.cny.title']  %>"/>
+    <meta property="og:title" content="<%= translations['campaign.cny.title'] %>"/>
+    <meta property="og:description" content="<%= translations['campaign.cny.desc'] %>"/>
+
+    <% include ../include/gtm.header.ejs %>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/cny.css">
+</head>
+
+<body class="<%= locale%>">
+<% include ../include/gtm.body.ejs %>
+    <div id="cny">
+        <% include cny.header.ejs %>
+        <% include cny.experiences.ejs %>
+
+        <div class="floating-icons">
+            <div class="section1 active"><h6><%= translations['campaign.cny.section.1.short']  %></h6></div>
+            <div class="section2"><h6><%= translations['campaign.cny.section2']  %></h6></div>
+            <div class="section3"><h6><%= translations['campaign.cny.section3']  %></h6></div>
+            <div class="section4"><h6><%= translations['campaign.cny.section4']  %></h6></div>
+        </div>
+        <div class="gotoTop"></div>
+        <% include campaign.destinations.ejs %>
+        <p class="desc marginTop-15px marginBottom-15px terms">
+            <b><%- translations['campaign.common.terms.title'] %></b><br>
+            <%- translations['campaign.cny.terms.desc'] %>
+        </p>
+
+        <% include ../include/footer.ejs %>
+    </div>
+
+    <% include ../include/js.ejs %>
+    <script src="/js/cny-bundle.js"></script>
+    <script>
+        var clipboard = new ClipboardJS('.copy-btn');
+
+        clipboard.on('success', function(e) {
+            $('.tooltiptext').addClass("show");
+
+            setTimeout(function() {
+                $('.tooltiptext').removeClass("show");
+            }, 3000);
+        });
+
+        var clipboard2 = new ClipboardJS('.copy-btn2');
+
+        clipboard2.on('success', function(e) {
+            $('.tooltiptext2').addClass("show");
+
+            setTimeout(function() {
+                $('.tooltiptext2').removeClass("show");
+            }, 3000);
+        });
+
+    </script>
+</body>
+</html>

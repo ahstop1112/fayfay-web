@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['review'] %>">
+    <meta name="keywords" content="<%= translations['review'] %>">
+    <title><%= translations['review'] %> | Fayfay.com</title>
+
+    <% include include/gtm.header.ejs %>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/review.css">
+    <link rel="stylesheet" type="text/css" href="/css/account.css">
+</head>
+
+<body>
+<% include include/gtm.body.ejs %>
+
+    <div id="page">
+        <% include review/review.header.ejs %>
+        <section class="account-section">
+            <div class="container-fluid">
+                <div id="account-info-container"><%- accountInfoContainerHtml %></div>
+            </div>
+        </section>
+
+        <% include include/footer.ejs %>
+    </div>
+
+    <% include include/js.ejs %>
+    <script src="/js/components/AccountContainer-bundle.js"></script>
+
+</body>
+</html>

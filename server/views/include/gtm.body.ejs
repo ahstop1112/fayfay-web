@@ -1,0 +1,56 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=<%= GOOGLE_TAG_MANAGER_KEY_TRAVEL %>"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v4.0',
+            appId: '<%= FACEBOOK_APP_ID %>'
+        });
+    };
+
+    (function (d, s, id) {
+        let locale = '<%= locale %>' || 'en_US';
+        let splitLocales = locale.split('-');
+        if (splitLocales.length >= 2) {
+            locale = splitLocales[0] + '_' + splitLocales[1].toUpperCase();
+        }
+
+        let js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/' + locale +'/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Your customer chat code -->
+<% if (typeof isChat !== "undefined" && isChat == 1 && useragent.isDesktop){ %>
+    <div class="fb-customerchat"
+         attribution=install_email
+         page_id="131986040853017"
+         theme_color="#ee7e31"
+         minimized="true"
+         greeting_dialog_display="show"
+         logged_in_greeting="<%= translations['chatbot.welcome.message'] %> <%= translations['chatbot.welcome.message2'] %>"
+         logged_out_greeting="<%= translations['chatbot.welcome.message'] %> <%= translations['chatbot.welcome.message2'] %>">
+    </div>
+<% }else{ %>
+    <div class="fb-customerchat"
+         attribution=install_email
+         page_id="131986040853017"
+         theme_color="#ee7e31"
+         minimized="true"
+         greeting_dialog_display="fade"
+         logged_in_greeting="<%= translations['chatbot.welcome.message'] %> <%= translations['chatbot.welcome.message2'] %>"
+         logged_out_greeting="<%= translations['chatbot.welcome.message'] %> <%= translations['chatbot.welcome.message2'] %>">
+    </div>
+<% } %>

@@ -1,0 +1,17 @@
+<header class="musthaves-header-section">
+    <% include ../include/header.ejs %>
+    <div class="section-background">
+        <div class="overlay-content">
+            <div class="bg-container">
+                <% if (locale == 'zh-hk') { %>
+                <img src="/images/campaign/musthaves/banner_tc.jpg" class="bg except-mobile-v">
+                <img src="/images/campaign/musthaves/banner_tc_4x3.jpg" class="bg mobile-v">
+                <% } else { %>
+                <img src="/images/campaign/musthaves/banner_en.jpg" class="bg except-mobile-v">
+                <img src="/images/campaign/musthaves/banner_en_4x3.jpg" class="bg mobile-v">
+                <% } %>
+
+            </div>
+        </div>
+    </div>
+</header>

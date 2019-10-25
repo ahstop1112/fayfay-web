@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['campaign.blackfriday.terms1'] %>">
+    <meta name="keywords" content="<%= translations['campaign.blackfriday.title'] %>">
+    <title><%= translations['campaign.blackfriday.title'] %> | Fayfay.com</title>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/campaign/<%= translations['campaign.vnshow.ogimage']%>"/>
+    <meta property="og:image:alt" content="<%= translations['campaign.blackfriday.title']  %>"/>
+    <meta property="og:title" content="<%= translations['campaign.blackfriday.title'] %>"/>
+    <meta property="og:description" content="<%= translations['campaign.blackfriday.terms1'] %>"/>
+
+    <% include ../include/gtm.header.ejs %>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/vnshow.css">
+</head>
+
+<body class="<%= locale%>">
+<% include ../include/gtm.body.ejs %>
+    <div id="vnshow" class="blackfriday">
+        <% include blackfriday.header.ejs %>
+        <% include blackfriday.all.ejs %>
+
+        <div class="floating-icons">
+            <div class="hcmc active"><h6><%= translations['activity.hcmc']  %></h6></div>
+            <div class="hanoi"><h6><%= translations['activity.hanoi'] %></h6></div>
+            <div class="daNang"><h6><%= translations['campaign.vnshow.daNang.hoian'] %></h6></div>
+            <div class="nhaTrang"><h6><%= translations['activity.nhaTrang'] %></h6></div>
+        </div>
+        <% include ../include/footer.ejs %>
+    </div>
+
+    <% include ../include/js.ejs %>
+    <script src="/js/blackfriday-bundle.js"></script>
+    <script> $( window ).load(function() { $( '.bgvideo' ).get(0).play(); }); </script>
+</body>
+</html>

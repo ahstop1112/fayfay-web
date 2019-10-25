@@ -1,0 +1,71 @@
+<div id="account-login" class="greyborderbox">
+    <div class="row hidden-xs">
+        <div class="col-md-4 col-md-offset-4">
+            <img src="/images/logo_2.png" alt="Fayfay">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button id="btn-fb" class="btn btn-brand" onclick="checkLoginState()"><i class="icon-brand facebook"></i>Log In with Facebook</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <!--<div id="gSignInWrapper">-->
+                <!--<span class="label">Sign in with:</span>-->
+                <!--<div id="customBtn" class="customGPlusSignIn">-->
+                    <!--<span class="icon"></span>-->
+                    <!--<span class="buttonText">Google</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div id="name"></div>-->
+            <button id="btn-google" class="btn btn-brand"><i class="icon-brand google"></i>Log In with Google</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 txt-center">
+            Or
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="text" class="input-field input-s" placeholder="Email">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="password" class="input-field input-s" placeholder="Password">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <input type="checkbox" placeholder="remember" style="display: inline-block"> <span style="display: inline-block"> Remember Me</span>
+            </div>
+        </div>
+        <div class="col-md-6 txt-right">
+            <div class="form-group">
+                <a href="">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+
+            <button class="btn btn-lg">Login</button>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <p class="desc marginTop-15px">No account yet? Create one now!</p>
+        </div>
+        <div class="col-md-4 txt-right">
+            <button class="btn btn-lg yellow" onclick="window.location.href='<%= langUrl %>/register'">Register</button>
+        </div>
+    </div>
+</div>

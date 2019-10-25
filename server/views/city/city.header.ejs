@@ -1,0 +1,17 @@
+<header class="city-header-section">
+    <% include ../include/header.ejs %>
+    <div class="section-background">
+        <div class="overlay-content">
+            <div class="overlay-wrap">
+                <div class="overlay">
+                    <div class="header-text">
+                        <h1 class="title"><%= cityData.name %></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-container">
+                <img data-src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1440/<%= cityData.headers[0].key %>.<%= cityData.headers[0].format %>" alt="<%= cityData.name %>" data-speed="-0.5" class="bg lazy">
+            </div>
+        </div>
+    </div>
+</header>

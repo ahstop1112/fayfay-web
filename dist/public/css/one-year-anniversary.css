@@ -1,0 +1,871 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+body {
+  overflow-x: hidden;
+  width: 100%; }
+
+#one-year-anniversary {
+  bbackground-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background: #7ecbc7;
+  background-image: url("/images/campaign/oneyearanniversary/bg.jpg"); }
+  #one-year-anniversary header {
+    height: 100%; }
+    #one-year-anniversary header .header-top-area {
+      box-shadow: none;
+      background: #fff;
+      border: 0;
+      position: static; }
+      #one-year-anniversary header .header-top-area .header-container {
+        width: 100%;
+        padding: 0 2%; }
+        #one-year-anniversary header .header-top-area .header-container .badge-notify {
+          position: absolute; }
+      #one-year-anniversary header .header-top-area .top-search-box {
+        right: 30px !important;
+        z-index: -99 !important; }
+        #one-year-anniversary header .header-top-area .top-search-box.open {
+          z-index: 99 !important; }
+      #one-year-anniversary header .header-top-area .badge-notify {
+        position: absolute; }
+      #one-year-anniversary header .header-top-area.scroll {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        background-color: rgba(255, 255, 255, 0.9); }
+        #one-year-anniversary header .header-top-area.scroll .logo {
+          background-image: url("/images/logo_nobird.png"); }
+        #one-year-anniversary header .header-top-area.scroll .navbar-right {
+          color: #163A4D; }
+          #one-year-anniversary header .header-top-area.scroll .navbar-right li a {
+            color: #163A4D; }
+    #one-year-anniversary header .section-background {
+      padding-top: 0;
+      z-index: 0; }
+      #one-year-anniversary header .section-background .bg-container:before {
+        padding-top: 28% !important; }
+        @media screen and (max-width: 550px) {
+          #one-year-anniversary header .section-background .bg-container:before {
+            padding-top: 75% !important; } }
+      #one-year-anniversary header .section-background .bg-container .except-mobile-v {
+        display: block; }
+        @media screen and (max-width: 550px) {
+          #one-year-anniversary header .section-background .bg-container .except-mobile-v {
+            display: none !important; } }
+      #one-year-anniversary header .section-background .bg-container .mobile-v {
+        display: none; }
+        @media screen and (max-width: 550px) {
+          #one-year-anniversary header .section-background .bg-container .mobile-v {
+            display: block !important; } }
+      #one-year-anniversary header .section-background .bg-container .bg {
+        top: -100%; }
+  #one-year-anniversary section {
+    padding: 30px 0; }
+    #one-year-anniversary section .main-logo-container {
+      margin-bottom: 10px;
+      -webkit-justify-content: center;
+      justify-content: center;
+      text-align: center; }
+      #one-year-anniversary section .main-logo-container h2 {
+        font-size: 1.75em; }
+        @media screen and (max-width: 550px) {
+          #one-year-anniversary section .main-logo-container h2 {
+            font-size: 1.5em; } }
+      #one-year-anniversary section .main-logo-container .main-logo img {
+        max-height: 40px;
+        width: auto; }
+      #one-year-anniversary section .main-logo-container .main-logo.danang img {
+        width: 80px;
+        margin-top: 5px; }
+  #one-year-anniversary section.coupon .content_p {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 30px;
+    background: rgba(126, 203, 199, 0.7); }
+    #one-year-anniversary section.coupon .content_p p {
+      text-align: center;
+      color: #fff;
+      font-size: 1.2em; }
+  #one-year-anniversary section.coupon .coupon-container {
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    justify-content: center;
+    align-items: stretch; }
+    @media screen and (max-width: 991px) {
+      #one-year-anniversary section.coupon .coupon-container {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 20px; } }
+    #one-year-anniversary section.coupon .coupon-container .coupon-bg {
+      width: 30%;
+      position: absolute; }
+      @media screen and (max-width: 550px) {
+        #one-year-anniversary section.coupon .coupon-container .coupon-bg {
+          width: 25%; } }
+      #one-year-anniversary section.coupon .coupon-container .coupon-bg:before {
+        padding-top: 100%;
+        content: "";
+        display: block; }
+      #one-year-anniversary section.coupon .coupon-container .coupon-bg.left {
+        max-width: 140px;
+        left: 0;
+        margin-top: -8%;
+        background-image: url("/images/campaign/oneyearanniversary/balloon_1.png"); }
+      #one-year-anniversary section.coupon .coupon-container .coupon-bg.right {
+        max-width: 100px;
+        right: 0;
+        margin-top: -5%;
+        background-image: url("/images/campaign/oneyearanniversary/balloon_2.png"); }
+        @media screen and (max-width: 550px) {
+          #one-year-anniversary section.coupon .coupon-container .coupon-bg.right {
+            margin-left: 40%; } }
+    #one-year-anniversary section.coupon .coupon-container .coupon {
+      flex: 0 0 50%;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      justify-content: center;
+      text-align: center; }
+      @media screen and (max-width: 767px) {
+        #one-year-anniversary section.coupon .coupon-container .coupon {
+          flex: 0 0 100%;
+          margin-bottom: 20px; } }
+      #one-year-anniversary section.coupon .coupon-container .coupon .coupon-bg {
+        background-size: contain;
+        background-repeat: no-repeat; }
+        #one-year-anniversary section.coupon .coupon-container .coupon .coupon-bg.right {
+          background-position: right; }
+        #one-year-anniversary section.coupon .coupon-container .coupon .coupon-bg.left {
+          background-position: left; }
+      #one-year-anniversary section.coupon .coupon-container .coupon .code-container {
+        width: 90%;
+        background: rgba(175, 252, 240, 0.8);
+        border: 5px solid #7ed5cd;
+        /* Tooltip text */ }
+        #one-year-anniversary section.coupon .coupon-container .coupon .code-container .code {
+          padding: 15px;
+          color: #43aa97; }
+          @media screen and (max-width: 991px) {
+            #one-year-anniversary section.coupon .coupon-container .coupon .code-container .code {
+              padding-top: 20px; } }
+        #one-year-anniversary section.coupon .coupon-container .coupon .code-container .currency {
+          font-size: 1.75em;
+          padding-left: 20%;
+          text-align: left;
+          color: #43aa97; }
+          @media screen and (max-width: 1025px) {
+            #one-year-anniversary section.coupon .coupon-container .coupon .code-container .currency {
+              font-size: 1.25em; } }
+        #one-year-anniversary section.coupon .coupon-container .coupon .code-container h1 {
+          font-size: 6.5em;
+          font-weight: 900;
+          color: #13716c; }
+          @media screen and (max-width: 1025px) {
+            #one-year-anniversary section.coupon .coupon-container .coupon .code-container h1 {
+              font-size: 4.5em;
+              padding-top: 0; } }
+          @media screen and (max-width: 767px) {
+            #one-year-anniversary section.coupon .coupon-container .coupon .code-container h1 {
+              font-size: 3.5em; } }
+          #one-year-anniversary section.coupon .coupon-container .coupon .code-container h1 span {
+            font-size: 0.3em;
+            text-transform: uppercase;
+            margin: 0 5px; }
+        #one-year-anniversary section.coupon .coupon-container .coupon .code-container h3 {
+          color: #13716c;
+          font-weight: 500;
+          margin-top: 5px;
+          margin-bottom: 10px;
+          width: 100%;
+          font-size: 1.5em; }
+          @media screen and (max-width: 1199px) {
+            #one-year-anniversary section.coupon .coupon-container .coupon .code-container h3 {
+              min-height: 46px;
+              width: 75%;
+              margin: 0 auto; } }
+          @media screen and (max-width: 1199px) {
+            #one-year-anniversary section.coupon .coupon-container .coupon .code-container h3.one {
+              line-height: 46px; } }
+        #one-year-anniversary section.coupon .coupon-container .coupon .code-container .promo-code-container {
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;
+          /* OLD - Firefox 19- (buggy but mostly works) */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Chrome */
+          display: flex;
+          /* NEW, Spec - Opera 12.1, Firefox 20+ */
+          justify-content: center;
+          text-align: center;
+          align-items: center; }
+          @media screen and (max-width: 767px) {
+            #one-year-anniversary section.coupon .coupon-container .coupon .code-container .promo-code-container {
+              flex-wrap: wrap; } }
+          #one-year-anniversary section.coupon .coupon-container .coupon .code-container .promo-code-container h4 {
+            color: #13716c;
+            font-weight: 900;
+            font-size: 2.5em; }
+            @media screen and (max-width: 550px) {
+              #one-year-anniversary section.coupon .coupon-container .coupon .code-container .promo-code-container h4 {
+                width: 100%;
+                flex: 0 0 100%; } }
+          #one-year-anniversary section.coupon .coupon-container .coupon .code-container .promo-code-container h5 {
+            color: #13716c;
+            font-weight: 300;
+            font-size: 1.4em;
+            margin-right: 5px; }
+            @media screen and (max-width: 550px) {
+              #one-year-anniversary section.coupon .coupon-container .coupon .code-container .promo-code-container h5 {
+                width: 100%;
+                flex: 0 0 100%; } }
+        #one-year-anniversary section.coupon .coupon-container .coupon .code-container .copy-btn, #one-year-anniversary section.coupon .coupon-container .coupon .code-container .copy-btn2 {
+          width: 50%;
+          border: none;
+          border-bottom: 3px solid #13716c;
+          background: #43aa97;
+          padding: 0 30px;
+          margin: 0 auto;
+          position: relative;
+          cursor: pointer; }
+          #one-year-anniversary section.coupon .coupon-container .coupon .code-container .copy-btn span, #one-year-anniversary section.coupon .coupon-container .coupon .code-container .copy-btn2 span {
+            color: #fff;
+            font-size: 1.5em;
+            line-height: 2; }
+          #one-year-anniversary section.coupon .coupon-container .coupon .code-container .copy-btn:hover, #one-year-anniversary section.coupon .coupon-container .coupon .code-container .copy-btn2:hover {
+            cursor: pointer; }
+          #one-year-anniversary section.coupon .coupon-container .coupon .code-container .copy-btn.show, #one-year-anniversary section.coupon .coupon-container .coupon .code-container .copy-btn2.show {
+            display: inline-block; }
+        #one-year-anniversary section.coupon .coupon-container .coupon .code-container p.remarks {
+          color: #43aa97;
+          font-weight: 300;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          text-align: center; }
+        #one-year-anniversary section.coupon .coupon-container .coupon .code-container .tooltiptext, #one-year-anniversary section.coupon .coupon-container .coupon .code-container .tooltiptext2 {
+          width: 50%;
+          margin-left: 25%;
+          margin-bottom: 10px;
+          color: #fff;
+          background: #7ecbc7;
+          text-align: center;
+          padding: 5px 30px;
+          border-radius: 6px;
+          position: relative;
+          z-index: 1;
+          font-size: 0.9em;
+          opacity: 0;
+          transition: all 0.4s ease-out;
+          -webkit-transition: all 0.4s ease-out; }
+          #one-year-anniversary section.coupon .coupon-container .coupon .code-container .tooltiptext:after, #one-year-anniversary section.coupon .coupon-container .coupon .code-container .tooltiptext2:after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #7ecbc7 transparent; }
+          #one-year-anniversary section.coupon .coupon-container .coupon .code-container .tooltiptext.show, #one-year-anniversary section.coupon .coupon-container .coupon .code-container .tooltiptext2.show {
+            opacity: 1; }
+  #one-year-anniversary section.experiences {
+    padding: 0; }
+    #one-year-anniversary section.experiences .btn-address {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      justify-content: center; }
+      @media screen and (max-width: 991px) {
+        #one-year-anniversary section.experiences .btn-address {
+          width: 100%;
+          flex-wrap: nowrap;
+          overflow-x: scroll;
+          justify-content: flex-start; } }
+      #one-year-anniversary section.experiences .btn-address .list-item {
+        flex: 0 0 19%;
+        width: 19%;
+        text-align: center;
+        background: none;
+        cursor: pointer;
+        min-width: 0; }
+        @media screen and (max-width: 991px) {
+          #one-year-anniversary section.experiences .btn-address .list-item {
+            flex: 0 0 calc(100% / 4);
+            min-width: 0;
+            font-size: 1.1em; } }
+        @media screen and (max-width: 550px) {
+          #one-year-anniversary section.experiences .btn-address .list-item {
+            flex: 0 0 calc(100% / 2.5);
+            min-width: 0; } }
+        @media screen and (max-width: 320px) {
+          #one-year-anniversary section.experiences .btn-address .list-item {
+            font-size: 0.8em; } }
+        #one-year-anniversary section.experiences .btn-address .list-item .list-content {
+          box-shadow: none; }
+        #one-year-anniversary section.experiences .btn-address .list-item .banner-bg {
+          width: 80%;
+          margin: 0 auto;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          padding: 5px;
+          overflow: hidden !important;
+          display: block;
+          position: relative;
+          background: #43aa97; }
+        #one-year-anniversary section.experiences .btn-address .list-item .banner {
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          overflow: hidden;
+          background: #43aa97;
+          background-size: cover;
+          background-repeat: no-repeat; }
+          #one-year-anniversary section.experiences .btn-address .list-item .banner .bg {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            right: 0;
+            bottom: -100%;
+            margin: auto;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            max-width: 200%;
+            max-height: 120px;
+            width: auto;
+            transition: all 0.4s ease-out;
+            -webkit-transition: all 0.4s ease-out; }
+            @media screen and (max-width: 767px) {
+              #one-year-anniversary section.experiences .btn-address .list-item .banner .bg {
+                max-width: 80px; } }
+          #one-year-anniversary section.experiences .btn-address .list-item .banner:before {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            content: "";
+            padding-top: 100%;
+            display: block; }
+          #one-year-anniversary section.experiences .btn-address .list-item .banner:after {
+            content: "";
+            padding-top: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1; }
+        #one-year-anniversary section.experiences .btn-address .list-item h3.title-s {
+          font-size: 1.25em;
+          text-transform: uppercase;
+          font-style: italic;
+          font-weight: 600;
+          color: #13716c; }
+          @media screen and (max-width: 767px) {
+            #one-year-anniversary section.experiences .btn-address .list-item h3.title-s {
+              font-size: 0.7em; } }
+    #one-year-anniversary section.experiences .section-experience {
+      margin: 0 auto;
+      margin-bottom: 30px;
+      width: 90%;
+      background: rgba(126, 203, 199, 0.7); }
+      @media screen and (max-width: 991px) {
+        #one-year-anniversary section.experiences .section-experience {
+          width: 100%; } }
+      #one-year-anniversary section.experiences .section-experience .experience-title {
+        display: none; }
+      #one-year-anniversary section.experiences .section-experience .experience-title-s {
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 25px;
+        margin-bottom: 25px;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        justify-content: center;
+        align-items: center;
+        width: 40%; }
+        @media screen and (max-width: 991px) {
+          #one-year-anniversary section.experiences .section-experience .experience-title-s {
+            width: 70%; } }
+        #one-year-anniversary section.experiences .section-experience .experience-title-s h5 {
+          text-transform: uppercase;
+          font-weight: 900;
+          font-size: 1.75em;
+          color: #fff; }
+          @media screen and (max-width: 767px) {
+            #one-year-anniversary section.experiences .section-experience .experience-title-s h5 {
+              font-size: 1.5em; } }
+        #one-year-anniversary section.experiences .section-experience .experience-title-s .address-icon {
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 17%;
+          margin-right: 3%; }
+          #one-year-anniversary section.experiences .section-experience .experience-title-s .address-icon:before {
+            content: "";
+            display: block;
+            padding-top: 100%; }
+          @media screen and (max-width: 767px) {
+            #one-year-anniversary section.experiences .section-experience .experience-title-s .address-icon {
+              width: 12%;
+              margin-right: 3%; } }
+      #one-year-anniversary section.experiences .section-experience .experience-list-container {
+        flex: 0 0 100%;
+        overflow: hidden; }
+        @media screen and (max-width: 767px) {
+          #one-year-anniversary section.experiences .section-experience .experience-list-container {
+            overflow-x: scroll; }
+            #one-year-anniversary section.experiences .section-experience .experience-list-container::-webkit-scrollbar {
+              display: none; } }
+        #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list {
+          margin: 0 auto;
+          width: 96%;
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;
+          /* OLD - Firefox 19- (buggy but mostly works) */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Chrome */
+          display: flex;
+          /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+          @media screen and (max-width: 991px) {
+            #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list {
+              width: 100%; } }
+          #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list.reverse {
+            flex-flow: row-reverse; }
+            @media screen and (max-width: 767px) {
+              #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list.reverse {
+                flex-flow: row; } }
+          #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col {
+            width: 50%;
+            display: -webkit-box;
+            /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;
+            /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;
+            /* TWEENER - IE 10 */
+            display: -webkit-flex;
+            /* NEW - Chrome */
+            display: flex;
+            /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-flow: row wrap; }
+            @media screen and (max-width: 767px) {
+              #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col {
+                width: 90%;
+                margin-right: 1%;
+                flex-wrap: nowrap; } }
+            #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item {
+              background: none;
+              list-style: none;
+              flex: 1 1 49.5%;
+              margin-right: 0.5%; }
+              @media screen and (max-width: 767px) {
+                #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item {
+                  min-width: 300px;
+                  margin-right: 1%; } }
+              #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content {
+                position: relative;
+                display: block; }
+                #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content:before {
+                  padding-top: 50%; }
+                #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .badge-container {
+                  width: 20%;
+                  position: absolute;
+                  right: 0;
+                  top: 5px;
+                  margin-bottom: 5px;
+                  z-index: 99; }
+                  #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .badge-container .priceRange-icon {
+                    width: 100%;
+                    display: -webkit-box;
+                    /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box;
+                    /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox;
+                    /* TWEENER - IE 10 */
+                    display: -webkit-flex;
+                    /* NEW - Chrome */
+                    display: flex;
+                    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                    -ms-flex-wrap: wrap;
+                    -webkit-flex-wrap: wrap;
+                    flex-wrap: wrap; }
+                    #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .badge-container .priceRange-icon .priceRange-type-img {
+                      width: 100%;
+                      background-size: 50%;
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      background-image: url("/images/campaign/oneyearanniversary/icon-discount.png"); }
+                      @media screen and (max-width: 767px) {
+                        #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .badge-container .priceRange-icon .priceRange-type-img {
+                          background-size: 50%; } }
+                      #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .badge-container .priceRange-icon .priceRange-type-img:before {
+                        content: "";
+                        display: block;
+                        padding-top: 60%; }
+                    #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .badge-container .priceRange-icon .priceRange-type-text {
+                      width: 100%;
+                      font-size: 0.78em;
+                      color: #fff;
+                      text-align: center;
+                      text-transform: capitalize;
+                      text-shadow: rgba(0, 0, 0, 0.5) 0.05em 0.05em 0.1em; }
+                #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .banner {
+                  width: 100%;
+                  overflow: hidden;
+                  position: relative; }
+                  #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .banner:before {
+                    content: "";
+                    padding-top: 75%;
+                    display: block; }
+                  #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .banner .bg {
+                    top: -100%;
+                    left: 0;
+                    right: 0;
+                    bottom: -100%;
+                    margin: auto;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                    width: auto;
+                    height: 100%;
+                    position: absolute; }
+                #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                  display: -webkit-box;
+                  /* OLD - iOS 6-, Safari 3.1-6 */
+                  display: -moz-box;
+                  /* OLD - Firefox 19- (buggy but mostly works) */
+                  display: -ms-flexbox;
+                  /* TWEENER - IE 10 */
+                  display: -webkit-flex;
+                  /* NEW - Chrome */
+                  display: flex;
+                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                  flex-wrap: wrap;
+                  -webkit-flex-wrap: wrap;
+                  align-content: center;
+                  align-items: center;
+                  transition: all 0.4s ease-out;
+                  -webkit-transition: all 0.4s ease-out;
+                  padding: 15px; }
+                  @media screen and (max-width: 991px) {
+                    #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                      padding: 10px; } }
+                  @media screen and (max-width: 550px) {
+                    #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                      padding: 15px; } }
+                  #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                    font-weight: 500;
+                    color: #fff;
+                    font-size: 1.2em;
+                    line-height: 1.2;
+                    min-height: 46px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    width: 100%; }
+                    @media screen and (max-width: 767px) {
+                      #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                        font-size: 1.4em;
+                        width: 100%;
+                        -webkit-line-clamp: 3;
+                        min-height: 75px; } }
+                  #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .desc {
+                    font-size: 1em;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    text-align: left;
+                    padding: 0;
+                    margin: 0;
+                    width: 100%;
+                    display: none; }
+                    @media screen and (max-width: 1025px) {
+                      #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .desc {
+                        font-size: 1em; } }
+                    @media screen and (max-width: 550px) {
+                      #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .desc {
+                        font-size: 1em;
+                        display: none; } }
+                  #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .price {
+                    text-align: left;
+                    color: #fff;
+                    font-size: 1.5em;
+                    font-weight: 700; }
+                    #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .price .ori-price {
+                      font-size: 0.8em;
+                      color: #fff;
+                      opacity: .5;
+                      text-decoration: line-through; }
+                  #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    display: -webkit-box;
+                    /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box;
+                    /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox;
+                    /* TWEENER - IE 10 */
+                    display: -webkit-flex;
+                    /* NEW - Chrome */
+                    display: flex;
+                    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                    flex-wrap: wrap; }
+                    @media screen and (max-width: 1025px) {
+                      #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                        margin-top: 0; } }
+                    @media screen and (max-width: 767px) {
+                      #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                        padding-top: 0; } }
+                    #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container {
+                      display: -webkit-box;
+                      /* OLD - iOS 6-, Safari 3.1-6 */
+                      display: -moz-box;
+                      /* OLD - Firefox 19- (buggy but mostly works) */
+                      display: -ms-flexbox;
+                      /* TWEENER - IE 10 */
+                      display: -webkit-flex;
+                      /* NEW - Chrome */
+                      display: flex;
+                      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                      flex-wrap: wrap;
+                      width: 100%; }
+                      #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                        font-size: 0.8em;
+                        color: #999;
+                        margin-right: 10px; }
+                        @media screen and (max-width: 550px) {
+                          #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                            font-size: 0.8em; } }
+                    #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .location, #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .btn-container {
+                      color: #fff;
+                      flex: 0 0 50%;
+                      width: 50%; }
+                      #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .location.btn-container, #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .btn-container.btn-container {
+                        text-align: right; }
+                        #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .location.btn-container .btn, #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .btn-container.btn-container .btn {
+                          background: #43aa97;
+                          border: 1px solid #43aa97; }
+                #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container {
+                  background-color: #13716c;
+                  color: #fff;
+                  padding: 5px 15px;
+                  margin-top: 10px;
+                  text-align: center;
+                  display: none; }
+                  #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price {
+                    font-size: 1.2em; }
+                    @media screen and (max-width: 550px) {
+                      #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price {
+                        font-size: 1em; } }
+                    @media screen and (max-width: 320px) {
+                      #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price {
+                        font-size: 0.8em; } }
+                    #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price .ori-price {
+                      font-size: 0.8em;
+                      color: #fff;
+                      opacity: .5;
+                      text-decoration: line-through; }
+              #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item.highlight .content h3 {
+                font-size: 1.8em;
+                line-height: 1.5; }
+                @media screen and (max-width: 767px) {
+                  #one-year-anniversary section.experiences .section-experience .experience-list-container .experience-list .list-col .list-item.highlight .content h3 {
+                    font-size: 1.5em;
+                    width: 100%; } }
+        #one-year-anniversary section.experiences .section-experience .experience-list-container.row-with-4-items .list-col {
+          width: 100%; }
+          #one-year-anniversary section.experiences .section-experience .experience-list-container.row-with-4-items .list-col .list-item {
+            flex: 1 1 24.5%;
+            margin-right: 0.5%;
+            background-color: #7ecbc7; }
+            #one-year-anniversary section.experiences .section-experience .experience-list-container.row-with-4-items .list-col .list-item:last-child {
+              margin-right: 0%; }
+            #one-year-anniversary section.experiences .section-experience .experience-list-container.row-with-4-items .list-col .list-item .list-content {
+              height: calc(100% - 35px); }
+        #one-year-anniversary section.experiences .section-experience .experience-list-container.row-with-6-items .list-col {
+          width: 100%; }
+          #one-year-anniversary section.experiences .section-experience .experience-list-container.row-with-6-items .list-col .list-item {
+            flex: 0 0 32.333%;
+            width: 32.333%;
+            margin-right: 1%;
+            margin-bottom: 1%;
+            background: #7ecbc7; }
+            @media screen and (max-width: 991px) {
+              #one-year-anniversary section.experiences .section-experience .experience-list-container.row-with-6-items .list-col .list-item {
+                flex: 0 0 49%; } }
+            #one-year-anniversary section.experiences .section-experience .experience-list-container.row-with-6-items .list-col .list-item:last-child {
+              margin-right: 0%; }
+            #one-year-anniversary section.experiences .section-experience .experience-list-container.row-with-6-items .list-col .list-item .list-content {
+              height: calc(100% - 35px); }
+    #one-year-anniversary section.experiences .see-more-container {
+      margin: 0 auto;
+      text-align: center; }
+      #one-year-anniversary section.experiences .see-more-container .see-more {
+        background: #43aa97;
+        margin-bottom: 50px; }
+  @media screen and (max-width: 550px) {
+    #one-year-anniversary section.adv {
+      padding: 10px 0; } }
+  #one-year-anniversary section.adv img {
+    width: 90%;
+    margin-left: 5%; }
+    @media screen and (max-width: 550px) {
+      #one-year-anniversary section.adv img {
+        width: 100%;
+        margin-left: 0; } }
+  #one-year-anniversary section.terms {
+    width: 100%;
+    background: #9aebe5; }
+    #one-year-anniversary section.terms div.terms {
+      width: 80%;
+      margin: 0 auto; }
+      @media screen and (max-width: 550px) {
+        #one-year-anniversary section.terms div.terms {
+          width: 100%; } }
+    #one-year-anniversary section.terms p {
+      line-height: 1.5;
+      word-break: break-word;
+      word-wrap: break-word;
+      font-size: 0.86em;
+      text-align: left;
+      font-weight: 400; }
+  #one-year-anniversary .floating-icons {
+    font-size: 1.2em;
+    position: fixed;
+    right: 0;
+    bottom: 40%;
+    cursor: pointer;
+    z-index: 100000;
+    display: none;
+    opacity: 0; }
+    @media screen and (max-width: 767px) {
+      #one-year-anniversary .floating-icons {
+        display: none !important; } }
+    #one-year-anniversary .floating-icons.show {
+      display: block;
+      opacity: 0.9; }
+    #one-year-anniversary .floating-icons > div {
+      display: block;
+      padding: 5px 15px;
+      margin-bottom: 2px;
+      box-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px;
+      background: #7ecbc7;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+      #one-year-anniversary .floating-icons > div.active {
+        background: #43aa97; }
+      #one-year-anniversary .floating-icons > div h6 {
+        font-size: 1em;
+        color: #fff;
+        font-weight: 800; }
+  #one-year-anniversary section#spotlight {
+    margin-bottom: 20px; }
+    #one-year-anniversary section#spotlight .container-fluid {
+      padding: 30px 0;
+      width: 100%; }
+      @media screen and (max-width: 991px) {
+        #one-year-anniversary section#spotlight .container-fluid {
+          width: calc(100% - 10px);
+          margin: 0 auto; } }
+    #one-year-anniversary section#spotlight .main-logo-container {
+      -webkit-justify-content: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 10px; }
+      #one-year-anniversary section#spotlight .main-logo-container h2 {
+        color: #fff; }
+    #one-year-anniversary section#spotlight .list-item {
+      flex: 1 1 24.5%;
+      margin-right: 0.5%;
+      padding: 15px;
+      background: #7ecbc7; }
+      @media screen and (max-width: 1025px) {
+        #one-year-anniversary section#spotlight .list-item {
+          flex: 0 0 calc(100% / 4.5);
+          min-width: 0; } }
+      @media screen and (max-width: 991px) {
+        #one-year-anniversary section#spotlight .list-item {
+          flex: 0 0 calc(100% / 3.5);
+          min-width: 0; } }
+      @media screen and (max-width: 767px) {
+        #one-year-anniversary section#spotlight .list-item {
+          min-width: 300px; } }
+      #one-year-anniversary section#spotlight .list-item a {
+        background-color: #13716c; }
+    #one-year-anniversary section#spotlight .slick-slide {
+      flex: 1 1 24.3%;
+      margin-right: 0.2%; }
+    #one-year-anniversary section#spotlight h2, #one-year-anniversary section#spotlight h3, #one-year-anniversary section#spotlight p.desc {
+      color: #fff; }
+
+body.zh-hk #one-year-anniversary section.coupon .coupon-container .coupon .code-container h3, body.zh-cn #one-year-anniversary section.coupon .coupon-container .coupon .code-container h3 {
+  line-height: 46px !important; }

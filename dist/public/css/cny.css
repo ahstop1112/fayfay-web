@@ -1,0 +1,955 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+body {
+  background-color: #be1c1e;
+  overflow-x: hidden;
+  width: 100%; }
+
+#cny {
+  color: #fff;
+  background-color: #be1c1e;
+  background-image: url("/images/campaign/cny/bg.jpg");
+  background-size: contain;
+  background-position: center; }
+  @media screen and (max-width: 767px) {
+    #cny {
+      background-image: url("/images/campaign/cny/bg_mobile.jpg");
+      background-position: center;
+      background-size: cover; } }
+  #cny header {
+    height: 100%; }
+    #cny header .header-top-area {
+      box-shadow: none;
+      background: #fff;
+      border: 0;
+      position: static; }
+      #cny header .header-top-area .header-container {
+        width: 100%;
+        padding: 0 2%; }
+        #cny header .header-top-area .header-container .badge-notify {
+          position: absolute; }
+      #cny header .header-top-area .badge-notify {
+        position: absolute; }
+      #cny header .header-top-area.scroll {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        background-color: rgba(255, 255, 255, 0.9); }
+        #cny header .header-top-area.scroll .logo {
+          background-image: url("/images/logo_nobird.png"); }
+        #cny header .header-top-area.scroll .navbar-right {
+          color: #163A4D; }
+          #cny header .header-top-area.scroll .navbar-right li a {
+            color: #163A4D; }
+    #cny header .overlay-header {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 40% !important;
+      margin-left: 30% !important;
+      padding-bottom: 30%; }
+      @media screen and (max-width: 1025px) {
+        #cny header .overlay-header {
+          width: 70% !important;
+          margin-left: 15% !important;
+          padding-bottom: 25%; } }
+      @media screen and (max-width: 767px) {
+        #cny header .overlay-header {
+          width: 80% !important;
+          margin-left: 10% !important;
+          padding-bottom: 45%; } }
+      #cny header .overlay-header h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 3em;
+        text-shadow: rgba(0, 0, 0, 0.5) 0.05em 0.05em 0.1em;
+        width: 100%;
+        display: none; }
+        @media screen and (max-width: 767px) {
+          #cny header .overlay-header h1 {
+            font-size: 2.2em; } }
+      #cny header .overlay-header p {
+        color: #fff;
+        text-align: center;
+        font-size: 1.5em;
+        text-shadow: rgba(0, 0, 0, 0.5) 0.05em 0.05em 0.1em;
+        width: 100%;
+        display: none; }
+        @media screen and (max-width: 767px) {
+          #cny header .overlay-header p {
+            font-size: 1em; } }
+    #cny header .section-background {
+      padding-top: 0;
+      z-index: 0; }
+      #cny header .section-background .bg-container {
+        background-color: #be1c1e;
+        max-height: 450px; }
+        @media screen and (min-width: 1440px) {
+          #cny header .section-background .bg-container {
+            max-height: none; } }
+        #cny header .section-background .bg-container:before {
+          padding-top: 28%; }
+          @media screen and (max-width: 550px) {
+            #cny header .section-background .bg-container:before {
+              padding-top: 75%; } }
+        #cny header .section-background .bg-container .bg {
+          top: -100%;
+          min-height: 100%; }
+          #cny header .section-background .bg-container .bg.expect-mobile-v {
+            display: none; }
+            @media screen and (min-width: 550px) {
+              #cny header .section-background .bg-container .bg.expect-mobile-v {
+                display: block; } }
+          #cny header .section-background .bg-container .bg.mobile-v {
+            display: none; }
+            @media screen and (max-width: 550px) {
+              #cny header .section-background .bg-container .bg.mobile-v {
+                display: block; } }
+  #cny section#coupon {
+    padding: 30px 0 0 0; }
+    @media screen and (max-width: 550px) {
+      #cny section#coupon {
+        padding: 15px 0 0 0; } }
+    #cny section#coupon p.content_p {
+      margin: 0 auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: #fff;
+      width: 90%;
+      text-align: center;
+      font-size: 1em; }
+      @media screen and (max-width: 1025px) {
+        #cny section#coupon p.content_p {
+          width: 90%; } }
+    #cny section#coupon .coupon-container {
+      width: 90%;
+      margin: 0px auto;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      justify-content: center;
+      align-items: stretch; }
+      @media screen and (max-width: 991px) {
+        #cny section#coupon .coupon-container {
+          width: 100%;
+          flex-wrap: wrap;
+          margin-top: 20px; } }
+      #cny section#coupon .coupon-container .coupon {
+        flex: 0 0 50%;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        justify-content: center;
+        text-align: center; }
+        @media screen and (max-width: 550px) {
+          #cny section#coupon .coupon-container .coupon {
+            flex: 0 0 100%;
+            margin-bottom: 20px; } }
+        #cny section#coupon .coupon-container .coupon .coupon-bg {
+          flex: 0 0 10%;
+          background-image: url("/images/campaign/cny/coupon.png");
+          background-size: contain;
+          background-repeat: no-repeat; }
+          #cny section#coupon .coupon-container .coupon .coupon-bg.right {
+            background-position: right; }
+          #cny section#coupon .coupon-container .coupon .coupon-bg.left {
+            background-position: left; }
+        #cny section#coupon .coupon-container .coupon .code {
+          margin: 15px 0;
+          padding: 30px;
+          width: 90%;
+          background: linear-gradient(to bottom left, rgba(166, 16, 16, 0.8), rgba(142, 4, 7, 0.8));
+          /* Tooltip text */ }
+          @media screen and (max-width: 991px) {
+            #cny section#coupon .coupon-container .coupon .code {
+              padding-top: 20px; } }
+          #cny section#coupon .coupon-container .coupon .code .currency {
+            font-size: 1.75em;
+            padding-left: 20%;
+            text-align: left;
+            background: linear-gradient(to bottom right, #eec832, #f7db91, #eec832);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; }
+            @media screen and (max-width: 1025px) {
+              #cny section#coupon .coupon-container .coupon .code .currency {
+                font-size: 1.25em; } }
+          #cny section#coupon .coupon-container .coupon .code h1 {
+            margin-top: -5px;
+            font-size: 6.5em;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(to bottom right, #eec832, #f7db91, #eec832);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; }
+            @media screen and (max-width: 1025px) {
+              #cny section#coupon .coupon-container .coupon .code h1 {
+                font-size: 4.5em;
+                padding-top: 0; } }
+            @media screen and (max-width: 767px) {
+              #cny section#coupon .coupon-container .coupon .code h1 {
+                font-size: 3.5em; } }
+            #cny section#coupon .coupon-container .coupon .code h1 span {
+              font-size: 0.4em;
+              font-weight: normal;
+              margin: 0 5px; }
+          #cny section#coupon .coupon-container .coupon .code h3 {
+            color: #fff;
+            font-weight: 300;
+            margin-top: 5px;
+            width: 100%; }
+            @media screen and (max-width: 991px) {
+              #cny section#coupon .coupon-container .coupon .code h3 {
+                font-size: 1.2em; } }
+          #cny section#coupon .coupon-container .coupon .code h4 {
+            color: #fff;
+            font-weight: 900;
+            font-size: 2.5em; }
+          #cny section#coupon .coupon-container .coupon .code .copy-btn, #cny section#coupon .coupon-container .coupon .code .copy-btn2 {
+            width: 100%;
+            background-color: #c01c2d;
+            border: none;
+            border-bottom: 3px solid #000;
+            padding: 0 30px;
+            margin: 0px auto;
+            margin-top: 20px;
+            position: relative;
+            cursor: pointer; }
+            #cny section#coupon .coupon-container .coupon .code .copy-btn span, #cny section#coupon .coupon-container .coupon .code .copy-btn2 span {
+              background: linear-gradient(to bottom right, #eec832, #f7db91, #eec832);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              font-size: 1.5em;
+              line-height: 1.5;
+              text-transform: uppercase; }
+            #cny section#coupon .coupon-container .coupon .code .copy-btn:hover, #cny section#coupon .coupon-container .coupon .code .copy-btn2:hover {
+              cursor: pointer; }
+            #cny section#coupon .coupon-container .coupon .code .copy-btn.show, #cny section#coupon .coupon-container .coupon .code .copy-btn2.show {
+              display: inline-block; }
+          #cny section#coupon .coupon-container .coupon .code p.desc {
+            color: #fff;
+            font-weight: 300;
+            margin-top: 10px;
+            text-align: center; }
+          #cny section#coupon .coupon-container .coupon .code .tooltiptext, #cny section#coupon .coupon-container .coupon .code .tooltiptext2 {
+            width: 50%;
+            margin-left: 25%;
+            background-color: #c01c2d;
+            color: #f3d35d;
+            text-align: center;
+            padding: 5px 30px;
+            border-radius: 6px;
+            position: relative;
+            z-index: 1;
+            font-size: 0.9em;
+            opacity: 0;
+            transition: all 0.4s ease-out;
+            -webkit-transition: all 0.4s ease-out; }
+            #cny section#coupon .coupon-container .coupon .code .tooltiptext:after, #cny section#coupon .coupon-container .coupon .code .tooltiptext2:after {
+              content: "";
+              position: absolute;
+              bottom: 100%;
+              left: 50%;
+              margin-left: -5px;
+              border-width: 5px;
+              border-style: solid;
+              border-color: transparent transparent #c01c2d transparent; }
+            #cny section#coupon .coupon-container .coupon .code .tooltiptext.show, #cny section#coupon .coupon-container .coupon .code .tooltiptext2.show {
+              opacity: 1; }
+  #cny section#all {
+    padding: 15px 0; }
+    #cny section#all .btn-address {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      width: 80%;
+      margin: 0px auto;
+      margin-bottom: 15px;
+      justify-content: center; }
+      @media screen and (max-width: 991px) {
+        #cny section#all .btn-address {
+          width: 100%;
+          flex-wrap: nowrap;
+          overflow-x: scroll;
+          justify-content: flex-start; } }
+      #cny section#all .btn-address .list-item {
+        flex: 0 0 24.5%;
+        text-align: center;
+        background: none;
+        cursor: pointer;
+        min-width: 0; }
+        @media screen and (max-width: 991px) {
+          #cny section#all .btn-address .list-item {
+            flex: 0 0 calc(100% / 4);
+            min-width: 0;
+            font-size: 1.1em; } }
+        @media screen and (max-width: 550px) {
+          #cny section#all .btn-address .list-item {
+            flex: 0 0 calc(100% / 3.5);
+            min-width: 0; } }
+        @media screen and (max-width: 320px) {
+          #cny section#all .btn-address .list-item {
+            font-size: 0.8em; } }
+        #cny section#all .btn-address .list-item .list-content {
+          box-shadow: none; }
+        #cny section#all .btn-address .list-item.section1 .banner:before {
+          background-image: url("https://res.fayfay.com/image/upload/w_640/fayfay-media/prod/j8mmxqhicrbputtqlyv3"); }
+        #cny section#all .btn-address .list-item.section2 .banner:before {
+          background-image: url("https://res.fayfay.com/image/upload/w_640/fayfay-media/prod/quldev6tuxauzmhrknkk"); }
+        #cny section#all .btn-address .list-item.section3 .banner:before {
+          background-image: url("https://res.fayfay.com/image/upload/w_640/fayfay-media/prod/wtyhn3r7uhvl9ahpmxsg"); }
+        #cny section#all .btn-address .list-item.section4 .banner:before {
+          background-image: url("https://res.fayfay.com/image/upload/w_640/fayfay-media/prod/l8b9xnkz7bulywcj13pg"); }
+        #cny section#all .btn-address .list-item .banner-bg {
+          width: 80%;
+          margin: 0 auto;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          padding: 5px;
+          overflow: hidden !important;
+          display: block;
+          position: relative;
+          background: linear-gradient(to bottom right, #eec832, #f7db91, #eec832); }
+        #cny section#all .btn-address .list-item .banner {
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          overflow: hidden;
+          background-color: #be1c1e; }
+          #cny section#all .btn-address .list-item .banner:before {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            content: "";
+            padding-top: 100%;
+            display: block; }
+          #cny section#all .btn-address .list-item .banner:after {
+            content: "";
+            padding-top: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1; }
+          @media screen and (max-width: 991px) {
+            #cny section#all .btn-address .list-item .banner {
+              background-size: 60%; } }
+        #cny section#all .btn-address .list-item h3.title-s {
+          font-size: 1.25em;
+          text-transform: uppercase;
+          font-style: italic;
+          font-weight: 600;
+          background: linear-gradient(to bottom right, #eec832, #f7db91, #eec832);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent; }
+          @media screen and (max-width: 767px) {
+            #cny section#all .btn-address .list-item h3.title-s {
+              font-size: 0.7em; } }
+    #cny section#all .section-experience {
+      background: linear-gradient(to bottom left, rgba(170, 11, 12, 0.8), rgba(115, 12, 14, 0.8));
+      padding: 30px 0;
+      margin: 0 5% 30px 5%;
+      width: 90%;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      flex-wrap: wrap;
+      align-items: center; }
+      @media screen and (max-width: 991px) {
+        #cny section#all .section-experience {
+          width: 100%;
+          margin: 0 0 30px 0;
+          padding: 0 0 30px 0; } }
+      #cny section#all .section-experience .experience-bg-left {
+        flex: 0 0 15%;
+        margin-top: -30px;
+        background-image: url("/images/campaign/cny/corner.png");
+        background-size: cover;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1); }
+        #cny section#all .section-experience .experience-bg-left:before {
+          content: "";
+          display: block;
+          padding-top: 100%; }
+        @media screen and (max-width: 991px) {
+          #cny section#all .section-experience .experience-bg-left {
+            margin-top: -15px; } }
+        @media screen and (max-width: 550px) {
+          #cny section#all .section-experience .experience-bg-left {
+            margin-top: -40px;
+            flex: 0 0 12%; } }
+      #cny section#all .section-experience .experience-bg-right {
+        flex: 0 0 15%;
+        margin-top: -30px;
+        background-image: url("/images/campaign/cny/corner.png");
+        background-size: cover; }
+        #cny section#all .section-experience .experience-bg-right:before {
+          content: "";
+          display: block;
+          padding-top: 100%; }
+        @media screen and (max-width: 991px) {
+          #cny section#all .section-experience .experience-bg-right {
+            margin-top: -15px; } }
+        @media screen and (max-width: 550px) {
+          #cny section#all .section-experience .experience-bg-right {
+            margin-top: -40px;
+            flex: 0 0 12%; } }
+      #cny section#all .section-experience .experience-title {
+        flex: 0 0 60%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 15px 0;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        justify-content: center;
+        align-items: center; }
+        @media screen and (max-width: 991px) {
+          #cny section#all .section-experience .experience-title {
+            flex: 0 0 70%; } }
+        @media screen and (max-width: 550px) {
+          #cny section#all .section-experience .experience-title {
+            flex: 0 0 76%; } }
+        #cny section#all .section-experience .experience-title .title-bg-left {
+          flex: 0 0 15%;
+          margin-top: -30px;
+          margin-right: -50px;
+          background-image: url("/images/campaign/cny/icon-dragon.png");
+          background-size: cover;
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1); }
+          #cny section#all .section-experience .experience-title .title-bg-left:before {
+            content: "";
+            display: block;
+            padding-top: 100%; }
+          @media screen and (max-width: 991px) {
+            #cny section#all .section-experience .experience-title .title-bg-left {
+              flex: 0 0 20%;
+              margin-top: 0; } }
+          @media screen and (max-width: 550px) {
+            #cny section#all .section-experience .experience-title .title-bg-left {
+              margin-top: 0px;
+              margin-right: -20px; } }
+        #cny section#all .section-experience .experience-title .title-bg-right {
+          flex: 0 0 15%;
+          margin-top: -30px;
+          margin-left: -50px;
+          background-image: url("/images/campaign/cny/icon-dragon.png");
+          background-size: cover; }
+          #cny section#all .section-experience .experience-title .title-bg-right:before {
+            content: "";
+            display: block;
+            padding-top: 100%; }
+          @media screen and (max-width: 991px) {
+            #cny section#all .section-experience .experience-title .title-bg-right {
+              flex: 0 0 20%;
+              margin-top: 0; } }
+          @media screen and (max-width: 550px) {
+            #cny section#all .section-experience .experience-title .title-bg-right {
+              margin-top: 0px;
+              margin-left: -20px; } }
+        #cny section#all .section-experience .experience-title .title-bg {
+          background-color: #720202;
+          flex: 0 0 70%; }
+        #cny section#all .section-experience .experience-title h2 {
+          background: linear-gradient(to bottom right, #eec832, #f7db91, #eec832);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-transform: uppercase;
+          font-weight: 900; }
+          @media screen and (max-width: 991px) {
+            #cny section#all .section-experience .experience-title h2 {
+              font-size: 1.75em; } }
+          @media screen and (max-width: 550px) {
+            #cny section#all .section-experience .experience-title h2 {
+              font-size: 1.25em; } }
+        #cny section#all .section-experience .experience-title.watersports .address-icon {
+          background-image: url("/images/campaign/cny/icon_water.png"); }
+        #cny section#all .section-experience .experience-title.fnb .address-icon {
+          background-image: url("/images/campaign/cny/icon_eat.png"); }
+        #cny section#all .section-experience .experience-title.naturalExploration .address-icon {
+          margin-top: -10px;
+          background-image: url("/images/campaign/cny/icon_natural.png"); }
+        #cny section#all .section-experience .experience-title.show .address-icon {
+          background-image: url("/images/campaign/cny/icon_show.png"); }
+        #cny section#all .section-experience .experience-title.simcard .address-icon {
+          background-image: url("/images/campaign/cny/icon_sim.png"); }
+      #cny section#all .section-experience .experience-title-s {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        justify-content: center;
+        align-items: center;
+        width: 40%; }
+        @media screen and (max-width: 991px) {
+          #cny section#all .section-experience .experience-title-s {
+            width: 70%; } }
+        #cny section#all .section-experience .experience-title-s.visa {
+          margin-top: 20px; }
+        #cny section#all .section-experience .experience-title-s.activity {
+          margin-top: -20px; }
+          @media screen and (max-width: 550px) {
+            #cny section#all .section-experience .experience-title-s.activity {
+              margin: 0 15% 20px 15%; } }
+        #cny section#all .section-experience .experience-title-s h5 {
+          background: linear-gradient(to bottom right, #eec832, #f7db91, #eec832);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-transform: uppercase;
+          font-weight: 900;
+          font-size: 1.75em; }
+          @media screen and (max-width: 991px) {
+            #cny section#all .section-experience .experience-title-s h5 {
+              font-size: 1.25em; } }
+          @media screen and (max-width: 550px) {
+            #cny section#all .section-experience .experience-title-s h5 {
+              font-size: 1.15em; } }
+        #cny section#all .section-experience .experience-title-s .address-icon {
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 12%;
+          margin-right: 3%; }
+          #cny section#all .section-experience .experience-title-s .address-icon:before {
+            content: "";
+            display: block;
+            padding-top: 100%; }
+          @media screen and (max-width: 767px) {
+            #cny section#all .section-experience .experience-title-s .address-icon {
+              width: 12%;
+              margin-right: 3%; } }
+        #cny section#all .section-experience .experience-title-s.visa .address-icon {
+          background-image: url("/images/campaign/cny/icon-visa.png"); }
+        #cny section#all .section-experience .experience-title-s.activity .address-icon {
+          background-image: url("/images/campaign/cny/icon-activity.png"); }
+      #cny section#all .section-experience .experience-list-container {
+        flex: 0 0 100%;
+        overflow: hidden; }
+        @media screen and (max-width: 767px) {
+          #cny section#all .section-experience .experience-list-container {
+            overflow-x: scroll; }
+            #cny section#all .section-experience .experience-list-container::-webkit-scrollbar {
+              display: none; } }
+        #cny section#all .section-experience .experience-list-container .experience-list {
+          margin: 0 auto;
+          width: 96%;
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;
+          /* OLD - Firefox 19- (buggy but mostly works) */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Chrome */
+          display: flex;
+          /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+          @media screen and (max-width: 991px) {
+            #cny section#all .section-experience .experience-list-container .experience-list {
+              width: 100%; } }
+          #cny section#all .section-experience .experience-list-container .experience-list.reverse {
+            flex-flow: row-reverse; }
+            @media screen and (max-width: 767px) {
+              #cny section#all .section-experience .experience-list-container .experience-list.reverse {
+                flex-flow: row; } }
+          #cny section#all .section-experience .experience-list-container .experience-list .list-col {
+            width: 50%;
+            display: -webkit-box;
+            /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;
+            /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;
+            /* TWEENER - IE 10 */
+            display: -webkit-flex;
+            /* NEW - Chrome */
+            display: flex;
+            /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-flow: row wrap; }
+            @media screen and (max-width: 767px) {
+              #cny section#all .section-experience .experience-list-container .experience-list .list-col {
+                width: 90%;
+                margin-right: 1%;
+                flex-wrap: nowrap; } }
+            #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item {
+              background: none;
+              list-style: none;
+              flex: 1 1 49.5%;
+              margin-right: 0.5%; }
+              @media screen and (max-width: 767px) {
+                #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item {
+                  min-width: 300px;
+                  margin-right: 1%; } }
+              #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content {
+                position: relative;
+                display: block; }
+                #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content:before {
+                  padding-top: 50%; }
+                #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .banner {
+                  width: 100%;
+                  overflow: hidden;
+                  position: relative; }
+                  #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .banner:before {
+                    content: "";
+                    padding-top: 100%;
+                    display: block; }
+                  #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .banner .bg {
+                    top: -100%;
+                    left: 0;
+                    right: 0;
+                    bottom: -100%;
+                    margin: auto;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                    width: auto;
+                    height: 100%;
+                    position: absolute; }
+                #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  z-index: 999;
+                  width: 100%;
+                  height: 100%;
+                  background-color: rgba(0, 0, 0, 0.2);
+                  display: -webkit-box;
+                  /* OLD - iOS 6-, Safari 3.1-6 */
+                  display: -moz-box;
+                  /* OLD - Firefox 19- (buggy but mostly works) */
+                  display: -ms-flexbox;
+                  /* TWEENER - IE 10 */
+                  display: -webkit-flex;
+                  /* NEW - Chrome */
+                  display: flex;
+                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                  justify-content: center;
+                  -webkit-justify-content: center;
+                  flex-wrap: wrap;
+                  -webkit-flex-wrap: wrap;
+                  align-content: center;
+                  align-items: center;
+                  transition: all 0.4s ease-out;
+                  -webkit-transition: all 0.4s ease-out;
+                  padding: 15px 30px; }
+                  #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content:hover {
+                    background-color: rgba(0, 0, 0, 0); }
+                  @media screen and (max-width: 991px) {
+                    #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                      padding: 10px; } }
+                  @media screen and (max-width: 550px) {
+                    #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                      padding: 15px; } }
+                  #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                    font-weight: 500;
+                    color: #fff;
+                    font-size: 1.3em;
+                    line-height: 1.2;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    text-shadow: rgba(0, 0, 0, 0.5) 0.1em 0.1em 0.1em;
+                    width: 100%; }
+                    @media screen and (max-width: 1025px) {
+                      #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                        font-size: 1.2em; } }
+                    @media screen and (max-width: 767px) {
+                      #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                        font-size: 1.5em;
+                        width: 100%; } }
+                  #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .desc {
+                    font-size: 1em;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    text-align: left;
+                    padding: 0;
+                    margin: 0;
+                    width: 100%;
+                    display: none; }
+                    @media screen and (max-width: 1025px) {
+                      #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .desc {
+                        font-size: 1em; } }
+                    @media screen and (max-width: 550px) {
+                      #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .desc {
+                        font-size: 1em;
+                        display: none; } }
+                  #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    display: -webkit-box;
+                    /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box;
+                    /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox;
+                    /* TWEENER - IE 10 */
+                    display: -webkit-flex;
+                    /* NEW - Chrome */
+                    display: flex;
+                    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                    flex-wrap: wrap; }
+                    @media screen and (max-width: 1025px) {
+                      #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                        margin-top: 0; } }
+                    @media screen and (max-width: 767px) {
+                      #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                        padding-top: 0; } }
+                    #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container {
+                      display: -webkit-box;
+                      /* OLD - iOS 6-, Safari 3.1-6 */
+                      display: -moz-box;
+                      /* OLD - Firefox 19- (buggy but mostly works) */
+                      display: -ms-flexbox;
+                      /* TWEENER - IE 10 */
+                      display: -webkit-flex;
+                      /* NEW - Chrome */
+                      display: flex;
+                      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                      flex-wrap: wrap;
+                      width: 100%; }
+                      #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                        font-size: 0.8em;
+                        color: #999;
+                        margin-right: 10px; }
+                        @media screen and (max-width: 550px) {
+                          #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                            font-size: 0.8em; } }
+                    #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .location {
+                      color: #fff; }
+                #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container {
+                  background-color: #be1c1e;
+                  color: #fff;
+                  padding: 5px 15px;
+                  margin-top: 10px;
+                  text-align: center; }
+                  #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price {
+                    font-size: 1.2em; }
+                    @media screen and (max-width: 550px) {
+                      #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price {
+                        font-size: 1em; } }
+                    @media screen and (max-width: 320px) {
+                      #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price {
+                        font-size: 0.8em; } }
+                    #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price .ori-price {
+                      font-size: 0.8em;
+                      color: #fff;
+                      opacity: .5;
+                      text-decoration: line-through; }
+              #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item.highlight .content h3 {
+                font-size: 1.8em;
+                line-height: 1.5; }
+                @media screen and (max-width: 767px) {
+                  #cny section#all .section-experience .experience-list-container .experience-list .list-col .list-item.highlight .content h3 {
+                    font-size: 1.5em;
+                    width: 100%; } }
+        #cny section#all .section-experience .experience-list-container.row-with-4-items .list-col {
+          width: 100%; }
+          #cny section#all .section-experience .experience-list-container.row-with-4-items .list-col .list-item {
+            flex: 1 1 24.5%;
+            margin-right: 0.5%;
+            padding: 15px;
+            background-color: #720202; }
+            #cny section#all .section-experience .experience-list-container.row-with-4-items .list-col .list-item:last-child {
+              margin-right: 0%; }
+            #cny section#all .section-experience .experience-list-container.row-with-4-items .list-col .list-item .list-content {
+              height: calc(100% - 35px); }
+  #cny .terms {
+    color: #fff;
+    line-height: 1.5;
+    word-break: break-word;
+    word-wrap: break-word;
+    font-size: 0.86em;
+    text-align: left;
+    font-weight: 400;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0 80px 0; }
+    @media screen and (max-width: 1025px) {
+      #cny .terms {
+        width: 90%; } }
+    @media screen and (max-width: 767px) {
+      #cny .terms {
+        width: 90%; } }
+    #cny .terms b {
+      color: #fff; }
+  #cny .floating-icons {
+    font-size: 1.2em;
+    position: fixed;
+    right: 0;
+    bottom: 35%;
+    cursor: pointer;
+    z-index: 100000;
+    display: none;
+    opacity: 0; }
+    @media screen and (max-width: 767px) {
+      #cny .floating-icons {
+        display: none !important; } }
+    #cny .floating-icons.show {
+      display: block;
+      opacity: 0.9; }
+    #cny .floating-icons > div {
+      display: block;
+      background-color: #720202;
+      padding: 5px 30px;
+      margin-bottom: 2px;
+      box-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+      #cny .floating-icons > div.active h6 {
+        background: linear-gradient(to bottom right, #eec832, #f7db91, #eec832);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
+      #cny .floating-icons > div h6 {
+        font-size: 1.15em;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 800; }
+  #cny .gotoTop {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    cursor: pointer;
+    z-index: 100000;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    -webkit-transform: translate3d(0, 0, 0); }
+    @media screen and (max-width: 767px) {
+      #cny .gotoTop {
+        right: 10px;
+        bottom: 50px; } }
+    #cny .gotoTop.show {
+      opacity: 0.8; }
+    #cny .gotoTop:before {
+      content: "";
+      padding-left: 80px;
+      padding-bottom: 80px;
+      background-image: url("/images/campaign/cny/top.png");
+      background-repeat: no-repeat;
+      background-size: contain; }
+      @media screen and (max-width: 767px) {
+        #cny .gotoTop:before {
+          padding-left: 60px;
+          padding-bottom: 60px; } }
+  #cny section#spotlight {
+    margin-bottom: 20px; }
+    #cny section#spotlight .container-fluid {
+      background: linear-gradient(to bottom left, rgba(170, 11, 12, 0.8), rgba(115, 12, 14, 0.8));
+      padding: 30px 0;
+      width: 100%; }
+      @media screen and (max-width: 991px) {
+        #cny section#spotlight .container-fluid {
+          width: calc(100% - 10px);
+          margin: 0 auto; } }
+    #cny section#spotlight .main-logo-container {
+      -webkit-justify-content: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 10px; }
+      #cny section#spotlight .main-logo-container h2 {
+        background: linear-gradient(to bottom right, #eec832, #f7db91, #eec832);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase; }
+    #cny section#spotlight .list-item {
+      flex: 1 1 24.5%;
+      margin-right: 0.5%;
+      padding: 15px;
+      background-color: #720202; }
+      @media screen and (max-width: 1025px) {
+        #cny section#spotlight .list-item {
+          flex: 0 0 calc(100% / 4.5);
+          min-width: 0; } }
+      @media screen and (max-width: 991px) {
+        #cny section#spotlight .list-item {
+          flex: 0 0 calc(100% / 3.5);
+          min-width: 0; } }
+      @media screen and (max-width: 767px) {
+        #cny section#spotlight .list-item {
+          min-width: 300px; } }
+      #cny section#spotlight .list-item a {
+        background-color: #be1c1e; }
+    #cny section#spotlight .slick-slide {
+      flex: 1 1 24.3%;
+      margin-right: 0.2%; }
+    #cny section#spotlight h2, #cny section#spotlight h3, #cny section#spotlight p.desc {
+      color: #fff; }

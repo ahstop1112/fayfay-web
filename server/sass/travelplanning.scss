@@ -1,0 +1,270 @@
+@import 'include/variable';
+.travel-planning-header-section {
+    overflow: hidden;
+    background-color: $white;
+
+    .btn-contact{
+        padding: 5px 25px;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 2;
+        border: 1px solid #EE7E31;
+        width: auto;
+    }
+
+    .bg{
+        top: 0 !important;
+
+        @media screen and (max-width: $mobile-v) {
+            top: -10% !important;
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    .header-text h1.title{
+        width: 96% !important;
+        margin: 0 auto;
+        font-size: 5em !important;
+        text-shadow: $text-shadow;
+
+        @media screen and (max-width: $tablet-h) {
+            font-size: 4em !important;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            font-size: 3em !important;
+        }
+    }
+}
+
+body.en-us, body.vi-vn{
+    .header-text h1.title{
+        font-family: $city-font;
+    }
+}
+
+.travel-planning-content-section {
+
+    padding: 20px 30px;
+
+    @media screen and (max-width: $mobile-h){
+        .btn{
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (max-width: $mobile-v) {
+        padding: 20px 0;
+
+        .col-xs-12{
+            padding: 0;
+        }
+
+        p{
+            padding: 15px;
+        }
+
+        .btn{
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+
+    h3{
+        color: $main-color;
+        font-size: 1.5em;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .travel-planning-list{
+
+        color: $light-grey;
+        justify-content: center;
+
+        p{
+            color: $light-grey;
+        }
+
+        @media screen and (max-width: $tablet-h) {
+            justify-content: flex-start;
+        }
+
+        .list-item{
+            flex: 0 0 32.33%;
+
+            @media screen and (max-width: $tablet-v) {
+                flex: 0 0 50%;
+            }
+
+            @media screen and (max-width: $mobile-v) {
+                flex: 0 0 100%;
+                padding: 0;
+            }
+
+            .list-content{
+                display: block;
+
+                .mobile-content{
+                    display: none;
+                    padding: 20px;
+
+                    h3{
+                        text-align: left;
+                        font-size: 2em;
+                        font-weight: 200;
+                        margin-top: 0;
+                        margin-bottom: 20px;
+                        color: $light-grey;
+                    }
+
+                    ul, li{
+                        list-style: disc;
+                    }
+                }
+
+                @media screen and (max-width: $tablet-h) {
+                    box-shadow: none;
+
+                    .mobile-content{
+                        display: block;
+                    }
+                }
+
+                .banner:before{
+                    padding-top: 100%;
+
+                    @media screen and (max-width: $tablet-h) {
+                        padding-top: 75%;
+                    }
+                }
+
+                .overlay{
+
+                    justify-content: center;
+                    align-items: center;
+
+                    .title-s{
+                        border: 1px solid $white;
+                        width: 60%;
+                        padding: 2% 3%;
+                        text-align: center;
+                        text-shadow: $text-shadow2;
+
+                        @media screen and (max-width: $tablet-h) {
+                            display: none;
+                        }
+                    }
+
+                    .nobg{
+                        p{
+                            text-align: center;
+                            color: $white;
+                        }
+
+                        ul, li{
+                            color: $white;
+                            font-size: 1em;
+                            text-align: left;
+                            list-style: disc;
+                        }
+                    }
+                }
+
+                .hover-normal:hover {
+
+                    .title-s{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    button.submit-btn {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .content-deliverables .checkbox-inline, .require-compensation .radio-inline {
+        display: block;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .row, .col-md-4, .col-sm-4{
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: $mobile-h) {
+            display: block;
+        }
+    }
+
+    .whitebox{
+
+        .img{
+            margin-bottom: 20px;
+            text-align: center;
+
+            img{
+                height: 80px;
+                width: auto;
+                max-width: 100%;
+            }
+        }
+        .desc{
+            font-size: 1.1em;
+            color: $main-font-color;
+        }
+        h3{
+            color: $main-color;
+            text-align: center;
+        }
+    }
+
+    .release-news{
+        ul.listing{
+            margin: 0;
+
+            li{
+                padding: 20px;
+                margin-bottom: 10px;
+                background-color: $white;
+
+                .date{
+                    font-size: 1.1em;
+                    color: $main-color;
+                    width: 25%;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+}
+
+.travel-planning-form-section{
+    margin-bottom: 50px;
+
+    h3{
+        color: $main-color;
+        font-size: 1.5em;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .react-datepicker-wrapper{
+        padding-top: 0;
+    }
+}

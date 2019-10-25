@@ -1,0 +1,22 @@
+<header class="header-section">
+    <% include ../include/header.ejs %>
+    <div class="section-background">
+        <div class="overlay-header">
+            <% if (locale.indexOf('zh') > -1) { %>
+                <img src="/images/campaign/coffeehouse/header_tc.png" class="bg"/>
+            <% } else { %>
+                <img src="/images/campaign/coffeehouse/header_en.png" class="bg"/>
+            <% } %>
+        </div>
+        <div class="overlay-content">
+
+            <div class="bg-container">
+                <% if (useragent.isDesktop) { %>
+                    <img src="/images/campaign/coffeehouse/header.jpg" data-speed="-0.5" class="bg"/>
+                <% }else{ %>
+                    <img src="/images/campaign/coffeehouse/header_mobile.jpg" data-speed="-0.5" class="bg"/>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,103 @@
+<div class="experience-title-s subSection<%=subIndex%>">
+    <% if (child.iconMedia){ %>
+        <span class="address-icon" style="background-image: url('<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%=child.iconMedia.key%>.<%=child.iconMedia.format%>')"></span>
+    <% } %>
+    <h5><%=child.name %></h5>
+</div>
+<% if (child.activities) { %>
+    <div class="experience-list-container section<%=index%>">
+        <div class="experience-list paddingBottom-30px reverse">
+            <% if (child.activities.length >= 5) {%>
+                <div class="list-col">
+                    <li class="list-item highlight">
+                    <% if (child.activities[4].packageId){ %>
+                        <a href="/<%=locale%>/experience/<%=child.activities[4].activityId%>-<%=child.activities[4].slug%>?packageId=<%=child.activities[4].packageId%>" target="_blank" title="<%=child.activities[4].title %>">
+                    <% }else{ %>
+                        <a href="/<%=locale%>/experience/<%=child.activities[4].activityId%>-<%=child.activities[4].slug%>" target="_blank" title="<%=child.activities[4].title %>">
+                    <% } %>
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640,q_auto,f_auto/<%=child.activities[4].imageMedia.key%>.<%=child.activities[4].imageMedia.format%>"
+                                         alt="<%=child.activities[4].title%>" class="bg"/>
+                                </div>
+                                <div class="content">
+                                    <h3><%=child.activities[4].title %></h3>
+                                    <div class="desc">
+                                        <span class="price">
+                                           <% if (ccy != 'VND') { %>
+                                               <%- formatMoney(child.activities[4].priceText, ccy, locale, 0)%> <%= translations['common.up']  %>
+                                           <% }else{ %>
+                                               Từ <%- formatMoney(child.activities[4].priceText, ccy, locale, 0)%>
+                                           <% } %>
+                                        </span>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="hashtag-container">
+                                            <% if(child.activities[4].hashTags) { %>
+                                            <% child.activities[4].hashTags.split(',').forEach(function (tag) { %>
+                                               <span class="hashtag">#<%=tag.trim() %></span>
+                                            <% })%>
+                                            <% } %>
+                                        </div>
+                                        <div class="price-container">
+                                            <span class="discount-price">
+                                                <%= translations['common.book.now']  %>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </div>
+            <% } %>
+
+                <div class="list-col">
+                <% child.activities.forEach(function (activity, atyIndex) { %>
+                    <% if (atyIndex < 4) { %>
+                        <li class="list-item">
+                            <% if (activity.packageId){ %>
+                                <a href="/<%=locale%>/experience/<%=activity.activityId%>-<%=activity.slug%>?packageId=<%=activity.packageId%>" target="_blank" title="<%=activity.title %>">
+                            <% }else{ %>
+                                <a href="/<%=locale%>/experience/<%=activity.activityId%>-<%=activity.slug%>" target="_blank" title="<%=activity.title %>">
+                            <% } %>
+                                <div class="list-content">
+                                    <div class="banner">
+                                        <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640,q_auto,f_auto/<%=activity.imageMedia.key%>.<%=activity.imageMedia.format%>"
+                                             alt="<%=activity.title%>" class="bg"/>
+                                    </div>
+                                    <div class="content">
+                                        <h3><%=activity.title %></h3>
+                                        <div class="desc">
+                                            <span class="price">
+                                               <% if (ccy != 'VND') { %>
+                                                   <%- formatMoney(activity.priceText, ccy, locale, 0)%> <%= translations['common.up']  %>
+                                               <% }else{ %>
+                                                   Từ <%- formatMoney(activity.priceText, ccy, locale, 0)%>
+                                               <% } %>
+                                            </span>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="hashtag-container">
+                                                <% if (activity.hashTags) { %>
+                                                <% activity.hashTags.split(',').forEach(function (tag) { %>
+                                                   <span class="hashtag">#<%=tag.trim() %></span>
+                                                <% })%>
+                                                <% } %>
+                                            </div>
+                                            <div class="price-container">
+                                                <span class="discount-price">
+                                                    <%= translations['common.book.now']  %>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    <% } %>
+                <% }) %>
+                </div>
+        </div>
+    </div>
+<% } %>

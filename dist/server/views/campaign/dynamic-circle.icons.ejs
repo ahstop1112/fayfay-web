@@ -1,0 +1,18 @@
+<div class="drag-list btn-address item<%=campaignData.sections.length%>">
+    <% campaignData.sections.forEach(function (section, index) { %>
+        <div class="list-item section<%=index%>">
+            <a id="section<%=index%>" title="<%=section.name %>">
+                <div class="banner-bg">
+                    <% if (section.backgroundMedia ) { %>
+                    <div class="banner" style="background-image: url('<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%=section.backgroundMedia.key%>.<%=section.backgroundMedia.format%>')">
+                        <% if (section.iconMedia ) { %>
+                            <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%=section.iconMedia.key%>.<%=section.iconMedia.format%>" alt="<%=section.name %>" class="bg">
+                        <% } %>
+                    </div>
+                    <% } %>
+                </div>
+                <h3 class="title-s"><%=section.name %></h3>
+            </a>
+        </div>
+    <% })%>
+</div>

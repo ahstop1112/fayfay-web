@@ -1,0 +1,14 @@
+<section id="error-section">
+    <div class="container-fluid">
+        <div class="row marginTop-15px">
+            <div class="col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3 txt-center">
+                <img src="/images/noresult.png" />
+            </div>
+        </div>
+        <div class="row marginBottom-15px">
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 txt-center">
+                <h4><%= translations['search.noResult'].format({'keyword': keyword.replace(/"/g, '')}) %></h4>
+            </div>
+        </div>
+    </div>
+</section>

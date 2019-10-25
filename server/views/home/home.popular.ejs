@@ -1,0 +1,79 @@
+<% if(popularActivities && popularActivities.length) { %>
+<section name="popular" id="popular">
+
+    <div class="main-logo-container popular">
+        <div class="main-logo">
+            <img src="/images/icons/popular.png">
+        </div>
+        <h2><%= translations['home.popularExperiences'] %></h2>
+        <p class="hidden-xs"><%= translations['home.popularExperiences.description'] %></p>
+    </div>
+    <div class="bg-slick-container">
+        <ul class="bg-slick">
+            <% popularActivities.forEach(function(activity){ %>
+                <% if(activity.highlighted){ %>
+                    <li class="list-item col-3 fullwidth-slick">
+                        <div class="list-content">
+                            <div class="overlay-content hover-fullwidth">
+                                <a href="<%= langUrl %>/experience/<%= activity.id %>-<%= activity.slug %>" title="<%= activity.title %>" target="_blank">
+                                    <div class="banner">
+                                        <div class="blackbg"></div>
+                                        <img
+                                            data-src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1440/<%= activity.thumbnailKey %>"
+                                            alt="<%= activity.title %>" data-speed="-0.3" class="lazy bg"/>
+                                    </div>
+
+                                    <div class="overlay-wrap">
+                                        <div class="overlay">
+                                            <p>
+                                            <h3 class="title-s"><%= activity.title.truncate(60) %></h3>
+                                            <p class="desc"><%- include('components/location.ejs', { location : activity.location }); %></p>
+                                            <%- include('components/price.ejs', { displayPrice : activity.displayPrice, displaySpecialPrice: activity.displaySpecialPrice }); %>
+                                            <div class="nobg">
+                                                <%- include('components/rating.ejs', { ratingAverage: activity.ratingAverage }); %>
+                                                <%- include('components/bookedCount.ejs', { bookedCount: activity.bookedCount }); %>
+                                            </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </li>
+                <% } %>
+            <% }); %>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <div class="drag-content">
+            <ul class="drag-list">
+                <% popularActivities.forEach(function(activity){ %>
+                    <% if(!activity.highlighted){ %>
+                        <li class="list-item">
+                            <a href="<%= langUrl %>/experience/<%= activity.id %>-<%= activity.slug %>" title="<%= activity.title %>" target="_blank">
+                                <div class="list-content">
+                                    <%- include('components/overlay.soldout.ejs', { packageAvailabilityDate : activity.packageAvailabilityDate, paymentFlow: activity.paymentFlow }); %>
+                                    <div class="banner">
+                                        <img data-src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640/<%= activity.thumbnailKey %>"
+                                             alt="<%= activity.title %>" class="lazy bg">
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="title-s"><%= activity.title.truncate(60) %></h3>
+                                    </div>
+                                    <%- include('components/price.ejs', { displayPrice : activity.displayPrice, displaySpecialPrice: activity.displaySpecialPrice }); %>
+                                    <div class="bottom">
+                                        <%- include('components/location.ejs', { location : activity.location }); %>
+                                        <%- include('components/rating.ejs', { ratingAverage: activity.ratingAverage }); %>
+                                        <%- include('components/bookedCount.ejs', { bookedCount: activity.bookedCount }); %>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    <% } %>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</section>
+<% }; %>

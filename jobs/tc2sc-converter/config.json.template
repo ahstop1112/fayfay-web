@@ -1,0 +1,7 @@
+{
+    "host": "127.0.0.1",
+    "user": "root",
+    "password": "ff@2018$",
+    "database": "fayfay",
+    "connectionLimit": 5
+}

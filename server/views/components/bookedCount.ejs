@@ -1,0 +1,7 @@
+<% if (typeof bookedCount !== 'undefined') { %>
+    <ul class="booked">
+        <li>
+            <%= translations["search.bookedCount"].format({ count: bookedCount.toLocaleString('en-us') }) %>
+        </li>
+    </ul>
+<% } %>

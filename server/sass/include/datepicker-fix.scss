@@ -1,0 +1,122 @@
+.react-datepicker-popper {
+    z-index: 3;
+}
+
+.react-datepicker {
+    font-size: 1.1em;
+}
+
+.react-datepicker__header {
+    padding-top: 0.8em;
+    background: none;
+    border-bottom: 0;
+    color: $main-font-color;
+}
+
+.react-datepicker__month {
+    margin: 0.4em 1em;
+    color: $main-font-color;
+}
+
+.react-datepicker__day-name, .react-datepicker__day {
+    width: 2.4em;
+    line-height: 2.4em;
+    margin: 0.4em;
+}
+
+.react-datepicker__day-name{
+    font-weight: 700;
+    color: $main-color;
+}
+
+.react-datepicker__current-month {
+    font-size: 1em;
+    color: $main-font-color;
+}
+
+.react-datepicker__navigation {
+    top: 1em;
+    line-height: 1.7em;
+    border: 0.45em solid transparent;
+}
+
+.react-datepicker__navigation--previous {
+    border-right-color: #ccc;
+    left: 1em;
+    outline: none;
+    cursor: pointer;
+}
+
+.react-datepicker__navigation--next {
+    border-left-color: #ccc;
+    right: 1em;
+    outline: none;
+    cursor: pointer;
+}
+
+.react-datepicker__day {
+    border-radius: 2.4em;
+    color: $main-font-color;
+    font-weight: 700;
+    &--disabled {
+        color: $light-grey;
+        font-weight: 400;
+    }
+}
+
+.react-datepicker__day:hover {
+    border-radius: 2.4em;
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+    padding: 5px 0 10px;
+}
+.react-datepicker__day--keyboard-selected, .react-datepicker__day--selected {
+    background-color: $main-color;
+    border-radius: 20em;
+    color: $white;
+
+    &:hover{
+        background-color: $main-color;
+        border-radius: 20em;
+        color: $white;
+    }
+}
+
+.react-datepicker__input-container {
+    width: 100%;
+
+    input {
+        width: 100%;
+        font-size: 1em;
+        border-radius: 0;
+        box-shadow: none;
+        border: 1px solid $border-grey;
+        color: $main-font-color;
+        line-height: 1.5;
+        padding: 6px 10px 5px;
+
+        &:focus {
+            outline: none;
+            border-color: #aeaeae;
+            box-shadow: inset 0 2px 2px #e9e9e9, 0 0 10px 0 rgba(73, 107, 125, 0.3);
+        }
+    }
+}
+
+@media only screen and (max-width: 480px), screen and (max-device-width: 480px) {
+    .react-datepicker__day-name, .react-datepicker__day {
+        width: 1.8em;
+        line-height: 1.8em;
+    }
+
+    .react-datepicker__day {
+        border-radius: 1.8em;
+    }
+
+    .react-datepicker__day:hover {
+        border-radius: 1.8em;
+    }
+}
+

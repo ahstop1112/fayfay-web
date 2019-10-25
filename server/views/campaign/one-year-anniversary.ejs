@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <% if (campaignData.name) { %>
+        <title><%= campaignData.name %> | Fayfay.com</title>
+        <meta name="title" content="<%= campaignData.name %>">
+        <meta name="keywords" content="<%= campaignData.name %>">
+    <% } %>
+    <% if (campaignData.headerDescription) { %>
+        <meta name="description" content="<%= campaignData.headerDescription %>">
+        <meta property="og:description" content="<%= campaignData.headerDescription %>"/>
+    <% } %>
+    <% if (campaignData.ogMedia && campaignData.ogTitle) { %>
+        <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= campaignData.ogMedia ? (campaignData.ogMedia.key+'.'+campaignData.ogMedia.format) : '' %>"/>
+        <meta property="og:image:alt" content="<%= campaignData.ogTitle  %>"/>
+    <% } %>
+
+    <% include ../include/gtm.header.ejs %>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/one-year-anniversary.css">
+</head>
+
+<body class="<%= locale%>">
+<% include ../include/gtm.body.ejs %>
+    <div id="one-year-anniversary">
+        <% include one-year-anniversary.header.ejs %>
+        <% include one-year-anniversary.coupon.ejs %>
+
+        <section class="section experiences">
+            <div class="container-fluid">
+                <% if (campaignData.sections) { %>
+
+                    <% include dynamic-circle.icons.ejs %>
+
+                    <% campaignData.sections.forEach(function (section, index) { %>
+                        <div class="section-experience  section<%=index%>">
+                            <div class="experience-title section<%=index%>">
+                                <div class="title-bg-left"></div>
+                                <div class="title-bg">
+                                    <h2><%=section.name %></h2>
+                                </div>
+                                <div class="title-bg-right"></div>
+                            </div>
+                            <% section.subSections.forEach(function (child, subIndex) { %>
+                                <% switch (child.layout) {
+                                    case 'VERTICAL_LIST' : %>
+                                        <% include dynamic-vertical.list.ejs %>
+                                    <% break;
+                                    case 'HORIZONTAL_LIST' : %>
+                                        <% include one-year-anniversary-horizontal.list.ejs %>
+                                    <% break;
+                                    case '4_PLUS_1_HIGHLIGHTED_LEFT' : %>
+                                        <% include dynamic-4plus1_highlighted_left.ejs %>
+                                    <% break;
+                                    case '4_PLUS_1_HIGHLIGHTED_RIGHT' : %>
+                                        <% include dynamic-4plus1_highlighted_right
+                                        .ejs %>
+                                    <% break;
+                                } %>
+                                <% if (section.seeMoreLink){ %>
+                                    <div class="see-more-container">
+                                        <a class="btn btn-lg see-more" href="<%=section.seeMoreLink%>" target="_blank">
+                                            <%= translations['campaign.common.see.more'] %>
+                                        </a>
+                                    </div>
+                                <% } %>
+                            <% })%>
+                        </div>
+                    <% })%>
+                <% } %>
+            </div>
+        </section>
+        <% include campaign.destinations.ejs %>
+
+        <section class="section terms">
+            <div class="container-fluid">
+
+                <% if (campaignData.footerDescription && useragent.isDesktop) { %>
+                    <div class="desc terms hidden-xs">
+                    <b><%-translations['campaign.common.terms.title']%></b><br>
+                    <%- converter.makeHtml(campaignData.footerDescription) %>
+                    </div>
+                <% } %>
+
+                <% if (campaignData.footerDescriptionMobile && !useragent.isDesktop) { %>
+                    <div class="desc terms visible-xs">
+                    <b><%-translations['campaign.common.terms.title']%></b><br>
+                    <%- converter.makeHtml(campaignData.footerDescriptionMobile) %>
+                    </div>
+                <% } %>
+            </div>
+        </section>
+
+        <% if (campaignData.sections) { %>
+            <div class="floating-icons">
+            <% campaignData.sections.forEach(function (section, index) { %>
+                <div class="section<%=index%> <%=index===0 ? 'active' : ''%>">
+                    <% if (section.iconMedia) { %>
+                        <div class="address-icon" style="background-image: url('<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%=section.iconMedia.key%>.<%=section.iconMedia.format%>')"></div>
+                    <% } %>
+                    <h6><%=section.name %></h6>
+                </div>
+            <% })%>
+        </div>
+        <% } %>
+        <% include ../include/footer.ejs %>
+    </div>
+
+    <% include ../include/js.ejs %>
+    <script src="/js/one-year-anniversary-bundle.js"></script>
+    <script>
+            var clipboard = new ClipboardJS('.copy-btn');
+
+            clipboard.on('success', function(e) {
+                $('.tooltiptext').addClass("show");
+
+                setTimeout(function() {
+                    $('.tooltiptext').removeClass("show");
+                }, 3000);
+            });
+
+            var clipboard2 = new ClipboardJS('.copy-btn2');
+
+            clipboard2.on('success', function(e) {
+                $('.tooltiptext2').addClass("show");
+
+                setTimeout(function() {
+                    $('.tooltiptext2').removeClass("show");
+                }, 3000);
+            });
+
+        </script>
+</body>
+</html>

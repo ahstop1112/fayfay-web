@@ -1,0 +1,104 @@
+<section class="press-tabs-section">
+    <div class="container-fluid">
+        <div class="row tabs-container ">
+            <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12">
+                <ul class="nav nav-pills-news hidden-xs">
+                    <li class="<%= pageType === 'coverage' ? 'active' : ''%>"><a href="/press/coverage" ><%= translations['press.media.coverage'] %></a></li>
+                    <li class="<%= pageType === 'release' ? 'active' : ''%>"><a href="/press/release" ><%= translations['press.release'] %></a></li>
+                    <li class="<%= pageType === 'contact' ? 'active' : ''%>"><a href="/press/contact" ><%= translations['press.media.contact'] %></a></li>
+                </ul>
+                <select class="bootstrap-select visible-xs" onchange="window.location=this.value">
+                    <option value="/press/coverage" <%= pageType === "coverage" ? 'selected' : ''%>><%= translations['press.media.coverage'] %></option>
+                    <option value="/press/release" <%= pageType === "release" ? 'selected' : ''%>><%= translations['press.release'] %></option>
+                    <option value="/press/contact" <%= pageType === "contact" ? 'selected' : ''%>><%= translations['press.media.contact'] %></option>
+                </select>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="press-tabs-content-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12">
+                <div class="tab-content fr-element fr-view">
+                    <% if (toList) { %>
+
+                        <% if(pageType === 'coverage') { %>
+                        <div class="tab-pane fade in active" id="media-coverage">
+                            <ul class="loaded-list">
+                                <% dataContainer.forEach(function(item, i){ %>
+                                <li class="list-item pr-<%=i%>">
+                                    <a href="/press/coverage/<%=item.slug%>">
+                                        <div class="list-content">
+                                            <div class="whitebox">
+                                                <div class="banner">
+                                                    <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640/<%=item.thumbnail.key%>.<%=item.thumbnail.format%>" class="bg"
+                                                    />
+                                                </div>
+                                                <div class="content">
+                                                    <h5><%=item.title%></h5>
+                                                    <div
+                                                        class="date"><span data-date="<%= item.publishedDate %>"></span></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                        <% } else if(pageType === 'release') { %>
+                        <div class="tab-pane fade release-news in active">
+                            <ul class="listing">
+                                <% dataContainer.forEach(function(item, i){ %>
+                                <li class="list-item pr-<%=i%>"><span class="date" data-date="<%= item.publishedDate %>"></span>
+                                    <a href="/press/release/<%=item.slug%>" class="title"><%=item.title%></a></li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                        <% } else { %>
+                        <div class="tab-pane fade in active">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="whitebox">
+                                        <div class="row marginTop-20px">
+                                            <div class="col-md-12">
+                                                <%- translations['press.media.contact.desc'] %>
+                                            </div>
+                                        </div>
+                                        <div class="row marginTop-20px">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <h6><%= translations['office.Vietnam']%></h6>
+                                                <p><%- translations['office.address']%></p>
+                                                <p><%= translations["office.phoneNumber"]%></p>
+                                                <a href="mailto:media@fayfay.com">media@fayfay.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                    <% } else { %>
+                        <div class="tab-pane fade in active">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="whitebox">
+                                        <h4><%= articleData ? articleData.title : '' %></h4>
+                                        <div class="date marginBottom-15px"><span data-date="<%= articleData.publishedDate %>"></span></div>
+                                        <hr />
+                                        <div class="content">
+                                            <%- articleData ? articleData.content : '' %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

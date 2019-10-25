@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['campaign.double11.terms1'] %>">
+    <meta name="keywords" content="<%= translations['campaign.double11.title'] %>">
+    <title><%= translations['campaign.double11.title'] %> | Fayfay.com</title>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/campaign/<%= translations['campaign.double11.ogimage']%>"/>
+    <meta property="og:image:alt" content="<%= translations['campaign.double11.title']  %>"/>
+    <meta property="og:title" content="<%= translations['campaign.double11.title'] %>"/>
+    <meta property="og:description" content="<%= translations['campaign.double11.terms1'] %>"/>
+
+    <% include ../include/gtm.header.ejs %>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/double11.css">
+</head>
+
+<body class="<%= locale%>">
+<% include ../include/gtm.body.ejs %>
+    <div id="double11">
+        <% include double11.header.ejs %>
+        <% include double11.promoCode.ejs %>
+        <% include double11.experiences.ejs %>
+
+        <div class="floating-icons">
+            <div class="hcmc active"><div class="address-icon"></div><h6><%= translations['activity.hcmc']  %></h6></div>
+            <div class="hanoi"><div class="address-icon"></div><h6><%= translations['activity.hanoi'] %></h6></div>
+            <div class="daNang"><div class="address-icon"></div><h6><%= translations['activity.daNang'] %></h6></div>
+            <div class="nhaTrang"><div class="address-icon"></div><h6><%= translations['activity.nhaTrang'] %></h6></div>
+        </div>
+        <% include ../include/footer.ejs %>
+    </div>
+
+    <% include ../include/js.ejs %>
+    <script src="/js/double11-bundle.js"></script>
+
+</body>
+</html>

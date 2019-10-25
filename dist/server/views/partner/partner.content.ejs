@@ -1,0 +1,17 @@
+<section class="partner-tabs-section">
+    <div class="container-fluid">
+        <div class="row tabs-container ">
+            <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12">
+                <ul class="nav nav-pills-partner hidden-xs">
+                    <li class="<%= pageName==='partner' ? 'active' : ''%>"><a href="<%= langUrl %>/partner"   ><%= translations['partner.become.an.experience.provider'] %></a></li>
+                    <li class="<%= pageName!=='partner' ? 'active' : ''%>"><a href="<%= langUrl %>/influencer"  ><%= translations['partner.become.an.fayfay.influencer'] %></a></li>
+                </ul>
+                <select class="bootstrap-select nav-tabs-mobile visible-xs" onchange="javascript:location='<%= langUrl %>/'+value;">
+                    <option value="partner" <%= pageName === "partner" ? 'selected' : ''%>><%= translations['partner.become.an.experience.provider'] %></option>
+                    <option value="influencer" <%= pageName === "influencer" ? 'selected' : ''%>><%= translations['partner.become.an.fayfay.influencer'] %></option>
+                </select>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="partner-tabs-content-section" id="partner-form-container"><%- InfoContainerHtml %></section>

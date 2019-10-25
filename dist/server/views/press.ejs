@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['press.room'] %>">
+    <meta name="keywords" content="<%= translations['press.room'] %>">
+    <title><%= translations['press.room'] %> | Fayfay.com</title>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/<%= articleData ? articleData.ogMedia.key +'.'+articleData.ogMedia.format : 'fayfay-media/common/indexog.jpg'%>"/>
+    <meta property="og:image:alt" content="<%= translations['home.og.image.alt']  %>"/>
+    <meta property="og:title" content="<%= articleData ? articleData.ogTitle : translations['home.og.title'] %>"/>
+    <meta property="og:description" content="<%= articleData ? articleData.content.truncate(60) : translations['home.og.desc'] %>"/>
+
+    <% include include/gtm.header.ejs %>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/press.css">
+</head>
+
+<body class="<%= locale%>">
+<% include include/gtm.body.ejs %>
+
+    <div id="page">
+        <% include press/press.header.ejs %>
+        <% include press/press.content.ejs %>
+
+        <% include include/footer.ejs %>
+    </div>
+
+    <% include include/js.ejs %>
+<script src="/js/lib/moment/moment.min.js"></script>
+</body>
+</html>

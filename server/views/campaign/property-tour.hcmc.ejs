@@ -1,0 +1,179 @@
+<div class="section-experience-city section0">
+    <div class="bg-slick-container">
+        <ul class="bg-slick">
+            <li class="list-item col-3 fullwidth-slick">
+                <div class="list-content">
+                    <div class="overlay-content hover-fullwidth">
+                        <div class="banner">
+                            <img data-src="/images/campaign/propertytour/hcmc-bg.jpg" alt="<%= translations['activity.hoChiMinh'] %>" data-speed="-0.3" class="lazy bg"/>
+                        </div>
+                        <div class="overlay-wrap">
+                            <div class="overlay">
+                                <h3 class="title-s"><%= translations['activity.hoChiMinh'] %></h3>
+                                <p class="desc"><%= translations['property.tour.hcmc.desc'] %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="drag-content">
+        <h4><%= translations['property.tour.featured.property'] %></h4>
+        <ul class="drag-list recommend-list">
+            <li class="list-item">
+                <div class="list-content text">
+                    <div class="overlay-content hover-normal">
+                        <div class="text-area">
+                            <h5><%= translations['property.tour.hcmc.property.name'] %></h5>
+                            <p>
+                                <b><%= translations['property.tour.location'] %></b> : <%= translations['property.tour.district'].format({ 'district': '7' }) %> <br/>
+                                <b><%= translations['property.tour.unit.size'] %></b> : <%= translations['property.tour.sq.ft'].format({ 'start': '861', 'end': '4,423' }) %><br/>
+                                <b><%= translations['property.tour.unit.type'] %></b> : <%= translations['property.tour.2br'] %>, <%= translations['property.tour.3br'] %>, <%= translations['property.tour.penthouse'] %><br/>
+                                <b>
+                                    <%
+                                        switch (ccy) {
+                                            case 'HKD' : %>
+                                                <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '958,655' }) %></b>
+                                            <% break;
+                                            case 'TWD' : %>
+                                                <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '3,806,424' }) %></b>
+                                            <% break;
+                                            case 'VND' : %>
+                                                <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '2,819,573,529' }) %></b>
+                                            <% break;
+                                            case 'USD' : %>
+                                               <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '121,242' }) %></b>
+                                            <% break;
+                                            case 'CNY' : %>
+                                                <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '854,331' }) %></b>
+                                            <% break;
+                                            case 'SGD' : %>
+                                                <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '166,355' }) %></b>
+                                            <% break;
+                                            case 'MYR' : %>
+                                                 <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '507,523' }) %></b>
+                                            <% break;
+                                         }
+                                     %>
+                                </b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-content">
+                    <div class="overlay-content hover-normal">
+                        <div class="banner">
+                            <img
+                                class="lazy bg" data-src="/images/campaign/propertytour/hcmc-1.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-content">
+                    <div class="overlay-content hover-normal">
+                        <div class="banner">
+                            <img
+                                class="lazy bg" data-src="/images/campaign/propertytour/hcmc-2.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-content">
+                    <div class="overlay-content hover-normal">
+                        <div class="banner">
+                            <img
+                                class="lazy bg" data-src="/images/campaign/propertytour/hcmc-3.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="drag-list recommend-list reverse">
+            <li class="list-item">
+                <div class="list-content text">
+                    <div class="overlay-content hover-normal">
+                        <div class="text-area">
+                            <h5><%= translations['property.tour.hcmc.property.name2'] %></h5>
+                            <p>
+                                <b><%= translations['property.tour.location'] %></b> : <%= translations['property.tour.district'].format({ 'district': '2' }) %> <br/>
+                                <b><%= translations['property.tour.unit.size'] %></b> : <%= translations['property.tour.sq.ft'].format({ 'start': '487', 'end': '1,433' }) %><br/>
+                                <b><%= translations['property.tour.unit.type'] %></b> : <%= translations['property.tour.1br'] %>, <%= translations['property.tour.2br'] %>, <%= translations['property.tour.3br'] %><br/>
+                                <b><%
+                                    switch (ccy) {
+                                        case 'HKD' : %>
+                                            <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '1,208,944' }) %></b>
+                                        <% break;
+                                        case 'TWD' : %>
+                                            <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '4,800,219' }) %></b>
+                                        <% break;
+                                        case 'VND' : %>
+                                            <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '3,555,717,647' }) %></b>
+                                        <% break;
+                                        case 'USD' : %>
+                                           <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '152,896' }) %></b>
+                                        <% break;
+                                        case 'CNY' : %>
+                                            <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '1,077,382' }) %></b>
+                                        <% break;
+                                        case 'SGD' : %>
+                                            <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '209,787' }) %></b>
+                                        <% break;
+                                        case 'MYR' : %>
+                                             <%= translations['property.tour.price.from'].format({ 'ccy': ccy, 'price': '640,029' }) %></b>
+                                        <% break;
+                                     }
+                                 %></b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-content">
+                    <div class="overlay-content hover-normal">
+                        <div class="banner">
+                            <img
+                                class="lazy bg" data-src="/images/campaign/propertytour/hcmc-4.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-content">
+                    <div class="overlay-content hover-normal">
+                        <div class="banner">
+                            <img
+                                class="lazy bg" data-src="/images/campaign/propertytour/hcmc-5.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-content">
+                    <div class="overlay-content hover-normal">
+                        <div class="banner">
+                            <img
+                                class="lazy bg" data-src="/images/campaign/propertytour/hcmc-6.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="desc-container">
+        <p class="desc"><%= translations['property.tour.let.us.know'] %></p>
+        <a href="/<%=locale%>/experience/10261-exploring-ho-chi-minh-city-property-half-day-private-tour" target="_blank" class="btn">
+            <%= translations['property.tour.book.now'].format({ 'city': translations['activity.hcmc'] }) %></a>
+    </div>
+</div>

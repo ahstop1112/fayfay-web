@@ -1,0 +1,42 @@
+<section class="activity-highlight-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="activity-title"><%= tplData.title %></h1>
+                <%- converter.makeHtml(tplData.brief) %>
+                <ul class="title-remark ">
+                    <li class="location hidden">
+                        <i class="icon 500 map-marker-alt orange"></i>
+                        <span><%= translations['payment.location'] %>:
+                            <span class="detail"><%= tplData.brief %></span>
+                        </span>
+                    </li>
+                    <li class="instant">
+                        <i class="icon clock orange"></i>
+                        <span><%= translations['package.duration'] %>:
+                            <span class="detail"> <%= tplData.duration%> <%= translations['package.hours'] %></span>
+                        </span>
+                    </li>
+                </ul>
+                <hr>
+                <ul class="listing two-col" id="special">
+
+                    <% for (var prop in tplData.badges ) { %>
+                        <li class="<%= tplData.badges[prop].name %>">
+                            <i class="icon orange"></i>
+                            <span><%= tplData.badges[prop].value %></span>
+                        </li>
+                    <% } %>
+                </ul>
+                <hr>
+                <div id="activity-description">
+                    <%- converter.makeHtml(tplData.description) %>
+                </div>
+                <hr> <% include ../activity/activity.most.recent.review.ejs %>
+            </div>
+            <div class="col-md-4">
+                <div id="booking-price-container" ><%- activityDetailsContainerHtml %></div>
+            </div>
+        </div>
+    </div>
+</section>

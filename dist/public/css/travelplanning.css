@@ -1,0 +1,192 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+.travel-planning-header-section {
+  overflow: hidden;
+  background-color: #fff; }
+  .travel-planning-header-section .btn-contact {
+    padding: 5px 25px;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 2;
+    border: 1px solid #EE7E31;
+    width: auto; }
+  .travel-planning-header-section .bg {
+    top: 0 !important; }
+    @media screen and (max-width: 550px) {
+      .travel-planning-header-section .bg {
+        top: -10% !important;
+        height: 100%;
+        width: auto; } }
+  .travel-planning-header-section .header-text h1.title {
+    width: 96% !important;
+    margin: 0 auto;
+    font-size: 5em !important;
+    text-shadow: rgba(0, 0, 0, 0.5) 0.05em 0.05em 0.1em; }
+    @media screen and (max-width: 1025px) {
+      .travel-planning-header-section .header-text h1.title {
+        font-size: 4em !important; } }
+    @media screen and (max-width: 767px) {
+      .travel-planning-header-section .header-text h1.title {
+        font-size: 3em !important; } }
+
+body.en-us .header-text h1.title, body.vi-vn .header-text h1.title {
+  font-family: city-font; }
+
+.travel-planning-content-section {
+  padding: 20px 30px; }
+  @media screen and (max-width: 767px) {
+    .travel-planning-content-section .btn {
+      margin: 0 auto;
+      margin-bottom: 30px; } }
+  @media screen and (max-width: 550px) {
+    .travel-planning-content-section {
+      padding: 20px 0; }
+      .travel-planning-content-section .col-xs-12 {
+        padding: 0; }
+      .travel-planning-content-section p {
+        padding: 15px; }
+      .travel-planning-content-section .btn {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 30px; } }
+  .travel-planning-content-section h3 {
+    color: #EE7E31;
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center; }
+  .travel-planning-content-section .travel-planning-list {
+    color: #999;
+    justify-content: center; }
+    .travel-planning-content-section .travel-planning-list p {
+      color: #999; }
+    @media screen and (max-width: 1025px) {
+      .travel-planning-content-section .travel-planning-list {
+        justify-content: flex-start; } }
+    .travel-planning-content-section .travel-planning-list .list-item {
+      flex: 0 0 32.33%; }
+      @media screen and (max-width: 991px) {
+        .travel-planning-content-section .travel-planning-list .list-item {
+          flex: 0 0 50%; } }
+      @media screen and (max-width: 550px) {
+        .travel-planning-content-section .travel-planning-list .list-item {
+          flex: 0 0 100%;
+          padding: 0; } }
+      .travel-planning-content-section .travel-planning-list .list-item .list-content {
+        display: block; }
+        .travel-planning-content-section .travel-planning-list .list-item .list-content .mobile-content {
+          display: none;
+          padding: 20px; }
+          .travel-planning-content-section .travel-planning-list .list-item .list-content .mobile-content h3 {
+            text-align: left;
+            font-size: 2em;
+            font-weight: 200;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #999; }
+          .travel-planning-content-section .travel-planning-list .list-item .list-content .mobile-content ul, .travel-planning-content-section .travel-planning-list .list-item .list-content .mobile-content li {
+            list-style: disc; }
+        @media screen and (max-width: 1025px) {
+          .travel-planning-content-section .travel-planning-list .list-item .list-content {
+            box-shadow: none; }
+            .travel-planning-content-section .travel-planning-list .list-item .list-content .mobile-content {
+              display: block; } }
+        .travel-planning-content-section .travel-planning-list .list-item .list-content .banner:before {
+          padding-top: 100%; }
+          @media screen and (max-width: 1025px) {
+            .travel-planning-content-section .travel-planning-list .list-item .list-content .banner:before {
+              padding-top: 75%; } }
+        .travel-planning-content-section .travel-planning-list .list-item .list-content .overlay {
+          justify-content: center;
+          align-items: center; }
+          .travel-planning-content-section .travel-planning-list .list-item .list-content .overlay .title-s {
+            border: 1px solid #fff;
+            width: 60%;
+            padding: 2% 3%;
+            text-align: center;
+            text-shadow: rgba(0, 0, 0, 0.2) 0.05em 0.05em 0.1em; }
+            @media screen and (max-width: 1025px) {
+              .travel-planning-content-section .travel-planning-list .list-item .list-content .overlay .title-s {
+                display: none; } }
+          .travel-planning-content-section .travel-planning-list .list-item .list-content .overlay .nobg p {
+            text-align: center;
+            color: #fff; }
+          .travel-planning-content-section .travel-planning-list .list-item .list-content .overlay .nobg ul, .travel-planning-content-section .travel-planning-list .list-item .list-content .overlay .nobg li {
+            color: #fff;
+            font-size: 1em;
+            text-align: left;
+            list-style: disc; }
+        .travel-planning-content-section .travel-planning-list .list-item .list-content .hover-normal:hover .title-s {
+          display: none; }
+  .travel-planning-content-section button.submit-btn {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .travel-planning-content-section .content-deliverables .checkbox-inline, .travel-planning-content-section .require-compensation .radio-inline {
+    display: block;
+    margin-left: 0;
+    margin-top: 0; }
+  .travel-planning-content-section .row, .travel-planning-content-section .col-md-4, .travel-planning-content-section .col-sm-4 {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    @media screen and (max-width: 767px) {
+      .travel-planning-content-section .row, .travel-planning-content-section .col-md-4, .travel-planning-content-section .col-sm-4 {
+        display: block; } }
+  .travel-planning-content-section .whitebox .img {
+    margin-bottom: 20px;
+    text-align: center; }
+    .travel-planning-content-section .whitebox .img img {
+      height: 80px;
+      width: auto;
+      max-width: 100%; }
+  .travel-planning-content-section .whitebox .desc {
+    font-size: 1.1em;
+    color: #163A4D; }
+  .travel-planning-content-section .whitebox h3 {
+    color: #EE7E31;
+    text-align: center; }
+  .travel-planning-content-section .release-news ul.listing {
+    margin: 0; }
+    .travel-planning-content-section .release-news ul.listing li {
+      padding: 20px;
+      margin-bottom: 10px;
+      background-color: #fff; }
+      .travel-planning-content-section .release-news ul.listing li .date {
+        font-size: 1.1em;
+        color: #EE7E31;
+        width: 25%;
+        margin-right: 20px; }
+
+.travel-planning-form-section {
+  margin-bottom: 50px; }
+  .travel-planning-form-section h3 {
+    color: #EE7E31;
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center; }
+  .travel-planning-form-section .react-datepicker-wrapper {
+    padding-top: 0; }

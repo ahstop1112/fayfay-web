@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <% if (campaignData.name) { %>
+        <title><%= campaignData.name %> | Fayfay.com</title>
+        <meta name="title" content="<%= campaignData.name %>">
+        <meta name="keywords" content="<%= campaignData.name %>">
+    <% } %>
+    <% if (campaignData.headerDescription) { %>
+        <meta name="description" content="<%= campaignData.headerDescription %>">
+        <meta property="og:description" content="<%= campaignData.headerDescription %>"/>
+    <% } %>
+    <% if (campaignData.ogMedia && campaignData.ogTitle) { %>
+        <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= campaignData.ogMedia ? (campaignData.ogMedia.key+'.'+campaignData.ogMedia.format) : '' %>"/>
+        <meta property="og:image:alt" content="<%= campaignData.ogTitle  %>"/>
+    <% } %>
+
+    <% include ../include/gtm.header.ejs %>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/property-tour.css">
+</head>
+
+<body class="<%= locale%>">
+<% include ../include/gtm.body.ejs %>
+    <div id="property-tour">
+        <% include property-tour.header.ejs %>
+        <% include property-tour.tours.ejs %>
+
+        <section class="section experiences bg-grey">
+            <div class="container-fluid">
+                <% if (campaignData.sections) { %>
+                    <% campaignData.sections.forEach(function (section, index) { %>
+                        <div class="section-experience  section<%=index%>">
+                            <div class="experience-title section<%=index%>">
+                                    <h2><%=section.name %></h2>
+                            </div>
+                            <div class="section-experiences">
+                                <% section.subSections.forEach(function (child, subIndex) { %>
+                                    <% switch (child.layout) {
+                                        case 'VERTICAL_LIST' : %>
+                                            <div class="experience-list-container">
+                                                <div class="drag-content">
+                                                    <ul class="drag-list">
+                                                        <% if (child.activities) { %>
+                                                            <% child.activities.forEach(function (activity){ %>
+                                                                <li class="list-item">
+                                                                    <a href="<%= langUrl %>/experience/<%=activity.activityId%>-<%= activity.slug %>" title="<%= activity.title %>" target="_blank">
+                                                                        <div class="list-content">
+                                                                            <div class="banner">
+                                                                                <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640/<%=activity.imageMedia.key%>.<%=activity.imageMedia.format%>"
+                                                                                     alt="<%= activity.title %>" class="lazy bg">
+                                                                            </div>
+                                                                            <div class="content">
+                                                                                <h3 class="title-s"><%= activity.title.truncate(60) %></h3>
+                                                                            </div>
+                                                                            <%- include('../components/price.ejs', { displayPrice : activity.price, displaySpecialPrice: 0 }); %>
+                                                                            <div class="bottom">
+                                                                                <%- include('../components/location.ejs', { location : activity.location }); %>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            <% }); %>
+                                                        <% } %>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        <% break;
+                                    } %>
+                                    <% if (section.seeMoreLink){ %>
+                                        <div class="see-more-container">
+                                            <a class="btn btn-lg see-more" href="<%=section.seeMoreLink%>" target="_blank">
+                                                <%= translations['campaign.common.see.more'] %>
+                                            </a>
+                                        </div>
+                                    <% } %>
+                            <% })%>
+                        </div>
+                    <% })%>
+                <% } %>
+            </div>
+        </section>
+
+        <% include property-tour.cities.ejs %>
+        <% include property-tour.add.ons.ejs %>
+        <section name="promotion" id="promotion">
+            <div class="container-fluid">
+                <% include ../home/home.promotion.ejs %>
+            </div>
+        </section>
+
+        <section class="section terms">
+            <div class="container-fluid">
+
+                <% if (campaignData.footerDescription && useragent.isDesktop) { %>
+                    <div class="desc terms hidden-xs">
+                    <b><%-translations['campaign.common.terms.title']%></b><br>
+                    <%- converter.makeHtml(campaignData.footerDescription) %>
+                    </div>
+                <% } %>
+
+                <% if (campaignData.footerDescriptionMobile && !useragent.isDesktop) { %>
+                    <div class="desc terms visible-xs">
+                    <b><%-translations['campaign.common.terms.title']%></b><br>
+                    <%- converter.makeHtml(campaignData.footerDescriptionMobile) %>
+                    </div>
+                <% } %>
+            </div>
+        </section>
+
+        <% include ../include/footer.ejs %>
+    </div>
+
+    <% include ../include/js.ejs %>
+    <script src="/js/property-tour-bundle.js"></script>
+</body>
+</html>

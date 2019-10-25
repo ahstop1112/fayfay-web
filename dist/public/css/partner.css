@@ -1,0 +1,136 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+.partner-header-section {
+  overflow: hidden;
+  background-color: #fff; }
+  .partner-header-section .bg {
+    top: 0 !important; }
+    @media screen and (max-width: 550px) {
+      .partner-header-section .bg {
+        top: -10% !important;
+        height: 100%;
+        width: auto; } }
+
+.partner-tabs-section {
+  box-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px;
+  padding-bottom: 0; }
+  @media screen and (max-width: 767px) {
+    .partner-tabs-section {
+      padding-bottom: 10px; } }
+  .partner-tabs-section .nav-pills-partner {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    border-spacing: 0;
+    -webkit-justify-content: center;
+    justify-content: center; }
+    .partner-tabs-section .nav-pills-partner li {
+      width: auto;
+      border: 0;
+      border-radius: 0;
+      font-size: 1em;
+      text-transform: inherit;
+      text-align: center; }
+      .partner-tabs-section .nav-pills-partner li a {
+        padding: 10px 15px; }
+      .partner-tabs-section .nav-pills-partner li.active a {
+        border-radius: 0;
+        background: none;
+        color: #EE7E31;
+        border-bottom: 2px solid #EE7E31;
+        padding: 10px 15px; }
+  .partner-tabs-section .bootstrap-select {
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 1.1em; }
+
+.partner-tabs-content-section {
+  padding: 0; }
+  .partner-tabs-content-section h3 {
+    color: #163A4D;
+    font-size: 1.5em;
+    font-weight: 400; }
+  .partner-tabs-content-section .bg-orange {
+    padding: 30px 0; }
+    .partner-tabs-content-section .bg-orange h1, .partner-tabs-content-section .bg-orange p {
+      color: #fff;
+      margin-bottom: 20px; }
+    .partner-tabs-content-section .bg-orange h1 {
+      line-height: 1.5;
+      font-size: 2em; }
+    .partner-tabs-content-section .bg-orange a.btn {
+      height: auto;
+      line-height: 2;
+      background-color: #fff;
+      color: #EE7E31;
+      font-weight: 600; }
+  .partner-tabs-content-section button.submit-btn {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .partner-tabs-content-section .content-deliverables .checkbox-inline, .partner-tabs-content-section .require-compensation .radio-inline {
+    display: block;
+    margin-left: 0;
+    margin-top: 0; }
+  .partner-tabs-content-section .row, .partner-tabs-content-section .col-md-4, .partner-tabs-content-section .col-sm-4 {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    @media screen and (max-width: 767px) {
+      .partner-tabs-content-section .row, .partner-tabs-content-section .col-md-4, .partner-tabs-content-section .col-sm-4 {
+        display: block; } }
+  .partner-tabs-content-section .whitebox .img {
+    margin-bottom: 20px;
+    text-align: center; }
+    .partner-tabs-content-section .whitebox .img img {
+      height: 80px;
+      width: auto;
+      max-width: 100%; }
+  .partner-tabs-content-section .whitebox .desc {
+    font-size: 1.1em;
+    color: #163A4D; }
+  .partner-tabs-content-section .whitebox h3 {
+    color: #EE7E31;
+    text-align: center; }
+  .partner-tabs-content-section .release-news ul.listing {
+    margin: 0; }
+    .partner-tabs-content-section .release-news ul.listing li {
+      padding: 20px;
+      margin-bottom: 10px;
+      background-color: #fff; }
+      .partner-tabs-content-section .release-news ul.listing li .date {
+        font-size: 1.1em;
+        color: #EE7E31;
+        width: 25%;
+        margin-right: 20px; }

@@ -1,0 +1,167 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+.breadcrumb-section {
+  margin-top: 90px; }
+  @media screen and (max-width: 1025px) {
+    .breadcrumb-section {
+      margin-top: 80px; } }
+  @media screen and (max-width: 550px) {
+    .breadcrumb-section {
+      margin-top: 60px; } }
+
+.checkout-section .whitebox, .checkout-section .orangebox, .checkout-section .greyborderbox {
+  cursor: pointer;
+  padding: 15px;
+  margin-bottom: 15px; }
+  .checkout-section .whitebox > div, .checkout-section .orangebox > div, .checkout-section .greyborderbox > div {
+    min-height: 20px; }
+  .checkout-section .whitebox h5, .checkout-section .orangebox h5, .checkout-section .greyborderbox h5 {
+    font-size: 1.5em;
+    min-height: 46px; }
+
+.checkout-section .activity .activity-row, .checkout-section .greybox .activity-row {
+  margin-bottom: 30px; }
+  .checkout-section .activity .activity-row .banner, .checkout-section .greybox .activity-row .banner {
+    overflow: hidden;
+    width: 100%;
+    position: relative; }
+    .checkout-section .activity .activity-row .banner:before, .checkout-section .greybox .activity-row .banner:before {
+      content: "";
+      padding-top: 56.25%;
+      display: block; }
+    .checkout-section .activity .activity-row .banner .bg, .checkout-section .greybox .activity-row .banner .bg {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      right: 0;
+      bottom: -100%;
+      margin: auto;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      min-width: 100%;
+      min-height: 100%; }
+
+.checkout-section .activity .form-group label, .checkout-section .greybox .form-group label {
+  margin-right: -1px; }
+
+.checkout-section .activity p, .checkout-section .greybox p {
+  margin: 0; }
+  .checkout-section .activity p.desc, .checkout-section .greybox p.desc {
+    color: #999; }
+    .checkout-section .activity p.desc span, .checkout-section .greybox p.desc span {
+      font-weight: 500;
+      margin-left: 2px; }
+
+.checkout-section .visa-applicants-container .visa-applicants {
+  border-top: 1px solid #ddd;
+  padding: 15px 5px; }
+  @media screen and (max-width: 550px) {
+    .checkout-section .visa-applicants-container .visa-applicants {
+      padding: 15px 0; } }
+  .checkout-section .visa-applicants-container .visa-applicants .icon:before {
+    font-weight: 800; }
+
+.checkout-section .visa-applicants-container > .visa-applicants:first-child {
+  border-top: 0;
+  padding-top: 0; }
+
+.checkout-section .orangebox {
+  min-height: 135px;
+  border: 1px solid #fff; }
+  .checkout-section .orangebox p {
+    color: #fff; }
+
+@media screen and (max-width: 550px) {
+  .checkout-section .paddingTop-20px {
+    padding-top: 0; } }
+
+.checkout-section #paymentForm .input-field {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.checkout-section #paymentForm .btn-xs {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.checkout-section #paymentForm .promo {
+  padding: 5px 3px 5px 8px; }
+  .checkout-section #paymentForm .promo .icon:before {
+    margin-left: 10px; }
+
+.checkout-section .radio-btn {
+  margin-right: 10px; }
+
+.checkout-section .payment-right-container.scroll {
+  position: fixed;
+  top: 90px;
+  width: 320px; }
+
+.checkout-modal .modal-content {
+  font-size: 23px;
+  text-align: center;
+  margin: 200px auto; }
+  @media screen and (max-width: 991px) {
+    .checkout-modal .modal-content {
+      font-size: 18px;
+      width: 200px; } }
+
+.payment-form .banner img {
+  width: 150px; }
+
+.payment-error {
+  text-align: left;
+  font-size: 15px; }
+
+.Select-placeholder {
+  font-size: 1em; }
+
+.pop-process-btn {
+  float: left; }
+
+.pop-border-top {
+  border-top: 1px solid #ccc; }
+
+.confirmation-form {
+  -webkit-overflow-scrolling: touch; }
+  @media screen and (min-width: 991px) {
+    .confirmation-form {
+      width: 60%; } }
+  @media screen and (max-width: 767px) {
+    .confirmation-form .modal-header {
+      padding: 8px; } }
+  .confirmation-form .modal-header .modal-title {
+    color: #EE7E31; }
+    @media screen and (max-width: 767px) {
+      .confirmation-form .modal-header .modal-title {
+        font-size: 1.25em; } }
+  @media screen and (max-width: 767px) {
+    .confirmation-form .modal-footer {
+      padding: 10px; } }
+  .confirmation-form .modal-footer .confirmation-footer .col-lg-8 {
+    text-align: right; }
+  .confirmation-form .modal-footer .confirmation-footer .col-xs-12 {
+    margin-top: 10px;
+    text-align: center; }
+  .confirmation-form .visa-applicants-container .visa-applicants {
+    border-top: 1px solid #ddd;
+    padding: 15px 0; }
+    .confirmation-form .visa-applicants-container .visa-applicants .icon:before {
+      font-weight: 800; }
+  .confirmation-form .visa-applicants-container > .visa-applicants:first-child {
+    border-top: 0;
+    padding-top: 0; }

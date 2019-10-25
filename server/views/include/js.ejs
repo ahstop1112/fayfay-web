@@ -1,0 +1,40 @@
+<% if (typeof appData !== "undefined") { %>
+<script>
+    window.__DATA__ = <%- appData %>;
+    window.__PRELOADED_STATE__ = <%- preloadedState %>;
+</script>
+<% if (typeof searchBoxData !== "undefined") { %>
+    <script>
+    window.__SEARCH_BOX_DATA__ = <%- searchBoxData %>;
+    </script>
+<% } %>
+<script src="/js/components/vendor-bundle.js"></script>
+<script src="/js/components/ShoppingCartPreviewContainer-bundle.js"></script>
+<script src="/js/components/ShoppingCartMobileContainer-bundle.js"></script>
+<script src="/js/components/SearchBoxContainer-bundle.js"></script>
+<script src="/js/components/EmailSubscribeContainer-bundle.js"></script>
+<% } %>
+
+<script src="/js/vendor-jquery-bundle.js"></script>
+<!-- Main JS -->
+<script src="/js/fayfay-bundle.js"></script>
+
+<!-- Yahoo Dot Tag -->
+<script type="application/javascript">
+    (function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({'projectId':'10000','properties':{'pixelId':'<%= YAHOO_PIXEL_ID %>'}});var s=d.createElement(t);s.src=r;s.async=true;s.onload=s.onreadystatechange=function(){var y,rs=this.readyState,c=w[u];if(rs&&rs!="complete"&&rs!="loaded"){return}try{y=YAHOO.ywa.I13N.fireBeacon;w[u]=[];w[u].push=function(p){y([p])};y(c)}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");
+</script>
+
+
+<!-- Yahoo SEM -->
+<script>
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"<%= YAHOO_BING_ID %>"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+</script>
+
+<!-- PAP -->
+<script type="text/javascript" id="pap_x2s6df8d" src="https://fayfaycom.postaffiliatepro.com/scripts/y4xhj8uno2n"></script>
+<script type="text/javascript">
+    PostAffTracker.setAccountId('default1');
+    try {
+        PostAffTracker.track();
+    } catch (err) { }
+</script>

@@ -1,0 +1,47 @@
+<header class="vnshow-header-section">
+    <div class="header-top-area">
+        <div class="header-container">
+
+            <div class="logo">
+                <a href="<%= langUrl %>/">
+                    <img src="/images/space.png" alt="Fayfay">
+                </a>
+            </div>
+            <div class="menu">
+                <% include nav.ejs %>
+            </div>
+            <% if (flash.message) { %>
+            <div id="notification">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-md-10 col-xs-10">
+                            <%= flash.message%>
+                        </div>
+                        <div class="col-md-2 col-md-2 col-xs-2">
+                            <a class="btn-close" id="close-notify"><i class="icon close"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="overlay-header">
+        <h1 class="hidden"><%= translations['campaign.vnshow.title'] %></h1>
+    </div>
+    <div class="video-background">
+        <div class="video-foreground">
+            <video autoplay loop muted playsinline class="bgvideo">
+                <source src="https://res.fayfay.com/video/upload/q_80/fayfay-media/common/campaign/aoshow.mp4">
+                <img src="/images/campaign/vnshow/video_image.jpg">
+            </video>
+        </div>
+    </div>
+    <div class="section-background">
+        <div class="overlay-content">
+            <div class="bg-container">
+                <img src="/images/campaign/vnshow/bg.jpg" alt="<%= translations['campaign.vnshow.title'] %>" data-speed="-0.5" class="bg">
+            </div>
+        </div>
+    </div>
+</header>

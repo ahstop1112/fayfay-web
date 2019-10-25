@@ -1,0 +1,1145 @@
+@import '../include/variable';
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+$light-green: #7ecbc7;
+$green: #43aa97;
+$deep-green: #13716c;
+
+
+#property-tour {
+    bbackground-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background: $white;
+    color: $main-font-color;
+
+
+    header {
+        height: 100%;
+
+        .header-top-area {
+            box-shadow: none;
+            background: $white;
+            border: 0;
+            position: static;
+
+            .header-container {
+                width: 100%;
+                padding: 0 2%;
+
+                .badge-notify{
+                    position: absolute;
+                }
+            }
+
+            .top-search-box{
+
+                right: 30px !important;
+                z-index: -99 !important;
+
+                &.open{
+                    z-index: 99 !important;
+                }
+            }
+
+            .badge-notify{
+                position: absolute;
+            }
+
+            &.scroll {
+                box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
+                background-color: hsla(0, 0%, 100%, .9);
+
+                .logo {
+                    background-image: url('/images/logo_nobird.png');
+                }
+
+                .navbar-right {
+                    color: $main-font-color;
+
+                    li {
+                        a {
+                            color: $main-font-color;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .section-background {
+            padding-top: 0;
+            z-index: 0;
+
+            .bg-container {
+
+                &:before {
+                    padding-top: 28% !important;
+
+                    @media screen and (max-width: $mobile-v) {
+                       padding-top: 75% !important;
+                    }
+                }
+
+                .except-mobile-v {
+                    display: block;
+
+                    @media screen and (max-width: $mobile-v) {
+                        display: none !important;
+                    }
+                }
+
+                .mobile-v {
+                    display: none;
+
+                    @media screen and (max-width: $mobile-v) {
+                        display: block !important;
+                    }
+                }
+
+                .bg {
+                    top: -100%;
+
+                }
+            }
+        }
+    }
+
+    section{
+        padding: 20px 0;
+
+        h2{
+            background: -webkit-linear-gradient(#4c8fe9, #2e5f9b, #42acd3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .drag-list{
+            width: 88%;
+            margin: 0 auto;
+            justify-content: center;
+
+            @media screen and (max-width: $tablet-v) {
+                width: 100%;
+            }
+        }
+    }
+
+    .content_p{
+        padding: 30px 0;
+        width: 86%;
+        margin: 0 auto;
+
+        @media screen and (max-width: $tablet-v) {
+            width: 100%;
+        }
+
+        p{
+            text-align: center;
+        }
+    }
+
+    section.tours{
+        .drag-list{
+
+            .list-item{
+                flex: 0 0 32.33%;
+                width: 32.33%;
+                text-align: center;
+
+                @media screen and (max-width: $tablet-v) {
+                    flex: 0 0 49.5%;
+                    width: 49.5%;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    flex: 0 0 100%;
+                    width: 100%;
+                }
+
+                h6{
+                    min-height: 30px;
+                    font-weight: 700;
+
+                    @media screen and (max-width: $tablet-v) {
+                        min-height: 0;
+                    }
+                }
+
+                p.desc{
+                    font-size: 0.86em;
+                    text-align: center;
+                    min-height: 35px;
+                }
+            }
+        }
+    }
+
+    section.experiences{
+
+        background-color: $bg-grey;
+
+        .btn-address {
+            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox; /* TWEENER - IE 10 */
+            display: -webkit-flex; /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: $padding;
+            justify-content: center;
+
+            @media screen and (max-width: $tablet-v) {
+                width: 100%;
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+                justify-content: flex-start;
+            }
+
+            .list-item {
+                flex: 0 0 19%;
+                width: 19%;
+                text-align: center;
+                background: none;
+                cursor: pointer;
+                min-width: 0;
+
+                @media screen and (max-width: $tablet-v) {
+                    flex: 0 0 calc(100% / 4);
+                    min-width: 0;
+                    font-size: 1.1em;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    flex: 0 0 calc(100% / 2.5);
+                    min-width: 0;
+                }
+
+                @media screen and (max-width: $mobile-xs) {
+                    font-size: 0.8em;
+                }
+
+                .list-content {
+                    box-shadow: none;
+                }
+
+                .banner-bg {
+                    width: 80%;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+
+                    padding: 5px;
+
+                    overflow: hidden !important;
+
+                    display: block;
+                    position: relative;
+
+                    //Gradient Yellow
+                    background: $green;
+
+                }
+
+                .banner {
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+
+                    overflow: hidden;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                    .bg {
+                        position: absolute;
+                        top: -100%;
+                        left: 0;
+                        right: 0;
+                        bottom: -100%;
+                        margin: auto;
+                        margin-left: 50%;
+                        transform: translateX(-50%);
+                        max-width: 200%;
+                        max-height: 120px;
+                        width: auto;
+                        transition: $fadeIn;
+                        -webkit-transition: $fadeIn;
+
+                        @media screen and (max-width: $mobile-h) {
+                            max-width: 80px;
+                        }
+                    }
+
+                    &:before {
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+
+                        content: "";
+                        padding-top: 100%;
+                        display: block;
+                    }
+
+                    &:after {
+                        content: "";
+                        padding-top: 100%;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                }
+
+                h3.title-s {
+                    font-size: 1.25em;
+                    text-transform: uppercase;
+                    font-style: italic;
+                    font-weight: 600;
+
+                    color: $deep-green;
+
+                    @media screen and (max-width: $mobile-h) {
+                        font-size: 0.7em;
+                    }
+                }
+            }
+        }
+
+        .section-experience{
+
+            @media screen and (max-width: $tablet-v) {
+                width: 100%;
+            }
+
+            .experience-title {
+                text-align: center;
+            }
+
+            .experience-title-s {
+
+                text-align: center;
+                margin: 0 auto;
+                padding-top: 25px;
+                margin-bottom: 25px;
+
+                display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox; /* TWEENER - IE 10 */
+                display: -webkit-flex; /* NEW - Chrome */
+                display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 70%;
+                }
+
+                h5 {
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    font-size: 1.75em;
+
+                    @media screen and (max-width: $mobile-h) {
+                        font-size: 1.5em;
+                    }
+                }
+
+                .address-icon {
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 17%;
+                    margin-right: 3%;
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        padding-top: 100%;
+                    }
+
+                    @media screen and (max-width: $mobile-h) {
+                        width: 12%;
+                        margin-right: 3%;
+                    }
+                }
+            }
+
+            .experience-list-container {
+
+                @media screen and (max-width: $mobile-h) {
+                    overflow-x: scroll;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+
+                .drag-list {
+                    margin: 0 auto;
+                    //width: 96%;
+
+                    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox; /* TWEENER - IE 10 */
+                    display: -webkit-flex; /* NEW - Chrome */
+                    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                    @media screen and (max-width: $tablet-v) {
+                        width: 100%;
+                    }
+
+                    @media screen and (max-width: $mobile-v){
+                        width: auto;
+                        overflow-x: auto;
+
+                        flex-wrap: nowrap;
+                        -webkit-flex-wrap: nowrap;
+
+                        justify-content: flex-start;
+                    }
+
+                    &.reverse {
+                        flex-flow: row-reverse;
+
+                        @media screen and (max-width: $mobile-h) {
+                            flex-flow: row;
+                        }
+                    }
+
+                    .list-item{
+                        flex: 0 0 32.33%;
+                        width: 32.33%;
+
+                        @media screen and (max-width: $mobile-v){
+                            flex: 0 0 calc(100%/1.5);
+                            width: calc(100%/1.5);
+                            padding-right: 1%;
+                        }
+                    }
+
+                    .list-col {
+                        width: 50%;
+                        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                        display: -ms-flexbox; /* TWEENER - IE 10 */
+                        display: -webkit-flex; /* NEW - Chrome */
+                        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        flex-flow: row wrap;
+
+                        @media screen and (max-width: $mobile-h) {
+                            width: 90%;
+                            margin-right: 1%;
+                            flex-wrap: nowrap;
+                        }
+
+                        .list-item {
+                            background: none;
+                            list-style: none;
+
+                            flex: 1 1 49.5%;
+                            margin-right: 0.5%;
+
+                            @media screen and (max-width: $mobile-h) {
+                                min-width: 300px;
+                                margin-right: 1%;
+                            }
+
+                            .list-content {
+                                position: relative;
+                                display: block;
+
+                                &:before {
+                                    padding-top: 50%;
+                                }
+
+                                .badge-container{
+                                    width: 20%;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 5px;
+                                    margin-bottom: 5px;
+                                    z-index: $lv2;
+
+                                    .priceRange-icon{
+                                        width: 100%;
+
+                                        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                                        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                                        display: -ms-flexbox;      /* TWEENER - IE 10 */
+                                        display: -webkit-flex;     /* NEW - Chrome */
+                                        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                                        -ms-flex-wrap: wrap;
+                                        -webkit-flex-wrap: wrap;
+                                        flex-wrap: wrap;
+
+                                        .priceRange-type-img{
+                                            width: 100%;
+                                            background-size: 50%;
+                                            background-position: center;
+                                            background-repeat: no-repeat;
+                                            background-image: url('/images/campaign/oneyearanniversary/icon-discount.png');
+
+                                            @media screen and (max-width: $mobile-h) {
+                                                background-size: 50%;
+                                            }
+
+                                            &:before{
+                                                content: "";
+                                                display: block;
+                                                padding-top: 60%;
+                                            }
+                                        }
+
+                                        .priceRange-type-text{
+                                            width: 100%;
+                                            font-size: 0.78em;
+                                            color: $white;
+                                            text-align: center;
+                                            text-transform: capitalize;
+                                            text-shadow: rgba(0, 0, 0, 0.5) 0.05em 0.05em 0.1em;;
+                                        }
+                                    }
+
+                                }
+
+                                .banner {
+                                    width: 100%;
+                                    overflow: hidden;
+                                    position: relative;
+
+                                    &:before {
+                                        content: "";
+                                        padding-top: 75%;
+                                        display: block;
+                                    }
+
+                                    .bg {
+                                        top: -100%;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: -100%;
+                                        margin: auto;
+                                        margin-left: 50%;
+                                        transform: translateX(-50%);
+                                        opacity: 0;
+                                        width: auto;
+                                        height: 100%;
+                                        position: absolute;
+                                    }
+                                }
+                                .content {
+                                    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                                    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                                    display: -ms-flexbox; /* TWEENER - IE 10 */
+                                    display: -webkit-flex; /* NEW - Chrome */
+                                    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                                    flex-wrap: wrap;
+                                    -webkit-flex-wrap: wrap;
+
+                                    align-content: center;
+                                    align-items: center;
+
+                                    transition: $fadeIn;
+                                    -webkit-transition: $fadeIn;
+
+                                    padding: $padding;
+
+                                    @media screen and (max-width: $tablet-v) {
+                                        padding: 10px;
+                                    }
+
+                                    @media screen and (max-width: $mobile-v) {
+                                        padding: $padding;
+                                    }
+
+                                    h3 {
+                                        font-weight: 500;
+                                        color: $white;
+                                        font-size: 1.2em;
+                                        line-height: 1.2;
+                                        min-height: 46px;
+                                        overflow: hidden;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 5;
+                                        -webkit-box-orient: vertical;
+
+                                        width: 100%;
+
+                                        @media screen and (max-width: $mobile-h) {
+                                            font-size: 1.4em;
+                                            width: 100%;
+                                            -webkit-line-clamp: 3;
+                                            min-height: 75px;
+                                        }
+                                    }
+
+                                    .desc {
+                                        font-size: 1em;
+                                        overflow: hidden;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 2;
+                                        -webkit-box-orient: vertical;
+                                        text-align: left;
+                                        padding: 0;
+                                        margin: 0;
+                                        width: 100%;
+                                        display: none;
+
+                                        @media screen and (max-width: $tablet-h) {
+                                            font-size: 1em;
+                                        }
+
+                                        @media screen and (max-width: $mobile-v) {
+                                            font-size: 1em;
+                                            display: none;
+                                        }
+                                    }
+
+                                    .price{
+                                        text-align: left;
+                                        color: $white;
+
+                                        font-size: 1.5em;
+                                        font-weight: 700;
+
+                                        .ori-price {
+                                            font-size: 0.8em;
+                                            color: $white;
+                                            opacity: .5;
+                                            text-decoration: line-through;
+                                        }
+                                    }
+
+                                    .bottom {
+                                        width: 100%;
+                                        margin: 0;
+                                        padding: 0;
+
+                                        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                                        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                                        display: -ms-flexbox; /* TWEENER - IE 10 */
+                                        display: -webkit-flex; /* NEW - Chrome */
+                                        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                                        flex-wrap: wrap;
+
+                                        @media screen and (max-width: $tablet-h) {
+                                            margin-top: 0;
+                                        }
+
+                                        @media screen and (max-width: $mobile-h) {
+                                            padding-top: 0;
+                                        }
+
+                                        .hashtag-container {
+                                            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                                            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                                            display: -ms-flexbox; /* TWEENER - IE 10 */
+                                            display: -webkit-flex; /* NEW - Chrome */
+                                            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                                            flex-wrap: wrap;
+                                            width: 100%;
+
+                                            .hashtag {
+                                                font-size: 0.8em;
+                                                color: $light-grey;
+                                                margin-right: 10px;
+
+                                                @media screen and (max-width: $mobile-v) {
+                                                    font-size: 0.8em;
+                                                }
+                                            }
+                                        }
+
+                                        .location, .btn-container {
+                                            color: $white;
+                                            flex: 0 0 50%;
+                                            width: 50%;
+
+                                            &.btn-container{
+                                                text-align: right;
+
+                                                .btn{
+                                                    background: $green;
+                                                    border: 1px solid $green;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .price-container {
+                                    background-color: $deep-green;
+                                    color: $white;
+                                    padding: 5px $padding;
+                                    margin-top: 10px;
+                                    text-align: center;
+                                    display: none;
+
+                                    .discount-price {
+                                        font-size: 1.2em;
+
+                                        @media screen and (max-width: $mobile-v) {
+                                            font-size: 1em;
+                                        }
+
+                                        @media screen and (max-width: $mobile-xs) {
+                                            font-size: 0.8em;
+                                        }
+
+                                        .ori-price {
+                                            font-size: 0.8em;
+                                            color: $white;
+                                            opacity: .5;
+                                            text-decoration: line-through;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.highlight {
+                                .content {
+
+                                    h3 {
+                                        font-size: 1.8em;
+                                        line-height: 1.5;
+
+                                        @media screen and (max-width: $mobile-h) {
+                                            font-size: 1.5em;
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .see-more-container{
+            margin: 0 auto;
+            text-align: center;
+
+            .see-more {
+                background: $green;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    section.cities{
+
+        h4{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-address{
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: $tablet-v) {
+                width: 100%;
+            }
+
+            .list-item{
+                flex: 0 0 31.33%;
+                width: 31.33%;
+                margin-right: 1%;
+
+                background: #0169a1;
+                padding: 10px 0;
+
+                text-align: center;
+
+                &:hover{
+                    background: #41a8d0;
+                    cursor: pointer;
+                }
+
+                &:last-child{
+                    flex: 0 0 33.33%;
+                    margin-right: 0;
+                }
+
+                .address-text{
+                    color: $white;
+                }
+            }
+        }
+
+        .bg-slick-container{
+
+            width: 88%;
+            margin: 0 auto;
+
+            @media screen and (max-width: $tablet-v) {
+                width: 100%;
+            }
+
+            .banner{
+
+                background: $white;
+
+                &:before{
+                    padding-top: 25%;
+
+                    @media screen and (max-width: $mobile-h) {
+                        padding-top: 42%;
+                    }
+
+                    @media screen and (max-width: $mobile-v) {
+                        padding-top: 75%;
+                    }
+                }
+
+                .bg{
+                    top: 0;
+                    height: 140%;
+                    width: auto;
+                }
+            }
+
+            .overlay-wrap{
+                background: none;
+
+                h3{
+                    margin-bottom: $padding;
+                    text-shadow: $text-shadow2;
+
+                    @media screen and (max-width: $tablet-v) {
+                        width: 100%;
+                    }
+                }
+
+                .desc{
+                    font-size: 1em;
+                    text-shadow: $text-shadow2;
+
+                    @media screen and (max-width: $tablet-v) {
+                        display: flex !important;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .drag-list{
+
+            &.reverse {
+                flex-flow: row-reverse;
+
+                @media screen and (max-width: $tablet-v) {
+                    flex-flow: wrap;
+                }
+            }
+
+            .list-item{
+
+                @media screen and (max-width: $tablet-v) {
+                    flex: 0 0 49.5%;
+                    width: 49.5%;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    flex: 0 0 100%;
+                    width: 100%;
+                }
+
+
+                .list-content{
+                    display: block;
+
+                    &.text{
+
+                        border-width: 2px;
+                        border-style: solid;
+                        -moz-border-image: -moz-linear-gradient(right,#4c8fe9 30%, #2e5f9b 70%, #42acd3 100%);
+                        -webkit-border-image: -webkit-linear-gradient(right,#4c8fe9 30%, #2e5f9b 70%, #42acd3 100%);
+                        border-image: linear-gradient(to right bottom,#4c8fe9 30%, #2e5f9b 70%, #42acd3 100%);
+                        -webkit-border-image-slice: 2;
+                        border-image-slice: 2;
+
+                        padding-top: 35%;
+
+                        @media screen and (max-width: $tablet-v){
+                            padding-top: 25%;
+                        }
+
+                        @media screen and (max-width: $mobile-v){
+                            padding-top: 0;
+                        }
+                    }
+
+                    .overlay-content{
+
+                        @media screen and (max-width: $tablet-v) {
+                            width: 100%;
+                        }
+
+                        .text-area{
+                            padding: $padding;
+
+                            @media screen and (max-width: $tablet-v) {
+                                width: 86%;
+                                margin: auto;
+                            }
+
+                            @media screen and (max-width: $mobile-v) {
+                                width: 96%;
+                                margin: auto;
+                            }
+
+
+                            h5, p{
+                                text-align: left;
+
+                                @media screen and (max-width: $tablet-v) {
+                                    width: 100%;
+                                }
+                            }
+
+                            h5{
+                                background: -webkit-linear-gradient(#4c8fe9, #2e5f9b, #42acd3);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                        }
+
+                        .banner{
+                            &:before{
+                                @media screen and (max-width: $tablet-h) {
+                                    padding-top: 150%;
+                                }
+
+                                @media screen and (max-width: $tablet-v) {
+                                    padding-top: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .desc-container{
+
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 30px;
+
+            text-align: center;
+
+            @media screen and (max-width: $mobile-v){
+                width: 100%;
+            }
+
+            p{
+                text-align: center;
+            }
+
+            .btn{
+                background: #0169a1;
+                padding: 10px 30px;
+                font-size: 1.2em;
+            }
+        }
+
+        .banner-container{
+            margin: 0 auto;
+            margin-top: $padding;
+            width: 86%;
+
+            @media screen and (max-width: $mobile-v){
+                display: none;
+            }
+        }
+    }
+
+    section.add-ons{
+
+        .add-ons-container{
+
+            .title{
+                text-align: center;
+            }
+
+            .drag-content{
+
+                .drag-list{
+
+                    @media screen and (max-width: $mobile-v){
+                        width: auto;
+                        overflow-x: auto;
+
+                        flex-wrap: nowrap;
+                        -webkit-flex-wrap: nowrap;
+                        justify-content: flex-start;
+                    }
+
+                    .list-item{
+                        flex: 0 0 32.33%;
+                        width: 32.33%;
+
+                        @media screen and (max-width: $mobile-v){
+                            flex: 0 0 calc(100%/1.5);
+                            width: calc(100%/1.5);
+
+                            padding-right: 2%;
+                        }
+
+                        p.desc{
+                            min-height: 100px;
+
+                            @media screen and (max-width: $mobile-v){
+                                min-height: 150px;
+                            }
+                        }
+
+                        .price{
+                            span{
+                                font-size: .8em;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #promotion, #promotion-mobile {
+        text-align: center;
+        display:  block;
+
+        &#promotion-mobile{
+            padding: 0;
+        }
+
+        &#promotion{
+            .bg-slick-container{
+                margin: 7px;
+            }
+        }
+
+        .bg-slick-container{
+
+            margin: 0 auto !important;
+            width: 86%;
+
+            @media screen and (max-width: $tablet-v) {
+                width: 100%;
+            }
+
+            .promotion-slider{
+                margin: 0;
+                display: none;
+            }
+
+            .banner{
+                max-height: none;
+
+                &:before{
+                    padding-top: 38.7%;
+
+                    @media screen and (max-width: $mobile-v) {
+                        padding-top: 75%;
+                    }
+                }
+            }
+
+            .bg{
+                top: -100%;
+                height: 100%;
+                min-width: 0;
+                min-height: 0;
+
+                &.expect-mobile-v{
+                    display: none;
+
+                    @media screen and (min-width: $mobile-v) {
+                        display: block;
+                    }
+                }
+
+                &.mobile-v{
+                    display: none;
+
+                    @media screen and (max-width: $mobile-v) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    section.terms {
+        width: 100%;
+
+        div.terms{
+            width: 80%;
+            margin: 0 auto;
+
+            @media screen and (max-width: $mobile-v) {
+                width: 100%;
+            }
+        }
+
+        p{
+            line-height: 1.5;
+            word-break: break-word;
+            word-wrap: break-word;
+            font-size: 0.86em;
+            text-align: left;
+            font-weight: 400;
+        }
+    }
+}
+
+body.zh-hk, body.zh-cn{
+    #property-tour{
+
+        section.tours{
+            .drag-list .list-item{
+                h6, .desc{
+                    font-size: 1.1em;
+                    min-height: 0;
+                }
+            }
+        }
+
+        section.cities{
+            .btn-address .list-item .address-text{
+                font-size: 1.1em;
+            }
+            .overlay-wrap .desc{
+                font-size: 1.1em;
+            }
+        }
+    }
+}

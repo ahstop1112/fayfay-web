@@ -1,0 +1,224 @@
+@import 'include/variable';
+
+.breadcrumb-section{
+    margin-top: 90px;
+
+    @media screen and (max-width: $tablet-h) {
+        margin-top: 80px;
+    }
+
+    @media screen and (max-width: $mobile-v) {
+        margin-top: 60px;
+    }
+}
+
+.checkout-section {
+    .whitebox, .orangebox, .greyborderbox {
+        cursor: pointer;
+
+        padding: 15px;
+        margin-bottom: 15px;
+
+        &>div{
+            min-height: 20px;
+        }
+
+        h5{
+            font-size: 1.5em;
+            min-height: 46px;
+        }
+    }
+
+    .activity, .greybox{
+
+        .activity-row{
+            margin-bottom: 30px;
+
+            .banner{
+                overflow: hidden;
+                width: 100%;
+                position: relative;
+
+                &:before{
+                    content: "";
+                    padding-top: 56.25%;
+                    display: block;
+                }
+
+                .bg {
+                    position: absolute;
+                    top: -100%;
+                    left: 0;
+                    right: 0;
+                    bottom: -100%;
+                    margin: auto;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    min-width: 100%;
+                    min-height: 100%;
+                }
+            }
+        }
+
+        .form-group label{
+            margin-right: -1px;
+        }
+
+
+        p{
+            margin: 0;
+
+            &.desc{
+                color: $light-grey;
+
+                span{
+                    font-weight: 500;
+                    margin-left: 2px;
+                }
+            }
+        }
+    }
+
+    .visa-applicants-container{
+
+        .visa-applicants{
+            border-top: 1px solid $border-grey;
+            padding: $padding 5px;
+
+            @media screen and (max-width: $mobile-v) {
+                padding: $padding 0
+            }
+
+            .icon:before{
+                font-weight: 800;
+            }
+        }
+        &>.visa-applicants:first-child{
+            border-top: 0;
+            padding-top: 0;
+        }
+    }
+
+    .orangebox{
+        min-height: 135px;
+        border: 1px solid $white;
+        p{
+            color: $white;
+        }
+    }
+
+    .paddingTop-20px{
+        @media screen and (max-width: $mobile-v) {
+            padding-top: 0;
+        }
+    }
+
+    #paymentForm{
+        .input-field{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .btn-xs{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .promo{
+            padding: 5px 3px 5px 8px;
+            .icon:before{
+                margin-left: 10px;
+            }
+        }
+    }
+    .radio-btn {
+        margin-right: 10px;
+    }
+
+    .payment-right-container {
+        &.scroll {
+            position: fixed;
+            top: 90px;
+            width: 320px;
+        }
+    }
+
+}
+
+.checkout-modal {
+    .modal-content {
+        font-size: 23px;
+        text-align: center;
+        margin: 200px auto;
+        @media screen and (max-width: $tablet-v) {
+            font-size: 18px;
+            width: 200px;
+        }
+    }
+}
+
+.payment-form .banner img {
+    width: 150px;
+}
+
+.payment-error {
+    text-align: left;
+    font-size: 15px;
+}
+
+
+.Select-placeholder {
+    font-size: 1em;
+}
+
+.pop-process-btn {
+    float: left;
+}
+.pop-border-top {
+    border-top: 1px solid #ccc;
+}
+.confirmation-form {
+    -webkit-overflow-scrolling: touch;
+    @media screen and (min-width: $tablet-v) {
+        width: 60%;
+    }
+    .modal-header {
+        @media screen and (max-width: $mobile-h) {
+            padding: 8px;
+        }
+        .modal-title {
+            color: $main-color;
+            @media screen and (max-width: $mobile-h) {
+                font-size: 1.25em;
+            }
+        }
+    }
+
+    .modal-footer {
+        @media screen and (max-width: $mobile-h) {
+            padding: 10px;
+        }
+        .confirmation-footer {
+            .col-lg-8 {
+                text-align: right;
+            }
+            .col-xs-12 {
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
+    }
+    .visa-applicants-container{
+        .visa-applicants{
+            border-top: 1px solid $border-grey;
+            padding: $padding 0;
+            .icon:before{
+                font-weight: 800;
+            }
+        }
+        &>.visa-applicants:first-child{
+            border-top: 0;
+            padding-top: 0;
+        }
+    }
+}

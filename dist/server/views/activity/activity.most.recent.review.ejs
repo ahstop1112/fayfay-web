@@ -1,0 +1,46 @@
+<%
+    if (tplData.reviewCount > 0){
+%>
+<h4 class="hidden-sm hidden-xs"><%= translations['package.most.recent.views'] %></h4>
+<div class="review-mobile-container visible-sm visible-xs">
+    <h4><%= translations['common.reviews'] %></h4>
+    <div class="header">
+        <div class="review-grade">
+            <%= tplData.ratingAverage %>
+        </div>
+        <div class="review-rating">
+            <%- include('components/rating.ejs', { ratingAverage: tplData.ratingAverage }); %>
+            <span class="view_numbers"><%= tplData.reviewCount %></span> <%= translations['views'] %>
+        </div>
+    </div>
+</div>
+<div class="recent-views-container">
+    <div class="recent-view">
+        <div class="user-photo">
+            <div class="img-container">
+                <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_320/<%= tplData.latestReview.profileImage.key %>.<%= tplData.latestReview.profileImage.format %>"/>
+            </div>
+        </div>
+        <div class="user-comment">
+            <% if (typeof tplData.latestReview !== 'undefined') { %>
+            <div class="header">
+                <div class="user-name"><p><%= tplData.latestReview.reviewer %></p></div>
+                <%- include('components/rating.ejs', { ratingAverage: tplData.latestReview.rating }); %>
+                <div class="comment-date" data-time="<%= tplData.latestReview.createdDate %>">
+                </div>
+            </div>
+
+            <div class="content">
+                <p><%= tplData.latestReview.content %></p>
+                <a id="showReviewsBtn" href="#reviews" class="hidden-xs"><%= translations['package.view.all.reviews'] %></a>
+            </div>
+            <div class="mobile-view-all-link visible-xs">
+                <a href="#reviews" class="visible-xs"><%= translations['package.view.all.reviews'] %></a>
+            </div>
+            <% }; %>
+        </div>
+    </div>
+</div>
+<%
+    }
+%>

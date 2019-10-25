@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['package.fayfay.help.center'] %>">
+    <meta name="keywords" content="<%= translations['package.fayfay.help.center'] %>">
+    <title><%= translations['package.fayfay.help.center'] %> | Fayfay.com</title>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/indexog.jpg"/>
+    <meta property="og:image:alt" content="<%= translations['home.og.image.alt']  %>"/>
+    <meta property="og:title" content="<%= translations['home.og.title'] %>"/>
+    <meta property="og:description" content="<%= translations['home.og.desc'] %>"/>
+
+    <% include include/gtm.header.ejs %>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/help.css">
+</head>
+
+<body class="<%= locale%>">
+<% include include/gtm.body.ejs %>
+
+    <div id="page">
+        <% include help/help.header.ejs %>
+        <section class="help-section">
+            <div class="container-fluid">
+                <div class="row help-heading">
+                    <div class="col-md-12">
+                        <h4 class=""><%= translations['package.fayfay.help.center'] %></h4>
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 help-menu hidden-sm hidden-xs">
+                            <% include help/help.menu.ejs %>
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-12 col-xs-12 help-content">
+                            <% include help/help.content.ejs %>
+                            <a href="/contactus" target="_self" class="visible-xs txt-center">
+                                <button class="btn btn-s white marginTop-20px"><%= translations['common.contact.us'] %></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <% include include/footer.ejs %>
+    </div>
+
+    <% include include/js.ejs %>
+
+</body>
+</html>

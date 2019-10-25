@@ -1,0 +1,841 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+body {
+  background-color: #fff;
+  overflow-x: hidden;
+  width: 100%; }
+
+#christmas {
+  color: #163A4D;
+  background-color: #fff; }
+  #christmas header {
+    height: 100%; }
+    #christmas header .nav > li {
+      font-size: 1.2em;
+      display: inline-block; }
+      #christmas header .nav > li a {
+        color: #fff; }
+        #christmas header .nav > li a:hover {
+          background: none;
+          text-decoration: underline;
+          opacity: 1; }
+    #christmas header .header-top-area {
+      box-shadow: none;
+      background: none;
+      border: 0; }
+      #christmas header .header-top-area .header-container {
+        width: 100%;
+        padding: 0 2%; }
+      #christmas header .header-top-area .logo {
+        background-image: url("/images/campaign/double11/logo_text_orangebg.png"); }
+      #christmas header .header-top-area .icon:before {
+        color: #fff; }
+      #christmas header .header-top-area.scroll {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        background-color: rgba(255, 255, 255, 0.9); }
+        #christmas header .header-top-area.scroll .logo {
+          background-image: url("/images/logo_nobird.png"); }
+        #christmas header .header-top-area.scroll .navbar-right {
+          color: #163A4D; }
+          #christmas header .header-top-area.scroll .navbar-right li a {
+            color: #163A4D; }
+    #christmas header .overlay-header {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 40% !important;
+      margin-left: 30% !important;
+      padding-bottom: 30%; }
+      @media screen and (max-width: 1025px) {
+        #christmas header .overlay-header {
+          width: 70% !important;
+          margin-left: 15% !important;
+          padding-bottom: 25%; } }
+      @media screen and (max-width: 767px) {
+        #christmas header .overlay-header {
+          width: 80% !important;
+          margin-left: 10% !important;
+          padding-bottom: 45%; } }
+      #christmas header .overlay-header h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 3em;
+        text-shadow: rgba(0, 0, 0, 0.5) 0.05em 0.05em 0.1em;
+        width: 100%;
+        display: none; }
+        @media screen and (max-width: 767px) {
+          #christmas header .overlay-header h1 {
+            font-size: 2.2em; } }
+      #christmas header .overlay-header p {
+        color: #fff;
+        text-align: center;
+        font-size: 1.5em;
+        text-shadow: rgba(0, 0, 0, 0.5) 0.05em 0.05em 0.1em;
+        width: 100%;
+        display: none; }
+        @media screen and (max-width: 767px) {
+          #christmas header .overlay-header p {
+            font-size: 1em; } }
+    #christmas header .section-background {
+      padding-top: 0;
+      z-index: 0; }
+      #christmas header .section-background .bg-container {
+        background-color: #fff;
+        max-height: 450px; }
+        @media screen and (min-width: 1440px) {
+          #christmas header .section-background .bg-container {
+            max-height: none; } }
+        @media screen and (max-width: 550px) {
+          #christmas header .section-background .bg-container:before {
+            padding-top: 75%; } }
+        #christmas header .section-background .bg-container .bg {
+          top: -100%;
+          min-height: 100%; }
+          #christmas header .section-background .bg-container .bg.expect-mobile-v {
+            display: none; }
+            @media screen and (min-width: 550px) {
+              #christmas header .section-background .bg-container .bg.expect-mobile-v {
+                display: block; } }
+          #christmas header .section-background .bg-container .bg.mobile-v {
+            display: none; }
+            @media screen and (max-width: 550px) {
+              #christmas header .section-background .bg-container .bg.mobile-v {
+                display: block; } }
+  #christmas section#all {
+    padding: 30px 0 15px 0;
+    background-image: url("/images/campaign/christmas/bg.jpg");
+    background-repeat: no-repeat; }
+    #christmas section#all .coupon-container {
+      width: 80%;
+      margin: 0 auto;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      justify-content: center;
+      align-items: stretch; }
+      @media screen and (max-width: 1025px) {
+        #christmas section#all .coupon-container {
+          width: 90%; } }
+      @media screen and (max-width: 767px) {
+        #christmas section#all .coupon-container {
+          width: 100%; } }
+      #christmas section#all .coupon-container .discount {
+        width: 40%;
+        padding: 15px;
+        text-align: center;
+        background-image: url("/images/campaign/christmas/light.gif");
+        background-size: 50%;
+        background-repeat: repeat-x;
+        background-color: #fff;
+        border: 2px solid #ddd;
+        border-right: none; }
+        @media screen and (max-width: 550px) {
+          #christmas section#all .coupon-container .discount {
+            width: 65%;
+            padding-right: 0; } }
+        #christmas section#all .coupon-container .discount h1 {
+          font-size: 3.5em;
+          font-weight: 900;
+          color: #3abdaa;
+          text-align: left;
+          padding-left: 10%;
+          padding-top: 20px; }
+          @media screen and (max-width: 991px) {
+            #christmas section#all .coupon-container .discount h1 {
+              font-size: 3em;
+              padding-top: 0; } }
+          @media screen and (max-width: 767px) {
+            #christmas section#all .coupon-container .discount h1 {
+              font-size: 2em;
+              padding-top: 0;
+              padding-left: 0; } }
+          @media screen and (max-width: 320px) {
+            #christmas section#all .coupon-container .discount h1 {
+              font-size: 2em; } }
+          #christmas section#all .coupon-container .discount h1 span {
+            color: #686666;
+            display: block;
+            font-size: 0.7em;
+            margin-top: 5px; }
+        #christmas section#all .coupon-container .discount p.desc {
+          font-size: 1em;
+          padding-left: 10%;
+          text-align: left; }
+          @media screen and (max-width: 767px) {
+            #christmas section#all .coupon-container .discount p.desc {
+              font-size: 0.7em;
+              padding-left: 0; } }
+      #christmas section#all .coupon-container .coupon-line {
+        width: 5%;
+        min-width: 50px;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        align-content: space-between;
+        flex-wrap: wrap;
+        background-image: url("/images/campaign/christmas/dot_line.png");
+        background-color: #fff;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 10%; }
+        @media screen and (max-width: 550px) {
+          #christmas section#all .coupon-container .coupon-line {
+            width: 10%;
+            min-width: 30px; } }
+        #christmas section#all .coupon-container .coupon-line .top-circle {
+          background: none;
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+          border: 2px solid #ddd;
+          border-top: 0;
+          width: 100%;
+          height: 25px; }
+        #christmas section#all .coupon-container .coupon-line .bottom-circle {
+          background-color: #fff;
+          border-top-left-radius: 50px;
+          border-top-right-radius: 50px;
+          border: 2px solid #ddd;
+          border-bottom: none;
+          width: 100%;
+          height: 25px; }
+      #christmas section#all .coupon-container .code {
+        border: 2px solid #ddd;
+        background-color: #fff;
+        border-left: none;
+        width: 55%;
+        padding: 20px 0;
+        padding-left: 5%;
+        padding-top: 40px;
+        background-image: url("/images/campaign/christmas/light.gif");
+        background-size: 40%;
+        background-repeat: repeat-x;
+        /* Tooltip text */ }
+        @media screen and (max-width: 991px) {
+          #christmas section#all .coupon-container .code {
+            padding-top: 20px; } }
+        #christmas section#all .coupon-container .code h1 {
+          font-size: 3.5em;
+          font-weight: 900;
+          color: #3abdaa; }
+          @media screen and (max-width: 1025px) {
+            #christmas section#all .coupon-container .code h1 {
+              font-size: 2.5em;
+              padding-top: 0; } }
+          @media screen and (max-width: 767px) {
+            #christmas section#all .coupon-container .code h1 {
+              font-size: 1.4em; } }
+        #christmas section#all .coupon-container .code h3 {
+          color: #686666;
+          font-weight: 400;
+          margin-top: 5px;
+          width: 100%; }
+          @media screen and (max-width: 991px) {
+            #christmas section#all .coupon-container .code h3 {
+              font-size: 1.2em; } }
+        #christmas section#all .coupon-container .code .copy-btn {
+          border: 1px solid #fff;
+          background-color: #c12028;
+          color: #fff;
+          padding: 0 30px;
+          position: relative;
+          cursor: pointer; }
+          #christmas section#all .coupon-container .code .copy-btn:hover {
+            cursor: pointer; }
+          #christmas section#all .coupon-container .code .copy-btn.show {
+            display: inline-block; }
+        #christmas section#all .coupon-container .code .tooltiptext {
+          background-color: #ddd;
+          color: #fff;
+          text-align: center;
+          padding: 5px 30px;
+          margin-top: 5px;
+          border-radius: 6px;
+          position: absolute;
+          z-index: 1;
+          font-size: 0.9em;
+          opacity: 0;
+          transition: all 0.4s ease-out;
+          -webkit-transition: all 0.4s ease-out; }
+          #christmas section#all .coupon-container .code .tooltiptext:after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #ddd transparent; }
+          #christmas section#all .coupon-container .code .tooltiptext.show {
+            opacity: 1; }
+    #christmas section#all p.content_p {
+      margin: 0px auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: #163A4D;
+      width: 80%;
+      text-align: center;
+      font-size: 1em; }
+      @media screen and (max-width: 1025px) {
+        #christmas section#all p.content_p {
+          width: 90%; } }
+    #christmas section#all .btn-address {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      width: 80%;
+      margin: 0px auto;
+      margin-bottom: 15px;
+      justify-content: center; }
+      @media screen and (max-width: 1025px) {
+        #christmas section#all .btn-address {
+          width: 100%;
+          flex-wrap: nowrap;
+          overflow-x: scroll;
+          justify-content: flex-start; } }
+      #christmas section#all .btn-address .list-item {
+        flex: 0 0 19.5%;
+        text-align: center;
+        background: none;
+        cursor: pointer;
+        min-width: 0; }
+        #christmas section#all .btn-address .list-item .banner {
+          display: block;
+          position: relative; }
+          #christmas section#all .btn-address .list-item .banner:before {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.6;
+            transition: all 0.4s ease-out;
+            -webkit-transition: all 0.4s ease-out; }
+          #christmas section#all .btn-address .list-item .banner:after {
+            content: "";
+            padding-top: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1; }
+          @media screen and (max-width: 991px) {
+            #christmas section#all .btn-address .list-item .banner {
+              background-size: 60%; } }
+        #christmas section#all .btn-address .list-item.watersports .banner:before {
+          background-image: url("/images/campaign/christmas/water-3.jpg"); }
+        #christmas section#all .btn-address .list-item.fnb .banner:before {
+          background-image: url("/images/campaign/christmas/foodie-2.jpg"); }
+        #christmas section#all .btn-address .list-item.naturalExploration .banner:before {
+          background-image: url("/images/campaign/christmas/natural-4.jpg"); }
+        #christmas section#all .btn-address .list-item.show .banner:before {
+          background-image: url("/images/campaign/christmas/show-2.jpg"); }
+        #christmas section#all .btn-address .list-item.simcard .banner:before {
+          background-image: url("/images/campaign/christmas/simcard-1.jpg"); }
+        @media screen and (min-width: 550px) {
+          #christmas section#all .btn-address .list-item:hover {
+            cursor: pointer; }
+            #christmas section#all .btn-address .list-item:hover .banner:before {
+              opacity: 1 !important; }
+            #christmas section#all .btn-address .list-item:hover .bg {
+              opacity: 0 !important; } }
+        @media screen and (max-width: 991px) {
+          #christmas section#all .btn-address .list-item {
+            flex: 0 0 calc(100% / 4.5);
+            min-width: 0;
+            font-size: 1.1em; } }
+        @media screen and (max-width: 767px) {
+          #christmas section#all .btn-address .list-item {
+            flex: 0 0 calc(100% / 3.5);
+            min-width: 0; } }
+        @media screen and (max-width: 320px) {
+          #christmas section#all .btn-address .list-item {
+            font-size: 0.8em; } }
+        #christmas section#all .btn-address .list-item .list-content {
+          box-shadow: none; }
+        #christmas section#all .btn-address .list-item .banner {
+          width: 70%;
+          margin: 0 auto;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border: 1px solid #ddd;
+          overflow: hidden !important;
+          position: relative; }
+          @media screen and (max-width: 767px) {
+            #christmas section#all .btn-address .list-item .banner {
+              width: 90%;
+              margin: 0 auto; } }
+          #christmas section#all .btn-address .list-item .banner:before {
+            content: "";
+            padding-top: 100%;
+            display: block; }
+          #christmas section#all .btn-address .list-item .banner .bg {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            right: 0;
+            bottom: -100%;
+            margin: auto;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            max-width: 200%;
+            max-height: 80px;
+            width: auto;
+            transition: all 0.4s ease-out;
+            -webkit-transition: all 0.4s ease-out; }
+            @media screen and (max-width: 991px) {
+              #christmas section#all .btn-address .list-item .banner .bg {
+                max-width: 70px; } }
+            @media screen and (max-width: 767px) {
+              #christmas section#all .btn-address .list-item .banner .bg {
+                max-width: 50px; } }
+        #christmas section#all .btn-address .list-item h3.title-s {
+          font-size: 1em;
+          text-transform: uppercase;
+          font-style: italic;
+          font-weight: 600; }
+          @media screen and (max-width: 767px) {
+            #christmas section#all .btn-address .list-item h3.title-s {
+              font-size: 0.7em; } }
+    #christmas section#all .experience-title {
+      text-align: center;
+      margin: 30px 0;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      justify-content: center; }
+      #christmas section#all .experience-title h3 {
+        color: #163A4D;
+        font-size: 1.8em;
+        text-transform: uppercase;
+        font-style: italic; }
+      #christmas section#all .experience-title .address-icon {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 50px;
+        width: 80px;
+        display: block;
+        margin: 0 auto; }
+        #christmas section#all .experience-title .address-icon:before {
+          content: "";
+          padding-top: 20px;
+          padding-left: 20px; }
+      #christmas section#all .experience-title.watersports .address-icon {
+        background-image: url("/images/campaign/christmas/icon_water.png"); }
+      #christmas section#all .experience-title.fnb .address-icon {
+        background-image: url("/images/campaign/christmas/icon_eat.png"); }
+      #christmas section#all .experience-title.naturalExploration .address-icon {
+        margin-top: -10px;
+        background-image: url("/images/campaign/christmas/icon_natural.png"); }
+      #christmas section#all .experience-title.show .address-icon {
+        background-image: url("/images/campaign/christmas/icon_show.png"); }
+      #christmas section#all .experience-title.simcard .address-icon {
+        background-image: url("/images/campaign/christmas/icon_sim.png"); }
+    #christmas section#all .experience-list-container {
+      width: 100%;
+      overflow: hidden; }
+      @media screen and (max-width: 767px) {
+        #christmas section#all .experience-list-container {
+          overflow-x: scroll; } }
+      #christmas section#all .experience-list-container .experience-list {
+        width: 80%;
+        margin: 0 auto;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+        @media screen and (max-width: 1025px) {
+          #christmas section#all .experience-list-container .experience-list {
+            width: 100%; } }
+        #christmas section#all .experience-list-container .experience-list.reverse {
+          flex-flow: row-reverse; }
+          @media screen and (max-width: 767px) {
+            #christmas section#all .experience-list-container .experience-list.reverse {
+              flex-flow: row; } }
+        #christmas section#all .experience-list-container .experience-list .list-col {
+          width: 50%;
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;
+          /* OLD - Firefox 19- (buggy but mostly works) */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Chrome */
+          display: flex;
+          /* NEW, Spec - Opera 12.1, Firefox 20+ */
+          flex-direction: column;
+          flex-wrap: wrap;
+          flex-flow: row wrap; }
+          @media screen and (max-width: 767px) {
+            #christmas section#all .experience-list-container .experience-list .list-col {
+              width: 90%;
+              flex-wrap: nowrap; } }
+          #christmas section#all .experience-list-container .experience-list .list-col .list-item {
+            border: 1px solid #fff;
+            background: none;
+            list-style: none;
+            flex: 1 1 auto;
+            width: 50%; }
+            @media screen and (max-width: 767px) {
+              #christmas section#all .experience-list-container .experience-list .list-col .list-item {
+                min-width: 300px; } }
+            #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content {
+              position: relative;
+              display: block; }
+              #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content:before {
+                padding-top: 50%; }
+              #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .banner {
+                width: 100%;
+                overflow: hidden;
+                position: relative; }
+                #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .banner:before {
+                  content: "";
+                  padding-top: 100%;
+                  display: block; }
+                #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .banner .bg {
+                  top: -100%;
+                  left: 0;
+                  right: 0;
+                  bottom: -100%;
+                  margin: auto;
+                  margin-left: 50%;
+                  transform: translateX(-50%);
+                  opacity: 0;
+                  width: auto;
+                  height: 100%;
+                  position: absolute; }
+              #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 999;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                display: -webkit-box;
+                /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;
+                /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;
+                /* TWEENER - IE 10 */
+                display: -webkit-flex;
+                /* NEW - Chrome */
+                display: flex;
+                /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                justify-content: flex-end;
+                flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                align-content: center;
+                transition: all 0.4s ease-out;
+                -webkit-transition: all 0.4s ease-out;
+                padding: 15px 30px; }
+                @media screen and (max-width: 991px) {
+                  #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                    padding: 15px 20px; } }
+                #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                  font-weight: 500;
+                  color: #fff;
+                  font-size: 1.3em;
+                  line-height: 1.2;
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 5;
+                  -webkit-box-orient: vertical;
+                  text-shadow: rgba(0, 0, 0, 0.2) 0.05em 0.05em 0.1em;
+                  width: 100%; }
+                  @media screen and (max-width: 1025px) {
+                    #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                      font-size: 1.2em; } }
+                  @media screen and (max-width: 767px) {
+                    #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                      font-size: 1.5em;
+                      width: 100%; } }
+                #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .desc {
+                  font-size: 1em;
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  text-align: left;
+                  padding: 0;
+                  margin: 0;
+                  width: 100%;
+                  display: none; }
+                  @media screen and (max-width: 1025px) {
+                    #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .desc {
+                      font-size: 1em; } }
+                  @media screen and (max-width: 550px) {
+                    #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .desc {
+                      font-size: 1em;
+                      display: none; } }
+                #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                  width: 100%;
+                  margin: 0;
+                  padding: 0;
+                  display: -webkit-box;
+                  /* OLD - iOS 6-, Safari 3.1-6 */
+                  display: -moz-box;
+                  /* OLD - Firefox 19- (buggy but mostly works) */
+                  display: -ms-flexbox;
+                  /* TWEENER - IE 10 */
+                  display: -webkit-flex;
+                  /* NEW - Chrome */
+                  display: flex;
+                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                  flex-wrap: wrap; }
+                  @media screen and (max-width: 1025px) {
+                    #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                      margin-top: 0; } }
+                  @media screen and (max-width: 767px) {
+                    #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                      padding-top: 0; } }
+                  #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container {
+                    display: -webkit-box;
+                    /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box;
+                    /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox;
+                    /* TWEENER - IE 10 */
+                    display: -webkit-flex;
+                    /* NEW - Chrome */
+                    display: flex;
+                    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                    flex-wrap: wrap;
+                    width: 100%; }
+                    #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                      font-size: 0.8em;
+                      color: #999;
+                      margin-right: 10px; }
+                      @media screen and (max-width: 550px) {
+                        #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                          font-size: 0.8em; } }
+                  #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .location {
+                    color: #fff; }
+                  #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .price-container {
+                    background-color: #c12028;
+                    color: #fff;
+                    padding: 5px 15px;
+                    margin-top: 10px; }
+                    #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .price-container .discount-price {
+                      font-size: 1.1em; }
+                      @media screen and (max-width: 550px) {
+                        #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .price-container .discount-price {
+                          font-size: 1em; } }
+                      @media screen and (max-width: 320px) {
+                        #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .price-container .discount-price {
+                          font-size: 0.8em; } }
+                      #christmas section#all .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .price-container .discount-price .ori-price {
+                        font-size: 0.8em;
+                        color: #fff;
+                        opacity: .5;
+                        text-decoration: line-through; }
+            #christmas section#all .experience-list-container .experience-list .list-col .list-item.highlight .content h3 {
+              font-size: 1.8em;
+              line-height: 1.5; }
+              @media screen and (max-width: 767px) {
+                #christmas section#all .experience-list-container .experience-list .list-col .list-item.highlight .content h3 {
+                  font-size: 1.5em;
+                  width: 100%; } }
+            #christmas section#all .experience-list-container .experience-list .list-col .list-item:hover {
+              cursor: pointer; }
+              #christmas section#all .experience-list-container .experience-list .list-col .list-item:hover .content {
+                background-color: rgba(0, 0, 0, 0); }
+      #christmas section#all .experience-list-container.simcard .list-col {
+        width: 100%; }
+        #christmas section#all .experience-list-container.simcard .list-col .list-item {
+          flex: 1 1 auto;
+          width: 33.33%; }
+          #christmas section#all .experience-list-container.simcard .list-col .list-item .content {
+            background-image: url("/images/campaign/christmas/sim.png");
+            background-position: center;
+            background-size: 50%;
+            background-repeat: no-repeat; }
+  #christmas .promotion-slider {
+    width: 80%;
+    margin: 0 auto; }
+    @media screen and (max-width: 767px) {
+      #christmas .promotion-slider {
+        width: 100%; } }
+    #christmas .promotion-slider .bg.expect-mobile-v {
+      display: none; }
+      @media screen and (min-width: 550px) {
+        #christmas .promotion-slider .bg.expect-mobile-v {
+          display: block; } }
+    #christmas .promotion-slider .bg.mobile-v {
+      display: none; }
+      @media screen and (max-width: 550px) {
+        #christmas .promotion-slider .bg.mobile-v {
+          display: block; } }
+  #christmas .terms {
+    color: #163A4D;
+    line-height: 1.5;
+    word-break: break-word;
+    word-wrap: break-word;
+    font-size: 0.86em;
+    text-align: left;
+    font-weight: 400;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px 0; }
+    @media screen and (max-width: 1025px) {
+      #christmas .terms {
+        width: 100%; } }
+    @media screen and (max-width: 767px) {
+      #christmas .terms {
+        width: 100%; } }
+    #christmas .terms b {
+      color: #163A4D; }
+  #christmas .floating-icons {
+    font-size: 1.2em;
+    position: fixed;
+    right: 0;
+    top: 35%;
+    cursor: pointer;
+    z-index: 100000;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out; }
+    #christmas .floating-icons.show {
+      opacity: 1; }
+    @media screen and (max-width: 767px) {
+      #christmas .floating-icons {
+        display: none !important; } }
+    #christmas .floating-icons > div {
+      display: block;
+      background: none;
+      padding: 5px 15px;
+      opacity: .5;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+      #christmas .floating-icons > div.active {
+        opacity: 1; }
+      #christmas .floating-icons > div.watersports .address-icon {
+        background-image: url("/images/campaign/christmas/icon_water.png"); }
+      #christmas .floating-icons > div.fnb .address-icon {
+        background-image: url("/images/campaign/christmas/icon_eat.png"); }
+      #christmas .floating-icons > div.naturalExploration .address-icon {
+        background-image: url("/images/campaign/christmas/icon_natural.png"); }
+      #christmas .floating-icons > div.show .address-icon {
+        background-image: url("/images/campaign/christmas/icon_show.png"); }
+      #christmas .floating-icons > div.simcard .address-icon {
+        background-image: url("/images/campaign/christmas/icon_sim.png"); }
+      #christmas .floating-icons > div h6 {
+        font-size: 1em;
+        color: #163A4D;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 600; }
+      #christmas .floating-icons > div.active {
+        background: none; }
+        #christmas .floating-icons > div.active .address-icon {
+          background-color: #fff; }
+    #christmas .floating-icons .address-icon {
+      background-repeat: no-repeat;
+      background-size: 60%;
+      background-position: center;
+      background-color: #fff;
+      width: 80px;
+      height: 80px;
+      padding: 5px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 80px; }
+      @media screen and (max-width: 767px) {
+        #christmas .floating-icons .address-icon {
+          width: 50px;
+          height: 50px; } }
+
+.lis-flake .fa-snowflake {
+  z-index: 999;
+  color: #fff;
+  font-size: 0.5em;
+  text-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px; }
+  @media screen and (max-width: 1025px) {
+    .lis-flake .fa-snowflake {
+      font-size: 0.3em; } }
+
+body.en-us #vnshow .overlay-header {
+  background-image: url("/images/campaign/vnshow/header_en.png");
+  width: 60% !important;
+  margin-left: 20% !important;
+  padding-bottom: 30%; }
+  @media screen and (max-width: 1025px) {
+    body.en-us #vnshow .overlay-header {
+      width: 70% !important;
+      margin-left: 15% !important;
+      padding-bottom: 25%; } }
+  @media screen and (max-width: 767px) {
+    body.en-us #vnshow .overlay-header {
+      width: 80% !important;
+      margin-left: 10% !important;
+      padding-bottom: 45%; } }
+
+body.zh-hk #christmas .overlay-header {
+  background-image: url("/images/campaign/vnshow/header_tc.png"); }
+
+body.zh-hk #christmas .btn-address h3, body.zh-hk #christmas #christmas .experience-title h3, body.zh-hk #christmas .floating-icons > div h6 {
+  font-style: normal !important; }

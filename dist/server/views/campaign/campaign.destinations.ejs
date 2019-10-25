@@ -1,0 +1,49 @@
+<% if(citiesSpotlight && citiesSpotlight.length) { %>
+<section name="spotlight" id="spotlight">
+    <div class="main-logo-container destination">
+        <div class="main-logo">
+            <img src="/images/icons/spotlight.png">
+        </div>
+        <h2><%= translations['campaign.spotLightDestination'] %></h2>
+        <p class="desc hidden-xs"><%= translations['campaign.spotLightDestination.description'] %></p>
+    </div>
+    <div class="drag-content">
+        <div class="drag-list destination-slick">
+        <% citiesSpotlight.forEach(function(city){ %>
+            <div class="list-item">
+                <div class="list-content">
+                    <div class="overlay-content">
+                        <a href="<%= langUrl %>/city/<%= city.id %>-<%= city.slug %>" title="<%= city.name %>">
+                            <div class="banner">
+                                <% if (city.headers && city.headers.length) { %>
+                                <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_800/<%= city.headers[0].key %>" alt="<%= city.name %>" class="bg">
+                                <% } %>
+                            </div>
+                            <h3 class="title-s"><%= city.name %></h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+        <div class="drag-list destinations">
+            <% citiesSpotlight.forEach(function(city){ %>
+            <div class="list-item">
+                <div class="list-content">
+                    <div class="overlay-content">
+                        <a href="<%= langUrl %>/city/<%= city.id %>-<%= city.slug %>" title="<%= city.name %>">
+                            <div class="banner">
+                                <% if (city.headers && city.headers.length) { %>
+                                <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_800/<%= city.headers[0].key %>" alt="<%= city.name %>" class="bg">
+                                <% } %>
+                            </div>
+                            <h3 class="title-s"><%= city.name %></h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+</section>
+<% }; %>

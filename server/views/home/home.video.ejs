@@ -1,0 +1,47 @@
+<% if(footerVideoActivity && footerVideoActivity.videoKey) { %>
+<section id="home-video-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 ">
+                <ul class="loaded-list">
+                    <li class="list-item col-3 video-slick">
+                        <div class="list-content">
+                            <div class="overlay-content hover-video">
+                                <a href="https://www.youtube.com/embed/dTOWQJaXC4Y" title="<%= footerVideoActivity.title %>">
+                                    <div class="banner">
+                                        <div class="icon-video">
+                                            <img src="/images/play_btn.png">
+                                        </div>
+                                        <div class="blackbg"></div>
+                                        <img
+                                            src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1440/<%= footerVideoActivity.thumbnailKey %>"
+                                            alt="<%= footerVideoActivity.title %>" class="bg"/>
+                                    </div>
+                                </a>
+
+                                <div class="overlay-wrap">
+                                    <div class="overlay">
+                                        <p>
+                                            <a href="<%= footerVideoActivity.videoKey %>" class="icon-video" title="<%= footerVideoActivity.title %>">
+                                                <img src="/images/play_btn.png"/>
+                                            </a>
+                                        <h3 class="title-s"><%= footerVideoActivity.title %></h3>
+                                        <p class="desc"><%= footerVideoActivity.brief %></p>
+                                        <%- include('components/price.ejs', { displayPrice : footerVideoActivity.displayPrice, displaySpecialPrice: footerVideoActivity.displaySpecialPrice }); %>
+                                        <div class="nobg">
+                                            <%- include('components/location.ejs', { location : footerVideoActivity.location }); %>
+                                            <%- include('components/rating.ejs', { ratingAverage: footerVideoActivity.ratingAverage }); %>
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<% } %>

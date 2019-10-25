@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title><%= translations["receipt"] %> | Fayfay.com</title>
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/indexog.jpg"/>
+    <meta property="og:image:alt" content="<%= translations['home.og.image.alt']  %>"/>
+    <meta property="og:title" content="<%= translations['home.og.title'] %>"/>
+    <meta property="og:description" content="<%= translations['home.og.desc'] %>"/>
+
+    <style type="text/css">
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            margin: 0;
+            width: 100%;
+            color: #163A4D;
+        }
+
+        td ul {
+            margin-left: -25px;
+        }
+
+        td ul li {
+            line-height: 1.5;
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .receipt-bg {
+            background-color: #EE7E31;
+            margin: 40px auto;
+            padding: 30px;
+            max-width: 700px;
+        }
+
+        .logo-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 5% 0 0;
+        }
+
+        .logo {
+            padding: 5px;
+            height: 70px;
+            background-image: url('/images/logo_2.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 0 auto;
+            display: inline-block;
+            min-width: 80px;
+        }
+
+        .title-1 {
+            margin: 0;
+            font-size: 2em;
+            color: #163A4D;
+            background-color: #fff;
+            padding: 0 4% 2%;
+            width: 92%;
+        }
+
+        .content {
+            padding: 0 30px;
+            background-color: #fff;
+        }
+
+        p {
+            margin: 5px 0 10px;
+        }
+
+        h3 {
+            margin: 5px 0 10px;
+            font-size: 18px;
+        }
+
+        .data-ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title-customer, .title-booking {
+            width: 40%;
+            padding-top: 10px;
+        }
+
+        .title-order {
+            width: 20%;
+            padding-top: 10px;
+        }
+
+        .dash-line {
+            border: 1px dashed #ddd;
+            height: 0 !important;
+        }
+
+        .title {
+            width: 100%;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #163A4D;
+            display: flex;
+        }
+
+        .names {
+            width: 100%;
+            color: #EE7E31;
+            font-weight: 400;
+        }
+
+        .title-2 {
+            color: #163A4D;
+            font-weight: 600;
+            padding-bottom: 5px;
+            display: flex;
+        }
+
+        .title-3 {
+            color: #163A4D;
+            font-weight: 600;
+            padding-top: 30px;
+            display: flex;
+        }
+
+        .solid-line {
+            border: 1px solid #ddd;
+            height: 0 !important;
+        }
+
+        .item {
+            padding: 10px 0;
+            display: flex;
+        }
+
+        .item p {
+            margin: 0;
+            padding-bottom: 4px;
+        }
+
+        .item .desc {
+            color: #999;
+            font-size: 0.9em;
+            line-height: 1.5;
+            font-weight: 200;
+        }
+
+        .i-total {
+            width: 20%;
+            color: #EE7E31;
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .item-details {
+            width: 40% !important;
+        }
+
+        .item-qty {
+            width: 19% !important;
+            padding-bottom: 10px;
+            font-size: 1em !important;
+            text-align: right;
+        }
+
+        .item-price {
+            width: 20% !important;
+            font-size: 1em !important;
+            text-align: right;
+        }
+
+        .item-total {
+            width: 20% !important;
+            padding-bottom: 10px;
+            font-size: 1em !important;
+            text-align: right;
+        }
+
+        .total-line {
+            border: 1px solid #db8550;
+            height: 0 !important;
+            display: block;
+            margin-bottom: 20px !important;
+        }
+
+        .total .title, .discount .title, .grand-total .title {
+            width: 70% !important;
+            justify-content: flex-end;
+        }
+
+        .total .price, .discount .price, .grand-total .price {
+            width: 30% !important;
+            text-align: right;
+        }
+
+        .grand-total .price {
+            font-weight: 800;
+            color: #EE7E31;
+            font-size: 1.15em;
+        }
+
+        .credit > .txt {
+            color: #5c6268;
+            text-align: right;
+        }
+
+        .sum {
+            padding-bottom: 5px;
+            display: flex;
+        }
+
+        .credit {
+            padding-bottom: 10px;
+        }
+
+        .visible-xs{
+            display: none;
+        }
+
+        @media only screen and (max-width: 767px), screen and (max-device-width: 767px) {
+            .receipt-bg {
+                padding: 3%;
+                margin: 0 auto;
+                max-width: 767px;
+            }
+
+            .content {
+                padding: 0 15px;
+            }
+
+            table {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .bodyContentTicks td {
+                padding-top: 0 !important
+            }
+
+            .title-1 {
+                font-size: 1.5em;
+            }
+
+            .title-2, .title-3, .item {
+                flex-wrap: wrap;
+            }
+
+            .names {
+                font-size: 1em;
+                padding-bottom: 10px;
+            }
+
+            .hidden-xs {
+                display: none;
+            }
+
+            .visible-xs{
+                display: inline-block;
+                margin-right: 5px;
+                text-align: left;
+            }
+
+            h1 {
+                font-size: 26px !important
+            }
+
+            h2 {
+                font-size: 22px !important
+            }
+
+            h3 {
+                font-size: 18px !important;
+                margin: 0;
+            }
+
+            h4 {
+                font-size: 18px !important
+            }
+
+            h5 {
+                font-size: 16px !important
+            }
+
+            h6 {
+                font-size: 14px !important
+            }
+
+            p {
+                font-size: 16px !important;
+                margin-bottom: 5px;
+            }
+
+            .item-details {
+                width: 80% !important;
+                padding-bottom: 10px;
+            }
+
+            .item-qty {
+                width: 19% !important;
+                text-align: right;
+
+            }
+
+            .item-price {
+                width: 55% !important;
+                margin-bottom: 10px;
+                text-align: left;
+            }
+
+            .i-total {
+                width: 45% !important;
+            }
+
+            .total .title, .discount .title, .grand-total .title {
+                width: 65% !important;
+                text-align: right;
+            }
+
+            .total .price, .discount .price, .grand-total .price {
+                width: 45% !important;
+                text-align: right;
+            }
+
+            .grand-total .price {
+                font-weight: 800;
+                color: #EE7E31;
+                font-size: 18px;
+            }
+
+            .bodyContent img {
+                max-width: 100% !important
+            }
+
+            .bodyContentImage img {
+                max-width: 100% !important
+            }
+
+            .bodyContentImage h4 {
+                font-size: 16px !important
+            }
+
+            .bodyContentImage h5 {
+                font-size: 15px !important;
+                margin-top: 0
+            }
+        }
+
+        @media only screen and (max-width: 480px), screen and (max-device-width: 480px) {
+            .receipt-bg {
+                padding: 3%;
+                margin: 0 auto;
+                max-width: 480px;
+            }
+
+            .title-customer, .title-booking, .title-order {
+                width: 50%;
+                text-align: left;
+            }
+
+            .data-ul > li {
+                clear: both;
+            }
+
+            .title-1{
+                padding: 0 3% 2%;
+                width: 94%;
+            }
+
+            .title-3 {
+                padding-top: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body bgcolor="#f5f5f5">
+<div class="receipt-bg">
+    <div class="logo-container">
+        <div class="logo"></div>
+    </div>
+    <div class="title-1"><%= translations["receipt"] %></div>
+    <div class="content">
+        <ul   class="data-ul">
+
+            <li class="title-2 pLR3020">
+                <div class="title-customer">
+                    <div class="title"><%= translations["receipt.customerName"] %></div>
+                    <div class="names"><%= order.firstName %> <%= order.lastName %></div>
+                </div>
+                <div class="title-booking">
+                    <div class="title"><%= translations["receipt.bookingDate"] %></div>
+                    <div class="names" data-time="<%= order.createdDate %>"></div>
+                </div>
+                <div class="title-order">
+                    <div class="title"><%= translations["receipt.orderNo"] %></div>
+                    <div class="names"><%= order.id %></div>
+                </div>
+            </li>
+            <li class="title-3 pLR3020">
+                <div class="item-details"><%= translations["receipt.description"] %></div>
+                <div class="item-qty"><%= translations["receipt.quantity"] %></div>
+                <div class="item-price hidden-xs"><%= translations["receipt.unitPrice"] %></div>
+                <div class="item-total hidden-xs"><%= translations["receipt.totalCost"] %></div>
+            </li>
+            <li class="solid-line"/>
+
+            <%
+                order.items.forEach(orderItem => {
+                    orderItem.items.forEach(function(ticket, index){
+            %>
+                <li class="item pLR3020">
+                    <div class="item-details">
+                        <p class="title"><%= orderItem.activityName %></p>
+                        <p class="desc">
+                            <b><%= orderItem.packageName %></b><br>
+                            -<%= ticket.ticketTypeName %></p>
+                    </div>
+                    <div class="item-qty"><%= ticket.quantity %></div>
+                    <div class="item-price"><span class="visible-xs"><%= translations["receipt.unitPrice"] %>: </span><%- formatMoney(ticket.payPrice, ccy, locale) %></div>
+                    <div class="i-total"><%- formatMoney(ticket.payPrice * ticket.quantity, ccy, locale) %></div>
+                </li>
+                <% if (index != orderItem.items.length-1){ %>
+                    <li class="dash-line"/>
+                <% } %>
+            <%
+                })
+            })
+            %>
+            <li class="total-line"/>
+            <li class="sum total">
+                <div class="title"><%= translations["receipt.subtotal"] %>:</div>
+                <div class="price"><%- formatMoney(order.totalAmount, ccy, locale) %></div>
+            </li>
+            <li class="sum discount">
+                <div class="title"><%= translations["receipt.couponCodeDiscount"] %>:</div>
+                <div class="price">- <%- order.discount ? formatMoney(order.discount, ccy, locale) : 0 %></div>
+            </li>
+            <li class="sum grand-total">
+                <div class="title"><%= translations["receipt.paymentAmount"] %>:</div>
+                <div class="price"><%- formatMoney(order.paymentAmount, ccy, locale) %></div>
+            </li>
+            <% if (order.refundTotalAmount > 0){ %>
+            <li class="sum grand-total">
+                <div class="title"><%= translations["receipt.refundTotal"] %>:</div>
+                <div class="price"><%- formatMoney(order.refundTotalAmount, ccy, locale) %></div>
+            </li>
+            <% } %>
+            <li class="credit">
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="/js/lib/jquery.min.js"></script>
+<script src="/js/lib/moment/moment.min.js"></script>
+<script src="/js/lib/formatDate.js"></script>
+</body>
+</html>

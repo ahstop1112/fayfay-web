@@ -1,0 +1,9 @@
+<div class="price">
+    <% if(displaySpecialPrice) { %>
+    <span><%- formatMoney(displaySpecialPrice, ccy, locale) %></span><del><%- formatMoney(displayPrice, ccy, locale) %></del>
+    <% } else { %>
+        <% if(displayPrice) { %>
+            <span><%- formatMoney(displayPrice, ccy, locale) %></span>
+        <% } else { %> <%= translations['activity.freeVoucher'] %><% } %>
+    <% } %>
+</div>

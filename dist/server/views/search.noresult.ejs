@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['common.search'] %>">
+    <meta name="keywords" content="<%= translations['common.search'] %>">
+    <title><%= translations['common.search'] %> | Fayfay.com</title>
+
+    <% include include/gtm.header.ejs %>
+
+    <% include include/css.ejs %>
+
+    <link rel="stylesheet" type="text/css" href="/css/search.css">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
+<body>
+<% include include/gtm.body.ejs %>
+
+<div id="page">
+    <% include search/search.header.ejs %>
+    <% include search/search.error.bird.ejs %>
+    <% include home/home.destinations.ejs %>
+    <% include home/home.popular.ejs %>
+    <% include home/home.fayfay.recommended.ejs %>
+    <% include include/footer.ejs %>
+</div>
+
+<% include include/js.ejs %>
+</body>
+</html>

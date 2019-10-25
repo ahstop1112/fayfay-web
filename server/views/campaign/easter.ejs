@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['campaign.easter.desc'] %>">
+    <meta name="keywords" content="<%= campaignData.ogTitle %>">
+    <title><%= campaignData.ogTitle %> | Fayfay.com</title>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= campaignData.ogMedia ? (campaignData.ogMedia.key+'.'+campaignData.ogMedia.format) : '' %>"/>
+    <meta property="og:image:alt" content="<%= campaignData.ogTitle  %>"/>
+    <meta property="og:title" content="<%= campaignData.ogTitle %>"/>
+    <meta property="og:description" content="<%= translations['campaign.easter.desc'] %>"/>
+
+    <% include ../include/gtm.header.ejs %>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/easter.css">
+</head>
+
+<body class="<%= locale%>">
+<% include ../include/gtm.body.ejs %>
+<div id="easter">
+    <% include easter.header.ejs %>
+    <section id="coupon">
+        <div class="container-fluid">
+            <div class="desc-container">
+                <p class="content_p"><%= translations['campaign.easter.desc'] %></p>
+            </div>
+            <div class="coupon-container">
+                <div class="coupon">
+                    <div class="discount">
+                        <img class="precent" src="/images/campaign/easter/10off.png">
+                        <p class="desc"><%= translations['campaign.easter.coupon.desc'] %></p>
+                    </div>
+                    <div class="code">
+                        <h1 class="promoCode">FayEaster10</h1>
+                        <button class="btn btn-s copy-btn show" data-clipboard-action="copy" data-clipboard-text="FayEaster10"
+                                aria-label="<%= translations['campaign.easter.copy'] %>">
+                            <%= translations['campaign.easter.copy'] %>
+                        </button>
+                        <span class="tooltiptext"><%= translations['campaign.easter.copied'] %></span>
+                    </div>
+                </div>
+                <div class="coupon">
+                    <div class="discount">
+                        <img class="precent" src="/images/campaign/easter/5off.png">
+                        <p class="desc"><%= translations['campaign.easter.coupon.desc2'] %></p>
+                    </div>
+                    <div class="code">
+                        <h1 class="promoCode">FayEaster5</h1>
+                        <button class="btn btn-s copy-btn2 show" data-clipboard-action="copy" data-clipboard-text="FayEaster5"
+                                aria-label="copy<%= translations['campaign.easter.copy'] %>">
+                            <%= translations['campaign.easter.copy'] %>
+                        </button>
+                        <span class="tooltiptext2"><%= translations['campaign.easter.copied'] %></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="all">
+        <div class="container-fluid">
+            <% if (campaignData.sections) { %>
+
+                <% include dynamic-circle.icons.ejs %>
+
+                <% campaignData.sections.forEach(function (section, index) { %>
+                    <div class="section-experience  section<%=index%>">
+                        <div class="experience-title section<%=index%>">
+                            <div class="title-bg-left"></div>
+                            <div class="title-bg">
+                                <h2><%=section.name %></h2>
+                            </div>
+                            <div class="title-bg-right"></div>
+                        </div>
+                        <% section.subSections.forEach(function (child, subIndex) { %>
+                            <% switch (child.layout) {
+                                case 'VERTICAL_LIST' : %>
+                                    <% include dynamic-vertical.list.ejs %>
+                                <% break;
+                                case 'HORIZONTAL_LIST' : %>
+                                    <% include dynamic-horizontal.list.ejs %>
+                                <% break;
+                                case '4_PLUS_1_HIGHLIGHTED_LEFT' : %>
+                                    <% include dynamic-4plus1_highlighted_left.ejs %>
+                                <% break;
+                                case '4_PLUS_1_HIGHLIGHTED_RIGHT' : %>
+                                    <% include dynamic-4plus1_highlighted_right
+                                    .ejs %>
+                                <% break;
+                            } %>
+                        <% })%>
+                    </div>
+                <% })%>
+            <% } %>
+
+            <div class="banner-container">
+
+                <a href="/<%= locale %>/travel-must-haves/" target="_blank">
+
+                    <% if (locale == 'zh-hk') { %>
+                        <img src="/images/campaign/easter/banner_tavelmusthave_tc.jpg" class="bg except-mobile-v">
+                        <img src="/images/campaign/easter/banner_tavelmusthave_tc_4x3.jpg" class="bg mobile-v">
+                    <% } else { %>
+                        <img src="/images/campaign/easter/banner_tavelmusthave_en.jpg" class="bg except-mobile-v">
+                        <img src="/images/campaign/easter/banner_tavelmusthave_en_4x3.jpg" class="bg mobile-v">
+                    <% } %>
+                </a>
+
+            </div>
+
+            <p class="desc terms">
+                <b><%-translations['campaign.easter.terms.title']%></b><br>
+                <%- translations['campaign.easter.terms.desc'] %>
+            </p>
+        </div>
+    </section>
+
+    <% if (campaignData.sections) { %>
+    <div class="floating-icons">
+        <% campaignData.sections.forEach(function (section, index) { %>
+        <div class="section<%=index%> <%=index===0 ? 'active' : ''%>"><div class="address-icon" style="background-image: url('<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%=section.iconMedia.key%>.<%=section.iconMedia.format%>')"></div><h6><%=section.name %></h6></div>
+        <% })%>
+    </div>
+    <% } %>
+    <% include campaign.destinations.ejs %>
+    <% include ../include/footer.ejs %>
+</div>
+
+<% include ../include/js.ejs %>
+<script src="/js/easter-bundle.js"></script>
+<script>
+        var clipboard = new ClipboardJS('.copy-btn');
+
+        clipboard.on('success', function(e) {
+            $('.tooltiptext').addClass("show");
+
+            setTimeout(function() {
+                $('.tooltiptext').removeClass("show");
+            }, 3000);
+        });
+
+        var clipboard2 = new ClipboardJS('.copy-btn2');
+
+        clipboard2.on('success', function(e) {
+            $('.tooltiptext2').addClass("show");
+
+            setTimeout(function() {
+                $('.tooltiptext2').removeClass("show");
+            }, 3000);
+        });
+
+    </script>
+
+</body>
+</html>

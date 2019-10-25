@@ -1,0 +1,852 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+#easter {
+  color: #163A4D;
+  background-image: url("/images/campaign/easter/bg.jpg");
+  background-size: contain; }
+  #easter header .header-top-area {
+    position: static;
+    box-shadow: none;
+    background-color: #fff;
+    color: #163A4D;
+    border: 0; }
+    #easter header .header-top-area .header-container {
+      width: 100%;
+      padding: 0 2%; }
+    #easter header .header-top-area.scroll {
+      position: fixed; }
+  #easter header .section-background {
+    padding-top: 0;
+    z-index: 0; }
+    #easter header .section-background .bg-container {
+      background-color: #cc8226; }
+      @media screen and (max-width: 1440px) {
+        #easter header .section-background .bg-container:before {
+          padding-top: 28%; } }
+      @media screen and (max-width: 550px) {
+        #easter header .section-background .bg-container:before {
+          padding-top: 75%; } }
+      #easter header .section-background .bg-container .bg {
+        top: -100%; }
+        #easter header .section-background .bg-container .bg.expect-mobile-v {
+          display: none; }
+          @media screen and (min-width: 550px) {
+            #easter header .section-background .bg-container .bg.expect-mobile-v {
+              display: block; } }
+        #easter header .section-background .bg-container .bg.mobile-v {
+          display: none; }
+          @media screen and (max-width: 550px) {
+            #easter header .section-background .bg-container .bg.mobile-v {
+              display: block; } }
+  #easter section#coupon p.desc:first-child {
+    width: 80%;
+    margin: 0 auto; }
+    @media screen and (max-width: 1025px) {
+      #easter section#coupon p.desc:first-child {
+        width: 100%; } }
+  #easter section#coupon .desc-container {
+    background-color: rgba(252, 212, 101, 0.9);
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 15px 10%; }
+    @media screen and (max-width: 1025px) {
+      #easter section#coupon .desc-container {
+        margin-bottom: 20px; } }
+    #easter section#coupon .desc-container .content_p {
+      text-align: center;
+      color: #8b640d;
+      font-size: 1.1em;
+      line-height: 1.5;
+      margin-top: 15px; }
+  #easter section#coupon .coupon-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    justify-content: center;
+    align-items: center; }
+    #easter section#coupon .coupon-container:before {
+      content: "";
+      display: block;
+      padding-top: 24%; }
+    @media screen and (max-width: 1025px) {
+      #easter section#coupon .coupon-container {
+        width: 90%;
+        margin-bottom: 0; } }
+    @media screen and (max-width: 991px) {
+      #easter section#coupon .coupon-container {
+        width: 100%;
+        margin-bottom: 0; } }
+    @media screen and (max-width: 767px) {
+      #easter section#coupon .coupon-container {
+        width: 100%;
+        flex-wrap: wrap; } }
+    #easter section#coupon .coupon-container .coupon {
+      flex: 0 0 50%;
+      background-image: url("/images/campaign/easter/egg_bg.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      align-items: center;
+      padding-top: 60px;
+      min-height: 400px; }
+      @media screen and (max-width: 1025px) {
+        #easter section#coupon .coupon-container .coupon {
+          min-height: 350px; } }
+      @media screen and (max-width: 991px) {
+        #easter section#coupon .coupon-container .coupon {
+          padding-top: 30px;
+          min-height: 300px; } }
+      @media screen and (max-width: 550px) {
+        #easter section#coupon .coupon-container .coupon {
+          flex: 0 0 90%;
+          margin-bottom: 15px;
+          padding-top: 50px; } }
+    #easter section#coupon .coupon-container .discount {
+      padding: 15px 0 0;
+      text-align: center; }
+      #easter section#coupon .coupon-container .discount img.precent {
+        max-height: 80px;
+        width: auto;
+        margin-bottom: 15px; }
+        @media screen and (max-width: 991px) {
+          #easter section#coupon .coupon-container .discount img.precent {
+            max-height: 65px;
+            margin-bottom: 10px; } }
+        @media screen and (max-width: 1025px) {
+          #easter section#coupon .coupon-container .discount img.precent {
+            max-height: 50px; } }
+      #easter section#coupon .coupon-container .discount h1 {
+        font-size: 5em;
+        font-weight: 900;
+        color: #fefc0d;
+        -webkit-text-stroke: 3px #8b640c;
+        text-shadow: 3px 3px 0 #8b640c, -1px -1px 0 #8b640c, 1px -1px 0 #8b640c, -1px 1px 0 #8b640c, 1px 1px 0 #8b640c; }
+        @media screen and (max-width: 991px) {
+          #easter section#coupon .coupon-container .discount h1 {
+            font-size: 4em; } }
+        @media screen and (max-width: 767px) {
+          #easter section#coupon .coupon-container .discount h1 {
+            font-size: 3.2em; } }
+        @media screen and (max-width: 320px) {
+          #easter section#coupon .coupon-container .discount h1 {
+            font-size: 2.5em; } }
+        #easter section#coupon .coupon-container .discount h1 .off {
+          font-size: 0.3em;
+          font-weight: 300;
+          margin-left: 5px;
+          text-transform: uppercase;
+          -webkit-text-stroke: 1px #8b640c;
+          text-shadow: none; }
+      #easter section#coupon .coupon-container .discount p.desc {
+        color: #8b640c;
+        font-size: 1.4em;
+        text-align: center;
+        margin-bottom: 5px; }
+        @media screen and (max-width: 767px) {
+          #easter section#coupon .coupon-container .discount p.desc {
+            font-size: 1em;
+            width: 100%; } }
+    #easter section#coupon .coupon-container .code {
+      border-left: none;
+      text-align: center;
+      /* Tooltip text */ }
+      #easter section#coupon .coupon-container .code h1 {
+        font-size: 2.5em;
+        font-weight: 900;
+        color: #cc8226;
+        margin: 0 0 15px 0; }
+        @media screen and (max-width: 1025px) {
+          #easter section#coupon .coupon-container .code h1 {
+            font-size: 2.5em; } }
+        @media screen and (max-width: 767px) {
+          #easter section#coupon .coupon-container .code h1 {
+            font-size: 1.4em; } }
+      #easter section#coupon .coupon-container .code h3 {
+        color: #fff;
+        font-weight: 400;
+        margin-top: 5px;
+        width: 100%;
+        text-shadow: rgba(0, 0, 0, 0.5) 0.05em 0.05em 0.1em; }
+        @media screen and (max-width: 991px) {
+          #easter section#coupon .coupon-container .code h3 {
+            font-size: 1.2em; } }
+      #easter section#coupon .coupon-container .code .copy-btn, #easter section#coupon .coupon-container .code .copy-btn2 {
+        border: 0;
+        border-bottom: 3px solid #cc8226;
+        background-color: #fec512;
+        color: #feffd5;
+        width: 30%;
+        margin: 0 auto;
+        padding: 0;
+        cursor: pointer;
+        font-size: 1.2em;
+        line-height: 1.5; }
+        #easter section#coupon .coupon-container .code .copy-btn:hover, #easter section#coupon .coupon-container .code .copy-btn2:hover {
+          cursor: pointer; }
+        #easter section#coupon .coupon-container .code .copy-btn.show, #easter section#coupon .coupon-container .code .copy-btn2.show {
+          display: inline-block; }
+      #easter section#coupon .coupon-container .code .tooltiptext, #easter section#coupon .coupon-container .code .tooltiptext2 {
+        max-width: 100px;
+        background-color: #a45f21;
+        color: #fff;
+        text-align: center;
+        padding: 5px 30px;
+        margin-top: 5px;
+        margin-left: -50px;
+        border-radius: 6px;
+        position: absolute;
+        opacity: 0;
+        z-index: 1;
+        font-size: 0.9em;
+        transition: all 0.4s ease-out;
+        -webkit-transition: all 0.4s ease-out; }
+        #easter section#coupon .coupon-container .code .tooltiptext:after, #easter section#coupon .coupon-container .code .tooltiptext2:after {
+          content: "";
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: transparent transparent #a45f21 transparent; }
+        #easter section#coupon .coupon-container .code .tooltiptext.show, #easter section#coupon .coupon-container .code .tooltiptext2.show {
+          opacity: 1; }
+      #easter section#coupon .coupon-container .code .remarks {
+        font-size: 1em;
+        color: #feffd5;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 200; }
+  #easter section#all {
+    padding: 15px 0; }
+    #easter section#all .btn-address {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      width: 80%;
+      margin: 0px auto;
+      margin-bottom: 15px;
+      justify-content: center; }
+      @media screen and (max-width: 991px) {
+        #easter section#all .btn-address {
+          width: 100%;
+          flex-wrap: nowrap;
+          overflow-x: scroll;
+          justify-content: flex-start; } }
+      #easter section#all .btn-address .list-item {
+        flex: 0 0 calc(100% / 6);
+        text-align: center;
+        background: none;
+        cursor: pointer;
+        min-width: 0; }
+        @media screen and (max-width: 991px) {
+          #easter section#all .btn-address .list-item {
+            flex: 0 0 calc(100% / 4);
+            min-width: 0;
+            font-size: 1.1em; } }
+        @media screen and (max-width: 550px) {
+          #easter section#all .btn-address .list-item {
+            flex: 0 0 calc(100% / 2.5);
+            min-width: 0; } }
+        @media screen and (max-width: 320px) {
+          #easter section#all .btn-address .list-item {
+            font-size: 0.8em; } }
+        #easter section#all .btn-address .list-item .list-content {
+          box-shadow: none; }
+        #easter section#all .btn-address .list-item .banner-bg {
+          width: 80%;
+          margin: 0 auto;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          padding: 5px;
+          overflow: hidden !important;
+          display: block;
+          position: relative;
+          background: #fff; }
+        #easter section#all .btn-address .list-item .banner {
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          overflow: hidden;
+          background-size: cover; }
+          #easter section#all .btn-address .list-item .banner:before {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            content: "";
+            padding-top: 100%;
+            display: block; }
+          #easter section#all .btn-address .list-item .banner:after {
+            content: "";
+            padding-top: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1; }
+        #easter section#all .btn-address .list-item h3.title-s {
+          font-size: 1.5em;
+          text-transform: uppercase;
+          font-weight: 500;
+          color: #fff;
+          text-shadow: rgba(0, 0, 0, 0.5) 0.1em 0.1em 0.1em; }
+          @media screen and (max-width: 767px) {
+            #easter section#all .btn-address .list-item h3.title-s {
+              font-size: 1.2em; } }
+    #easter section#all .section-experience {
+      background: rgba(254, 201, 45, 0.8);
+      padding: 30px 0;
+      margin: 0 5% 30px 5%;
+      width: 90%;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      flex-wrap: wrap;
+      align-items: center; }
+      @media screen and (max-width: 991px) {
+        #easter section#all .section-experience {
+          width: 100%;
+          margin: 0 0 30px 0;
+          padding: 0 0 30px 0; } }
+      #easter section#all .section-experience .experience-bg-left {
+        flex: 0 0 15%;
+        margin-top: -30px;
+        background-image: url("/images/campaign/cny/corner.png");
+        background-size: cover;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1); }
+        #easter section#all .section-experience .experience-bg-left:before {
+          content: "";
+          display: block;
+          padding-top: 100%; }
+        @media screen and (max-width: 991px) {
+          #easter section#all .section-experience .experience-bg-left {
+            margin-top: -15px; } }
+        @media screen and (max-width: 550px) {
+          #easter section#all .section-experience .experience-bg-left {
+            margin-top: -40px;
+            flex: 0 0 12%; } }
+      #easter section#all .section-experience .experience-bg-right {
+        flex: 0 0 15%;
+        margin-top: -30px;
+        background-image: url("/images/campaign/cny/corner.png");
+        background-size: cover; }
+        #easter section#all .section-experience .experience-bg-right:before {
+          content: "";
+          display: block;
+          padding-top: 100%; }
+        @media screen and (max-width: 991px) {
+          #easter section#all .section-experience .experience-bg-right {
+            margin-top: -15px; } }
+        @media screen and (max-width: 550px) {
+          #easter section#all .section-experience .experience-bg-right {
+            margin-top: -40px;
+            flex: 0 0 12%; } }
+      #easter section#all .section-experience .experience-title {
+        flex: 0 0 60%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 15px 0 0 0;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        justify-content: center;
+        align-items: center; }
+        @media screen and (max-width: 991px) {
+          #easter section#all .section-experience .experience-title {
+            flex: 0 0 70%; } }
+        @media screen and (max-width: 550px) {
+          #easter section#all .section-experience .experience-title {
+            flex: 0 0 90%;
+            margin-bottom: 20px; } }
+        #easter section#all .section-experience .experience-title .title-bg-left {
+          flex: 0 0 15%;
+          margin-top: -30px;
+          margin-right: -5%;
+          background-image: url("/images/campaign/easter/rabbit_left.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          -moz-transform: scaleX(1);
+          -o-transform: scaleX(1);
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+          z-index: 999; }
+          #easter section#all .section-experience .experience-title .title-bg-left:before {
+            content: "";
+            display: block;
+            padding-top: 100%; }
+          @media screen and (max-width: 991px) {
+            #easter section#all .section-experience .experience-title .title-bg-left {
+              flex: 0 0 15%; } }
+          @media screen and (max-width: 550px) {
+            #easter section#all .section-experience .experience-title .title-bg-left {
+              margin-top: 0px;
+              margin-right: -20px; } }
+        #easter section#all .section-experience .experience-title .title-bg-right {
+          flex: 0 0 15%;
+          margin-top: -30px;
+          margin-left: -5%;
+          background-image: url("/images/campaign/easter/rabbit_right.png");
+          background-size: contain;
+          background-repeat: no-repeat; }
+          #easter section#all .section-experience .experience-title .title-bg-right:before {
+            content: "";
+            display: block;
+            padding-top: 100%; }
+          @media screen and (max-width: 991px) {
+            #easter section#all .section-experience .experience-title .title-bg-right {
+              flex: 0 0 15%; } }
+          @media screen and (max-width: 550px) {
+            #easter section#all .section-experience .experience-title .title-bg-right {
+              margin-top: 0px;
+              margin-left: -20px; } }
+        #easter section#all .section-experience .experience-title .title-bg {
+          background-color: #ecb842;
+          flex: 0 0 70%; }
+        #easter section#all .section-experience .experience-title h2 {
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: 900; }
+          @media screen and (max-width: 991px) {
+            #easter section#all .section-experience .experience-title h2 {
+              font-size: 1.75em; } }
+          @media screen and (max-width: 550px) {
+            #easter section#all .section-experience .experience-title h2 {
+              font-size: 1.25em; } }
+      #easter section#all .section-experience .experience-title-s {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 60%; }
+        #easter section#all .section-experience .experience-title-s:first-child {
+          margin-top: 0; }
+        @media screen and (max-width: 1025px) {
+          #easter section#all .section-experience .experience-title-s {
+            margin-top: 10px;
+            margin-bottom: 10px; } }
+        @media screen and (max-width: 550px) {
+          #easter section#all .section-experience .experience-title-s {
+            display: none; } }
+        #easter section#all .section-experience .experience-title-s h5 {
+          color: #fff;
+          font-weight: 300;
+          font-size: 1.25em; }
+          @media screen and (max-width: 991px) {
+            #easter section#all .section-experience .experience-title-s h5 {
+              font-size: 1.5em; } }
+          @media screen and (max-width: 767px) {
+            #easter section#all .section-experience .experience-title-s h5 {
+              font-size: 1.25em; } }
+        #easter section#all .section-experience .experience-title-s .address-icon {
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 8%;
+          margin-right: 3%;
+          display: none; }
+          #easter section#all .section-experience .experience-title-s .address-icon:before {
+            content: "";
+            display: block;
+            padding-top: 100%; }
+          @media screen and (max-width: 991px) {
+            #easter section#all .section-experience .experience-title-s .address-icon {
+              width: 15%;
+              margin-right: 1%; } }
+          @media screen and (max-width: 550px) {
+            #easter section#all .section-experience .experience-title-s .address-icon {
+              width: 20%;
+              margin-right: 0; } }
+      #easter section#all .section-experience .experience-list-container {
+        flex: 0 0 100%;
+        overflow: hidden; }
+        @media screen and (max-width: 767px) {
+          #easter section#all .section-experience .experience-list-container {
+            overflow-x: scroll; }
+            #easter section#all .section-experience .experience-list-container::-webkit-scrollbar {
+              display: none; } }
+        #easter section#all .section-experience .experience-list-container .experience-list {
+          margin: 0 auto;
+          width: 96%;
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;
+          /* OLD - Firefox 19- (buggy but mostly works) */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Chrome */
+          display: flex;
+          /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+          @media screen and (max-width: 991px) {
+            #easter section#all .section-experience .experience-list-container .experience-list {
+              width: 100%; } }
+          #easter section#all .section-experience .experience-list-container .experience-list.reverse {
+            flex-flow: row-reverse; }
+            @media screen and (max-width: 767px) {
+              #easter section#all .section-experience .experience-list-container .experience-list.reverse {
+                flex-flow: row; } }
+          #easter section#all .section-experience .experience-list-container .experience-list .list-col {
+            width: 50%;
+            display: -webkit-box;
+            /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;
+            /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;
+            /* TWEENER - IE 10 */
+            display: -webkit-flex;
+            /* NEW - Chrome */
+            display: flex;
+            /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-flow: row wrap; }
+            @media screen and (max-width: 767px) {
+              #easter section#all .section-experience .experience-list-container .experience-list .list-col {
+                width: 90%;
+                margin-right: 1%;
+                flex-wrap: nowrap; } }
+            #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item {
+              background: none;
+              list-style: none;
+              flex: 1 1 49.5%;
+              margin-right: 0.5%; }
+              @media screen and (max-width: 767px) {
+                #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item {
+                  min-width: 300px;
+                  margin-right: 1%; } }
+              #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content {
+                position: relative;
+                display: block; }
+                #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content:before {
+                  padding-top: 50%; }
+                #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .banner {
+                  width: 100%;
+                  overflow: hidden;
+                  position: relative; }
+                  #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .banner:before {
+                    content: "";
+                    padding-top: 100%;
+                    display: block; }
+                  #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .banner .bg {
+                    top: -100%;
+                    left: 0;
+                    right: 0;
+                    bottom: -100%;
+                    margin: auto;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                    width: auto;
+                    height: 100%;
+                    position: absolute; }
+                #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  z-index: 999;
+                  width: 100%;
+                  height: 100%;
+                  background-color: rgba(0, 0, 0, 0.2);
+                  display: -webkit-box;
+                  /* OLD - iOS 6-, Safari 3.1-6 */
+                  display: -moz-box;
+                  /* OLD - Firefox 19- (buggy but mostly works) */
+                  display: -ms-flexbox;
+                  /* TWEENER - IE 10 */
+                  display: -webkit-flex;
+                  /* NEW - Chrome */
+                  display: flex;
+                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                  justify-content: center;
+                  -webkit-justify-content: center;
+                  flex-wrap: wrap;
+                  -webkit-flex-wrap: wrap;
+                  align-content: center;
+                  align-items: center;
+                  transition: all 0.4s ease-out;
+                  -webkit-transition: all 0.4s ease-out;
+                  padding: 15px 30px; }
+                  #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content:hover {
+                    background-color: rgba(0, 0, 0, 0); }
+                  @media screen and (max-width: 991px) {
+                    #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                      padding: 10px; } }
+                  @media screen and (max-width: 550px) {
+                    #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content {
+                      padding: 15px; } }
+                  #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                    font-weight: 500;
+                    color: #fff;
+                    font-size: 1.5em;
+                    line-height: 1.2;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    text-shadow: rgba(0, 0, 0, 0.5) 0.1em 0.1em 0.1em;
+                    width: 100%; }
+                    @media screen and (max-width: 1025px) {
+                      #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                        font-size: 1.2em; } }
+                    @media screen and (max-width: 767px) {
+                      #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content h3 {
+                        font-size: 1.5em;
+                        width: 100%; } }
+                  #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .desc {
+                    font-size: 1em;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    text-align: left;
+                    padding: 0;
+                    margin: 0;
+                    width: 100%; }
+                    #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .desc .price {
+                      font-weight: 500;
+                      font-size: 1.25em;
+                      color: #fff;
+                      text-shadow: rgba(0, 0, 0, 0.5) 0.1em 0.1em 0.1em; }
+                  #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    display: -webkit-box;
+                    /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box;
+                    /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox;
+                    /* TWEENER - IE 10 */
+                    display: -webkit-flex;
+                    /* NEW - Chrome */
+                    display: flex;
+                    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                    flex-wrap: wrap; }
+                    @media screen and (max-width: 1025px) {
+                      #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                        margin-top: 0; } }
+                    @media screen and (max-width: 767px) {
+                      #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom {
+                        padding-top: 0; } }
+                    #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container {
+                      display: -webkit-box;
+                      /* OLD - iOS 6-, Safari 3.1-6 */
+                      display: -moz-box;
+                      /* OLD - Firefox 19- (buggy but mostly works) */
+                      display: -ms-flexbox;
+                      /* TWEENER - IE 10 */
+                      display: -webkit-flex;
+                      /* NEW - Chrome */
+                      display: flex;
+                      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                      flex-wrap: wrap;
+                      width: 100%;
+                      display: none !important; }
+                      #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                        font-size: 0.8em;
+                        color: #75cee2;
+                        margin-right: 10px; }
+                        @media screen and (max-width: 550px) {
+                          #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                            font-size: 0.8em; } }
+                    #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .content .bottom .location {
+                      color: #fff; }
+                #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container {
+                  background-color: #fec512;
+                  color: #fff;
+                  padding: 5px 15px;
+                  margin-top: 10px;
+                  text-align: center; }
+                  #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price {
+                    font-size: 1.2em; }
+                    @media screen and (max-width: 550px) {
+                      #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price {
+                        font-size: 1em; } }
+                    @media screen and (max-width: 320px) {
+                      #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price {
+                        font-size: 0.8em; } }
+                    #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item .list-content .price-container .discount-price .ori-price {
+                      font-size: 0.8em;
+                      color: #fff;
+                      opacity: .5;
+                      text-decoration: line-through; }
+              #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item.highlight .content h3 {
+                font-size: 1.8em;
+                line-height: 1.5; }
+                @media screen and (max-width: 767px) {
+                  #easter section#all .section-experience .experience-list-container .experience-list .list-col .list-item.highlight .content h3 {
+                    font-size: 1.5em;
+                    width: 100%; } }
+        #easter section#all .section-experience .experience-list-container.row-with-4-items .list-col {
+          width: 100%; }
+          #easter section#all .section-experience .experience-list-container.row-with-4-items .list-col .list-item {
+            flex: 1 1 24.5%;
+            margin-right: 0.5%;
+            padding: 15px;
+            background-color: #edb12c; }
+            #easter section#all .section-experience .experience-list-container.row-with-4-items .list-col .list-item:last-child {
+              margin-right: 0%; }
+            #easter section#all .section-experience .experience-list-container.row-with-4-items .list-col .list-item .list-content {
+              height: calc(100% - 35px); }
+    #easter section#all .banner-container {
+      width: 90%;
+      margin: 0 auto; }
+      @media screen and (max-width: 550px) {
+        #easter section#all .banner-container {
+          width: 100%; } }
+      #easter section#all .banner-container .except-mobile-v {
+        display: none; }
+        @media screen and (min-width: 550px) {
+          #easter section#all .banner-container .except-mobile-v {
+            display: block; } }
+      #easter section#all .banner-container .mobile-v {
+        display: none; }
+        @media screen and (max-width: 550px) {
+          #easter section#all .banner-container .mobile-v {
+            display: block; } }
+  #easter .terms {
+    color: #8b640d;
+    font-size: 0.86em;
+    line-height: 1.5;
+    word-break: break-word;
+    word-wrap: break-word;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0 50px 0; }
+    @media screen and (max-width: 1025px) {
+      #easter .terms {
+        width: 90%; } }
+    @media screen and (max-width: 767px) {
+      #easter .terms {
+        width: 90%; } }
+    #easter .terms b {
+      color: #8b640d; }
+  #easter .floating-icons {
+    font-size: 1.2em;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+    z-index: 100000;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out; }
+    #easter .floating-icons.show {
+      opacity: 1; }
+    @media screen and (max-width: 767px) {
+      #easter .floating-icons {
+        display: none !important; } }
+    #easter .floating-icons .address-icon {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: contain;
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+      display: none !important; }
+      @media screen and (max-width: 767px) {
+        #easter .floating-icons .address-icon {
+          width: 30px;
+          height: 30px; } }
+    #easter .floating-icons > div {
+      display: block;
+      background-color: #fec92b;
+      color: #fff;
+      padding: 5px 30px 5px 15px;
+      box-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+      #easter .floating-icons > div h6 {
+        font-size: 1em;
+        color: #fff; }
+      #easter .floating-icons > div.active h6 {
+        color: #ce8526; }
+  #easter section#spotlight {
+    margin-bottom: 50px; }
+    #easter section#spotlight h2, #easter section#spotlight p {
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(66, 40, 8, 0.9); }
+    #easter section#spotlight .list-item.slick-current .list-content, #easter section#spotlight .list-item:hover .list-content, #easter section#spotlight .destinations .list-item .list-content {
+      background-color: #fec414; }
+    @media screen and (max-width: 767px) {
+      #easter section#spotlight .main-logo-container {
+        justify-content: center;
+        text-align: center; }
+      #easter section#spotlight .drag-content {
+        width: 96%;
+        margin: 0 auto; } }

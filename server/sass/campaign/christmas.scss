@@ -1,0 +1,1145 @@
+@import '../include/variable';
+
+$green: #074221;
+$christmas-red: #c12028;
+$christmas-green: #3abdaa;
+
+body{
+    background-color: $white;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+#christmas{
+
+    color: $main-font-color;
+    background-color: $white;
+
+    header {
+        height: 100%;
+
+        .nav > li {
+            font-size: 1.2em;
+            display: inline-block;
+
+            a {
+                color: $white;
+
+                &:hover {
+                    background: none;
+                    text-decoration: underline;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .header-top-area {
+            box-shadow: none;
+            background: none;
+            border: 0;
+
+            .header-container {
+                width: 100%;
+                padding: 0 2%;
+            }
+
+            .logo {
+                background-image: url('/images/campaign/double11/logo_text_orangebg.png');
+            }
+
+            .icon:before {
+                color: $white;
+            }
+
+            &.scroll {
+                box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
+                background-color: hsla(0, 0%, 100%, .9);
+
+                .logo {
+                    background-image: url('/images/logo_nobird.png');
+                }
+
+                .navbar-right {
+                    color: $main-font-color;
+
+                    li {
+                        a {
+                            color: $main-font-color;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .overlay-header {
+
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            position: absolute;
+            width: 40% !important;
+            margin-left: 30% !important;
+            padding-bottom: 30%;
+
+            @media screen and (max-width: $tablet-h) {
+                width: 70% !important;
+                margin-left: 15% !important;
+                padding-bottom: 25%;
+            }
+
+            @media screen and (max-width: $mobile-h) {
+                width: 80% !important;
+                margin-left: 10% !important;
+                padding-bottom: 45%;
+
+            }
+
+            h1 {
+                color: $white;
+                text-align: center;
+                font-size: 3em;
+                text-shadow: $text-shadow;
+                width: 100%;
+                display: none;
+
+                @media screen and (max-width: $mobile-h) {
+                    font-size: 2.2em;
+                }
+            }
+
+            p {
+                color: $white;
+                text-align: center;
+                font-size: 1.5em;
+                text-shadow: $text-shadow;
+                width: 100%;
+                display: none;
+
+                @media screen and (max-width: $mobile-h) {
+                    font-size: 1em;
+                }
+            }
+
+        }
+
+        .section-background {
+            padding-top: 0;
+            z-index: 0;
+
+            .bg-container {
+                background-color: $white;
+                max-height: 450px;
+
+                @media screen and (min-width: $desktop) {
+                    max-height: none;
+                }
+
+                &:before {
+
+                    @media screen and (max-width: $mobile-v) {
+                        padding-top: 75%;
+                    }
+                }
+
+                .bg {
+                    top: -100%;
+                    min-height: 100%;
+
+                    &.expect-mobile-v {
+                        display: none;
+
+                        @media screen and (min-width: $mobile-v) {
+                            display: block;
+                        }
+                    }
+
+                    &.mobile-v {
+                        display: none;
+
+                        @media screen and (max-width: $mobile-v) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#all{
+        padding: 30px 0 15px 0;
+        background-image: url('/images/campaign/christmas/bg.jpg');
+        background-repeat: no-repeat;
+
+        .coupon-container{
+
+            width: 80%;
+            margin: 0 auto;
+
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            justify-content: center;
+            align-items: stretch;
+
+            @media screen and (max-width: $tablet-h) {
+                width: 90%;
+            }
+
+            @media screen and (max-width: $mobile-h) {
+                width: 100%;
+            }
+
+            .discount{
+                width: 40%;
+                padding: $padding;
+                text-align: center;
+                background-image: url('/images/campaign/christmas/light.gif');
+                background-size: 50%;
+                background-repeat: repeat-x;
+                background-color: $white;
+                border: 2px solid #ddd;
+                border-right: none;
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 65%;
+                    padding-right: 0;
+                }
+
+                h1{
+                    font-size: 3.5em;
+                    font-weight: 900;
+                    color: $christmas-green;
+                    text-align: left;
+                    padding-left: 10%;
+                    padding-top: 20px;
+
+                    @media screen and (max-width: $tablet-v) {
+                        font-size: 3em;
+                        padding-top: 0;
+                    }
+
+                    @media screen and (max-width: $mobile-h) {
+                        font-size: 2em;
+                        padding-top: 0;
+                        padding-left: 0;
+                    }
+
+                    @media screen and (max-width: $mobile-xs) {
+                        font-size: 2em;
+                    }
+
+                    span{
+                        color: #686666;
+                        display: block;
+                        font-size: 0.7em;
+                        margin-top: 5px;
+                    }
+                }
+
+                p.desc{
+                    font-size: 1em;
+                    padding-left: 10%;
+                    text-align: left;
+
+                    @media screen and (max-width: $mobile-h) {
+                        font-size: 0.7em;
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            .coupon-line{
+                width: 5%;
+                min-width: 50px;
+                display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;      /* TWEENER - IE 10 */
+                display: -webkit-flex;     /* NEW - Chrome */
+                display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                align-content: space-between;
+                flex-wrap: wrap;
+
+                background-image: url('/images/campaign/christmas/dot_line.png');
+                background-color: $white;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                background-size: 10%;
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 10%;
+                    min-width: 30px;
+                }
+
+                .top-circle{
+                    background: none;
+                    border-bottom-left-radius: 50px;
+                    border-bottom-right-radius: 50px;
+                    border: 2px solid #ddd;
+                    border-top: 0;
+
+                    width: 100%;
+                    height: 25px;
+                }
+
+                .bottom-circle{
+                    background-color: $white;
+
+                    border-top-left-radius: 50px;
+                    border-top-right-radius: 50px;
+                    border: 2px solid #ddd;
+                    border-bottom: none;
+
+                    width: 100%;
+                    height: 25px;
+                }
+            }
+
+            .code{
+                border: 2px solid #ddd;
+                background-color: $white;
+                border-left: none;
+                width: 55%;
+                padding: 20px 0;
+                padding-left: 5%;
+                padding-top: 40px;
+
+                background-image: url('/images/campaign/christmas/light.gif');
+                background-size: 40%;
+                background-repeat: repeat-x;
+
+                @media screen and (max-width: $tablet-v) {
+                    padding-top: 20px;
+                }
+
+                h1{
+                    font-size: 3.5em;
+                    font-weight: 900;
+                    color: $christmas-green;
+
+                    @media screen and (max-width: $tablet-h) {
+                        font-size: 2.5em;
+                        padding-top: 0;
+                    }
+
+                    @media screen and (max-width: $mobile-h) {
+                        font-size: 1.4em;
+                    }
+                }
+
+                h3{
+                    color: #686666;
+                    font-weight: 400;
+                    margin-top: 5px;
+                    width: 100%;
+
+                    @media screen and (max-width: $tablet-v) {
+                        font-size: 1.2em;
+                    }
+                }
+
+                .copy-btn{
+                    border: 1px solid $white;
+                    background-color: $christmas-red;
+                    color: $white;
+                    padding: 0 30px;
+                    position: relative;
+                    cursor: pointer;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+
+                    &.show{
+                        display: inline-block;
+                    }
+                }
+
+                /* Tooltip text */
+                .tooltiptext {
+                    background-color: #ddd;
+                    color: $white;
+                    text-align: center;
+                    padding: 5px 30px;
+                    margin-top: 5px;
+                    border-radius: 6px;
+                    position: absolute;
+                    z-index: 1;
+                    font-size: 0.9em;
+                    opacity: 0;
+
+                    transition: $fadeIn;
+                    -webkit-transition: $fadeIn;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: 100%;
+                        left: 50%;
+                        margin-left: -5px;
+                        border-width: 5px;
+                        border-style: solid;
+                        border-color: transparent transparent #ddd transparent;
+                    }
+
+                    &.show{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        p.content_p{
+            margin: 0px auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            color: $main-font-color;
+            width: 80%;
+            text-align: center;
+            font-size: 1em;
+
+            @media screen and (max-width: $tablet-h) {
+                width: 90%;
+            }
+        }
+
+        .btn-address{
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            width: 80%;
+            margin: 0px auto;
+            margin-bottom: $padding;
+            justify-content: center;
+
+            @media screen and (max-width: $tablet-h) {
+                width: 100%;
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+                justify-content: flex-start;
+            }
+
+            .list-item{
+                flex: 0 0 19.5%;
+                text-align: center;
+                background: none;
+                cursor: pointer;
+                min-width: 0;
+
+                .banner{
+
+                    display: block;
+                    position: relative;
+
+                    &:before{
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        opacity: 0.6;
+                        transition: $fadeIn;
+                        -webkit-transition: $fadeIn;
+                    }
+
+                    &:after {
+                        content: "";
+                        padding-top: 100%;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        position: absolute;
+                        z-index: -1;
+                    }
+
+                    @media screen and (max-width: $tablet-v) {
+                        background-size: 60%;
+                    }
+                }
+
+                &.watersports{
+                    .banner:before{
+                        background-image: url("/images/campaign/christmas/water-3.jpg");
+                    }
+                }
+                &.fnb{
+                    .banner:before{
+                        background-image: url("/images/campaign/christmas/foodie-2.jpg");
+                    }
+                }
+                &.naturalExploration{
+                    .banner:before{
+                        background-image: url("/images/campaign/christmas/natural-4.jpg");
+                    }
+                }
+                &.show{
+                    .banner:before{
+                        background-image: url("/images/campaign/christmas/show-2.jpg");
+                    }
+                }
+                &.simcard{
+                    .banner:before{
+                        background-image: url("/images/campaign/christmas/simcard-1.jpg");
+                    }
+                }
+
+                &:hover{
+
+                    @media screen and (min-width: $mobile-v) {
+                        .banner:before{
+                            opacity: 1 !important;
+                        }
+                        cursor: pointer;
+
+                        .bg{
+                            opacity: 0 !important;
+                        }
+                    }
+
+                }
+
+                @media screen and (max-width: $tablet-v) {
+                    flex: 0 0 calc(100% / 4.5);
+                    min-width: 0;
+                    font-size: 1.1em;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    flex: 0 0 calc(100% / 3.5);
+                    min-width: 0;
+                }
+
+                @media screen and (max-width: $mobile-xs) {
+                    font-size: 0.8em;
+                }
+
+                .list-content{
+                    box-shadow: none;
+                }
+
+                .banner{
+                    width: 70%;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+
+                    border: 1px solid #ddd;
+                    overflow: hidden !important;
+                    position: relative;
+
+                    @media screen and (max-width: $mobile-h) {
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+
+                    &:before {
+                        content: "";
+                        padding-top: 100%;
+                        display: block;
+                    }
+
+                    .bg {
+                        position: absolute;
+                        top: -100%;
+                        left: 0;
+                        right: 0;
+                        bottom: -100%;
+                        margin: auto;
+                        margin-left: 50%;
+                        transform: translateX(-50%);
+                        max-width: 200%;
+                        max-height: 80px;
+                        width: auto;
+                        transition: $fadeIn;
+                        -webkit-transition: $fadeIn;
+
+                        @media screen and (max-width: $tablet-v) {
+                            max-width: 70px;
+                        }
+
+                        @media screen and (max-width: $mobile-h) {
+                            max-width: 50px;
+                        }
+                    }
+                }
+
+                h3.title-s{
+                    font-size: 1em;
+                    text-transform: uppercase;
+                    font-style: italic;
+                    font-weight: 600;
+
+                    @media screen and (max-width: $mobile-h) {
+                        font-size: 0.7em;
+                    }
+                }
+            }
+        }
+
+        .experience-title{
+
+            text-align: center;
+            margin: 30px 0;
+
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            justify-content: center;
+
+            h3{
+                color: $main-font-color;
+                font-size: 1.8em;
+                text-transform: uppercase;
+                font-style: italic;
+            }
+
+            .address-icon{
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 50px;
+                width: 80px;
+                display: block;
+                margin: 0 auto;
+
+                &:before{
+                    content: "";
+                    padding-top: 20px;
+                    padding-left: 20px;
+                }
+            }
+
+            &.watersports{
+                .address-icon{
+                    background-image: url("/images/campaign/christmas/icon_water.png");
+                }
+            }
+            &.fnb{
+                .address-icon{
+                    background-image: url("/images/campaign/christmas/icon_eat.png");
+                }
+            }
+            &.naturalExploration{
+                .address-icon{
+                    margin-top: -10px;
+                    background-image: url("/images/campaign/christmas/icon_natural.png");
+                }
+            }
+            &.show{
+                .address-icon{
+                    background-image: url("/images/campaign/christmas/icon_show.png");
+                }
+            }
+            &.simcard{
+                .address-icon{
+                    background-image: url("/images/campaign/christmas/icon_sim.png");
+                }
+            }
+        }
+
+        .experience-list-container{
+            width: 100%;
+            overflow: hidden;
+
+            @media screen and (max-width: $mobile-h) {
+                overflow-x: scroll;
+            }
+
+            .experience-list{
+                width: 80%;
+                margin: 0 auto;
+
+                display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;      /* TWEENER - IE 10 */
+                display: -webkit-flex;     /* NEW - Chrome */
+                display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                @media screen and (max-width: $tablet-h) {
+                    width: 100%;
+                }
+
+                &.reverse{
+                    flex-flow: row-reverse;
+
+                    @media screen and (max-width: $mobile-h) {
+                        flex-flow: row;
+                    }
+                }
+
+                .list-col{
+                    width: 50%;
+                    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox;      /* TWEENER - IE 10 */
+                    display: -webkit-flex;     /* NEW - Chrome */
+                    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    flex-flow: row wrap;
+
+                    @media screen and (max-width: $mobile-h) {
+                        width: 90%;
+                        flex-wrap: nowrap;
+                    }
+
+                    .list-item{
+                        border: 1px solid $white;
+                        background: none;
+                        list-style: none;
+
+                        flex: 1 1 auto;
+                        width: 50%;
+
+
+                        @media screen and (max-width: $mobile-h) {
+                            min-width: 300px;
+                        }
+
+                        .list-content{
+                            position: relative;
+                            display: block;
+
+
+                            &:before{
+                                padding-top: 50%;
+                            }
+
+                            .banner{
+                                width: 100%;
+                                overflow: hidden;
+                                position: relative;
+
+                                &:before {
+                                    content: "";
+                                    padding-top: 100%;
+                                    display: block;
+                                }
+
+
+                                .bg{
+                                    top: -100%;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: -100%;
+                                    margin: auto;
+                                    margin-left: 50%;
+                                    transform: translateX(-50%);
+                                    opacity: 0;
+                                    width: auto;
+                                    height: 100%;
+                                    position: absolute;
+                                }
+                            }
+                            .content{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                z-index: 999;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0,0,0,0.2);
+
+                                display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                                display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                                display: -ms-flexbox;      /* TWEENER - IE 10 */
+                                display: -webkit-flex;     /* NEW - Chrome */
+                                display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                                justify-content: flex-end;
+
+                                flex-wrap: wrap;
+                                -webkit-flex-wrap: wrap;
+
+                                align-content: center;
+
+                                transition: $fadeIn;
+                                -webkit-transition: $fadeIn;
+
+                                padding: $padding 30px;
+
+                                @media screen and (max-width: $tablet-v) {
+                                    padding: $padding 20px;
+                                }
+
+                                h3{
+                                    font-weight: 500;
+                                    color: $white;
+                                    font-size: 1.3em;
+                                    line-height: 1.2;
+                                    overflow: hidden;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 5;
+                                    -webkit-box-orient: vertical;
+                                    text-shadow: $text-shadow2;
+
+                                    width: 100%;
+
+                                    @media screen and (max-width: $tablet-h) {
+                                        font-size: 1.2em;
+                                    }
+
+                                    @media screen and (max-width: $mobile-h) {
+                                        font-size: 1.5em;
+                                        width: 100%;
+                                    }
+                                }
+
+                                .desc{
+                                    font-size: 1em;
+                                    overflow: hidden;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+                                    text-align: left;
+                                    padding: 0;
+                                    margin: 0;
+                                    width: 100%;
+                                    display: none;
+
+                                    @media screen and (max-width: $tablet-h) {
+                                        font-size: 1em;
+                                    }
+
+                                    @media screen and (max-width: $mobile-v) {
+                                        font-size: 1em;
+                                        display: none;
+                                    }
+                                }
+
+                                .bottom{
+                                    width: 100%;
+                                    margin: 0;
+                                    padding: 0;
+
+                                    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                                    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                                    display: -ms-flexbox;      /* TWEENER - IE 10 */
+                                    display: -webkit-flex;     /* NEW - Chrome */
+                                    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                                    flex-wrap: wrap;
+
+                                    @media screen and (max-width: $tablet-h) {
+                                        margin-top: 0;
+                                    }
+
+                                    @media screen and (max-width: $mobile-h) {
+                                        padding-top: 0;
+                                    }
+
+                                    .hashtag-container{
+                                        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                                        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                                        display: -ms-flexbox;      /* TWEENER - IE 10 */
+                                        display: -webkit-flex;     /* NEW - Chrome */
+                                        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                                        flex-wrap: wrap;
+                                        width: 100%;
+
+                                        .hashtag{
+                                            font-size: 0.8em;
+                                            color: $light-grey;
+                                            margin-right: 10px;
+
+                                            @media screen and (max-width: $mobile-v) {
+                                                font-size: 0.8em;
+                                            }
+                                        }
+                                    }
+
+                                    .location{
+                                        color: $white;
+
+
+                                    }
+
+                                    .price-container{
+                                        background-color: $christmas-red;
+                                        color: $white;
+                                        padding: 5px $padding;
+                                        margin-top: 10px;
+
+                                        .discount-price{
+                                            font-size: 1.1em;
+
+                                            @media screen and (max-width: $mobile-v) {
+                                                font-size: 1em;
+                                            }
+
+                                            @media screen and (max-width: $mobile-xs) {
+                                                font-size: 0.8em;
+                                            }
+
+                                            .ori-price{
+                                                font-size: 0.8em;
+                                                color: $white;
+                                                opacity: .5;
+                                                text-decoration: line-through;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.highlight{
+                            .content{
+
+                                h3{
+                                    font-size: 1.8em;
+                                    line-height: 1.5;
+
+                                    @media screen and (max-width: $mobile-h) {
+                                        font-size: 1.5em;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:hover{
+                            cursor: pointer;
+
+                            .content{
+                                background-color: rgba(0,0,0,0);
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.simcard{
+                .list-col{
+                    width: 100%;
+
+                    .list-item{
+                        flex: 1 1 auto;
+                        width: 33.33%;
+
+                        .content{
+                            background-image: url("/images/campaign/christmas/sim.png");
+                            background-position: center;
+                            background-size: 50%;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .promotion-slider{
+        width: 80%;
+        margin: 0 auto;
+
+        @media screen and (max-width: $mobile-h) {
+            width: 100%;
+        }
+
+        .bg{
+            &.expect-mobile-v{
+                display: none;
+
+                @media screen and (min-width: $mobile-v) {
+                    display: block;
+                }
+            }
+
+            &.mobile-v{
+                display: none;
+
+                @media screen and (max-width: $mobile-v) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .terms{
+        color: $main-font-color;
+        line-height: 1.5;
+        word-break: break-word;
+        word-wrap: break-word;
+        font-size: 0.86em;
+        text-align: left;
+        font-weight: 400;
+
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding: 20px 0;
+
+        @media screen and (max-width: $tablet-h) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            width: 100%;
+        }
+
+        b{
+            color: $main-font-color;
+        }
+    }
+
+    .floating-icons {
+        font-size: 1.2em;
+        position: fixed;
+        right: 0;
+        top: 35%;
+        cursor: pointer;
+        z-index: 100000;
+        opacity: 0;
+        -webkit-transition: $fadeIn;
+        transition: $fadeIn;
+
+        &.show{
+            opacity: 1;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            display: none !important;
+        }
+
+        &>div{
+            display: block;
+            background: none;
+            padding: 5px 15px;
+            opacity: .5;
+
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            &.active{
+                opacity: 1;
+            }
+
+            &.watersports{
+                .address-icon{
+                    background-image: url("/images/campaign/christmas/icon_water.png");
+                }
+            }
+            &.fnb{
+                .address-icon{
+                    background-image: url("/images/campaign/christmas/icon_eat.png");
+                }
+            }
+            &.naturalExploration{
+                .address-icon{
+                    background-image: url("/images/campaign/christmas/icon_natural.png");
+                }
+            }
+            &.show{
+                .address-icon{
+                    background-image: url("/images/campaign/christmas/icon_show.png");
+                }
+            }
+            &.simcard{
+                .address-icon{
+                    background-image: url("/images/campaign/christmas/icon_sim.png");
+                }
+            }
+
+            h6{
+                font-size: 1em;
+                color: $main-font-color;
+                text-transform: uppercase;
+                font-style: italic;
+                font-weight: 600;
+            }
+
+            &.active{
+                background: none;
+                .address-icon {
+                    background-color: $white;
+                }
+            }
+        }
+
+        .address-icon{
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: center;
+            background-color: $white;
+
+            width: 80px;
+            height: 80px;
+            padding: 5px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 80px;
+
+            @media screen and (max-width: $mobile-h) {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+.lis-flake{
+
+    .fa-snowflake{
+        z-index: 999;
+        color: $white;
+        font-size: 0.5em;
+        text-shadow: $shadow;
+
+        @media screen and (max-width: $tablet-h) {
+            font-size: 0.3em;
+        }
+    }
+}
+
+
+
+body.en-us #vnshow{
+    .overlay-header{
+        background-image: url('/images/campaign/vnshow/header_en.png');
+
+        width: 60% !important;
+        margin-left: 20% !important;
+        padding-bottom: 30%;
+
+        @media screen and (max-width: $tablet-h) {
+            width: 70% !important;
+            margin-left: 15% !important;
+            padding-bottom: 25%;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            width: 80% !important;
+            margin-left: 10% !important;
+            padding-bottom: 45%;
+
+        }
+    }
+}
+
+body.zh-hk #christmas{
+    .overlay-header{
+        background-image: url('/images/campaign/vnshow/header_tc.png');
+    }
+
+    .btn-address h3, #christmas .experience-title h3, .floating-icons > div h6{
+        font-style: normal !important;
+    }
+}

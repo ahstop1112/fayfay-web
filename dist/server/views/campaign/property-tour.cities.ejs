@@ -1,0 +1,35 @@
+<section class="section cities">
+    <div class="container-fluid">
+        <h2><%= translations['search.cities'] %></h2>
+        <div class="btn-address section">
+            <div class="list-item section0">
+                <a id="section 0" title="<%= translations['activity.hoChiMinh'] %>">
+                    <span class="address-text"><%= translations['activity.hoChiMinh'] %></span>
+                </a>
+            </div>
+            <div class="list-item section1">
+                <a id="section 0" title="<%= translations['activity.hanoi'] %>">
+                    <span class="address-text"><%= translations['activity.hanoi'] %></span>
+                </a>
+            </div>
+            <div class="list-item section2">
+                <a id="section 0" title="<%= translations['activity.daNang'] %>">
+                    <span class="address-text"><%= translations['activity.daNang'] %></span>
+                </a>
+            </div>
+        </div>
+        <% include property-tour.hcmc.ejs %>
+        <% include property-tour.hanoi.ejs %>
+        <% include property-tour.danang.ejs %>
+        <div class="banner-container">
+            <a href="http://property.fayfay.com/en-us/" target="_blank">
+                <% if (locale == 'zh-hk' || locale == 'zh-cn') { %>
+                    <img src="/images/campaign/propertytour/banner-promo-tc.jpg">
+                <% } else { %>
+                    <img src="/images/campaign/propertytour/banner-promo.jpg">
+                <% } %>
+
+            </a>
+        </div>
+    </div>
+</section>

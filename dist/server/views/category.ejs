@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= subCategoryTxt || categoryTxt %>">
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/images/category.jpg"/>
+    <meta property="og:title" content="<%= subCategoryTxt || categoryTxt %>"/>
+    <meta property="og:description" content="<%= subCategoryTxt || categoryTxt %>"/>
+    <title><%= subCategoryTxt || categoryTxt %> | Fayfay.com</title>
+
+    <% include include/gtm.header.ejs %>
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/city.css">
+    <link rel="stylesheet" type="text/css" href="/css/search.css">
+    <style>
+        #map{
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body class="<%= locale%>">
+<% include include/gtm.body.ejs %>
+
+    <div id="page">
+        <% include category/category.header.ejs %>
+        <% include category/category.breadcrumb.ejs %>
+
+        <div id="search-container" class="city-search"><%- searchContainerHtml %></div>
+
+        <% include home/home.destinations.ejs %>
+        <% include include/footer.ejs %>
+    </div>
+    <% include include/js.ejs %>
+    <script src="/js/components/SearchContainer-bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+<% if (!packageAvailabilityDate && paymentFlow === 'NORMAL') { %>
+    <div class="overlay-soldout">
+        <div class="banner">
+            <% if (locale == 'zh-hk' || locale == 'zh-cn') { %>
+                <img src="/images/sold_tc.png" class="soldout">
+            <% } else { %>
+                <img src="/images/sold_en.png" class="soldout">
+            <% } %>
+        </div>
+    </div>
+<% } %>

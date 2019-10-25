@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['common.checkout'] %>">
+    <meta name="keywords" content="<%= translations['common.checkout'] %>">
+    <title><%= translations['common.checkout'] %> | Fayfay.com</title>
+
+    <% include include/gtm.header.ejs %>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/checkout.css">
+</head>
+
+<body>
+<% include include/gtm.body.ejs %>
+
+<div id="page">
+    <% include checkout/checkout.header.ejs %>
+    <% include checkout/checkout.breadcrumb.ejs %>
+    <section class="checkout-section">
+        <div class="container-fluid" id="payment-container"><%- paymentContainerHtml %></div>
+    </section>
+
+    <% include include/footer.ejs %>
+</div>
+
+<% include include/js.ejs %>
+<script src="/js/components/PaymentContainer-bundle.js"></script>
+</body>
+</html>

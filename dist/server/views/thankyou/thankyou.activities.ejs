@@ -1,0 +1,91 @@
+<section class="thankyou-section">
+    <div class="container-fluid">
+        <div class="row thankyou-message">
+            <div class="col-md-12">
+                <div class="marginBottom-15px">
+                    <div class="row">
+                        <div class="col-lg-10 col-md-9 col-sm-8">
+                            <h3><i class="icon check"></i><%= translations['payment.thankyou.title'] %></h3>
+                            <p class="payment-highlight paddingTop-15px"><%= translations['payment.thankyou.description'] %>
+                                <span><%= order.email %></span>.<br><%= translations['payment.thankyou.description2'] %>
+                            </p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-4 hidden-xs paddingTop-30px txt-right">
+                            <a href="<%= langUrl %>/">
+                                <button class="btn btn-s"><%= translations['payment.thankyou.view.more'] %></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-title">
+            <div class="bg-light-grey">
+                <div class="photo"></div>
+                <div class="name"><%= translations['common.activity.description'] %></div>
+                <div class="date hidden-xs"><%= translations['common.activity.date'] %></div>
+                <div class="price hidden-xs"><%= translations['common.subtotal'] %></div>
+                <div class="edit-delete hidden-sm hidden-xs"></div>
+            </div>
+        </div>
+
+        <div class="table-activity">
+            <% order.items.forEach(function(activity){ %>
+            <div class="greyborderbox">
+                <div class="photo">
+                    <img
+                        src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640/<%= activity.thumbnailKey %>.<%= activity.thumbnailFormat %>"/>
+                </div>
+                <div class="name">
+                    <h5><%= activity.activityName %></h5>
+                    <p class="desc">
+                        <%= activity.packageName %><br>
+                        <% activity.items.forEach(function(ticket){ %>
+                        <%= ticket.ticketTypeName %> x <%= ticket.quantity %> <br/>
+                        <% }); %>
+                    </p>
+                    <b class="visible-xs"><%= translations['common.activity.date'] %>:</b> <span
+                        class="visible-xs"><%= formatDate(activity.packageAvailabilityDate) %></span>
+                    <b><%= translations['account.booking.number'] %>:</b> <span><%= order.id %></span><br>
+                    <b><%= translations['account.booking.date'] %>:</b>
+                    <span data-time="<%= order.createdDate %>"></span>
+
+                </div>
+                <div class="date visible-sm visible-md visible-lg"><%= formatDate(activity.packageAvailabilityDate) %> <%= activity.packageAvailabilityTime %></div>
+                <div class="hr visible-xs"></div>
+                <div class="price"><%- formatMoney(activity.amount, ccy, locale) %></div>
+                <div class="hr visible-sm"></div>
+                <div class="edit-delete">
+                    <a href="<%= langUrl %>/my-bookings">
+                        <button class="btn btn-s white"><%= translations['payment.thankyou.view.booking'] %></button>
+                    </a>
+                </div>
+
+            </div>
+            <% }); %>
+
+        </div>
+        <br/>
+        <div class="total-box">
+            <div class="greyborderbox">
+                <% if (order.couponCode) { %>
+                <div class="row order-price">
+                    <b><%= translations['payment.discount'] %>:</b>
+                    <span class="price">
+                        <%- formatMoney(order.discount, ccy, locale) %></span>
+                    <div>
+                        ( <b><%= translations['payment.couponCode']%>:</b> <%= order.couponCode%> )
+                    </div>
+                </div>
+                <% } %>
+                <div class="row order-price">
+                    <b><%= translations['payment.total'] %>:</b>
+                    <span class="price">
+                        <%- formatMoney(order.paymentAmount, ccy, locale) %></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

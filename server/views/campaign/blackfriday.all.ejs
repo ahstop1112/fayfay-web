@@ -1,0 +1,522 @@
+<section id="all">
+    <div class="container-fluid">
+        <div class="coupon-container">
+            <div class="discount">
+                <h1>50%<span class="off">off</span></h1>
+                <p class="desc"><%= translations['campaign.vnshow.discountText'] %></p>
+            </div>
+            <div class="coupon-line">
+                <div class="top-circle"></div>
+                <div class="bottom-circle"></div>
+            </div>
+            <div class="code">
+                <h3><%= translations['campaign.vnshow.discountCode'] %></h3>
+                <h1 class="promoCode">BLACKFRIDAY18</h1>
+                <button class="btn btn-s copy-btn show"><%= translations['campaign.vnshow.copy'] %></button>
+                <button class="btn btn-s copied-btn"><%= translations['campaign.vnshow.copied'] %></button>
+            </div>
+        </div>
+        <p class="content_p hidden-xs"><%- translations['campaign.blackfriday.terms1']  %></p>
+        <p class="content_p visible-xs"><%- translations['campaign.blackfriday.mobile.terms1']  %></p>
+
+        <div class="btn-address">
+            <div class="hcmc active"><%= translations['activity.hcmc']  %></div>
+            <div class="hanoi"><%= translations['activity.hanoi'] %></div>
+            <div class="daNang"><%= translations['campaign.vnshow.daNang.hoian'] %></div>
+            <div class="nhaTrang"><%= translations['activity.nhaTrang'] %></div>
+        </div>
+        <div class="experience-title hcmc">
+            <h3><%= translations['activity.hoChiMinh']  %></h3>
+        </div>
+        <div class="experience-list hcmc">
+            <li class="list-item highlight">
+                <a href="/<%=locale%>/experience/10175-a-o-show-ticket-at-saigon-opera-house-ho-chi-minh-city" target="_blank"title="<%= translations['campaign.vnshow.hcmc.highlight1.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="https://res.fayfay.com/image/upload/w_800/fayfay-media/prod/pkkxiypfbdwtfioe4rdv.jpg" alt="<%= translations['campaign.vnshow.hcmc.highlight1.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <h3><%= translations['campaign.vnshow.hcmc.highlight1.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.hcmc.highlight1.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.highlight1.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.highlight1.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.highlight1.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 455 <%= translations['common.up']  %> <span class="ori-price">NT$ 910</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 119 <%= translations['common.up']  %> <span class="ori-price">HK$ 238</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10164-visa-on-arrival-single-entry-for-ho-chi-minh-city" target="_blank"title="<%= translations['campaign.vnshow.hcmc.experience1.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="https://res.fayfay.com/image/upload/w_800/fayfay-media/prod/usnwyt8grbnv55yhsmh0.jpg" alt="<%= translations['campaign.vnshow.hcmc.experience1.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <div class="award"></div>
+                            <h3><%= translations['campaign.vnshow.hcmc.experience1.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.hcmc.experience1.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.experience1.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.experience1.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.experience1.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 168 <%= translations['common.up']  %> <span class="ori-price">NT$ 202</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 44 <%= translations['common.up']  %> <span class="ori-price">HK$ 52.8</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10191-4g-sim-card-ho-chi-minh-city-airport-pick-up" target="_blank"title="<%= translations['campaign.vnshow.hcmc.experience2.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="https://res.fayfay.com/image/upload/w_800/fayfay-media/prod/cgyvhfgxo9amps4spzye.png" alt="<%= translations['campaign.vnshow.hcmc.experience2.title']  %>" class="bg"/>
+                            <div class="overlay-txt"><span>200 sold</span></div>
+                        </div>
+                        <div class="content">
+                            <h3><%= translations['campaign.vnshow.hcmc.experience2.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.hcmc.experience2.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.experience2.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.experience2.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.experience2.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price zh-tw">NT$ 260 <%= translations['common.up']  %> <span class="ori-price">NT$ 360</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price en-us">HK$ 68 <%= translations['common.up']  %> <span class="ori-price">HK$ 78</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10179-private-airport-transfer-for-ho-chi-minh-city-tan-son-nhat-int-l-airport" target="_blank"title="<%= translations['campaign.vnshow.hcmc.experience3.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="/images/campaign/double11/banner_car.jpg" alt="<%= translations['campaign.vnshow.hcmc.experience3.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <h3><%= translations['campaign.vnshow.hcmc.experience3.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.hcmc.experience3.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.experience3.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.experience3.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.experience3.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 187 <%= translations['common.up']  %> <span class="ori-price">NT$ 202</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 49 <%= translations['common.up']  %> <span class="ori-price">HK$ 53</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10240-car-charter-in-ho-chi-minh-city-by-hour-or-by-km" target="_blank"title="<%= translations['campaign.vnshow.hcmc.experience4.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="/images/campaign/vnshow/car6.jpg" alt="<%= translations['campaign.vnshow.hcmc.experience4.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <h3><%= translations['campaign.vnshow.hcmc.experience4.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.hcmc.experience4.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.experience4.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.experience4.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hcmc.experience4.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 1,026 <%= translations['common.up']  %> <span class="ori-price">NT$ 1,065</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 268 <%= translations['common.up']  %> <span class="ori-price">HK$ 278</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </div>
+        <div class="experience-title hanoi">
+            <span class="address-icon"></span><h3><%= translations['activity.hanoi']  %></h3>
+        </div>
+        <div class="experience-list hanoi">
+            <li class="list-item highlight">
+                <a href="/<%=locale%>/experience/10176-lang-toi-my-village-show-ticket-at-hanoi-vietnam-tuong-theatre" target="_blank"title="<%= translations['campaign.vnshow.hanoi.highlight1.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="https://res.fayfay.com/image/upload/w_800/fayfay-media/prod/lfgd9xuavhqxz52cbaz9.jpg" alt="<%= translations['campaign.vnshow.hanoi.highlight1.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <h3><%= translations['campaign.vnshow.hanoi.highlight1.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.hanoi.highlight1.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.highlight1.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.highlight1.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.highlight1.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 455 <%= translations['common.up']  %> <span class="ori-price">NT$ 910</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 119 <%= translations['common.up']  %> <span class="ori-price">HK$ 238</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10182-visa-on-arrival-single-entry-for-hanoi" target="_blank"title="<%= translations['campaign.vnshow.hanoi.experience1.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="https://res.fayfay.com/image/upload/w_800/fayfay-media/prod/vax9ylrubjc34wjdorgt.jpg" alt="<%= translations['campaign.vnshow.hanoi.experience1.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <h3><%= translations['campaign.vnshow.hanoi.experience1.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.hanoi.experience1.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.experience1.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.experience1.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.experience1.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 168 <%= translations['common.up']  %> <span class="ori-price">NT$ 202</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 44 <%= translations['common.up']  %> <span class="ori-price">HK$ 52.8</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10274-4g-sim-card-ha-noi-airport-pick-up" target="_blank"title="<%= translations['campaign.vnshow.hanoi.experience2.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="https://res.fayfay.com/image/upload/w_800/fayfay-media/prod/cgyvhfgxo9amps4spzye.png" alt="<%= translations['campaign.vnshow.hanoi.experience2.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <h3><%= translations['campaign.vnshow.hanoi.experience2.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.hanoi.experience2.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.experience2.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.experience2.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.experience2.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 260 <%= translations['common.up']  %> <span class="ori-price">NT$ 360</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 68 <%= translations['common.up']  %> <span class="ori-price">HK$ 78</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10283-private-noi-bai-airport-transfer-for-hanoi-city-center" target="_blank"title="<%= translations['campaign.vnshow.hanoi.experience3.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="https://res.fayfay.com/image/upload/w_800/fayfay-media/prod/bb18tda8qypumhdqbjrm.jpg" alt="<%= translations['campaign.vnshow.hanoi.experience3.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <h3><%= translations['campaign.vnshow.hanoi.experience3.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.hanoi.experience3.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.experience3.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.experience3.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.experience3.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 299 <%= translations['common.up']  %> <span class="ori-price">NT$ 302</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 78 <%= translations['common.up']  %> <span class="ori-price">HK$ 79</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10287-car-charter-in-hanoi-city-by-hour-or-by-km" target="_blank"title="<%= translations['campaign.vnshow.hanoi.experience4.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="/images/campaign/vnshow/car7.jpg" alt="<%= translations['campaign.vnshow.hanoi.experience4.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <h3><%= translations['campaign.vnshow.hanoi.experience4.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.hanoi.experience4.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.experience4.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.experience4.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.hanoi.experience4.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 897 <%= translations['common.up']  %> <span class="ori-price">NT$ 975</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 234 <%= translations['common.up']  %> <span class="ori-price">HK$ 255</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </div>
+        <div class="experience-title daNang">
+            <span class="address-icon"></span><h3><%= translations['campaign.vnshow.daNang.hoian']  %></h3>
+        </div>
+        <div class="experience-list daNang">
+            <li class="list-item highlight">
+                <a href="/<%=locale%>/experience/10279-palao-ticket-at-hoi-an-lune-performing-center" target="_blank"title="<%= translations['campaign.vnshow.daNang.highlight1.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="/images/campaign/vnshow/palao.jpg" alt="<%= translations['campaign.vnshow.daNang.highlight1.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <h3><%= translations['campaign.vnshow.daNang.highlight1.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.daNang.highlight1.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.highlight1.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.highlight1.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.highlight1.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 455 <%= translations['common.up']  %> <span class="ori-price">NT$ 910</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 119 <%= translations['common.up']  %> <span class="ori-price">HK$ 238</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10181-visa-on-arrival-single-entry-for-da-nang" target="_blank"title="<%= translations['campaign.vnshow.daNang.experience1.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="https://res.fayfay.com/image/upload/w_800/fayfay-media/prod/x21nkf3qantbiv0w4rnl.jpg" alt="<%= translations['campaign.vnshow.daNang.experience1.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <div class="award"></div>
+                            <h3><%= translations['campaign.vnshow.daNang.experience1.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.daNang.experience1.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience1.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience1.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience1.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 168 <%= translations['common.up']  %> <span class="ori-price">NT$ 202</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 44 <%= translations['common.up']  %> <span class="ori-price">HK$ 52.8</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10273-4g-sim-card-da-nang-airport-pick-up" target="_blank"title="<%= translations['campaign.vnshow.daNang.experience2.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="https://res.fayfay.com/image/upload/w_800/fayfay-media/prod/cgyvhfgxo9amps4spzye.png" alt="<%= translations['campaign.vnshow.daNang.experience2.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <div class="award"></div>
+                            <h3><%= translations['campaign.vnshow.daNang.experience2.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.daNang.experience2.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience2.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience2.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience2.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 260 <%= translations['common.up']  %> <span class="ori-price">NT$ 360</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 68 <%= translations['common.up']  %> <span class="ori-price">HK$ 78</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10099-private-airport-transfer-for-da-nang-city-center-da-nang-int-l-airport" target="_blank"title="<%= translations['campaign.vnshow.daNang.experience3.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="https://res.fayfay.com/image/upload/w_800/fayfay-media/prod/sj70odu87opgjxiau1vq.jpg" alt="<%= translations['campaign.vnshow.daNang.experience3.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <div class="award"></div>
+                            <h3><%= translations['campaign.vnshow.daNang.experience3.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.daNang.experience3.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience3.hashtag3']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience3.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience3.hashtag2']  %></span>
+
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 412 <%= translations['common.up']  %> <span class="ori-price">NT$ 425</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 107 <%= translations['common.up']  %> <span class="ori-price">HK$ 111</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10237-private-airport-transfer-for-hoi-an-city-center-da-nang-int-l-airport" target="_blank"title="<%= translations['campaign.vnshow.daNang.experience4.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="/images/campaign/vnshow/car4.jpg" alt="<%= translations['campaign.vnshow.daNang.experience4.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <div class="award"></div>
+                            <h3><%= translations['campaign.vnshow.daNang.experience4.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.daNang.experience4.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience4.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience4.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience4.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 500 <%= translations['common.up']  %> <span class="ori-price">NT$ 516</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 130 <%= translations['common.up']  %> <span class="ori-price">HK$ 134</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10238-private-transfer-for-hoi-an-city-da-nang-city-center" target="_blank"title="<%= translations['campaign.vnshow.daNang.experience5.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="/images/campaign/vnshow/car5.jpg" alt="<%= translations['campaign.vnshow.daNang.experience5.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <div class="award"></div>
+                            <h3><%= translations['campaign.vnshow.daNang.experience5.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.daNang.experience5.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience5.hashtag3']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience5.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.daNang.experience5.hashtag2']  %></span>
+
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 500 <%= translations['common.up']  %> <span class="ori-price">NT$ 516</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 130 <%= translations['common.up']  %> <span class="ori-price">HK$ 134</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </div>
+        <div class="experience-title nhaTrang">
+            <span class="address-icon"></span><h3><%= translations['activity.nhaTrang']  %></h3>
+        </div>
+        <div class="experience-list nhaTrang">
+            <li class="list-item">
+                <a href="/<%=locale%>/experience/10171-visa-on-arrival-single-entry-for-nha-trang" target="_blank"title="<%= translations['campaign.vnshow.nhaTrang.experience1.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="https://res.fayfay.com/image/upload/w_800/fayfay-media/prod/pcpnrwwdtkzmqdcyopc9.jpg" alt="<%= translations['campaign.vnshow.nhaTrang.experience1.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <div class="award"></div>
+                            <h3><%= translations['campaign.vnshow.nhaTrang.experience1.title']  %></h3>
+                            <p class="desc"><%= translations['campaign.vnshow.nhaTrang.experience1.desc']  %></p>
+                            <div class="bottom">
+                                <div class="hashtag-container">
+                                    <span class="hashtag"><%= translations['campaign.vnshow.nhaTrang.experience1.hashtag']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.nhaTrang.experience1.hashtag2']  %></span>
+                                    <span class="hashtag"><%= translations['campaign.vnshow.nhaTrang.experience1.hashtag3']  %></span>
+                                </div>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 168 <%= translations['common.up']  %> <span class="ori-price">NT$ 202</span></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 44 <%= translations['common.up']  %> <span class="ori-price">HK$ 52.8</span></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </div>
+        <p class="desc marginTop-15px marginBottom-15px terms">
+            <b><%- translations['campaign.vnshow.terms2']  %></b><br>
+            <%- translations['campaign.blackfriday.terms3']  %>
+        </p>
+    </div>
+</section>

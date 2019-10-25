@@ -1,0 +1,687 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title><%= translations["common.voucher"] %> | Fayfay.com</title>
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/indexog.jpg"/>
+    <meta property="og:image:alt" content="<%= translations['home.og.image.alt']  %>"/>
+    <meta property="og:title" content="<%= translations['home.og.title'] %>"/>
+    <meta property="og:description" content="<%= translations['home.og.desc'] %>"/>
+    <style type="text/css">
+
+        span.preheader {
+            display: none !important
+        }
+
+        td ul {
+            margin-left: -25px;
+        }
+
+        td ul li {
+            font-size: 14px;
+            line-height: 20px;
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        /* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+        #outlook a {
+            padding: 0
+        }
+
+        /* Force Outlook to provide a "view in browser" message */
+        .ReadMsgBody {
+            width: 100%
+        }
+
+        .ExternalClass {
+            width: 100%
+        }
+
+        /* Force Hotmail to display emails at full width */
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+            line-height: 100%
+        }
+
+        /* Force Hotmail to display normal line spacing */
+        body, table, td, p, a, li, blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%
+        }
+
+        /* Prevent WebKit and Windows mobile changing default text sizes */
+        table, td {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0
+        }
+
+        /* Remove spacing between tables in Outlook 2007 and up */
+        /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+        body {
+            margin: 0;
+            padding: 0
+        }
+
+        img {
+            max-width: 100%;
+            border: 0;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none
+        }
+
+        table {
+            border-collapse: collapse !important
+        }
+
+        .content {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .brdBottomPadd-two{
+            max-width: 900px;
+        }
+
+        .brdBottomPadd-two td{
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .brdBottomPadd-two td .title{
+            width: 33.333%;
+            padding-bottom: 20px;
+        }
+
+        .brdBottomPadd-two td .title span{
+            font-size: 0.9em;
+            color: #999;
+        }
+
+        .voucher-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .voucher-div{
+            width: 30%;
+            margin-right: 15px;
+        }
+
+        #bodyCellFooter {
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+            padding: 15px 0;
+            background-color: #333;
+            color: #999;
+        }
+
+        #bodyCellFooter p {
+            color: #999;
+            font-size: 12px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-width: 100% !important
+        }
+
+        #templateContainer {
+            border-top: 1px solid #efefef;
+            border-radius: 4px 4px 0 0;
+            background-clip: padding-box;
+            border-spacing: 0
+        }
+
+        h1 {
+            color: #163A4D;
+            display: block;
+            font-family: Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            font-size: 22px;
+            line-height: 1.385em;
+            font-style: normal;
+            font-weight: 300;
+            letter-spacing: normal;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 15px;
+            margin-left: 0;
+            text-align: left
+        }
+
+        h1 span{
+            font-size: 0.9em;
+            color: #999;
+            display: block;
+        }
+
+        /**
+        * @tab Page
+        * @section heading 2
+        * @tip Set the styling for all second-level headings in your emails.
+        * @style heading 2
+        */
+        h2 {
+            color: #163A4D;
+            display: block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 22px;
+            line-height: 1.455em;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 15px;
+            margin-left: 0;
+            text-align: center
+        }
+
+        h2 span{
+            font-size: 0.9em;
+            color: #999;
+            display: block;
+        }
+
+        /**
+        * @tab Page
+        * @section heading 3
+        * @tip Set the styling for all third-level headings in your emails.
+        * @style heading 3
+        */
+        h3 {
+            color: #163A4D;
+            display: block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.444em;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 15px;
+            margin-left: 0;
+            text-align: left
+        }
+
+        h4 {
+            color: #163A4D;
+            display: block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.444em;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 15px;
+            margin-left: 0;
+        }
+
+        /**
+        * @tab Page
+        * @section heading 4
+        * @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
+        * @style heading 4
+        */
+        p {
+            color: #163A4D;
+            display: block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.571em;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 15px;
+            margin-left: 0;
+            text-align: left
+        }
+
+        .bodyContent {
+            color: #505050;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 150%;
+            padding: 2em 3em;
+            text-align: left
+        }
+
+        /**
+        * @tab Body
+        * @section body link
+        * @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
+        */
+        a:visited {
+            color: #EE7E31;
+            text-decoration: none;
+        }
+
+        a:focus {
+            color: #EE7E31;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #EE7E31;
+            text-decoration: none;
+        }
+
+        a:link {
+            color: #EE7E31;
+            text-decoration: none;
+        }
+
+        a .yshortcuts {
+            color: #EE7E31;
+            text-decoration: none;
+        }
+
+        .bodyContent img {
+            height: auto;
+            max-width: 498px
+        }
+
+        .voucher-div p span span, div.terms span, div.terms span p{
+            font-size: 0.9em;
+            color: #999;
+        }
+
+        a.orange-btn {
+            background: #EE7E31;
+            color: #FFFFFF;
+            border-top: 10px solid #EE7E31;
+            border-bottom: 10px solid #EE7E31;
+            border-left: 20px solid #EE7E31;
+            border-right: 20px solid #EE7E31;
+            text-decoration: none;
+            font-size: 14px;
+            background-clip: padding-box;
+            text-align: center;
+            margin: 30px auto;
+            display: block;
+            width: 40%;
+        }
+
+        @media only screen and (max-width: 1024px){
+            .brdBottomPadd-two{
+                max-width: 660px;
+            }
+
+            .voucher-div{
+                width: 40%;
+                margin-right: 0;
+            }
+        }
+
+        @media only screen and (max-width: 767px){
+            .brdBottomPadd-two{
+                max-width: 660px;
+            }
+
+            .voucher-container {
+                flex-wrap: wrap;
+            }
+
+            .voucher-div{
+                width: 100%;
+                margin-right: 15px;
+            }
+        }
+
+        @media only screen and (max-width: 550px), screen and (max-device-width: 550px) {
+            body[yahoo] .hide {
+                display: none !important
+            }
+
+            body[yahoo] .buttonwrapper {
+                background-color: transparent !important
+            }
+
+            body[yahoo] .button {
+                padding: 0 !important
+            }
+
+            body[yahoo] .button a {
+                background-color: #e05443;
+                padding: 15px 15px 13px !important
+            }
+
+            body[yahoo] .unsubscribe {
+                font-size: 14px;
+                display: block;
+                margin-top: .714em;
+                padding: 10px 50px;
+                background: #2f3942;
+                border-radius: 5px;
+                text-decoration: none !important
+            }
+
+            .voucher-container {
+                flex-wrap: wrap;
+            }
+
+            .voucher-div{
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+
+        @media only screen and (max-width: 480px), screen and (max-device-width: 480px) {
+
+            .brdBottomPadd-two td .title{
+                width: 50%;
+                padding-bottom: 20px;
+            }
+
+            .bodyContentTicks {
+                padding: 6% 5% 5% 6% !important
+            }
+
+            .content, table {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .bodyContentTicks td {
+                padding-top: 0 !important
+            }
+
+            h1 {
+                font-size: 22px !important;
+                font-weight: 500 !important;
+            }
+
+            h3 {
+                font-size: 18px !important
+            }
+
+            h4 {
+                font-size: 18px !important
+            }
+
+            h5 {
+                font-size: 16px !important
+            }
+
+            h6 {
+                font-size: 14px !important
+            }
+
+            p {
+                font-size: 14px !important;
+                margin-bottom: 5px;
+            }
+
+            .bodyContent {
+                padding: 6% 5% 1% 6% !important
+            }
+
+            .bodyContent img {
+                max-width: 100% !important
+            }
+
+            .bodyContentImage {
+                padding: 3% 6% 6% !important
+            }
+
+            .bodyContentImage img {
+                max-width: 100% !important
+            }
+
+            .bodyContentImage h4 {
+                font-size: 16px !important
+            }
+
+            .bodyContentImage h5 {
+                font-size: 15px !important;
+                margin-top: 0
+            }
+        }
+
+        .ii a[href] {
+            color: inherit !important;
+        }
+
+        span > a, span > a[href] {
+            color: inherit !important;
+        }
+
+        a > span, .ii a[href] > span {
+            text-decoration: inherit !important;
+        }
+    </style>
+</head>
+
+<body bgcolor="#f5f5f5">
+<%
+const orderItem = order.items[0];
+var orderItemEN = "";
+if (locale === 'zh-hk'){
+    orderItemEN = orderEN.items[0];
+}
+const customer = order.customer;
+%>
+<table border="0" cellpadding="10" cellspacing="0" style=
+"background-color: #f5f5f5;" width="100%">
+    <tr>
+        <td>
+            <!--[if (gte mso 9)|(IE)]>
+            <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+            <![endif]-->
+
+            <table align="center" border="0" cellpadding="0" cellspacing="0" class="content"
+                   style="background-color: #FFFFFF; margin-top: 30px; border-top-left-radius: 20px; border-top-right-radius: 20px; overflow: hidden">
+                <tr>
+                    <td id="templateContainerHeader" valign="top">
+                        <p style="text-align:center;margin:0;padding:0; background-color: #EE7E31; ">
+                            <img
+                                src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/fayfay-media/common/logo_orangebg_g40g23.png"
+                                style="display:inline-block; max-width: 150px;"
+                                alt="logo"/></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center" valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" class=
+                        "brdBottomPadd-two" width="100%">
+                            <tr>
+                                <td class="bodyContent" valign="top">
+                                    <h1 style="width: 100%; text-align: center"><strong><%= orderItem.activityName %></strong> - <%= orderItem.packageName %>
+                                        <%
+                                            if (locale === 'zh-hk' && orderItemEN){
+                                        %>
+                                            <span><strong><%= orderItemEN.activityName %></strong> - <%= orderItemEN.packageName %></span><br />
+                                        <%
+                                            }
+                                        %>
+                                    </h1>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" valign="top">
+                        <table border="0"  class="brdBottomPadd-two" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td>
+                                    <div class="title">
+                                        <p><%- translations["voucher.lead.person"] %></p>
+                                        <h3 style="color: #EE7E31">
+                                            <strong><%= order.firstName %> <%= order.lastName %></strong></h3>
+                                    </div>
+                                    <div class="title">
+                                        <p><%- translations["voucher.activity.date"] %></p>
+                                        <h3 style="color: #EE7E31">
+                                            <strong><%= formatDate(orderItem.packageAvailabilityDate, 'DD/MM/YYYY')%> <%=orderItem.packageAvailabilityTime%></strong>
+                                        </h3>
+                                    </div>
+                                    <div class="title">
+                                        <p><%- translations['voucher.quantity'] %></p>
+                                        <h3 style="color: #EE7E31"><strong><%= orderItem.quantity %></strong></h3>
+                                    </div>
+                                    <div class="title">
+                                        <p><%- translations["voucher.booking.number"] %></p>
+                                        <h3 style="color: #EE7E31"><strong><%= order.id %></strong></h3>
+                                    </div>
+                                    <div class="title">
+                                        <p><%- translations['voucher.experience.code'] %></p>
+                                        <h3 style="color: #EE7E31"><strong><%= orderItem.activityId %></strong></h3>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td style="width: 20px">
+                                    <div
+                                        style="width: 0;  height: 0;   border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 20px solid #f5f5f5;"></div>
+                                </td>
+                                <td style="">
+                                    <div style="height: 1px;   border-top: 2px dashed #efefef"></div>
+                                </td>
+                                <td style="width: 20px">
+                                    <div
+                                        style="width: 0;  height: 0;   border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-right: 20px solid #f5f5f5;"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" valign="top" class="voucher-container">
+                        <% orderItem.items.forEach(function (voucher, index) { %>
+                        <div class="voucher-div" style="border: 1px solid #efefef;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                     class="voucher-div">
+                                <tr>
+                                    <td style="padding: 20px; text-align: center">
+                                        <h2><strong style="text-align: center"><%= voucher.quantity %>
+                                                x <%= voucher.ticketTypeName %></strong>
+                                            <%
+                                                if (locale === 'zh-hk' && orderItemEN){
+                                            %>
+                                                <br><span style="text-align: center"><%= orderItemEN.items[index].quantity %>
+                                                        x <%= orderItemEN.items[index].ticketTypeName %></span>
+                                            <%
+                                                }
+                                            %>
+
+                                        </h2>
+                                        <img
+                                            src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= voucher.imageKey %>.<%= voucher.imageFormat %>"
+                                            alt=''><br/>
+                                        <p style="text-align: center"><span><%- translations["voucher.voucher.no"] %></span></p>
+                                        <h2 style="text-align: center"><strong><%= voucher.voucherCode %></strong></h2>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <% }) %>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td style="width: 20px">
+                                    <div
+                                        style="width: 0;  height: 0;   border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 20px solid #f5f5f5;"></div>
+                                </td>
+                                <td style="">
+                                    <div style="height: 1px;   border-top: 2px dashed #efefef"></div>
+                                </td>
+                                <td style="width: 20px">
+                                    <div
+                                        style="width: 0;  height: 0;   border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-right: 20px solid #f5f5f5;"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" valign="top">
+                        <table border="0" cellpadding="0" cellspacing="0" width="90%">
+                            <tr>
+                                <td style="padding: 20px; text-align: center">
+                                    <h1><strong><%- translations["voucher.package.details"] %></strong></h1>
+                                    <div class="terms"><%- converter.makeHtml(orderItem.packageDescription) %></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" width="90%">
+                            <tr>
+                                <td style="padding: 20px; text-align: center">
+                                    <h1><strong><%- translations["voucher.package.how.to.use"] %></strong></h1>
+                                    <div class="terms"><%- converter.makeHtml(orderItem.howToUse) %></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" width="90%">
+                            <tr>
+                                <td style="padding: 20px; text-align: center">
+                                    <h1><strong><%- translations["voucher.package.cancelation.policy"] %></strong></h1>
+                                    <div class="terms"><%- converter.makeHtml(orderItem.cancelationPolicy) %></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" width="90%">
+                            <tr>
+                                <td style="padding: 20px; text-align: center">
+                                    <h1><strong><%- translations["voucher.contact.us"] %></strong></h1>
+                                    <h3><a href="mailto:support@fayfay.com">support@fayfay.com</a></h3>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" id="bodyCellFooter" valign=
+                    "top">
+                        <table border="0" cellpadding="0" cellspacing="0" width="90%">
+                            <tr>
+                                <td valign="top" width="100%" style="padding: 15px">
+                                    <p style="color: #999"><%- translations["common.copyright"] %></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>
+</table>
+<script src="/js/lib/jquery.min.js"></script>
+<script src="/js/lib/moment/moment.min.js"></script>
+<script src="/js/lib/formatDate.js"></script>
+</body>
+</html>

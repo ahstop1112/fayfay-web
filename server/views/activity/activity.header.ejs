@@ -1,0 +1,31 @@
+<header class="activity-header-section">
+    <% include ../include/header.ejs %>
+    <div class="section-background">
+        <div class="overlay-video black">
+            <div class="banner-slick hidden">
+                <% tplData.medias.filter(item => item.format === 'mp4').forEach(video => { %>
+                <div class="item">
+                    <a href="<%= video.key %>?autoplay=1" target="_blank" class="imageThumbnail">
+                        <div class="bg-container">
+                            <div class="icon-video"><img src="/images/play_btn.png" alt="<%= video.alt || tplData.title %> - Video"/></div>
+                            <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1440/<%= video.thumbnail.key %>.<%= video.thumbnail.format %>"
+                             data-speed="-0.5" alt="<%= video.alt || tplData.title %> - video" class="bg">
+                        </div>
+                    </a>
+                </div>
+                <% }) %>
+                <% tplData.medias.filter(item => item.format !== 'mp4').forEach(image => { %>
+                <div class="item">
+                    <a href="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1440/<%= image.key %>.<%= image.format %>"
+                       target="_blank" class="imageThumbnail">
+                        <div class="bg-container">
+                            <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1440/<%= image.key %>.<%= image.format %>"
+                             data-speed="-0.5" alt="<%= image.alt || tplData.title %> - banner" class="bg">
+                        </div>
+                    </a>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</header>

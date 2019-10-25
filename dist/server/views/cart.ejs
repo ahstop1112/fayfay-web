@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['shopping.cart'] %>">
+    <meta name="keywords" content="<%= translations['shopping.cart'] %>">
+    <title><%= translations['shopping.cart'] %> | Fayfay.com</title>
+
+    <% include include/gtm.header.ejs %>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/cart.css">
+</head>
+<body>
+<% include include/gtm.body.ejs %>
+
+<div id="page">
+    <% include cart/cart.header.ejs %>
+    <% include cart/cart.breadcrumb.ejs %>
+    <section class="cart-section">
+        <div class="container-fluid" id="shopping-cart-container"><%- shoppingCartContainerHtml %></div>
+    </section>
+    <%if (cityData.sections){ %>
+        <% for(var i = 0; i < cityData.sections.length; i++) { %>
+            <% include city/city.layout.horizontal.4.big.items.ejs %>
+            <% include city/city.layout.horizontal.4.items.ejs %>
+        <% } %>
+    <% } %>
+    <% include home/home.popular.ejs %>
+    <% include include/footer.ejs %>
+    <% include include/js.ejs %>
+</div>
+<script src="/js/components/ShoppingCartContainer-bundle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <% if (campaignData.name) { %>
+        <title><%= campaignData.name %> | Fayfay.com</title>
+        <meta name="title" content="<%= campaignData.name %>">
+        <meta name="keywords" content="<%= campaignData.name %>">
+    <% } %>
+    <% if (campaignData.headerDescription) { %>
+        <meta name="description" content="<%= campaignData.headerDescription %>">
+        <meta property="og:description" content="<%= campaignData.headerDescription %>"/>
+    <% } %>
+    <% if (campaignData.ogMedia && campaignData.ogTitle) { %>
+        <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= campaignData.ogMedia ? (campaignData.ogMedia.key+'.'+campaignData.ogMedia.format) : '' %>"/>
+        <meta property="og:image:alt" content="<%= campaignData.ogTitle  %>"/>
+    <% } %>
+
+    <% include ../include/gtm.header.ejs %>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/coffeehouse.css">
+</head>
+
+<body class="<%= locale%>">
+<% include ../include/gtm.body.ejs %>
+    <div id="coffeehouse">
+        <% include coffeehouse.header.ejs %>
+        <% include coffeehouse.intro.ejs %>
+        <% include coffeehouse.voucher.ejs %>
+        <% include coffeehouse.signature.ejs %>
+        <% include coffeehouse.map.ejs %>
+        <section class="section experiences bg-grey">
+            <div class="container-fluid">
+                <div class="main-logo-container" data-aos="fade-up" data-aos-duration="800">
+                    <div class="main-logo danang">
+                        <img src="/images/campaign/coffeehouse/icon-danang.png">
+                    </div>
+                    <h2><%= translations['campaign.coffeehouse.danang.experiences']  %></h2>
+                </div>
+                <% if (campaignData.sections) { %>
+                    <% campaignData.sections.forEach(function (section, index) { %>
+                        <div class="section-experience  section<%=index%>">
+                            <% section.subSections.forEach(function (child, subIndex) { %>
+                                <% switch (child.layout) {
+                                    case 'VERTICAL_LIST' : %>
+                                        <% include dynamic-vertical.list.ejs %>
+                                    <% break;
+                                    case 'HORIZONTAL_LIST' : %>
+                                        <% include dynamic-horizontal.list.ejs %>
+                                    <% break;
+                                    case '4_PLUS_1_HIGHLIGHTED_LEFT' : %>
+                                        <% include dynamic-4plus1_highlighted_left.ejs %>
+                                    <% break;
+                                    case '4_PLUS_1_HIGHLIGHTED_RIGHT' : %>
+                                        <% include dynamic-4plus1_highlighted_right
+                                        .ejs %>
+                                    <% break;
+                                } %>
+                            <% })%>
+                        </div>
+                    <% })%>
+                <% } %>
+            </div>
+        </section>
+        <% include coffeehouse.adv.ejs %>
+        <% if (campaignData.footerDescription && useragent.isDesktop) { %>
+            <p class="desc terms hidden-xs">
+            <b><%-translations['campaign.common.terms.title']%></b><br>
+            <%- campaignData.footerDescription %>
+            </p>
+        <% } %>
+
+        <% if (campaignData.footerDescriptionMobile && !useragent.isDesktop) { %>
+            <p class="desc terms visible-xs">
+            <b><%-translations['campaign.common.terms.title']%></b><br>
+            <%- campaignData.footerDescriptionMobile %>
+            </p>
+        <% } %>
+
+        <% include ../include/footer.ejs %>
+    </div>
+
+    <% include ../include/js.ejs %>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= GOOGLE_API_KEY_TRAVEL %>"></script>
+    <script src="/js/coffeehouse-bundle.js"></script>
+</body>
+</html>

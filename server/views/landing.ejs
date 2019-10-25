@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><%= translations['common.home-title'] %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['home.og.desc'] %>">
+    <meta property="og:image" content="<%= cloudinaryUrl %>/fayfay-media/common/indexog.jpg"/>
+    <meta property="og:image:alt" content="<%= translations['home.og.image.alt']  %>"/>
+    <meta property="og:title" content="<%= translations['home.og.title'] %>"/>
+    <meta property="og:description" content="<%= translations['home.og.desc'] %>"/>
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%=GOOGLE_ANALYTICS_KEY%>"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());;
+    </script>
+    <!-- End Analytics -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','<%= GOOGLE_TAG_MANAGER_KEY %>');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '<%=FACEBOOK_PIXEL_ID%>');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=<%=FACEBOOK_PIXEL_ID%>&ev=PageView&noscript=1"
+        /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
+
+<body class="<%=locale%>">
+<!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=<%= GOOGLE_TAG_MANAGER_KEY_TRAVEL %>"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="index-page">
+        <div id="index">
+            <header id="index-header" class="index-header-section">
+                <div class="header-top-area">
+                    <div class="header-container">
+                        <div class="menu">
+                            <%
+                            const currencyList = ['USD', 'VND', 'HKD', 'TWD', 'CNY', 'SGD', 'MYR'];
+                            const languageList = [
+                                { name: 'English', locale: 'en-us' },
+                                { name: '繁體中文', locale: 'zh-hk' },
+                                { name: '简体中文', locale: 'zh-cn' },
+                                { name: 'Tiếng Việt', locale: 'vi-vn' }
+                            ];
+                            %>
+                            %>
+                            <nav class="navigation-menu right-menu">
+                                <div class="navbar">
+                                    <div class="navbar-collapse collapse">
+                                        <ul class="nav navbar-nav navbar-right visible-lg">
+                                            <li>
+                                                <div class="btn-group">
+                                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false">
+                                                        <i class="icon language"></i>
+                                                        <%= languageText %>
+                                                    </button>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <% languageList.forEach(function (language) {
+                                                        if (language.locale !== locale ) { %>
+                                                            <a class="dropdown-item"
+                                                               href="/change-lang/<%= language.locale %>"><%= language.name %></a>
+                                                        <% } }); %>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                            <nav id="mainNav-mobile">
+                                <ul>
+                                    <li>
+                                        <a href="<%= langUrl %>/"><i class="icon home"></i><%= translations['common.home'] %></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon globe"></i><%= translations['common.language.list'] %> <span
+                                                class="menu-right"><%= languageText %></span></a>
+                                        <ul class="Vertical">
+                                            <% languageList.forEach(function (language) {
+                                            if (language.locale !== locale ) { %>
+                                                <li><a href="/change-lang/<%= language.locale %>"><%= language.name %></a></li>
+                                            <% } }); %>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="header-menu-mobile visible-xs visible-sm visible-md">
+                            <a id="btn-menu-mobile" href="#mainNav-mobile">
+                                <i class="icon bars"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="/images/logo_2.png">
+                </div>
+                <h4 class="desc"><%- translations["common.fayfay.desc"] %></h4>
+            </div>
+            <div class="sections-container">
+                <div class="section travel">
+                    <a href="<%= TRAVEL_WEB_URL%>/<%=locale%>">
+                        <div class="overlay-content">
+                            <div class="overlay-wrap">
+                                <div class="overlay">
+                                    <div class="header-text">
+                                        <h3 class="title"><%= translations["common.power.title"] %></h3>
+                                        <hr>
+                                        <p class="desc"><%= translations["home.og.image.alt"] %></p>
+                                        <div class="btn btn-lg"><%= translations["payment.thankyou.view.more"]%></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-container">
+                                <img src="/images/banner_travel.jpg" class="bg">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="section property">
+                    <a href="<%= PROPERTY_WEB_URL%>/<%=locale%>">
+                        <div class="overlay-content">
+                            <div class="overlay-wrap">
+                                <div class="overlay">
+                                    <div class="header-text">
+                                        <h3 class="title"><%= translations["common.vietnam.real.estate"] %></h3><hr>
+                                          <p class="desc"><%= translations["common.property.desc"] %></p>
+                                          <div class="btn btn-lg yellow"><%= translations["common.invest.now"]%></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-container">
+                                <img src="/images/banner_property.jpg" class="bg">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-container">
+                <%- translations["common.copyright"] %>
+            </div>
+        </div>
+    </div>
+    <% include include/js.ejs %>
+</body>
+</html>

@@ -1,0 +1,185 @@
+@import 'include/variable';
+.about-header-section {
+    overflow: hidden;
+    background-color: $white;
+
+    .bg{
+        top: 0 !important;
+
+        @media screen and (max-width: $mobile-v) {
+            top: -15% !important;
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    .overlay{
+        .header-text{
+            img{
+                max-width: 150px;
+                position: static;
+                margin: 0 auto;
+                width: auto;
+                text-align: center;
+                transform: translateX(0);
+
+                @media screen and (max-width: $tablet-v) {
+                    max-width: 120px;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    max-width: 100px;
+                }
+            }
+
+            h1{
+                @media screen and (max-width: $mobile-h) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.about-buttons-section, .about-content-section {
+    padding: 20px 30px;
+    text-align: center;
+
+    @media screen and (max-width: $mobile-h) {
+        padding: 15px;
+    }
+
+    h3{
+        color: $main-font-color;
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+
+    h2{
+        margin: 30px 0;
+    }
+
+    .about-us-btn-row, .press-row{
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .about-us-btn{
+            border: 1px solid #f4f4f4;
+            flex: 0 0 33%;
+
+            @media screen and (max-width: $mobile-v) {
+                flex: 0 0 100%;
+            }
+
+            .whitebox{
+
+                text-align: center;
+
+                @media screen and (max-width: $mobile-v) {
+                    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox;      /* TWEENER - IE 10 */
+                    display: -webkit-flex;     /* NEW - Chrome */
+                    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                    align-items: center;
+                }
+
+                .img{
+                    padding-bottom: 10px;
+                    text-align: center;
+
+                    @media screen and (max-width: $mobile-h) {
+                        padding-bottom: 0;
+                    }
+
+                    img{
+                        height: 120px;
+                        width: auto;
+                        max-width: 100%;
+
+                        @media screen and (max-width: $mobile-v) {
+                            height: 100px;
+                            margin-left: $padding;
+                            margin-right: $padding;
+                        }
+                    }
+                }
+                .content{
+                    @media screen and (max-width: $mobile-v) {
+                        width: 60%;
+                        margin-left: $padding;
+                    }
+
+                    p{
+                        text-align: center;
+                        @media screen and (max-width: $mobile-v) {
+                            text-align: left;
+                        }
+                    }
+                    h1{
+                        color: $main-font-color;
+                        font-size: 1.25em;
+
+                        @media screen and (max-width: $mobile-v) {
+                            text-align: left;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        &.press-row{
+            align-items: center;
+            border: 1px solid #f4f4f4;
+        }
+
+        &.float-right{
+            flex-direction: row-reverse;
+        }
+
+        .press-img{
+            flex: 0 0 40%;
+
+            @media screen and (max-width: $mobile-v) {
+                flex: 0 0 100%;
+            }
+        }
+
+        .press-desc{
+            flex: 0 0 56%;
+            padding: 2%;
+
+            @media screen and (max-width: $mobile-v) {
+                flex: 0 0 100%;
+            }
+        }
+    }
+
+    .release-news{
+        ul.listing{
+            margin: 0;
+
+            li{
+                padding: 20px;
+                margin-bottom: 10px;
+                background-color: $white;
+
+                .date{
+                    font-size: 1.1em;
+                    color: $main-color;
+                    width: 25%;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

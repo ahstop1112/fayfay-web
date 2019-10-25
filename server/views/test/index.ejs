@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>fayfay.com</title>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
+
+<body>
+<% if (flash.message) { %>
+<p><%= flash.message %></p>
+<% } %>
+<div id="page">
+    <% include ../include/footer.ejs %>
+</div>
+<% include ../include/js.ejs %>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+<section class="breadcrumb-section">
+    <div class="container-fluid">
+        <div class="breadcrumb-container">
+            <a class="breadcrumb" href="<%= langUrl %>/" title="<%= translations['common.home'] %>"><%= translations['common.home'] %></a>
+            <% if (subCategoryTxt) { %>
+            <span class="breadcrumb arrow"></span>
+            <a href="/category/<%=categorySlug%>" class="breadcrumb"><%= categoryTxt %></a>
+            <% } %>
+            <span class="breadcrumb arrow"></span>
+            <span class="breadcrumb active" id="breadcrumb-second-lv"><%= subCategoryTxt || categoryTxt %></span>
+        </div>
+    </div>
+</section>

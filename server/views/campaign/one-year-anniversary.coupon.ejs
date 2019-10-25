@@ -1,0 +1,105 @@
+<section class="coupon">
+    <div class="container-fluid">
+        <div class="content_p">
+            <% if (campaignData.headerDescription) { %>
+                <%- converter.makeHtml(campaignData.headerDescription) %>
+            <% } %>
+        </div>
+
+        <div class="coupon-container">
+            <div class="coupon" data-aos="fade-up" data-aos-duration="500">
+                <div class="coupon-bg right" data-aos="fade-up" data-aos-duration="700"></div>
+                <div class="code-container">
+                    <div class="code">
+                        <h3 class="one"><%= translations['campaign.one.year.anniversary.summer.promotion'] %></h3>
+                        <h1 class="price"><%- translations['campaign.one.year.anniversary.promotion.95.off'] %></h1>
+                        <div class="promo-code-container">
+                            <h5><%= translations['campaign.common.promo.code'] %>: </h5>
+                            <h4 class="promoCode">FAYHB95</h4>
+                        </div>
+                    </div>
+                    <button class="btn btn-s copy-btn show" data-clipboard-action="copy" data-clipboard-text="FAYHB95" data-aos="zoom-in" data-aos-duration="500"
+                            aria-label="<%= translations['campaign.common.copied'] %>">
+                        <span><%= translations['campaign.common.copy'] %></span>
+                    </button>
+                    <p class="remarks">
+                        <%= translations['campaign.common.spend'] %>
+                        <% switch (ccy) {
+                            case 'HKD' : %>
+                            HK$ 300
+                            <% break;
+                            case 'TWD' : %>
+                            NT$ 1,147
+                            <% break;
+                            case 'VND' : %>
+                            ₫ 822,353
+                            <% break;
+                            case 'USD' : %>
+                            US$ 37.9
+                            <% break;
+                            case 'CNY' : %>
+                            ¥ 256
+                            <% break;
+                            case 'SGD' : %>
+                            S$ 52.1
+                            <% break;
+                            case 'MYR' : %>
+                            RM 159
+                            <% break;
+                        } %>
+                        <%= translations['campaign.common.or.more'] %>
+                    </p>
+                    <div class="tooltiptext"><%= translations['campaign.common.copied'] %></div>
+                </div>
+                <div class="coupon-bg left" data-aos="fade-up" data-aos-duration="400"></div>
+            </div>
+
+            <div class="coupon" data-aos="fade-up" data-aos-duration="600">
+                <div class="coupon-bg right" data-aos="fade-up" data-aos-duration="800"></div>
+                <div class="code-container">
+                    <div class="code">
+                        <h3><%= translations['campaign.one.year.anniversary.promotion'] %></h3>
+                        <h1 class="price"><%- translations['campaign.one.year.anniversary.promotion.88.off'] %></h1>
+                        <div class="promo-code-container">
+                            <h5><%= translations['campaign.common.promo.code'] %>: </h5>
+                            <h4 class="promoCode">FAYHB88</h4>
+                        </div>
+                    </div>
+                    <button class="btn btn-s copy-btn2 show" data-clipboard-action="copy" data-clipboard-text="FAYHB88" data-aos="zoom-in" data-aos-duration="500"
+                            aria-label="<%= translations['campaign.common.copied'] %>">
+                        <span><%= translations['campaign.common.copy'] %></span>
+                    </button>
+                    <p class="remarks">
+                        <%= translations['campaign.common.spend.specify'] %>
+                        <% switch (ccy) {
+                            case 'HKD' : %>
+                            HK$ 500
+                            <% break;
+                            case 'TWD' : %>
+                            NT$ 1,912
+                            <% break;
+                            case 'VND' : %>
+                            ₫ 1,470,588
+                            <% break;
+                            case 'USD' : %>
+                            US$ 63.2
+                            <% break;
+                            case 'CNY' : %>
+                            ¥ 426
+                            <% break;
+                            case 'SGD' : %>
+                            S$ 86.8
+                            <% break;
+                            case 'MYR' : %>
+                            RM 265
+                            <% break;
+                        } %>
+                        <%= translations['campaign.common.or.more.experience'] %>
+                    </p>
+                    <div class="tooltiptext2"><%= translations['campaign.common.copied'] %></div>
+                </div>
+                <div class="coupon-bg left" data-aos="fade-up" data-aos-duration="400"></div>
+            </div>
+        </div>
+    </div>
+</section>

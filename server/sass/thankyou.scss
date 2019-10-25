@@ -1,0 +1,524 @@
+@import 'include/variable';
+
+.breadcrumb-section{
+    margin-top: 90px;
+}
+
+.thankyou-section {
+
+    .bg-light-grey{
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    h3{
+        color: $main-color;
+    }
+
+    .payment-highlight{
+        font-size: 1.1em;
+        line-height: 1.5;
+        margin-top: 20px;
+    }
+
+    span{
+        color: $main-color;
+    }
+
+    .table-title, .table-activity{
+
+        .greyborderbox, .bg-light-grey {
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            -webkit-justify-content: flex-start;
+            justify-content: flex-start;
+
+            -webkit-align-items: center;
+            align-items: center;
+
+            margin-bottom: 0;
+            padding: 10px 15px;
+
+            @media screen and (max-width: $tablet-v) {
+                -ms-flex-wrap: wrap;
+                -webit-flex-wrap: wrap;
+                flex-wrap: wrap;
+
+                -webkit-align-items: center;
+                align-items: center;
+            }
+
+            .photo{
+                width: 19%;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                height: 120px;
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 15%;
+                    height: 100px;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    width: 30%;
+                    padding-right: 2%;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 30%;
+                    height: 100px;
+                    margin-top: -100px;
+                }
+
+                img{
+                    position: absolute;
+                    top:-100%; left:0; right: 0; bottom:-100%;
+                    margin: auto;
+
+                    margin-left: 50%;
+                    /* Move to the left by 50% of own width */
+                    transform: translateX(-50%);
+
+                    width: auto;
+                    height: 100%;
+                }
+            }
+
+            .name{
+                width: 38%;
+                padding: 1%;
+                padding-left: 2%;
+
+                b{
+                    font-weight: 500;
+                }
+
+                @media screen and (max-width: $tablet-h) {
+                    width: 33%;
+                }
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 43%;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    width: 64%;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 65%;
+                    padding-left: 5%;
+
+                    b{
+                        display: block;
+                    }
+                }
+
+                h5{
+                    @media screen and (max-width: $tablet-v) {
+                        font-size: 1.2em;
+                        line-height: 1.5;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        font-weight: 700;
+                    }
+                }
+
+                .desc {
+                    color: #aaa;
+
+                    @media screen and (max-width: $tablet-v) {
+                        margin: 0;
+                    }
+                }
+            }
+            .date {
+                width: 14%;
+                padding-right: 1%;
+
+                //color: $dark-grey;
+                line-height: 2.5;
+
+                p{
+                    margin: 0;
+                }
+
+                @media screen and (max-width: $tablet-v) {
+                    line-height: 1.5;
+                    margin-top: 0;
+                    width: 18%;
+                }
+            }
+            .input-group {
+                width: 14%;
+                padding-right: 1%;
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 20%;
+                    //margin-top: 0;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    width: 30%;
+                    margin-left: 35%;
+                    margin-top: -25px;
+                    //margin-top: 0;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 50%;
+                    margin-left: 40%;
+                    margin-top: -25px;
+                    //margin-top: 0;
+                }
+            }
+            .hr{
+                border-top: 1px solid $border-grey;
+                margin: 10px 0;
+                width: 100%;
+            }
+            .price {
+                width: 15%;
+                color: $main-color;
+                font-size: 1.1em;
+                text-align: center;
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 20%;
+                    text-align: center;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    width: 30%;
+                    margin-left: 5%;
+                    text-align: left;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    margin-left: 0;
+                    width: 40%;
+                }
+            }
+            .edit-delete{
+                width: 15%;
+                text-align: right;
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 100%;
+                    margin: 10px 0;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    width: 60%;
+                }
+
+                a{
+                    color: #aaa;
+                    padding: 0 15px;
+                    cursor: pointer;
+
+                    @media screen and (max-width: $mobile-h) {
+                        padding: 0 5px;
+                    }
+                }
+
+                .popup-details{
+                    width: 25%;
+
+                    background-color: $bg-grey;
+                    position: absolute;
+                    z-index: 999;
+                    margin-top: -3%;
+                    margin-left: -21%;
+                    opacity: 0;
+                    box-shadow: $shadow;
+                    text-align: left;
+                    //display: none;
+
+                    @media screen and (max-width: $tablet-v) {
+                        width: 42%;
+                        margin-top: -4.5%;
+                        margin-left: -38%;
+                    }
+
+                  /*iphone x*/
+                    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation:  landscape){
+                        width: 100%;
+                        height: 100%;
+                        max-height: 100%;
+                        position: fixed;
+                        //border: 1px solid red;
+                        //min-height: 100%;
+                        overflow-x: hidden;
+                        overflow-y: scroll;
+                        margin-top: 0;
+                        margin-left: 0;
+                        top: 0;
+                        left: 0;
+                        z-index: 9999;
+                        padding: 0;
+                    }
+
+                    @media screen and (max-width: $mobile-h) {
+                        width: 100%;
+                        height: 100%;
+                        max-height: 100%;
+                        position: fixed;
+                        //border: 1px solid red;
+                        //min-height: 100%;
+                        overflow-x: hidden;
+                        overflow-y: scroll;
+                        margin-top: 0;
+                        margin-left: 0;
+                        top: 0;
+                        left: -100%;
+                        opacity: 1;
+                        z-index: 9999;
+                        padding: 0;
+                        -webkit-transition: $fadeIn;
+                        transition: $fadeIn;
+                    }
+
+                    .popup-header{
+                        background-color: $white;
+                        width: 100%;
+                        padding: 0;
+                         display: none;
+
+                        @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation:  landscape) {
+                          display: block;
+                        }
+
+                        @media screen and (max-width: $mobile-h) {
+
+                          display: block;
+                        }
+
+                        .icon{
+                            margin: $padding;
+                        }
+                    }
+
+                    .popup-body{
+                        padding: $padding;
+                        color: $main-font-color;
+
+                        .input-group{
+                            width: 40%;
+                            padding-top: 15px;
+
+                            @media screen and (max-width: $tablet-v) {
+                                width: 45%;
+                                padding-top: 15px;
+                                margin-top: 0;
+                            }
+                        }
+
+                        .price{
+                            margin: 0; padding: 0;
+                        }
+
+                        .arrow{
+                            width: 0;
+                            height: 0;
+                            position: absolute;
+                            top: 20px;
+                            right: -10px;
+
+                            border-top: 10px solid transparent;
+                            border-bottom: 10px solid transparent;
+
+                            border-left: 10px solid $bg-grey;
+
+                            @media screen and (max-width: $mobile-h) {
+                                display: none;
+                            }
+                        }
+
+                        .desc{
+                            margin-bottom: $padding;
+                        }
+
+                        .btn{
+                            width: 100%;
+                        }
+                    }
+
+                    &.opened{
+                        //display: block;
+                        opacity: 1;
+
+                        @media screen and (max-width: $mobile-h) {
+                            left: 0;
+
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .table-title {
+        font-size: 1.1em;
+        line-height: 2.5;
+        color: #aaa;
+        vertical-align: middle;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: $mobile-v) {
+            display: none;
+        }
+
+        .photo{
+            height: auto !important;
+        }
+
+        .radio-group .checkmark {
+            background-color: $white;
+        }
+
+        .price{
+            color: #aaa !important;
+        }
+
+
+    }
+
+    .total-box{
+
+        .greyborderbox {
+            .order-price {
+                text-align: right;
+                margin-right: 0;
+            }
+        }
+
+        @media screen and (max-width: $mobile-v) {
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            z-index: 900;
+            margin: 0;
+
+            .greyborderbox{
+                margin-bottom: 0;
+                box-shadow: $shadow;
+            }
+        }
+
+        .checkmark{
+            margin-top: 15px;
+        }
+
+        .price{
+            @media screen and (max-width: $tablet-v) {
+                font-size: 1.5em;
+            }
+        }
+
+        a{
+            line-height: 4;
+            color: $dark-grey;
+            padding: 0 15px;
+            cursor: pointer;
+
+            @media screen and (max-width: $tablet-v) {
+                padding: 0 5px;
+            }
+        }
+
+        .btn-lg{
+            margin: 0;
+
+            @media screen and (max-width: $mobile-h) {
+                margin: 5px 0;
+            }
+        }
+
+    }
+}
+
+
+.destination-slick {
+
+    outline: 0;
+    display: none;
+
+    .slick-prev, .slick-next, a {
+        outline: 0;
+        text-decoration: none;
+    }
+
+    .slick-slide {
+        //opacity: 0.6;
+        outline: 0;
+    }
+
+    .list-item {
+
+        opacity: 0.8;
+        transition: $fadeIn;
+        padding: 10px;
+        min-width: 0;
+
+        .list-content {
+            background-color: #ccc;
+        }
+
+        .banner {
+
+            &:before {
+                padding-top: 100%; //ratio 1:1
+            }
+
+            .bg {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        h3 {
+            color: $main-font-color;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 400;
+            margin: 5px 0;
+
+            @media screen and (max-width: $mobile-xs) {
+                font-size: 1em;
+            }
+        }
+
+        .list-content {
+            display: block;
+        }
+
+        &.slick-current {
+            opacity: 1;
+            transform: scale(1.05);
+
+            .list-content {
+                background-color: $main-color;
+            }
+
+            h3 {
+                color: $white;
+                text-align: center;
+                font-size: 1.2em;
+                font-weight: 400;
+
+                @media screen and (max-width: $mobile-xs) {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,54 @@
+<section class="faysim-section exclusive section2">
+    <div class="container-fluid">
+        <h2 class="title"><%= translations['faysim.exclusive'] %></h2>
+        <p class="desc"><%= translations['faysim.exclusive.desc'] %></p>
+
+        <div class="tick-table">
+            <div class="list">
+                <ul><%- translations['faysim.exclusive.tick1'] %></ul>
+            </div>
+            <div class="list">
+                <ul><%- translations['faysim.exclusive.tick2'] %></ul>
+            </div>
+            <div class="img">
+                <% if (locale == 'zh-hk') { %>
+                    <img src="/images/icons/faysim_bird_tc.png">
+                <% } else { %>
+                    <img src="/images/icons/faysim_bird.png">
+                <% } %>
+            </div>
+        </div>
+
+        <p class="remarks">* <%- translations['faysim.exclusive.remarks'] %></p>
+
+        <div class="photo-table">
+            <div class="list-item">
+                <div class="banner">
+                    <img src="/images/faysim_fnb.png" alt="<%= translations['faysim.exclusive.fnb'] %>" class="bg">
+                </div>
+                <div class="content">
+                    <h3><%= translations['faysim.exclusive.fnb'] %></h3>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="banner">
+                    <img src="/images/faysim_attractions.jpg" alt="<%= translations['faysim.exclusive.attractions'] %>" class="bg">
+                </div>
+                <div class="content">
+                    <h3><%= translations['faysim.exclusive.attractions'] %></h3>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="banner">
+                    <img src="/images/faysim_shopping.jpg" alt="<%= translations['faysim.exclusive.shopping'] %>" class="bg">
+                </div>
+                <div class="content">
+                    <h3><%= translations['faysim.exclusive.shopping'] %></h3>
+                </div>
+            </div>
+        </div>
+
+        <p class="remarks marginTop-20px">* <%- translations['faysim.exclusive.remarks2'] %></p>
+
+    </div>
+</section>

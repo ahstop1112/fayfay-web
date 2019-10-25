@@ -1,0 +1,885 @@
+@import 'include/variable';
+
+.activity-header-section {
+    overflow: hidden;
+    background-color: $white;
+    //height: 45%;
+
+    @media screen and (max-width: $tablet-h) {
+        //height: 50%;
+
+        .city-title {
+            width: 80%;
+        }
+    }
+    @media screen and (max-width: $tablet-v) {
+        //height: 40%;
+        .city-title {
+            width: 80%;
+        }
+    }
+    @media screen and (max-width: $mobile-h) {
+        //height: 90%;
+        overflow: hidden;
+    }
+    @media screen and (max-width: $mobile-v) {
+        //height: 45%;
+        overflow: hidden;
+    }
+    &.scroll {
+        background-color: $black;
+    }
+    .overlay-video {
+        //height: 85%;
+        @media screen and (max-width: $tablet-h) {
+            height: 100%;
+        }
+        @media screen and (max-width: $tablet-v) {
+            height: 80%;
+            margin-top: 0;
+        }
+        @media screen and (max-width: $mobile-h) {
+            margin-top: 0;
+        }
+        @media screen and (max-width: $mobile-v) {
+            margin-top: 0;
+        }
+    }
+}
+
+.tab-content {
+
+    .reviews-header {
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Chrome */
+        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
+        align-items: center;
+
+        margin-bottom: 10px;
+        border-bottom: 1px solid $bg-grey;
+
+        @media screen and (max-width: $mobile-v) {
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+
+            flex-wrap: wrap;
+        }
+
+        h4 {
+            @media screen and (max-width: $mobile-v) {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .header {
+            margin: 0;
+            padding: 0;
+
+            @media screen and (max-width: $mobile-v) {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .rating-num {
+                font-size: 3.8em;
+                padding: 0 $padding;
+                line-height: 1;
+            }
+
+            .rating-container {
+
+                p {
+                    color: $light-grey;
+                    font-size: 1em;
+                    padding: 5px 0;
+                }
+            }
+
+            .rating-num {
+                @media screen and (max-width: $mobile-v) {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.recent-view, .reviews {
+    list-style: none;
+    margin: 0;
+
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+
+    border-bottom: 1px solid $bg-grey;
+    padding-bottom: $padding;
+    margin-bottom: $padding;
+
+    @media screen and (max-width: $tablet-v) {
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+    }
+
+    .user-photo {
+        min-width: 100px;
+        padding-right: 10px;
+        width: 15%;
+
+        @media screen and (max-width: $tablet-h) {
+            width: 20%;
+        }
+
+        @media screen and (max-width: $mobile-v) {
+            min-width: auto;
+            padding-top: 10px;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            width: 28%;
+        }
+
+        .img-container {
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            margin: auto;
+            img {
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                border: 1px solid $border-grey;
+            }
+            @media screen and (max-width: $mobile-v) {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        .user-name {
+            font-size: 0.9em;
+            line-height: 1.5;
+            word-break: break-all;
+            text-align: center;
+
+            margin-top: 5px;
+
+            @media screen and (max-width: $mobile-h) {
+                padding-bottom: 0;
+            }
+
+            @media screen and (max-width: $mobile-v) {
+                width: 100%;
+                padding-left: 0;
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+    .user-comment {
+        width: 82%;
+
+        @media screen and (max-width: $tablet-h) {
+            width: 80%;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            width: 70%;
+        }
+
+        .header {
+            margin: 0;
+            padding-top: 0;
+        }
+
+        .content {
+
+            p {
+                word-wrap: break-word;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+
+                &.showAll {
+                    display: block;
+                    overflow: visible;
+                }
+            }
+
+            .div-photos {
+                .photos-container > div{
+                    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox; /* TWEENER - IE 10 */
+                    display: -webkit-flex; /* NEW - Chrome */
+                    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                    -ms-flex-wrap: wrap;
+                    -webkit-flex-wrap: wrap;
+                    flex-wrap: wrap;
+
+                    a {
+                        list-style-type: none;
+                        flex: 0 0 16.66%;
+                        margin: 0 0.5%;
+                        margin-bottom: 20px;
+                        overflow: hidden;
+                        width: 100%;
+                        position: relative;
+
+                        @media screen and (max-width: $mobile-v) {
+                            flex: 0 0 32.33%;
+                        }
+
+                        &:before{
+                            content: "";
+                            display: block;
+                            padding-top: 100%;
+                        }
+
+                        img {
+                            position: absolute;
+                            top: -100%;
+                            left: 0;
+                            right: 0;
+                            bottom: -100%;
+                            margin: auto;
+                            margin-left: 50%;
+                            transform: translateX(-50%);
+                            min-width: 100%;
+                            min-height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .comment-date {
+            width: 35%;
+            font-size: 1em;
+            color: $light-grey;
+            text-align: right;
+            padding-top: 10px;
+        }
+    }
+
+    &.recent-view {
+        .content p {
+            word-wrap: break-word;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    }
+
+    .star {
+        width: 25px;
+        height: 25px;
+        min-width: 20px;
+        min-height: 20px;
+        background-image: url(/images/rate_icon2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media screen and (max-width: $tablet-v) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .fay {
+        min-width: 20px;
+        min-height: 20px;
+        background-image: url(/images/rate_icon.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.review-mobile-container {
+
+    .header {
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+    }
+    .review-grade {
+        //display: table-cell;
+        font-size: 3.5em;
+        vertical-align: top;
+        width: 12%;
+        font-weight: 600;
+
+        @media screen and (max-width: $mobile-h) {
+            width: 28%;
+        }
+    }
+
+    .review-rating {
+        //display: table-cell;
+        vertical-align: middle;
+        color: $light-grey;
+        @media screen and (max-width: $tablet-v) {
+            width: 50%;
+            padding-top: 20px;
+        }
+        .rating-num {
+            visibility: hidden !important;
+        }
+
+        .rating {
+            width: 180px;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+
+            .star {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+}
+
+.activity-highlight-section {
+    .activity-title {
+        margin-top: 0;
+        font-size: 1.8em;
+
+        @media screen and (max-width: $tablet-v) {
+            font-size: 1.5em;
+        }
+    }
+    .whitebox {
+        padding: 0;
+    }
+    .price {
+        font-size: 1.6em;
+
+        del, del .currency {
+            font-size: 14rem;
+            color: $light-grey;
+            margin-left: 5px;
+        }
+    }
+
+    .title-remark {
+        margin-left: 0;
+    }
+    ul {
+        *list-style: none;
+    }
+
+    #activity-description {
+        ul {
+            margin-left: $padding;
+        }
+    }
+
+    #booking-price-container {
+
+        .booking-price-container {
+            transition: $fadeIn;
+            -webkit-transition: $fadeIn;
+        }
+
+        @media screen and (max-width: $tablet-v) {
+            position: fixed;
+            z-index: $lv2;
+            width: 100%;
+            left: 0;
+            bottom: -1px;
+            padding: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .greybox {
+            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox; /* TWEENER - IE 10 */
+            display: -webkit-flex; /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            -ms-flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+
+            @media screen and (max-width: $tablet-v) {
+                margin-bottom: 0;
+                align-items: center;
+                background: none;
+                box-shadow: none;
+
+                .btn {
+                    width: 90%;
+                }
+            }
+
+            .bottom {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.add-to-wish-list {
+    color: $main-font-color;
+    cursor: pointer;
+    &:hover {
+        color: $main-color;
+    }
+    .far:before {
+        color: $main-font-color;
+    }
+    .fas:before {
+        color: $main-color;
+    }
+}
+
+.activity-tabs-section {
+    border: 1px solid #eee;
+    box-shadow: $shadow;
+    padding-bottom: 0;
+
+    .nav-pills {
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Chrome */
+        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+        border-spacing: 0;
+
+        li {
+            width: auto;
+            border: 0;
+            border-radius: 0;
+            font-size: 1em;
+            text-transform: inherit;
+            text-align: center;
+            a {
+                padding: 10px 15px;
+                font-size: 1em;
+            }
+
+            &.active {
+                a {
+                    border-radius: 0;
+                    background: none;
+                    color: $main-color;
+                    border-bottom: 2px solid $main-color;
+                }
+            }
+        }
+    }
+
+    &.scroll {
+        position: fixed;
+        top: 80px;
+        z-index: $lv3;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+
+        /* transitions */
+        -webkit-transition: $fadeIn;
+        -moz-transition: $fadeIn;
+        -ms-transition: $fadeIn;
+        -o-transition: $fadeIn;
+        transition: $fadeIn;
+
+        .nav-pills {
+            margin: 0;
+
+            li {
+                background: none;
+
+                a {
+                    padding: 10px 15px;
+                    font-size: 1em;
+                }
+            }
+        }
+
+    }
+}
+
+.activity-tabs-content-section {
+    background-color: #eee;
+
+    .form-group, h6 {
+        margin: 0;
+    }
+    h4 {
+        margin-top: 0;
+    }
+    h6, ul {
+        margin: 8px 0;
+    }
+
+    .package-header {
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Chrome */
+        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+
+        width: 100%;
+        vertical-align: top;
+
+        h6, .fas:before {
+            color: $light-grey;
+        }
+        .fas:before {
+            padding-left: 5px;
+        }
+        .package-title-price,
+        .package-select {
+            vertical-align: middle;
+            margin-top: 5px;
+            padding-right: 15px;
+
+            .btn.disabled, .btn[disabled] {
+                opacity: 1;
+            }
+        }
+        .package-price {
+            font-size: 1em;
+            padding-right: 10px;
+            display: flex;
+
+            .inquiry-from {
+                font-size: 1.2em;
+                color: $main-font-color;
+                margin-right: 10px;
+            }
+
+            .discount-price {
+                font-size: 1.2em;
+                color: $main-font-color;
+
+                del, del .currency {
+                    font-size: 14rem;
+                    color: $light-grey;
+                    margin-left: 5px;
+                }
+            }
+            .ori-price {
+                color: $light-grey;
+                text-decoration: line-through;
+                display: none;
+            }
+        }
+
+        &.soldout {
+            h4,
+            .discount-price {
+                color: $light-grey;
+            }
+            .btn {
+                background-color: $border-grey;
+                border: 1px solid $white;
+                color: $white;
+                text-transform: initial;
+            }
+        }
+    }
+
+    .package-details-header {
+        cursor: pointer;
+    }
+    .package-details {
+        h5 {
+            font-size: 1.14em;
+        }
+        h6, li, p {
+            font-size: 1em;
+        }
+        li {
+            margin-left: 15px;
+        }
+        .fas:before {
+            padding-left: 5px;
+            color: $light-grey;
+        }
+    }
+
+    #activity-info {
+
+        h4 {
+            margin: 20px 0;
+        }
+        .yellowbox {
+            background-color: #fffae7;
+            padding: $padding;
+        }
+    }
+    .package-qty-row {
+        h6 {
+            font-size: 1em;
+            margin: 5px 0;
+        }
+        .price {
+            font-size: 1.1em;
+        }
+
+        .input-group {
+            padding: 7px 10px;
+        }
+
+        .form-control[disabled] {
+            background-color: $white;
+            cursor: pointer;
+        }
+    }
+
+    .tab-content > .tab-pane {
+        display: block;
+        opacity: 1;
+    }
+
+    #what-to-expect {
+        .photo p {
+            display: inline-block;
+        }
+    }
+
+    #cancellation-policy, #FAQs, #highlights, #experience-info, #how-to-use {
+        ul {
+            margin: 8px 0 15px 20px;
+        }
+    }
+}
+
+.booking-price-container {
+    &.scroll {
+        position: fixed;
+        top: 150px;
+        z-index: $lv2;
+        width: 31%;
+        max-width: 400px;
+
+        @media screen and (max-width: $tablet-v) {
+            position: static;
+            width: 100%;
+            max-width: none;
+        }
+    }
+}
+
+#booking-details-container {
+    z-index: 100;
+}
+
+.booking-details-container {
+    &.scroll {
+        position: fixed;
+        top: 150px;
+        z-index: $lv2;
+        width: 31%;
+        max-width: 400px;
+
+        @media screen and (max-width: $tablet-v) {
+            position: static;
+        }
+    }
+
+}
+
+.booking-details {
+    @media screen and (max-width: $tablet-v) {
+        position: fixed;
+        left: 5%;
+        bottom: -1px;
+        margin: 0;
+        padding: 0;
+        width: 95%;
+        z-index: $lv3;
+        background: none;
+    }
+
+    .tooltiptext {
+        background-color: $main-color;
+        color: #fff;
+        text-align: center;
+        padding: 5px 30px;
+        margin-left: 5.5%;
+        border-radius: 6px;
+        position: absolute;
+        opacity: 0;
+        z-index: 1;
+        font-size: 1em;
+        transition: all 1s ease-out;
+        -webkit-transition: all 1s ease-out;
+
+        &.show {
+            opacity: 1;
+        }
+    }
+
+    @media screen and (max-width: $mobile-v) {
+        width: 90%;
+        left: 10%;
+    }
+
+    .buttons {
+        display: table;
+        width: 100%;
+
+        .btn-icon {
+            display: table-cell;
+            font-size: 1.5em;
+            padding-left: 5px;
+            .fas:before {
+                padding-top: 10px;
+                color: $main-color;
+            }
+        }
+        .btn-div {
+            display: table-cell;
+            width: 45%;
+            text-align: center;
+
+            button {
+                width: 90%;
+                margin: 5px 0;
+                line-height: 1.8;
+            }
+        }
+    }
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.empty-dates {
+    .react-datepicker__day--today {
+        font-weight: normal;
+        color: #999;
+        background-color: #fff;
+    }
+}
+
+#gotoTop {
+    @media screen and (max-width: $tablet-v) {
+        bottom: 110px;
+    }
+    @media screen and (max-width: $mobile-h) {
+        bottom: 70px;
+    }
+}
+
+.instant-icon {
+    background-image: url('/images/instant.png');
+    width: 20px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-right: 28px;
+}
+
+.fb_dialog {
+    @media screen and (max-width: $mobile-h) {
+        bottom: 35px !important;
+        right: 15px !important;
+    }
+}
+
+.markdown {
+    margin-bottom: $padding;
+    p {
+        margin-bottom: 15px;
+    }
+    ol {
+        margin: 0 15px;
+        li {
+            list-style: decimal;
+        }
+    }
+
+}
+
+body.vi-vn {
+    .activity-tabs-section {
+        .nav-pills li a {
+            font-size: 0.9em;
+
+            @media screen and (max-width: $tablet-h) {
+                font-size: 0.8em;
+            }
+        }
+    }
+
+}
+
+.drag-list {
+    &.related-experiences-slider {
+        .list-item {
+            padding: 8px 0.2%;
+        }
+    }
+}
+
+.related-activities-section {
+    z-index: $lv3;
+    position: relative;
+    background-color: $white;
+    .drag-content {
+        .drag-list {
+            @media screen and (max-width: $tablet-h) {
+                .slick-dots {
+                    position: relative;
+                    bottom: 0;
+
+                    li {
+                        button {
+                            &:before {
+                                background-color: $bg-grey;
+                            }
+                        }
+
+                        &.slick-active {
+                            button {
+                                &:before {
+                                    background-color: $main-color;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .slick-prev {
+                    &:before {
+                        color: $light-grey !important;
+                    }
+                }
+
+                .slick-next {
+                    &:before {
+                        color: $light-grey !important;
+                    }
+                }
+            }
+        }
+    }
+}

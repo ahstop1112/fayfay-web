@@ -1,0 +1,611 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+body {
+  overflow-x: hidden;
+  width: 100%; }
+
+#coffeehouse {
+  background-size: contain;
+  background-position: center; }
+  #coffeehouse header {
+    height: 100%; }
+    #coffeehouse header .header-top-area {
+      box-shadow: none;
+      background: #fff;
+      border: 0;
+      position: static; }
+      #coffeehouse header .header-top-area .header-container {
+        width: 100%;
+        padding: 0 2%; }
+        #coffeehouse header .header-top-area .header-container .badge-notify {
+          position: absolute; }
+      #coffeehouse header .header-top-area .badge-notify {
+        position: absolute; }
+      #coffeehouse header .header-top-area.scroll {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        background-color: rgba(255, 255, 255, 0.9); }
+        #coffeehouse header .header-top-area.scroll .logo {
+          background-image: url("/images/logo_nobird.png"); }
+        #coffeehouse header .header-top-area.scroll .navbar-right {
+          color: #163A4D; }
+          #coffeehouse header .header-top-area.scroll .navbar-right li a {
+            color: #163A4D; }
+    #coffeehouse header .overlay-header {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      z-index: 999;
+      width: 100%;
+      overflow: hidden; }
+      #coffeehouse header .overlay-header:before {
+        content: "";
+        padding-top: 50%;
+        display: block; }
+        @media screen and (max-width: 550px) {
+          #coffeehouse header .overlay-header:before {
+            padding-top: 100%; } }
+      #coffeehouse header .overlay-header .bg {
+        top: -100%;
+        left: 0;
+        right: 0;
+        bottom: -100%;
+        margin: auto;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        width: 35%;
+        height: auto;
+        position: absolute; }
+        @media screen and (max-width: 550px) {
+          #coffeehouse header .overlay-header .bg {
+            width: 60%; } }
+    #coffeehouse header .section-background {
+      padding-top: 0;
+      z-index: 0; }
+      #coffeehouse header .section-background .bg-container {
+        max-height: none; }
+        #coffeehouse header .section-background .bg-container:before {
+          padding-top: 50%; }
+          @media screen and (max-width: 550px) {
+            #coffeehouse header .section-background .bg-container:before {
+              padding-top: 100%; } }
+        #coffeehouse header .section-background .bg-container .bg {
+          top: 0;
+          min-height: 100%; }
+          @media screen and (max-width: 550px) {
+            #coffeehouse header .section-background .bg-container .bg {
+              min-height: 105%; } }
+  #coffeehouse section {
+    padding: 30px 0; }
+    #coffeehouse section .main-logo-container {
+      margin-bottom: 10px;
+      -webkit-justify-content: center;
+      justify-content: center;
+      text-align: center; }
+      #coffeehouse section .main-logo-container h2 {
+        font-size: 1.75em; }
+        @media screen and (max-width: 550px) {
+          #coffeehouse section .main-logo-container h2 {
+            font-size: 1.5em; } }
+      #coffeehouse section .main-logo-container .main-logo img {
+        max-height: 40px;
+        width: auto; }
+      #coffeehouse section .main-logo-container .main-logo.danang img {
+        width: 80px;
+        margin-top: 5px; }
+  #coffeehouse section.intro {
+    background-color: #EE7E31;
+    color: #fff; }
+    #coffeehouse section.intro h2, #coffeehouse section.intro h5, #coffeehouse section.intro p {
+      color: #fff;
+      text-align: center; }
+  #coffeehouse section.voucher {
+    color: #163A4D; }
+    #coffeehouse section.voucher h3.title {
+      text-align: center;
+      margin: 30px 0; }
+      @media screen and (max-width: 550px) {
+        #coffeehouse section.voucher h3.title {
+          font-size: 1.5em; } }
+    #coffeehouse section.voucher .row {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      align-items: center;
+      flex-wrap: wrap; }
+      #coffeehouse section.voucher .row .btn {
+        margin: 0 auto;
+        padding: 5px 35px;
+        border-radius: 15px; }
+    #coffeehouse section.voucher #voucherAddress {
+      position: fixed;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      z-index: 999999;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      flex-flow: column;
+      -webkit-flex-flow: column; }
+      #coffeehouse section.voucher #voucherAddress .close-btn {
+        float: right;
+        width: 100%;
+        max-width: 900px;
+        text-align: right;
+        position: relative; }
+        #coffeehouse section.voucher #voucherAddress .close-btn .icon {
+          opacity: 1;
+          font-weight: 200; }
+          #coffeehouse section.voucher #voucherAddress .close-btn .icon:before {
+            color: #fff;
+            font-weight: 200;
+            font-size: 40px; }
+            @media screen and (min-width: 1920px) {
+              #coffeehouse section.voucher #voucherAddress .close-btn .icon:before {
+                font-size: 50px; } }
+            @media screen and (max-width: 767px) {
+              #coffeehouse section.voucher #voucherAddress .close-btn .icon:before {
+                font-size: 30px; } }
+      #coffeehouse section.voucher #voucherAddress .content-container {
+        max-width: 900px;
+        max-height: 80%;
+        overflow-y: auto;
+        margin: 0 auto; }
+        @media screen and (max-width: 767px) {
+          #coffeehouse section.voucher #voucherAddress .content-container {
+            max-width: 700px; } }
+        @media screen and (max-width: 550px) {
+          #coffeehouse section.voucher #voucherAddress .content-container {
+            max-width: 350px; } }
+        @media screen and (max-width: 320px) {
+          #coffeehouse section.voucher #voucherAddress .content-container {
+            max-width: 300px; } }
+        #coffeehouse section.voucher #voucherAddress .content-container .main-logo-container img {
+          width: 40px;
+          height: auto;
+          margin-top: 10px; }
+          @media screen and (max-width: 550px) {
+            #coffeehouse section.voucher #voucherAddress .content-container .main-logo-container img {
+              margin-top: 5px; } }
+        @media screen and (max-width: 550px) {
+          #coffeehouse section.voucher #voucherAddress .content-container .main-logo-container h2 {
+            font-size: 1.2em; } }
+        #coffeehouse section.voucher #voucherAddress .content-container .content {
+          background: #fff;
+          padding: 20px;
+          width: 100%;
+          height: 100%;
+          overflow-y: auto;
+          text-align: left; }
+          #coffeehouse section.voucher #voucherAddress .content-container .content h4 {
+            color: #163A4D;
+            text-align: center;
+            margin-bottom: 20px; }
+          #coffeehouse section.voucher #voucherAddress .content-container .content .content-table {
+            display: -webkit-box;
+            /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;
+            /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;
+            /* TWEENER - IE 10 */
+            display: -webkit-flex;
+            /* NEW - Chrome */
+            display: flex;
+            /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            flex-wrap: wrap; }
+            #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .content-address, #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .title-address {
+              width: 59.5%;
+              flex: 0 0 59.5%;
+              margin-right: 0.5%;
+              margin-bottom: 0.5%;
+              padding: 5px 15px 10px 15px;
+              background: #f4f4f4; }
+              #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .content-address.title-address, #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .title-address.title-address {
+                color: #fff;
+                font-weight: bold;
+                background: #EE7E31;
+                padding: 15px; }
+              @media screen and (max-width: 550px) {
+                #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .content-address, #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .title-address {
+                  width: 100%;
+                  flex: 0 0 100%;
+                  margin-right: 0;
+                  margin-bottom: 0; }
+                  #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .content-address.title-address, #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .title-address.title-address {
+                    display: none; } }
+            #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .content-time, #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .title-time {
+              width: 40%;
+              flex: 0 0 40%;
+              margin-bottom: 0.5%;
+              padding: 15px;
+              background: #f4f4f4; }
+              #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .content-time.title-time, #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .title-time.title-time {
+                color: #fff;
+                font-weight: bold;
+                background: #EE7E31; }
+              @media screen and (max-width: 550px) {
+                #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .content-time, #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .title-time {
+                  width: 100%;
+                  flex: 0 0 100%;
+                  margin-right: 0;
+                  padding-top: 0; }
+                  #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .content-time.title-time, #coffeehouse section.voucher #voucherAddress .content-container .content .content-table .title-time.title-time {
+                    display: none; } }
+        #coffeehouse section.voucher #voucherAddress .content-container img, #coffeehouse section.voucher #voucherAddress .content-container a {
+          width: 100%;
+          margin: 0 auto; }
+  #coffeehouse section.signature {
+    background-color: #f4f4f4; }
+    #coffeehouse section.signature .signature-list {
+      width: 90%;
+      margin: 0 auto;
+      list-style: none;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      flex-wrap: wrap;
+      align-items: center; }
+      #coffeehouse section.signature .signature-list .list-item {
+        flex: 0 0 49%;
+        margin-right: 1%;
+        margin-bottom: 1%; }
+        @media screen and (max-width: 550px) {
+          #coffeehouse section.signature .signature-list .list-item {
+            flex: 0 0 100%;
+            margin-right: 0; } }
+        #coffeehouse section.signature .signature-list .list-item.peach .list-content {
+          background-color: #ffae5a; }
+        #coffeehouse section.signature .signature-list .list-item.matcha .list-content {
+          background-color: #879646; }
+        #coffeehouse section.signature .signature-list .list-item.coffee .list-content {
+          background-color: #bd8a53; }
+        #coffeehouse section.signature .signature-list .list-item.dragonfruit .list-content {
+          background-color: #ff8b60; }
+        #coffeehouse section.signature .signature-list .list-item .bg {
+          width: auto;
+          height: 100%;
+          min-width: 0;
+          min-height: 0; }
+  #coffeehouse section.map .map-container {
+    margin-bottom: 15px; }
+    #coffeehouse section.map .map-container .map-details {
+      width: 30%;
+      position: absolute;
+      left: 0;
+      max-height: 500px;
+      overflow-y: auto;
+      z-index: 999; }
+      @media screen and (max-width: 767px) {
+        #coffeehouse section.map .map-container .map-details {
+          width: 40%; } }
+      @media screen and (max-width: 550px) {
+        #coffeehouse section.map .map-container .map-details {
+          width: 100%;
+          position: static;
+          max-height: none;
+          overflow-y: hidden;
+          margin-bottom: 20px; } }
+      #coffeehouse section.map .map-container .map-details ol {
+        counter-reset: item;
+        border-right: 0;
+        width: 100%; }
+        #coffeehouse section.map .map-container .map-details ol li {
+          list-style: none;
+          background: rgba(255, 255, 255, 0.9);
+          border-bottom: 1px solid #f4f4f4;
+          padding: 10px 20px; }
+          #coffeehouse section.map .map-container .map-details ol li:before {
+            content: counters(item, ".") ". ";
+            counter-increment: item;
+            color: #163A4D; }
+          #coffeehouse section.map .map-container .map-details ol li h6 {
+            display: inline-block;
+            color: #163A4D;
+            margin: 0; }
+          #coffeehouse section.map .map-container .map-details ol li p {
+            font-size: 0.86em;
+            color: #999;
+            margin-left: 15px;
+            margin-bottom: 0; }
+          #coffeehouse section.map .map-container .map-details ol li a {
+            font-size: 0.86em;
+            margin-left: 15px;
+            margin-bottom: 10px; }
+    #coffeehouse section.map .map-container .map {
+      flex: 0 0 100%;
+      width: 100%; }
+      #coffeehouse section.map .map-container .map #map {
+        width: 100%;
+        height: 500px;
+        border: none; }
+  #coffeehouse section.experiences {
+    padding: 0; }
+    #coffeehouse section.experiences .section-experience {
+      margin: 0 auto;
+      width: 90%; }
+      @media screen and (max-width: 991px) {
+        #coffeehouse section.experiences .section-experience {
+          margin: 0 auto;
+          width: 100%; } }
+      #coffeehouse section.experiences .section-experience .experience-title-s {
+        display: none; }
+      #coffeehouse section.experiences .section-experience .experience-list {
+        margin: 0 auto;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+        @media screen and (max-width: 991px) {
+          #coffeehouse section.experiences .section-experience .experience-list {
+            width: 100%; } }
+        #coffeehouse section.experiences .section-experience .experience-list.reverse {
+          flex-flow: row-reverse; }
+          @media screen and (max-width: 767px) {
+            #coffeehouse section.experiences .section-experience .experience-list.reverse {
+              flex-flow: row; } }
+        #coffeehouse section.experiences .section-experience .experience-list .list-col {
+          display: none;
+          width: 100%;
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;
+          /* OLD - Firefox 19- (buggy but mostly works) */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Chrome */
+          display: flex;
+          /* NEW, Spec - Opera 12.1, Firefox 20+ */
+          flex-direction: column;
+          flex-wrap: wrap;
+          flex-flow: row wrap; }
+          #coffeehouse section.experiences .section-experience .experience-list .list-col.slick-slider .slick-prev {
+            left: -18px;
+            width: 20px;
+            font-size: 4.5em; }
+            #coffeehouse section.experiences .section-experience .experience-list .list-col.slick-slider .slick-prev:before {
+              color: #999 !important; }
+          #coffeehouse section.experiences .section-experience .experience-list .list-col.slick-slider .slick-next {
+            right: -15px;
+            width: 25px;
+            font-size: 4.5em; }
+            #coffeehouse section.experiences .section-experience .experience-list .list-col.slick-slider .slick-next:before {
+              color: #999 !important; }
+          #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item {
+            background: none;
+            list-style: none;
+            width: 32.333%;
+            flex: 1 1 32.33%;
+            margin: 0 7px 1px 8px; }
+            @media screen and (max-width: 767px) {
+              #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item {
+                width: 100%;
+                flex: 1 1 100%; } }
+            #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content {
+              position: relative;
+              display: block;
+              background-color: #fff;
+              width: 100%;
+              height: 100%;
+              box-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px;
+              -webkit-transition: all 0.4s ease-out;
+              transition: all 0.4s ease-out; }
+              #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content:before {
+                padding-top: 50%; }
+              #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .banner {
+                width: 100%;
+                overflow: hidden;
+                position: relative; }
+                #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .banner:before {
+                  content: "";
+                  padding-top: 56.25%;
+                  display: block; }
+                #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .banner .bg {
+                  top: -100%;
+                  left: 0;
+                  right: 0;
+                  bottom: -100%;
+                  margin: auto;
+                  margin-left: 50%;
+                  transform: translateX(-50%);
+                  opacity: 0;
+                  position: absolute; }
+              #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .content {
+                display: -webkit-box;
+                /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;
+                /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;
+                /* TWEENER - IE 10 */
+                display: -webkit-flex;
+                /* NEW - Chrome */
+                display: flex;
+                /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                align-content: center;
+                align-items: center;
+                transition: all 0.4s ease-out;
+                -webkit-transition: all 0.4s ease-out;
+                padding: 0 10px;
+                border-bottom: 0; }
+                @media screen and (max-width: 991px) {
+                  #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .content {
+                    padding: 10px; } }
+                @media screen and (max-width: 550px) {
+                  #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .content {
+                    padding: 15px; } }
+                #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .content h3 {
+                  font-weight: 500;
+                  font-size: 1.25em;
+                  line-height: 1.2;
+                  min-height: 42px;
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 5;
+                  -webkit-box-orient: vertical;
+                  width: 100%; }
+                #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .content .desc {
+                  font-size: 1em;
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  text-align: left;
+                  padding: 0;
+                  margin: 0;
+                  width: 100%; }
+                #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .content .price {
+                  font-weight: 500;
+                  font-size: 1.25em; }
+                #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .content .bottom {
+                  width: 100%;
+                  margin: 0;
+                  padding: 10px 0;
+                  display: -webkit-box;
+                  /* OLD - iOS 6-, Safari 3.1-6 */
+                  display: -moz-box;
+                  /* OLD - Firefox 19- (buggy but mostly works) */
+                  display: -ms-flexbox;
+                  /* TWEENER - IE 10 */
+                  display: -webkit-flex;
+                  /* NEW - Chrome */
+                  display: flex;
+                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                  flex-wrap: wrap; }
+                  @media screen and (max-width: 1025px) {
+                    #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .content .bottom {
+                      margin-top: 0; } }
+                  @media screen and (max-width: 767px) {
+                    #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .content .bottom {
+                      padding-top: 0; } }
+                  #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container {
+                    display: -webkit-box;
+                    /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box;
+                    /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox;
+                    /* TWEENER - IE 10 */
+                    display: -webkit-flex;
+                    /* NEW - Chrome */
+                    display: flex;
+                    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                    flex-wrap: wrap;
+                    width: 100%;
+                    display: none !important; }
+                    #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                      font-size: 0.8em;
+                      color: #75cee2;
+                      margin-right: 10px; }
+                      @media screen and (max-width: 550px) {
+                        #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .content .bottom .hashtag-container .hashtag {
+                          font-size: 0.8em; } }
+              #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item .list-content .price-container {
+                display: none; }
+            #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item.highlight {
+              margin-bottom: 4px; }
+              @media screen and (max-width: 767px) {
+                #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item.highlight {
+                  margin-bottom: 0; } }
+              #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item.highlight .content h3 {
+                font-size: 1.8em;
+                line-height: 1.5; }
+                @media screen and (max-width: 767px) {
+                  #coffeehouse section.experiences .section-experience .experience-list .list-col .list-item.highlight .content h3 {
+                    font-size: 1.5em;
+                    width: 100%; } }
+      #coffeehouse section.experiences .section-experience.row-with-1-items .list-col, #coffeehouse section.experiences .section-experience.row-with-2-items .list-col, #coffeehouse section.experiences .section-experience.row-with-3-items .list-col, #coffeehouse section.experiences .section-experience.row-with-4-items .list-col {
+        width: 100%; }
+        #coffeehouse section.experiences .section-experience.row-with-1-items .list-col .list-item, #coffeehouse section.experiences .section-experience.row-with-2-items .list-col .list-item, #coffeehouse section.experiences .section-experience.row-with-3-items .list-col .list-item, #coffeehouse section.experiences .section-experience.row-with-4-items .list-col .list-item {
+          flex: 1 1 24.5%;
+          margin-right: 0.5%;
+          padding: 15px;
+          background-color: #e6f8ff; }
+          #coffeehouse section.experiences .section-experience.row-with-1-items .list-col .list-item:last-child, #coffeehouse section.experiences .section-experience.row-with-2-items .list-col .list-item:last-child, #coffeehouse section.experiences .section-experience.row-with-3-items .list-col .list-item:last-child, #coffeehouse section.experiences .section-experience.row-with-4-items .list-col .list-item:last-child {
+            margin-right: 0%; }
+          #coffeehouse section.experiences .section-experience.row-with-1-items .list-col .list-item .list-content, #coffeehouse section.experiences .section-experience.row-with-2-items .list-col .list-item .list-content, #coffeehouse section.experiences .section-experience.row-with-3-items .list-col .list-item .list-content, #coffeehouse section.experiences .section-experience.row-with-4-items .list-col .list-item .list-content {
+            height: calc(100% - 42px); }
+      #coffeehouse section.experiences .section-experience.row-with-1-items.row-with-1-items .list-item, #coffeehouse section.experiences .section-experience.row-with-2-items.row-with-1-items .list-item, #coffeehouse section.experiences .section-experience.row-with-3-items.row-with-1-items .list-item, #coffeehouse section.experiences .section-experience.row-with-4-items.row-with-1-items .list-item {
+        flex: 1 1 100%;
+        margin-right: 0; }
+      #coffeehouse section.experiences .section-experience.row-with-1-items.row-with-2-items .list-item, #coffeehouse section.experiences .section-experience.row-with-2-items.row-with-2-items .list-item, #coffeehouse section.experiences .section-experience.row-with-3-items.row-with-2-items .list-item, #coffeehouse section.experiences .section-experience.row-with-4-items.row-with-2-items .list-item {
+        flex: 1 1 49%; }
+      #coffeehouse section.experiences .section-experience.row-with-1-items.row-with-3-items .list-item, #coffeehouse section.experiences .section-experience.row-with-2-items.row-with-3-items .list-item, #coffeehouse section.experiences .section-experience.row-with-3-items.row-with-3-items .list-item, #coffeehouse section.experiences .section-experience.row-with-4-items.row-with-3-items .list-item {
+        flex: 1 1 32.33%; }
+  @media screen and (max-width: 550px) {
+    #coffeehouse section.adv {
+      padding: 10px 0; } }
+  #coffeehouse section.adv img {
+    width: 90%;
+    margin-left: 5%; }
+    @media screen and (max-width: 550px) {
+      #coffeehouse section.adv img {
+        width: 100%;
+        margin-left: 0; } }
+  #coffeehouse .terms {
+    line-height: 1.5;
+    word-break: break-word;
+    word-wrap: break-word;
+    font-size: 0.86em;
+    text-align: left;
+    font-weight: 400;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0 80px 0; }
+    @media screen and (max-width: 1025px) {
+      #coffeehouse .terms {
+        width: 90%; } }
+    @media screen and (max-width: 767px) {
+      #coffeehouse .terms {
+        width: 90%; } }

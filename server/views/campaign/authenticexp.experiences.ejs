@@ -1,0 +1,1456 @@
+<section id="all">
+    <div class="container-fluid">
+        <div class="coupon-container">
+            <div class="discount">
+                <h1>5%<span class="off">off</span></h1>
+                <p class="desc"><%= translations['campaign.authenticexp.coupon.desc'] %></p>
+            </div>
+            <div class="code">
+                <h3><%= translations['campaign.authenticexp.discountCode'] %></h3>
+                <h1 class="promoCode">FAYVIET19</h1>
+                <button class="btn btn-s copy-btn show" data-clipboard-action="copy" data-clipboard-text="FAYVIET19"
+                        aria-label="<%= translations['campaign.authenticexp.copy'] %>">
+                    <%= translations['campaign.authenticexp.copy'] %>
+                </button>
+                <span class="tooltiptext"><%= translations['campaign.authenticexp.copied'] %></span>
+            </div>
+        </div>
+        <p class="content_p hidden-xs"><%- translations['campaign.authenticexp.desc'] %></p>
+        <p class="content_p visible-xs"><%- translations['campaign.authenticexp.mobile.desc'] %></p>
+
+        <div class="drag-list btn-address">
+            <div class="list-item hcmc">
+                <a id="hcmc" title="<%- translations['campaign.authenticexp.hcmc'] %>">
+                    <div class="banner">
+                        <img src="/images/campaign/authenticexp/icon-hcmc.png"
+                             alt="<%- translations['campaign.authenticexp.hcmc'] %>" class="bg" style="opacity: 1;">
+                    </div>
+                    <h3 class="title-s"><%- translations['campaign.authenticexp.hcmc'] %></h3>
+                </a>
+            </div>
+
+            <div class="list-item hanoi">
+                <div class="overlay-content">
+                    <a id="hanoi" title="<%- translations['campaign.authenticexp.hanoi'] %>">
+                        <div class="banner">
+                            <img src="/images/campaign/authenticexp/icon-hanoi.png"
+                                 alt="<%- translations['campaign.authenticexp.hanoi'] %>" class="bg"
+                                 style="opacity: 1;">
+                        </div>
+                        <h3 class="title-s"><%- translations['campaign.authenticexp.hanoi'] %></h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="list-item hoian">
+                <div class="overlay-content">
+                    <a id="hoian" title="<%- translations['campaign.authenticexp.daNang.hoian'] %>">
+                        <div class="banner">
+                            <img src="/images/campaign/authenticexp/icon-hoian.png"
+                                 alt="<%- translations['campaign.authenticexp.nhaTrang'] %>" class="bg"
+                                 style="opacity: 1;">
+                        </div>
+                        <h3 class="title-s"><%- translations['campaign.authenticexp.daNang.hoian'] %></h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="list-item nhaTrang">
+                <div class="overlay-content">
+                    <a id="nhaTrang" title="<%- translations['campaign.authenticexp.nhaTrang'] %>">
+                        <div class="banner">
+                            <img src="/images/campaign/authenticexp/icon-nhatrang.png"
+                                 alt="<%- translations['campaign.authenticexp.nhaTrang'] %>" class="bg"
+                                 style="opacity: 1;">
+                        </div>
+                        <h3 class="title-s"><%- translations['campaign.authenticexp.nhaTrang'] %></h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="experience-title hcmc">
+            <span class="address-icon"></span>
+            <h3><%= translations['campaign.authenticexp.hcmc'] %></h3>
+        </div>
+        <div class="experience-list-container hcmc">
+            <div class="experience-list">
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10292-saigon-skydeck-in-bitexco-financial-tower-ticket-in-ho-chi-minh-city"
+                       target="_blank" title="<%= translations['campaign.authenticexp.hcmc.experience1.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/hcmc-1.jpg"
+                                     alt="<%= translations['campaign.authenticexp.hcmc.experience1.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <div class="award"></div>
+                                <h3><%= translations['campaign.authenticexp.hcmc.experience1.title'] %></h3>
+                                <p class="desc"><%= translations['campaign.authenticexp.hcmc.experience1.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hcmc.experience1.hashtag3'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hcmc.experience1.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hcmc.experience1.hashtag2'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.hcmc'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 65 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 247 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 190,000
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 8.1 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 55 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 11 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 34 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 68
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 260
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 200,000
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 8.6
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 58
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 12
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 36
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10423-cu-chi-mysterious-underground-tunnels-half-day-join-in-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.hcmc.experience2.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/hcmc-2.jpg"
+                                     alt="<%= translations['campaign.authenticexp.hcmc.experience2.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.hcmc.experience2.title'] %></h3>
+                                <p class="desc"><%= translations['campaign.authenticexp.hcmc.experience2.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hcmc.experience2.hashtag3'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hcmc.experience2.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hcmc.experience2.hashtag2'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.hcmc'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 90 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 340 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 261,250
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 11.2 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 76 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 15 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 48 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 94
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 358
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 275,000
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 11.8
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 80
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 16
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 50
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10422-saigon-amazing-architecture-adventure-half-day-join-in-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.hcmc.experience3.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/hcmc-3.jpg"
+                                     alt="<%= translations['campaign.authenticexp.hcmc.experience3.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.hcmc.experience3.title'] %></h3>
+                                <p class="desc"><%= translations['campaign.authenticexp.hcmc.experience3.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hcmc.experience3.hashtag3'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hcmc.experience3.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hcmc.experience3.hashtag2'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.hcmc'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 83 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 306 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 242,876
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 10.4 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 70 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 14 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 44 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 87
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 332
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 255,659
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 10.9
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 74
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 15
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 46
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10430-mekong-delta-country-life-discovery-full-day-join-in-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.hcmc.experience4.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/hcmc-4.jpg"
+                                     alt="<%= translations['campaign.authenticexp.hcmc.experience4.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.hcmc.experience4.title'] %></h3>
+                                <p class="desc"><%= translations['campaign.authenticexp.hcmc.experience4.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hcmc.experience4.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hcmc.experience4.hashtag2'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hcmc.experience4.hashtag3'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.hcmc'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 116 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 442 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 340,025
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 14.6 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 99 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 20 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 61 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 122
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 465
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 357,922
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 15.4
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 104
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 21
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 64
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+        <div class="experience-title hanoi">
+            <span class="address-icon"></span>
+            <h3><%= translations['campaign.authenticexp.hanoi'] %></h3>
+        </div>
+        <div class="experience-list-container hanoi">
+            <div class="experience-list">
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10398-hoa-lu-tam-coc-trip-full-day-join-in-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.hanoi.experience1.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/hanoi-1.jpg"
+                                     alt="<%= translations['campaign.authenticexp.hanoi.experience1.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.hanoi.experience1.title'] %></h3>
+                                <p class="desc"><%= translations['campaign.authenticexp.hanoi.experience1.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hanoi.experience1.hashtag3'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hanoi.experience1.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hanoi.experience1.hashtag2'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.hanoi'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 307 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 1,173 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 902,500
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 38.9 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 262 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 53 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 162 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 323
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 1,235
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 950,000
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 40.9
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 276
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 56
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 171
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10395-halong-bay-cruise-via-wonderful-nature-wonders-full-day-join-in-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.hanoi.experience2.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/hanoi-2.jpg"
+                                     alt="<%= translations['campaign.authenticexp.hanoi.experience2.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.hanoi.experience2.title'] %></h3>
+                                <p class="desc"><%= translations['campaign.authenticexp.hanoi.experience2.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hanoi.experience2.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hanoi.experience2.hashtag2'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hanoi.experience2.hashtag3'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.hanoi'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 404 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 1,544 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 1,187,500
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 51.1 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 345 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 70 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 214 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 425
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 1,625
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 1,250,000
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 53.8
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 363
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 74
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 225
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10000-phu-lang-pottery-village-half-day-private-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.hanoi.experience3.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/hanoi-3.jpg"
+                                     alt="<%= translations['campaign.authenticexp.hanoi.experience3.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.hanoi.experience3.title'] %></h3>
+                                <p class="desc"><%= translations['campaign.authenticexp.hanoi.experience3.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hanoi.experience3.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hanoi.experience3.hashtag2'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hanoi.experience3.hashtag3'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.hanoi'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 418 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 1,597 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 1,228,350
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 52.8 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 356 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 72 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 221 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 440
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 1,681
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 1,293,000
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 55.6
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 375
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 76
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 233
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10063-treasure-hunt-urban-tales-of-thang-long-half-day-private-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.hanoi.experience4.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/hanoi-4.jpg"
+                                     alt="<%= translations['campaign.authenticexp.hanoi.experience4.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.hanoi.experience4.title'] %></h3>
+                                <p class="desc"><%= translations['campaign.authenticexp.hanoi.experience4.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hanoi.experience4.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hanoi.experience4.hashtag2'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hanoi.experience4.hashtag3'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.hanoi'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 441 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 1,684 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 1,295,800
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 55.8 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 376 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 76 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 234 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 464
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 1,773
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 1,364,000
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 58.7
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 396
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 80
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 246
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+        <div class="experience-title hoian">
+            <span class="address-icon"></span>
+            <h3><%= translations['campaign.authenticexp.daNang.hoian'] %></h3>
+        </div>
+        <div class="experience-list-container hoian">
+            <div class="experience-list">
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10370-tan-thanh-mural-art-village-weekends-tour-half-day-join-in-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.hoian.experience1.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/hoian-1.jpg"
+                                     alt="<%= translations['campaign.authenticexp.hoian.experience1.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.hoian.experience1.title'] %></h3>
+                                <p class="desc"><%- translations['campaign.authenticexp.hoian.experience1.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hoian.experience1.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hoian.experience1.hashtag2'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hoian.experience1.hashtag3'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.daNang.hoian'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 147 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 562 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 432,630
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 18.6 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 125 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 26 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 78 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 155
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 592
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 455,400
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 19.6
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 132
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 27
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 82
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10374-hoi-an-city-trip-lantern-making-workshop-half-day-join-in-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.hoian.experience2.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/hoian-2.jpg"
+                                     alt="<%= translations['campaign.authenticexp.hoian.experience2.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.hoian.experience2.title'] %></h3>
+                                <p class="desc"><%- translations['campaign.authenticexp.hoian.experience2.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hoian.experience2.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hoian.experience2.hashtag2'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hoian.experience2.hashtag3'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.daNang.hoian'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 155 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 594 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 456,665
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 19.7 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 132 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 27 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 83 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 163
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 625
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 480,700
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 20.7
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 139
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 28
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 87
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10378-my-son-sanctuary-trip-from-da-nang-half-day-join-in-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.hoian.experience3.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/hoian-3.jpg"
+                                     alt="<%= translations['campaign.authenticexp.hoian.experience3.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.hoian.experience3.title'] %></h3>
+                                <p class="desc"><%- translations['campaign.authenticexp.hoian.experience3.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hoian.experience3.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hoian.experience3.hashtag2'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hoian.experience3.hashtag3'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.daNang.hoian'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 196 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 750 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 576,840
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 24.8 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 167 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 34 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 104 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 206
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 789
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 607,200
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 26.1
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 176
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 36
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 109
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10421-the-dreamlike-ba-na-hill-and-fantasy-park-full-day-join-in-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.hoian.experience4.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/hoian-4.jpg"
+                                     alt="<%= translations['campaign.authenticexp.hoian.experience4.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.hoian.experience4.title'] %></h3>
+                                <p class="desc"><%- translations['campaign.authenticexp.hoian.experience4.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hoian.experience4.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hoian.experience4.hashtag2'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.hoian.experience4.hashtag3'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.daNang.hoian'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 341 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 1,304 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 1,003,200
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 43.1 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 291 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 59 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 181 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 359
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 1,373
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 1,056,000
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 45.4
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 306
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 62
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 190
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+        <div class="experience-title nhaTrang">
+            <span class="address-icon"></span>
+            <h3><%= translations['campaign.authenticexp.nhaTrang'] %></h3>
+        </div>
+        <div class="experience-list-container nhaTrang marginBottom-30px">
+            <div class="experience-list">
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10307-vietnam-spa-on-the-nha-trang-beach"
+                       target="_blank" title="<%= translations['campaign.authenticexp.nhaTrang.experience1.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/nhaTrang-1.jpg"
+                                     alt="<%= translations['campaign.authenticexp.nhaTrang.experience1.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.nhaTrang.experience1.title'] %></h3>
+                                <p class="desc"><%- translations['campaign.authenticexp.nhaTrang.experience1.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.nhaTrang.experience1.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.nhaTrang.experience1.hashtag2'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.nhaTrang.experience1.hashtag3'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.nhaTrang'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 82 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 313 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 240,350
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 10.4 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 70 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 14 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 44 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 86
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 329
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 253,000
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 10.9
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 73
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 15
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 46
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10304-trekking-in-nui-chua-reservation-full-day-private-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.nhaTrang.experience2.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/nhaTrang-2.jpg"
+                                     alt="<%= translations['campaign.authenticexp.nhaTrang.experience2.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.nhaTrang.experience2.title'] %></h3>
+                                <p class="desc"><%- translations['campaign.authenticexp.nhaTrang.experience2.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.nhaTrang.experience2.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.nhaTrang.experience2.hashtag2'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.nhaTrang.experience2.hashtag3'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.nhaTrang'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 620 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 2,371 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 1,824,000
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 78.5 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 530 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 107 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 329 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 653
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 2,496
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 1,920,000
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 82.6
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 557
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 113
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 346
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10263-craft-beer-tour-with-vespa-in-nha-trang-half-day-private-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.nhaTrang.experience3.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/nhaTrang-3.jpg"
+                                     alt="<%= translations['campaign.authenticexp.nhaTrang.experience3.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.nhaTrang.experience3.title'] %></h3>
+                                <p class="desc"><%- translations['campaign.authenticexp.nhaTrang.experience3.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.nhaTrang.experience3.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.nhaTrang.experience3.hashtag2'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.nhaTrang.experience3.hashtag3'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.nhaTrang'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 659 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 2,519 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 1,938,800
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 83.3 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 562 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 114 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 349 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 694
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 2,652
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 2,040,000
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 87.7
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 592
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 120
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 367
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="https://fayfay.com/<%= locale %>/experience/10310-sunset-cocktail-and-dinner-on-cruise-half-day-join-in-tour"
+                       target="_blank" title="<%= translations['campaign.authenticexp.nhaTrang.experience4.title'] %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/authenticexp/nhaTrang-4.jpg"
+                                     alt="<%= translations['campaign.authenticexp.nhaTrang.experience4.title'] %>"
+                                     class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.authenticexp.nhaTrang.experience4.title'] %></h3>
+                                <p class="desc"><%- translations['campaign.authenticexp.nhaTrang.experience4.desc'] %></p>
+
+                                <div class="bottom">
+                                    <div class="hashtag-container">
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.nhaTrang.experience4.hashtag'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.nhaTrang.experience4.hashtag2'] %></span>
+                                        <span
+                                            class="hashtag"><%= translations['campaign.authenticexp.nhaTrang.experience4.hashtag3'] %></span>
+                                    </div>
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%= translations['campaign.authenticexp.nhaTrang'] %>
+                                        </li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <span class="discount-price">
+                                            <% switch (ccy) {
+                                            case 'HKD' : %>
+                                            HK$ 632 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'TWD' : %>
+                                            NT$ 2,415 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'VND' : %>
+                                            Từ ₫ 1,857,250
+                                            <% break;
+                                            case 'USD' : %>
+                                            US$ 79.9 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'CNY' : %>
+                                            ¥ 539 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'SGD' : %>
+                                            S$ 109 <%= translations['common.up'] %>
+                                            <% break;
+                                            case 'MYR' : %>
+                                            RM 334 <%= translations['common.up'] %>
+                                            <% break;
+                                            } %>
+                                            <span class="ori-price">
+                                                <% switch (ccy) {
+                                                case 'HKD' : %>
+                                                HK$ 665
+                                                <% break;
+                                                case 'TWD' : %>
+                                                NT$ 2,542
+                                                <% break;
+                                                case 'VND' : %>
+                                                ₫ 1,955,000
+                                                <% break;
+                                                case 'USD' : %>
+                                                US$ 84.1
+                                                <% break;
+                                                case 'CNY' : %>
+                                                ¥ 567
+                                                <% break;
+                                                case 'SGD' : %>
+                                                S$ 115
+                                                <% break;
+                                                case 'MYR' : %>
+                                                RM 352
+                                                <% break;
+                                                } %>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+
+    </div>
+</section>

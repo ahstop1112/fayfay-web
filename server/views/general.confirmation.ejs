@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>fayfay.com</title>
+    <% include ./include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/account.css">
+</head>
+
+<body>
+<div id="page">
+    <header class="account-header-section">
+        <div class="header-top-area">
+            <div class="header-container">
+
+                <div class="logo">
+                    <a href="<%= langUrl %>/">
+                        <img src="/images/space.png" alt="Fayfay">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="account-section bg-light-grey">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4 col-sm-8 col-xs-12 myaccount-content">
+                    <% if(isSuccess) { %>
+                        <div class="alert alert-success">
+                            <%- message %>
+                        </div>
+                    <% } else { %>
+                        <div class="alert alert-warning">
+                            <%- message %>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

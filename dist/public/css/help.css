@@ -1,0 +1,123 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+.help-header-section {
+  overflow: hidden;
+  background-color: #fff; }
+  .help-header-section .header-text img {
+    max-width: 700px; }
+    @media screen and (max-width: 1025px) {
+      .help-header-section .header-text img {
+        max-width: 450px; } }
+  .help-header-section .bg {
+    top: 0 !important; }
+    @media screen and (max-width: 550px) {
+      .help-header-section .bg {
+        top: -10% !important;
+        height: 100%;
+        width: auto; } }
+
+.help-section {
+  padding: 30px 0;
+  padding-top: 10px; }
+  .help-section .help-heading h4 {
+    color: #999;
+    font-weight: 400; }
+  .help-section .leftmenu.nav-tabs {
+    margin-left: 0;
+    border: 0; }
+    .help-section .leftmenu.nav-tabs li {
+      width: 100%;
+      border: 0;
+      background: none;
+      border-radius: 0;
+      text-align: left;
+      color: #163A4D;
+      padding: 10px 0;
+      font-size: 1em; }
+      .help-section .leftmenu.nav-tabs li a {
+        color: #163A4D;
+        background: none;
+        border: none;
+        padding: 0;
+        font-weight: 400;
+        text-transform: capitalize; }
+        .help-section .leftmenu.nav-tabs li a .icon {
+          color: #EE7E31; }
+          .help-section .leftmenu.nav-tabs li a .icon:before {
+            margin-right: 10px; }
+      .help-section .leftmenu.nav-tabs li.active a {
+        color: #EE7E31;
+        background: none;
+        padding: 0; }
+  .help-section .icon-graph {
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+    padding-left: 15px;
+    margin-right: 10px; }
+    .help-section .icon-graph.booking {
+      background-image: url("/images/icons/book.png"); }
+    .help-section .icon-graph.payment {
+      background-image: url("/images/icons/card.png"); }
+    .help-section .icon-graph.coupons {
+      background-image: url("/images/icons/ticket.png"); }
+    .help-section .icon-graph.changes {
+      background-image: url("/images/icons/return.png"); }
+    .help-section .icon-graph.settings {
+      background-image: url("/images/icons/user.png"); }
+  .help-section .help-content h3 {
+    color: #EE7E31;
+    font-size: 1.5em;
+    font-weight: 400; }
+  @media screen and (max-width: 991px) {
+    .help-section .help-content .tab-content > .tab-pane {
+      display: block !important;
+      opacity: 1 !important; } }
+  .help-section .help-content .panel-default {
+    border: 0;
+    border-bottom: 1px solid #eee; }
+    .help-section .help-content .panel-default > .panel-heading {
+      background: none;
+      border: 0;
+      border-radius: 0;
+      padding: 15px 0; }
+      .help-section .help-content .panel-default > .panel-heading .panel-title {
+        font-size: 1em; }
+      .help-section .help-content .panel-default > .panel-heading a {
+        text-decoration: none; }
+        .help-section .help-content .panel-default > .panel-heading a:before {
+          font-family: 'Glyphicons Halflings';
+          content: "\E114";
+          float: right;
+          transition: all 0.5s;
+          margin-right: 15px; }
+          @media screen and (max-width: 767px) {
+            .help-section .help-content .panel-default > .panel-heading a:before {
+              margin-right: 0; } }
+      .help-section .help-content .panel-default > .panel-heading.active a:before {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        transform: rotate(180deg); }
+    .help-section .help-content .panel-default .panel-body {
+      border: 0;
+      font-size: 1em;
+      background-color: #f4f4f4;
+      padding: 15px;
+      margin-bottom: 15px; }

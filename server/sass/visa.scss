@@ -1,0 +1,753 @@
+@import 'include/variable';
+
+.visa-header-section {
+    overflow: hidden;
+    background-color: $white;
+
+    .bg-container{
+        @media screen and (min-width: $desktop) {
+            max-height: none !important;
+        }
+
+        &:before{
+            padding-top: 30% !important;
+
+            @media screen and (max-width: $mobile-h) {
+                padding-top: 31% !important;
+            }
+
+            @media screen and (max-width: $mobile-v) {
+                padding-top: 75% !important;
+            }
+        }
+
+        .bg{
+            top: -100% !important;
+            height: 100% !important;
+            width: auto !important;
+
+            &.except-mobile-v {
+                display: block;
+
+                @media screen and (min-width: $mobile-v) {
+                    display: block;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    height: auto !important;
+                    width: 100% !important;
+                }
+            }
+
+            &.mobile-v {
+                display: none;
+
+                @media screen and (max-width: $mobile-v) {
+                    display: block;
+                    top: -95% !important;
+                }
+            }
+        }
+
+    }
+}
+
+.visa-section.flow{
+
+    h2.title{
+        color: $main-color;
+        text-align: center;
+        line-height: 2;
+
+        @media screen and (max-width: $mobile-v) {
+            font-size: 1.5em;
+        }
+    }
+
+    .flows-container {
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Chrome */
+        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+
+        .flow-item {
+            padding: 10px 20px;
+            flex:  0 0 25%;
+            width: 25%;
+            text-align: center;
+
+            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox; /* TWEENER - IE 10 */
+            display: -webkit-flex; /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+
+            @media screen and (max-width: $tablet-v) {
+                padding: 5px 10px;
+                flex:  0 0 50%;
+                width: 50%;
+            }
+
+            @media screen and (max-width: $mobile-h) {
+                border: none;
+            }
+
+            .number-circle{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 100%;
+
+                background-color: $main-color;
+                color: $white;
+
+                text-align: center;
+
+                @media screen and (max-width: $mobile-h) {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                }
+            }
+
+            .content{
+                width: 100%;
+
+                h1 {
+                    font-size: 1.25em;
+                    width: 100%;
+
+                    @media screen and (max-width: $mobile-h) {
+                        font-size: 1em;
+                    }
+                }
+
+                p.desc{
+                    text-align: center;
+
+                    @media screen and (max-width: $mobile-h) {
+                        font-size: 0.9em;
+                    }
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    flex-direction: column;
+                }
+            }
+
+            .flow-icon{
+                width: 44%;
+                margin: 0 auto;
+                margin-bottom: 10px;
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 64%;
+                    max-height: 104px;
+                }
+
+                img{
+                    max-width: 200px;
+
+                    @media screen and (max-width: $mobile-v) {
+                        max-width: 90px;
+                        max-height: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.visa-section.products{
+
+    padding: 20px 10px;
+
+    h2.title{
+        color: $main-color;
+        text-align: center;
+        line-height: 2;
+
+        @media screen and (max-width: $mobile-v) {
+            font-size: 1.5em;
+            line-height: 1.5;
+            margin: 20px 0;
+        }
+    }
+    .products-container {
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Chrome */
+        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+
+        @media screen and (max-width: $tablet-v) {
+            width: 100%;
+        }
+
+        .product-item {
+            width: 32.33% !important;
+            flex: 0 0 32.333%;
+            margin: 8px 0.5%;
+            text-align: center;
+
+            border: 1px solid $main-color;
+
+            @media screen and (max-width: $tablet-v) {
+                padding: 5px 10px;
+
+                flex:  0 0 49%;
+                width: 49%;
+            }
+
+            @media screen and (max-width: $mobile-v) {
+                flex:  0 0 100%;
+                width: 100%;
+
+                margin-bottom: 2%;
+            }
+
+            .item-header{
+                width: 100%;
+                border-bottom: 1px solid $main-color;
+                padding: 10px;
+
+                p.desc, h4{
+                    margin-bottom: 0;
+                    text-align: center;
+
+                    &.desc{
+                        color: $black;
+                        font-size: 1.5em;
+                    }
+                }
+
+                h4{
+                    color: $main-color;
+                    font-size: 2em;
+
+                    span{
+                        font-size: 0.6em;
+                        margin-left: 5px;
+
+                        &.vnd{
+                            margin-left: 0;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+            }
+
+            .content{
+                width: 100%;
+                padding: 10px;
+                text-align: left;
+
+                ul {
+                    list-style: none;
+                    margin-left: 0;
+                    padding-left: 0;
+
+                    li {
+                        padding-left: 1em;
+                        color: $light-grey;
+
+                        &:before {
+                            display: inline-block;
+                            font-family: "Font Awesome 5 Pro";
+                            font-weight: 500 !important;
+                            font-style: normal;
+                            margin-right: 5px;
+                            font-size: 1em !important;
+                            content: "\F00C";
+                            padding-right: 5px;
+                            color: $main-color;
+                        }
+
+                        &:last-child{
+                            &:before {
+                                content: "\f155";
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                }
+
+                p{
+                    margin-left: $padding;
+                    color: $light-grey;
+                    font-size: 0.86em;
+
+
+                }
+            }
+
+            .bottom{
+                padding-top: 0;
+                padding-bottom: 15px;
+
+                .btn{
+                    margin: 0 auto;
+                    padding: 5px 35px;
+                    line-height: 1.5;
+                    border-radius: 10px;
+                    border: none;
+                }
+            }
+
+            .flow-icon{
+                width: 44%;
+                margin: 0 auto;
+                margin-bottom: 10px;
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 64%;
+                }
+
+                img{
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+}
+.visa-section.add-ons{
+
+    padding: 20px 10px;
+
+    @media screen and (max-width: $mobile-v) {
+        padding-top: 0;
+    }
+
+    h2.title{
+        color: $main-color;
+        text-align: center;
+        line-height: 2;
+
+        @media screen and (max-width: $mobile-v) {
+            font-size: 1.5em;
+        }
+    }
+
+    .drag-list{
+
+        justify-content: center;
+        flex-direction: row;
+        margin: 0 auto;
+        width: 92%;
+
+        @media screen and (max-width: $tablet-v) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $mobile-v) {
+            padding: 0;
+        }
+
+        .list-item{
+            width: 32.33% !important;
+            flex: 0 0 32.333%;
+
+            @media screen and (max-width: $mobile-h) {
+                width: 99.5%;
+                flex: 0 0 99.5%;
+            }
+
+            .list-content{
+                box-shadow: none;
+                justify-content: flex-start;
+
+                .content{
+                    padding: 0 $padding;
+                    border: 1px solid #ddd;
+                    border-bottom: 0;
+
+                    .desc{
+                        min-height: 120px;
+                        text-align: left;
+
+                        @media screen and (max-width: $tablet-h) {
+                            min-height: 160px;
+                        }
+
+                        @media screen and (max-width: $mobile-h) {
+                            min-height: 0;
+                        }
+
+                        b{
+                            color: $light-grey;
+                        }
+                    }
+
+
+
+                    h3{
+                        color: $main-color;
+                        font-size: 1.25em;
+                        min-height: 42px;
+
+                        @media screen and (max-width: $mobile-h) {
+                            min-height: 0;
+                        }
+                    }
+                }
+
+                .bottom{
+                    border: 1px solid #ddd;
+                    border-top: 0;
+
+                    .price span{
+                        font-size: 0.8em;
+                        margin-left: 5px;
+                    }
+
+                    .details{
+                        color: $main-font-color;
+                        text-align: right;
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+.visa-section.combo{
+
+    padding: 20px 10px;
+
+    @media screen and (max-width: $mobile-v) {
+        padding-top: 0;
+    }
+
+    h2.title{
+        color: $main-color;
+        text-align: center;
+        line-height: 2;
+
+        @media screen and (max-width: $mobile-v) {
+            font-size: 1.5em;
+        }
+    }
+
+    .drag-list{
+        width: 92%;
+        margin: 0 auto;
+
+        justify-content: center;
+        flex-direction: row;
+        margin: 0 auto;
+        width: 90%;
+
+        @media screen and (max-width: $tablet-v) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $mobile-v) {
+            padding: 0;
+        }
+
+        .list-item {
+            width: 32.33% !important;
+            flex: 0 0 32.333%;
+
+            @media screen and (max-width: $mobile-h) {
+                width: 99.5%;
+                flex: 0 0 99.5%;
+            }
+
+            .price{
+                span {
+                    font-size: 0.8em;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+.visa-section.customer-reviews {
+    margin-top: 20px;
+    padding: 20px 10px;
+    padding-bottom: 50px;
+    text-align: center;
+    background: $bg-grey;
+
+    h2.title {
+        color: $main-color;
+        text-align: center;
+        line-height: 2;
+
+        @media screen and (max-width: $mobile-v) {
+            font-size: 1.5em;
+        }
+    }
+
+    p.desc{
+        text-align: center;
+    }
+
+    .reviews-slider{
+        list-style: none;
+        margin: 0 auto;
+        width: 92%;
+        display: none;
+
+        @media screen and (max-width: $tablet-v) {
+            width: 100%;
+        }
+
+        .slick-next{
+            right: -20px;
+
+            &:before{
+                color: #ddd !important;
+            }
+        }
+
+        .slick-prev{
+            left: -20px;
+
+            &:before{
+                color: #ddd !important;
+            }
+        }
+
+        .slick-dots{
+            position: relative;
+            bottom: 0;
+        }
+
+        .list-item{
+            flex: 0 0 100%;
+
+            &:hover{
+                opacity: 1;
+            }
+
+            .list-content{
+
+                @media screen and (max-width: $mobile-v) {
+                    box-shadow: none;
+                    border: 1px solid $bg-grey;
+                }
+            }
+
+            .review-content{
+                padding: 20px;
+                background-image: linear-gradient(to right, $main-color, #fdc66a);
+                min-height: 275px;
+
+                .icon.quote-left{
+                    font-weight: 900 !important;
+                    float: left;
+                    margin-bottom: 5px;
+
+                    &:before{
+                        margin-right: 10px;
+                        font-size: 2em;
+                        color: $white;
+                    }
+                }
+                .icon.quote-right{
+                    font-weight: 900 !important;
+                    float: right;
+                    margin-top: 5px;
+
+                    &:before{
+                        margin-left: 10px;
+                        margin-right: 0;
+                        font-size: 2em;
+                        color: $white;
+                    }
+                }
+
+                p{
+                    font-size: 1.2em;
+                    color: $white;
+
+                    text-align: center;
+                    width: 90%;
+                    margin: 0 auto;
+
+                    word-wrap: break-word;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+
+                    transition: $fadeIn;
+                    -webkit-transition: $fadeIn;
+
+                    &.opened{
+                        overflow: visible;
+                        -webkit-line-clamp: 100;
+                    }
+                }
+
+                .viewmore, .showless{
+                    display: block;
+                    margin-top: 10px;
+                    width: 100%;
+                    color: $white;
+                    text-decoration: underline;
+
+                    &.hidden{
+                        display: none;
+                    }
+                }
+            }
+
+            .review-user{
+                padding: 10px 20px;
+
+                h5.name{
+                    margin-bottom: 5px;
+                    color: $main-color;
+                    text-align: center;
+                }
+
+                p.date{
+                    margin-bottom: 0;
+                    color: $light-grey;
+                    text-align: center;
+                }
+            }
+
+            .bottom{
+                border-top: 1px solid #ddd;
+                padding: 20px;
+                padding-top: 10px;
+                padding-bottom: 0;
+                justify-content: center;
+
+                .rating{
+                    width: 150px;
+
+                    .star{
+                        width: 30px;
+                        height: 30px;
+                        min-width: 30px;
+                        min-height: 30px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+body.zh-hk .visa-section.customer-reviews {
+    .reviews-slider{
+        .review-content{
+            p{
+                -webkit-line-clamp: 4;
+            }
+        }
+    }
+}
+
+body.zh-hk .visa-section.add-ons .drag-list .list-item .list-content .content .desc{
+    min-height: 80px;
+}
+
+.visa-section.faq {
+    padding: 0 10px;
+    padding-bottom: 150px;
+    text-align: center;
+
+    h2.title{
+        color: $main-color;
+        text-align: center;
+        line-height: 2;
+
+        @media screen and (max-width: $mobile-v) {
+            font-size: 1.5em;
+        }
+    }
+
+    #accordion{
+        width: 90%;
+        margin: 0 auto;
+        text-align: left;
+
+        @media screen and (max-width: $tablet-v) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            padding: $padding;
+        }
+
+        @media screen and (max-width: $mobile-v) {
+            padding: 10px 0;
+        }
+
+        .panel-title > a{
+            display: flex;
+
+            @media screen and (max-width: $mobile-v) {
+                justify-content: flex-start;
+            }
+
+            &::after{
+                content: "\f068";
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 300 !important;
+                float: right;
+                color: $light-grey;
+            }
+
+            &.collapsed:after{
+                content: "\f067";
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 300 !important;
+                color: $light-grey;
+
+                @media screen and (max-width: $mobile-v) {
+                    display: inline-block;
+                }
+            }
+
+            span{
+                margin-left: 8px;
+                width: 98%;
+                flex: 0 0 96%;
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 90%;
+                    flex: 0 0 90%;
+                }
+            }
+        }
+
+        .remarks{
+            font-size: 0.86em;
+            color: $light-grey;
+            margin-top: $padding;
+        }
+    }
+}

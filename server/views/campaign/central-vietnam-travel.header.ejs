@@ -1,0 +1,16 @@
+<header class="central-vietnam-travel-header-section">
+    <% include ../include/header.ejs %>
+    <div class="section-background">
+        <div class="overlay-content">
+            <div class="bg-container">
+                <% if (locale == 'zh-hk') { %>
+                    <img src="/images/campaign/centralvntravel/header_tc.jpg" class="bg except-mobile-v">
+                    <img src="/images/campaign/centralvntravel/header_mobile_tc.jpg" class="bg mobile-v">
+                <% } else { %>
+                    <img src="/images/campaign/centralvntravel/header_en.jpg" class="bg except-mobile-v">
+                    <img src="/images/campaign/centralvntravel/header_mobile_en.jpg" class="bg mobile-v">
+                <% } %>
+            </div>
+        </div>
+    </div>
+</header>

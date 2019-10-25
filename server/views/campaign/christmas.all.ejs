@@ -1,0 +1,642 @@
+<section id="all">
+    <div class="container-fluid">
+        <div class="coupon-container">
+            <div class="discount">
+                <h1><%- translations['campaign.christmas.discountText'] %></h1>
+                <p class="desc"><%= translations['campaign.christmas.discountSmallText'] %></p>
+            </div>
+            <div class="coupon-line">
+                <div class="top-circle"></div>
+                <div class="bottom-circle"></div>
+            </div>
+            <div class="code">
+                <h3><%= translations['campaign.christmas.discountCode'] %></h3>
+                <h1 class="promoCode">XMASIM18</h1>
+                <button class="btn btn-s copy-btn show" data-clipboard-action="copy" data-clipboard-text="XMASIM18" aria-label="<%= translations['campaign.christmas.copied'] %>">
+                    <%= translations['campaign.christmas.copy'] %>
+                </button>
+                <span class="tooltiptext"><%= translations['campaign.christmas.copied'] %></span>
+            </div>
+        </div>
+        <p class="content_p hidden-xs"><%- translations['campaign.christmas.terms1']  %></p>
+        <p class="content_p visible-xs"><%- translations['campaign.christmas.mobile.terms1']  %></p>
+
+        <div class="drag-list btn-address">
+            <div class="list-item watersports">
+                <a id="watersports" title="<%- translations['campaign.christmas.watersports']  %>">
+                    <div class="banner">
+                        <img src="/images/campaign/christmas/icon_water.png" alt="<%- translations['campaign.christmas.watersports']  %>" class="bg" style="opacity: 1;">
+                    </div>
+                    <h3 class="title-s"><%- translations['campaign.christmas.watersports']  %></h3>
+                </a>
+            </div>
+
+            <div class="list-item fnb">
+                <div class="overlay-content">
+                    <a id="fnb" title="<%- translations['campaign.christmas.fnb']  %>">
+                        <div class="banner">
+                            <img src="/images/campaign/christmas/icon_eat.png" alt="<%- translations['campaign.christmas.fnb']  %>" class="bg" style="opacity: 1;">
+                        </div>
+                        <h3 class="title-s"><%- translations['campaign.christmas.fnb']  %></h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="list-item naturalExploration">
+                <div class="overlay-content">
+                    <a id="naturalExploration" title="<%- translations['campaign.christmas.naturalExploration']  %>">
+                        <div class="banner">
+                            <img src="/images/campaign/christmas/icon_natural.png" alt="<%- translations['campaign.christmas.naturalExploration']  %>" class="bg" style="opacity: 1;">
+                        </div>
+                        <h3 class="title-s"><%- translations['campaign.christmas.naturalExploration']  %></h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="list-item show">
+                <div class="overlay-content">
+                    <a id="show" title="<%- translations['campaign.christmas.show']  %>">
+                        <div class="banner">
+                            <img src="/images/campaign/christmas/icon_show.png" alt="<%- translations['campaign.christmas.show']  %>" class="bg" style="opacity: 1;">
+                        </div>
+                        <h3 class="title-s"><%- translations['campaign.christmas.show']  %></h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="list-item simcard">
+                <div class="overlay-content">
+                    <a id="show" title="<%- translations['campaign.christmas.simcard']  %>">
+                        <div class="banner">
+                            <img src="/images/campaign/christmas/icon_sim.png" alt="<%- translations['campaign.christmas.simcard']  %>" class="bg" style="opacity: 1;">
+                        </div>
+                        <h3 class="title-s"><%- translations['campaign.christmas.simcard']  %></h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="experience-title watersports visible-xs">
+            <span class="address-icon"></span><h3><%= translations['campaign.christmas.watersports']  %></h3>
+        </div>
+        <div class="experience-list-container watersports">
+            <div class="experience-list">
+            <div class="list-col">
+                <li class="list-item highlight">
+                <a href="/<%=locale%>/experience/10209-fishing-coral-snorkeling-in-northern-phu-quoc-full-day-tour" target="_blank"title="<%= translations['campaign.christmas.watersports.highlight1.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="/images/campaign/christmas/water-3.jpg" alt="<%= translations['campaign.christmas.watersports.highlight1.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <h3><%= translations['campaign.christmas.watersports.highlight1.title']  %></h3>
+                            <div class="bottom">
+                                <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.phuQuoc'] %></li></ul>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 486 <%= translations['common.up']  %></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 127 <%= translations['common.up']  %></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            </div>
+            <div class="list-col">
+                <li class="list-item">
+                    <a href="/<%=locale%>/experience/10207-snorkeling-fishing-in-phu-quoc-3-islands-full-day-tour" target="_blank"title="<%= translations['campaign.christmas.watersports.experience1.title']  %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/christmas/water-4.jpg" alt="<%= translations['campaign.christmas.watersports.experience1.title']  %>" class="bg"/>
+                            </div>
+                            <div class="content">
+                                <div class="award"></div>
+                                <h3><%= translations['campaign.christmas.watersports.experience1.title']  %></h3>
+                                <div class="bottom">
+                                    <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.phuQuoc'] %></li></ul>
+                                    <div class="price-container">
+                                        <% if (ccy == 'TWD') { %>
+                                        <span class="discount-price">NT$ 936 <%= translations['common.up']  %></span>
+                                        <% } else { %>
+                                        <span class="discount-price">HK$ 244 <%= translations['common.up']  %></span>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/<%=locale%>/experience/10282-the-halong-bay-limestone-wonder-retreat-2d1n-join-in-tour" target="_blank"title="<%= translations['campaign.christmas.watersports.experience2.title']  %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/christmas/water-2.jpg" alt="<%= translations['campaign.christmas.watersports.experience2.title']  %>" class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.christmas.watersports.experience2.title']  %></h3>
+                                <div class="bottom">
+                                    <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hanoi'] %></li></ul>
+                                    <div class="price-container">
+                                        <% if (ccy == 'TWD') { %>
+                                        <span class="discount-price zh-tw">NT$ 5,352 <%= translations['common.up']  %></span>
+                                        <% } else { %>
+                                        <span class="discount-price en-us">HK$ 1,399 <%= translations['common.up']  %></span>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/<%=locale%>/experience/10221-hoi-an-kayak-excursion-with-floating-bar-afternoon-private-tour" target="_blank"title="<%= translations['campaign.christmas.watersports.experience3.title']  %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/christmas/water-6.jpg" alt="<%= translations['campaign.christmas.watersports.experience3.title']  %>" class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.christmas.watersports.experience3.title']  %></h3>
+                                <div class="bottom">
+                                    <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoiAn'] %></li></ul>
+                                    <div class="price-container">
+                                        <% if (ccy == 'TWD') { %>
+                                        <span class="discount-price">NT$ 1,149 <%= translations['common.up']  %></span>
+                                        <% } else { %>
+                                        <span class="discount-price">HK$ 300 <%= translations['common.up']  %></span>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/<%=locale%>/experience/10157-phong-nha-national-park-unesco-heritage-full-day-join-in-tour" target="_blank" title="<%= translations['campaign.christmas.watersports.experience4.title']  %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/christmas/water-5.jpg" alt="<%= translations['campaign.christmas.watersports.experience4.title']  %>" class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%= translations['campaign.christmas.watersports.experience4.title']  %></h3>
+                                <div class="bottom">
+                                    <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.quangBinh'] %></li></ul>
+                                    <div class="price-container">
+                                        <% if (ccy == 'TWD') { %>
+                                        <span class="discount-price">NT$ 1,930 <%= translations['common.up']  %></span>
+                                        <% } else { %>
+                                        <span class="discount-price">HK$ 504 <%= translations['common.up']  %></span>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </div>
+        </div>
+        </div>
+
+        <div class="experience-title fnb visible-xs">
+            <span class="address-icon"></span><h3><%= translations['campaign.christmas.fnb']  %></h3>
+        </div>
+        <div class="experience-list-container fnb">
+            <div class="experience-list reverse">
+                <div class="list-col">
+                    <li class="list-item highlight">
+                        <a href="/<%=locale%>/experience/10245-blanc-restaurant-dining-with-sign-language" target="_blank"title="<%= translations['campaign.christmas.fnb.highlight1.title']  %>">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="/images/campaign/christmas/foodie-2.jpg" alt="<%= translations['campaign.christmas.fnb.highlight1.title']  %>" class="bg"/>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['campaign.christmas.fnb.highlight1.title']  %></h3>
+                                    <div class="bottom">
+                                        <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoChiMinh'] %></li></ul>
+                                        <div class="price-container">
+                                            <% if (ccy == 'TWD') { %>
+                                            <span class="discount-price">NT$ 450  <%= translations['common.up']  %></span>
+                                            <% } else { %>
+                                            <span class="discount-price">HK$ 117 <%= translations['common.up']  %></span>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </div>
+                <div class="list-col">
+                    <li class="list-item">
+                        <a href="/<%=locale%>/experience/10206-bonsai-cruise-buffet-dinner-on-the-saigon-river" target="_blank"title="<%= translations['campaign.christmas.fnb.experience1.title']  %>">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="/images/campaign/christmas/foodie-3.jpg" alt="<%= translations['campaign.christmas.fnb.experience1.title']  %>" class="bg"/>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['campaign.christmas.fnb.experience1.title']  %></h3>
+                                    <div class="bottom">
+                                        <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoChiMinh'] %></li></ul>
+                                        <div class="price-container">
+                                            <% if (ccy == 'TWD') { %>
+                                            <span class="discount-price">NT$ 1,405 <%= translations['common.up']  %></span>
+                                            <% } else { %>
+                                            <span class="discount-price">HK$ 367 <%= translations['common.up']  %></span>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="/<%=locale%>/experience/10035-hoi-an-street-food-evening-private-tour" target="_blank"title="<%= translations['campaign.christmas.fnb.experience2.title']  %>">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="/images/campaign/christmas/foodie-1.jpg" alt="<%= translations['campaign.christmas.fnb.experience2.title']  %>" class="bg"/>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['campaign.christmas.fnb.experience2.title']  %></h3>
+                                    <div class="bottom">
+                                        <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoiAn'] %></li></ul>
+                                        <div class="price-container">
+                                            <% if (ccy == 'TWD') { %>
+                                            <span class="discount-price">NT$ 1,099 <%= translations['common.up']  %></span>
+                                            <% } else { %>
+                                            <span class="discount-price">HK$ 287 <%= translations['common.up']  %></span>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="/<%=locale%>/experience/10040-eat-like-a-local-in-hanoi-half-day-private-food-tour" target="_blank"title="<%= translations['campaign.christmas.fnb.experience3.title']  %>">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="/images/campaign/christmas/foodie-5.jpg" alt="<%= translations['campaign.christmas.fnb.experience3.title']  %>" class="bg"/>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['campaign.christmas.fnb.experience3.title']  %></h3>
+                                    <div class="bottom">
+                                        <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hanoi'] %></li></ul>
+                                        <div class="price-container">
+                                            <% if (ccy == 'TWD') { %>
+                                            <span class="discount-price">NT$ 1,678 <%= translations['common.up']  %></span>
+                                            <% } else { %>
+                                            <span class="discount-price">HK$ 439 <%= translations['common.up']  %></span>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="/<%=locale%>/experience/10200-cooking-class-half-day-join-in-tour" target="_blank"title="<%= translations['campaign.christmas.fnb.experience4.title']  %>">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="/images/campaign/christmas/foodie-4.jpg" alt="<%= translations['campaign.christmas.fnb.experience4.title']  %>" class="bg"/>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['campaign.christmas.fnb.experience4.title']  %></h3>
+                                    <div class="bottom">
+                                        <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoChiMinh'] %></li></ul>
+                                        <div class="price-container">
+                                            <% if (ccy == 'TWD') { %>
+                                            <span class="discount-price">NT$ 1,216 <%= translations['common.up']  %></span>
+                                            <% } else { %>
+                                            <span class="discount-price">HK$ 318 <%= translations['common.up']  %></span>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+
+        <div class="experience-title naturalExploration visible-xs">
+            <span class="address-icon"></span><h3><%= translations['campaign.christmas.naturalExploration']  %></h3>
+        </div>
+        <div class="experience-list-container naturalExploration">
+            <div class="experience-list">
+            <div class="list-col">
+                <li class="list-item highlight">
+                <a href="/<%=locale%>/experience/10143-the-secret-of-cu-chi-tunnels-morning-join-in-tour" target="_blank"title="<%= translations['campaign.christmas.naturalExploration.highlight1.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="/images/campaign/christmas/natural-4.jpg" alt="<%= translations['campaign.christmas.naturalExploration.highlight1.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <h3><%= translations['campaign.christmas.naturalExploration.highlight1.title']  %></h3>
+                            <div class="bottom">
+                                <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoChiMinh'] %></li></ul>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 929 <%= translations['common.up']  %></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 243 <%= translations['common.up']  %></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            </div>
+            <div class="list-col">
+                <li class="list-item">
+                <a href="/<%=locale%>/experience/10018-hoa-lu-tam-coc-with-easy-cycling-full-day-private-tour" target="_blank"title="<%= translations['campaign.christmas.naturalExploration.experience1.title']  %>">
+                    <div class="list-content">
+                        <div class="banner">
+                            <img src="/images/campaign/christmas/natural-5.jpg" alt="<%= translations['campaign.christmas.naturalExploration.experience1.title']  %>" class="bg"/>
+                        </div>
+                        <div class="content">
+                            <div class="award"></div>
+                            <h3><%= translations['campaign.christmas.naturalExploration.experience1.title']  %></h3>
+                            <div class="bottom">
+                                <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hanoi'] %></li></ul>
+                                <div class="price-container">
+                                    <% if (ccy == 'TWD') { %>
+                                    <span class="discount-price">NT$ 1,955 <%= translations['common.up']  %></span>
+                                    <% } else { %>
+                                    <span class="discount-price">HK$ 511 <%= translations['common.up']  %></span>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+                <li class="list-item">
+                    <a href="/<%=locale%>/experience/10226-hoi-an-countryside-bicycle-tour-my-son-sanctuary-full-day-private-tour" target="_blank"title="<%= translations['campaign.christmas.naturalExploration.experience2.title']  %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/christmas/natural-2.jpg" alt="<%= translations['campaign.christmas.naturalExploration.experience2.title']  %>" class="bg"/>
+                            </div>
+                            <div class="content">
+                                <div class="award"></div>
+                                <h3><%= translations['campaign.christmas.naturalExploration.experience2.title']  %></h3>
+                                <div class="bottom">
+                                    <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoiAn'] %></li></ul>
+                                    <div class="price-container">
+                                        <% if (ccy == 'TWD') { %>
+                                        <span class="discount-price">NT$ 1,722 <%= translations['common.up']  %></span>
+                                        <% } else { %>
+                                        <span class="discount-price">HK$ 450 <%= translations['common.up']  %></span>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/<%=locale%>/experience/10023-picturesque-mai-chau-minority-village-2d1n-private-tour" target="_blank"title="<%= translations['campaign.christmas.naturalExploration.experience3.title']  %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/christmas/natural-1.jpg" alt="<%= translations['campaign.christmas.naturalExploration.experience3.title']  %>" class="bg"/>
+                            </div>
+                            <div class="content">
+                                <div class="award"></div>
+                                <h3><%= translations['campaign.christmas.naturalExploration.experience3.title']  %></h3>
+                                <div class="bottom">
+                                    <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoChiMinh'] %></li></ul>
+                                    <div class="price-container">
+                                        <% if (ccy == 'TWD') { %>
+                                        <span class="discount-price">NT$ 3,666 <%= translations['common.up']  %></span>
+                                        <% } else { %>
+                                        <span class="discount-price">HK$ 958 <%= translations['common.up']  %></span>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/<%=locale%>/experience/10225-my-son-sanctuary-jeep-ride-via-local-village-private-tour" target="_blank"title="<%= translations['campaign.christmas.naturalExploration.experience4.title']  %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/christmas/natural-3.jpg" alt="<%= translations['campaign.christmas.naturalExploration.experience4.title']  %>" class="bg"/>
+                            </div>
+                            <div class="content">
+                                <div class="award"></div>
+                                <h3><%= translations['campaign.christmas.naturalExploration.experience4.title']  %></h3>
+                                <div class="bottom">
+                                    <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoChiMinh'] %></li></ul>
+                                    <div class="price-container">
+                                        <% if (ccy == 'TWD') { %>
+                                        <span class="discount-price">NT$ 1,939 <%= translations['common.up']  %></span>
+                                        <% } else { %>
+                                        <span class="discount-price">HK$ 507 <%= translations['common.up']  %></span>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </div>
+        </div>
+        </div>
+
+        <div class="experience-title show visible-xs">
+            <span class="address-icon"></span><h3><%= translations['campaign.christmas.show']  %></h3>
+        </div>
+        <div class="experience-list-container show">
+            <div class="experience-list reverse">
+                <div class="list-col">
+                    <li class="list-item highlight">
+                    <a href="/<%=locale%>/experience/10175-a-o-show-ticket-at-saigon-opera-house-ho-chi-minh-city" target="_blank"title="<%= translations['campaign.christmas.nhaTrang.experience1.title']  %>">
+                        <div class="list-content">
+                            <div class="banner">
+                                <img src="/images/campaign/christmas/show-2.jpg" alt="<%= translations['campaign.christmas.nhaTrang.experience1.title']  %>" class="bg"/>
+                            </div>
+                            <div class="content">
+                                <div class="award"></div>
+                                <h3><%- translations['campaign.christmas.show.highlight1.title']  %></h3>
+                                <div class="bottom">
+                                    <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoChiMinh'] %></li></ul>
+                                    <div class="price-container">
+                                        <% if (ccy == 'TWD') { %>
+                                        <span class="discount-price">NT$ 910 <%= translations['common.up']  %></span>
+                                        <% } else { %>
+                                        <span class="discount-price">HK$ 238 <%= translations['common.up']  %></span>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                </div>
+                <div class="list-col">
+                    <li class="list-item">
+                        <a href="/<%=locale%>/experience/10176-lang-toi-my-village-show-ticket-at-hanoi-vietnam-tuong-theatre" target="_blank"title="<%= translations['campaign.christmas.fnb.experience1.title']  %>">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="/images/campaign/christmas/show-3.jpg" alt="<%= translations['campaign.christmas.fnb.experience1.title']  %>" class="bg"/>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['campaign.christmas.show.experience1.title']  %></h3>
+                                    <div class="bottom">
+                                        <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hanoi'] %></li></ul>
+                                        <div class="price-container">
+                                            <% if (ccy == 'TWD') { %>
+                                            <span class="discount-price">NT$ 910 <%= translations['common.up']  %></span>
+                                            <% } else { %>
+                                            <span class="discount-price">HK$ 238 <%= translations['common.up']  %></span>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="/<%=locale%>/experience/10279-palao-ticket-at-hoi-an-lune-performing-center" target="_blank"title="<%= translations['campaign.christmas.fnb.experience2.title']  %>">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="/images/campaign/christmas/show-4.jpg" alt="<%= translations['campaign.christmas.fnb.experience2.title']  %>" class="bg"/>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['campaign.christmas.show.experience2.title']  %></h3>
+                                    <div class="bottom">
+                                        <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoiAn'] %></li></ul>
+                                        <div class="price-container">
+                                            <% if (ccy == 'TWD') { %>
+                                            <span class="discount-price">NT$ 910 <%= translations['common.up']  %></span>
+                                            <% } else { %>
+                                            <span class="discount-price">HK$ 238 <%= translations['common.up']  %></span>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="/<%=locale%>/experience/10188-cultural-heritage-water-puppet-show-ticket-in-ho-chi-minh-city" target="_blank"title="<%= translations['campaign.christmas.show.experience3.title']  %>">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="/images/campaign/christmas/show-1.jpg" alt="<%= translations['campaign.christmas.show.experience3.title']  %>" class="bg"/>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['campaign.christmas.show.experience3.title']  %></h3>
+                                    <div class="bottom">
+                                        <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoChiMinh'] %></li></ul>
+                                        <div class="price-container">
+                                            <% if (ccy == 'TWD') { %>
+                                            <span class="discount-price">NT$ 370 <%= translations['common.up']  %></span>
+                                            <% } else { %>
+                                            <span class="discount-price">HK$ 96 <%= translations['common.up']  %></span>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="/<%=locale%>/experience/10253-dinner-cruise-water-puppet-show-in-ho-chi-minh-city-half-day-join-in-tour" target="_blank"title="<%= translations['campaign.christmas.show.experience4.title']  %>">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="/images/campaign/christmas/show-5.jpg" alt="<%= translations['campaign.christmas.show.experience4.title']  %>" class="bg"/>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['campaign.christmas.show.experience4.title']  %></h3>
+                                    <div class="bottom">
+                                        <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoChiMinh'] %></li></ul>
+                                        <div class="price-container">
+                                            <% if (ccy == 'TWD') { %>
+                                            <span class="discount-price">NT$ 1,345 <%= translations['common.up']  %></span>
+                                            <% } else { %>
+                                            <span class="discount-price">HK$ 351 <%= translations['common.up']  %></span>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+
+        <div class="experience-title simcard visible-xs">
+            <span class="address-icon"></span><h3><%= translations['campaign.christmas.simcard']  %></h3>
+        </div>
+        <div class="experience-list-container simcard">
+            <div class="experience-list">
+                <div class="list-col">
+                    <li class="list-item">
+                        <a href="/<%=locale%>/experience/10191-4g-sim-card-ho-chi-minh-city-airport-pick-up" target="_blank"title="<%= translations['campaign.christmas.show.experience1.title']  %>">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="/images/campaign/christmas/simcard-1.jpg" alt="<%= translations['campaign.christmas.show.experience1.title']  %>" class="bg"/>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['campaign.christmas.simcard.experience1.title']  %></h3>
+                                    <div class="bottom">
+                                        <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hoChiMinh'] %></li></ul>
+                                        <div class="price-container">
+                                            <span class="discount-price"><%- translations['campaign.christmas.free']  %></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="/<%=locale%>/experience/10274-4g-sim-card-ha-noi-airport-pick-up" target="_blank"title="<%= translations['campaign.christmas.simcard.experience2.title']  %>">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="/images/campaign/christmas/simcard-2.jpg" alt="<%= translations['campaign.christmas.simcard.experience2.title']  %>" class="bg"/>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['campaign.christmas.simcard.experience2.title']  %></h3>
+                                    <div class="bottom">
+                                        <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.hanoi'] %></li></ul>
+                                        <div class="price-container">
+                                            <span class="discount-price"><%- translations['campaign.christmas.free']  %></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="/<%=locale%>/experience/10273-4g-sim-card-da-nang-airport-pick-up" target="_blank"title="<%= translations['campaign.christmas.simcard.experience3.title']  %>">
+                            <div class="list-content">
+                                <div class="banner">
+                                    <img src="/images/campaign/christmas/simcard-3.jpg" alt="<%= translations['campaign.christmas.simcard.experience3.title']  %>" class="bg"/>
+                                </div>
+                                <div class="content">
+                                    <h3><%= translations['campaign.christmas.simcard.experience3.title']  %></h3>
+                                    <div class="bottom">
+                                        <ul class="location"><li><i class="icon bold-800 map-marker-alt"></i><%= translations['activity.daNang'] %></li></ul>
+                                        <div class="price-container">
+                                            <span class="discount-price"><%- translations['campaign.christmas.free']  %></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+
+        <p class="desc marginTop-15px marginBottom-15px terms">
+            <b><%- translations['campaign.christmas.terms2']  %></b><br>
+            <%- translations['campaign.christmas.terms3']  %>
+        </p>
+    </div>
+</section>

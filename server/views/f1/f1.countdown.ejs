@@ -1,0 +1,27 @@
+<section class="f1-section countdown">
+    <div class="container-fluid">
+        <div class="countdown-container">
+            <ul id="countdown">
+              <li class="countdown-title"><h4>
+                <% if (useragent.isDesktop) { %>
+                    <%= translations['f1.countdown.title'] %>
+                <% }else{ %>
+                    <%- translations['f1.countdown.title.mobile'] %>
+                <% } %>
+                </h4></li>
+              <li><span class="days">00</span><p class="days_text"><%= translations['f1.days'] %></p></li>
+              <li><span class="hours">00</span><p class="hours_text"><%= translations['f1.hours'] %></p></li>
+              <li><span class="minutes">00</span><p class="minutes_text"><%= translations['f1.minutes'] %></p></li>
+              <li><span class="seconds">00</span><p class="seconds_text"><%= translations['f1.seconds'] %></p></li>
+            </ul>
+            <p class="remarks">
+                <% if (useragent.isDesktop) { %>
+                    <%= translations['f1.countdown.remarks'] %>
+                <% }else{ %>
+                    <%- translations['f1.countdown.remarks.mobile'] %>
+                <% } %>
+            </p>
+        </div>
+    </div>
+</section>
+

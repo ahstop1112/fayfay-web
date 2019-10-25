@@ -1,0 +1,527 @@
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+body {
+  background-color: #000; }
+
+#bubbles {
+  color: #fff; }
+  #bubbles header {
+    height: 100%; }
+    #bubbles header .header-top-area {
+      border: 0;
+      background: none;
+      box-shadow: none; }
+      #bubbles header .header-top-area a {
+        color: #fff !important; }
+      #bubbles header .header-top-area .header-container {
+        width: 100%;
+        padding: 0 2%; }
+        #bubbles header .header-top-area .header-container .mobile-search-icon, #bubbles header .header-top-area .header-container #btn-menu-mobile {
+          color: #fff !important; }
+      #bubbles header .header-top-area.scroll {
+        background-color: #000; }
+        #bubbles header .header-top-area.scroll .navbar-nav {
+          color: #fff; }
+    #bubbles header .overlay-header {
+      background-image: url("/images/campaign/bubbles/header_en.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 60% !important;
+      margin-left: 20% !important;
+      padding-bottom: 50%; }
+      @media screen and (max-width: 1025px) {
+        #bubbles header .overlay-header {
+          width: 70% !important;
+          margin-left: 15% !important; } }
+      @media screen and (max-width: 767px) {
+        #bubbles header .overlay-header {
+          width: 70% !important;
+          margin-left: 15% !important; } }
+      @media screen and (max-width: 550px) {
+        #bubbles header .overlay-header {
+          background-image: url("/images/campaign/bubbles/header_mobile_en.png");
+          width: 70% !important;
+          margin-left: 15% !important;
+          padding-bottom: 100%; } }
+      #bubbles header .overlay-header h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 3em;
+        text-shadow: rgba(0, 0, 0, 0.5) 0.05em 0.05em 0.1em;
+        width: 100%;
+        display: none; }
+        @media screen and (max-width: 767px) {
+          #bubbles header .overlay-header h1 {
+            font-size: 2.2em; } }
+      #bubbles header .overlay-header p {
+        color: #fff;
+        text-align: center;
+        font-size: 1.5em;
+        text-shadow: rgba(0, 0, 0, 0.5) 0.05em 0.05em 0.1em;
+        width: 100%;
+        display: none; }
+        @media screen and (max-width: 767px) {
+          #bubbles header .overlay-header p {
+            font-size: 1em; } }
+    #bubbles header .video-background {
+      position: relative;
+      overflow: hidden;
+      height: 0;
+      z-index: -99;
+      margin-top: -80px;
+      padding-bottom: 41.8%; }
+      @media screen and (max-width: 550px) {
+        #bubbles header .video-background {
+          padding-bottom: 75%; } }
+      #bubbles header .video-background video, #bubbles header .video-background iframe {
+        position: absolute;
+        top: -25%;
+        left: -25%;
+        width: 150%;
+        height: 150%;
+        pointer-events: none; }
+        @media screen and (max-width: 550px) {
+          #bubbles header .video-background video, #bubbles header .video-background iframe {
+            top: -40%;
+            left: -40%;
+            width: 180%;
+            height: 180%; } }
+    @media (min-aspect-ratio: 16 / 9) {
+      #bubbles header .video-foreground {
+        height: 300%;
+        top: -100%; } }
+    #bubbles header .nav > li a {
+      color: #fff; }
+      #bubbles header .nav > li a:hover {
+        background: none;
+        text-decoration: underline;
+        opacity: 1; }
+    #bubbles header .nav > li .dropdown-toggle {
+      color: #fff; }
+    #bubbles header .nav > li .dropdown-item {
+      color: #1ae0d4 !important; }
+    #bubbles header .section-background {
+      position: absolute;
+      z-index: -100;
+      padding-top: 0;
+      height: auto;
+      overflow: hidden; }
+      #bubbles header .section-background .bg-container {
+        background-color: #000;
+        max-height: 3000px; }
+        #bubbles header .section-background .bg-container:before {
+          content: "";
+          padding-bottom: 100%; }
+        #bubbles header .section-background .bg-container .bg {
+          top: -30%;
+          border: 1px solid blue; }
+  #bubbles section#all {
+    padding: 30px 0 15px 0;
+    background-image: url("/images/campaign/bubbles/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; }
+    @media screen and (max-width: 767px) {
+      #bubbles section#all {
+        background-image: url("/images/campaign/bubbles/bg_mobile.jpg");
+        background-position: center;
+        background-size: cover; } }
+    #bubbles section#all p {
+      color: #fff; }
+    #bubbles section#all p.desc:first-child {
+      width: 80%;
+      margin: 0 auto; }
+      @media screen and (max-width: 1025px) {
+        #bubbles section#all p.desc:first-child {
+          width: 100%; } }
+    #bubbles section#all .content_p {
+      width: 80%;
+      margin: 0px auto;
+      text-align: center; }
+    #bubbles section#all .btn-address {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      width: 80%;
+      margin: 0px auto;
+      margin-bottom: 15px;
+      margin-top: 30px;
+      justify-content: center; }
+      @media screen and (max-width: 1025px) {
+        #bubbles section#all .btn-address {
+          width: 100%; } }
+      #bubbles section#all .btn-address .list-item {
+        flex: 0 0 33.33%;
+        text-align: center;
+        background: none;
+        cursor: pointer;
+        min-width: 0; }
+        #bubbles section#all .btn-address .list-item .banner {
+          display: block;
+          position: relative; }
+          #bubbles section#all .btn-address .list-item .banner:before {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.6;
+            transition: all 0.4s ease-out;
+            -webkit-transition: all 0.4s ease-out; }
+          #bubbles section#all .btn-address .list-item .banner:after {
+            content: "";
+            padding-top: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1; }
+          @media screen and (max-width: 991px) {
+            #bubbles section#all .btn-address .list-item .banner {
+              background-size: 60%; } }
+        @media screen and (max-width: 767px) {
+          #bubbles section#all .btn-address .list-item {
+            flex: 0 0 calc(100% / 2);
+            padding: 2px; } }
+        @media screen and (max-width: 320px) {
+          #bubbles section#all .btn-address .list-item {
+            font-size: 0.8em; } }
+        #bubbles section#all .btn-address .list-item .list-content {
+          box-shadow: none; }
+        #bubbles section#all .btn-address .list-item .banner {
+          margin: 0 auto;
+          overflow: hidden !important;
+          position: relative; }
+          @media screen and (max-width: 767px) {
+            #bubbles section#all .btn-address .list-item .banner {
+              width: 100%;
+              margin: 0 auto;
+              margin-bottom: 0; } }
+          #bubbles section#all .btn-address .list-item .banner:before {
+            content: "";
+            padding-top: 100%;
+            display: block; }
+          #bubbles section#all .btn-address .list-item .banner .bg {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            right: 0;
+            bottom: -100%;
+            margin: auto;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            transition: all 0.4s ease-out;
+            -webkit-transition: all 0.4s ease-out; }
+        #bubbles section#all .btn-address .list-item h3.title-s {
+          font-size: 1em;
+          text-transform: uppercase;
+          font-style: italic;
+          font-weight: 600; }
+          @media screen and (max-width: 767px) {
+            #bubbles section#all .btn-address .list-item h3.title-s {
+              font-size: 0.7em; } }
+    #bubbles section#all .experience-title {
+      text-align: center;
+      margin: 30px 0; }
+      @media screen and (max-width: 767px) {
+        #bubbles section#all .experience-title {
+          margin: 15px 0; } }
+      #bubbles section#all .experience-title h1 {
+        color: #fff;
+        text-transform: capitalize; }
+        @media screen and (max-width: 767px) {
+          #bubbles section#all .experience-title h1 {
+            font-size: 2em; } }
+      @media screen and (max-width: 767px) {
+        #bubbles section#all .experience-title h3 {
+          font-size: 1.25em; } }
+      #bubbles section#all .experience-title .location {
+        color: #fff;
+        font-weight: 300; }
+      #bubbles section#all .experience-title .logo {
+        width: 40%;
+        text-align: center;
+        max-width: 250px;
+        margin: 15px 0; }
+    #bubbles section#all .schedule {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      width: 80%;
+      margin: 0px auto;
+      margin-bottom: 15px;
+      margin-top: 30px;
+      justify-content: center; }
+      @media screen and (max-width: 1025px) {
+        #bubbles section#all .schedule {
+          width: 100%;
+          margin-bottom: 0;
+          margin-top: 0; } }
+      #bubbles section#all .schedule .list-item {
+        flex: 0 0 33.33%;
+        text-align: center;
+        background: none;
+        cursor: pointer;
+        min-width: 0;
+        pointer-events: none; }
+        @media screen and (max-width: 767px) {
+          #bubbles section#all .schedule .list-item {
+            flex: 0 0 100%; } }
+        #bubbles section#all .schedule .list-item .list-content {
+          box-shadow: none;
+          background: none;
+          border: 1px solid #fff; }
+          #bubbles section#all .schedule .list-item .list-content .content {
+            padding: 15px 15px 30px 15px; }
+        #bubbles section#all .schedule .list-item .title-s {
+          text-transform: capitalize;
+          width: 90%;
+          padding: 15px;
+          margin: 0 auto;
+          font-weight: 600;
+          color: #fff;
+          border-bottom: 4px dotted #fff; }
+          @media screen and (max-width: 991px) {
+            #bubbles section#all .schedule .list-item .title-s {
+              width: 100%; } }
+        #bubbles section#all .schedule .list-item .desc {
+          color: #1ae0d4;
+          text-align: center;
+          font-size: 1.2em;
+          margin-bottom: 0;
+          padding: 15px; }
+          @media screen and (max-width: 991px) {
+            #bubbles section#all .schedule .list-item .desc {
+              font-size: 1.2em; } }
+        #bubbles section#all .schedule .list-item .time {
+          text-align: center;
+          color: #fff;
+          font-size: 1.75em;
+          margin: 0; }
+          @media screen and (max-width: 991px) {
+            #bubbles section#all .schedule .list-item .time {
+              font-size: 1.8em; } }
+          @media screen and (max-width: 767px) {
+            #bubbles section#all .schedule .list-item .time {
+              font-size: 1.4em; } }
+        #bubbles section#all .schedule .list-item .desc_y {
+          color: #edff63;
+          text-align: center;
+          font-size: 1.2em;
+          margin: 15px 0; }
+    #bubbles section#all .bubbles-list {
+      width: 80%;
+      margin: 0px auto;
+      margin-top: 20px; }
+      @media screen and (max-width: 1025px) {
+        #bubbles section#all .bubbles-list {
+          width: 98%; } }
+      #bubbles section#all .bubbles-list .list-item {
+        border: 1px solid #f4f4f4;
+        list-style: none;
+        margin-bottom: 10px; }
+        #bubbles section#all .bubbles-list .list-item .list-content {
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;
+          /* OLD - Firefox 19- (buggy but mostly works) */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Chrome */
+          display: flex;
+          /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+          @media screen and (max-width: 767px) {
+            #bubbles section#all .bubbles-list .list-item .list-content {
+              flex-wrap: wrap; } }
+          #bubbles section#all .bubbles-list .list-item .list-content .banner {
+            width: 40%;
+            overflow: hidden;
+            position: relative; }
+            #bubbles section#all .bubbles-list .list-item .list-content .banner:before {
+              content: "";
+              padding-top: 75%;
+              display: block; }
+            @media screen and (max-width: 767px) {
+              #bubbles section#all .bubbles-list .list-item .list-content .banner {
+                width: 100%; } }
+            #bubbles section#all .bubbles-list .list-item .list-content .banner .bg {
+              top: -100%;
+              left: 0;
+              right: 0;
+              bottom: -100%;
+              margin: auto;
+              margin-left: 50%;
+              transform: translateX(-50%);
+              position: absolute; }
+              @media screen and (max-width: 1025px) {
+                #bubbles section#all .bubbles-list .list-item .list-content .banner .bg {
+                  min-height: 100%; } }
+          #bubbles section#all .bubbles-list .list-item .list-content .content {
+            width: 60%;
+            padding: 15px; }
+            @media screen and (max-width: 767px) {
+              #bubbles section#all .bubbles-list .list-item .list-content .content {
+                width: 100%;
+                padding-bottom: 30px; } }
+            #bubbles section#all .bubbles-list .list-item .list-content .content .title {
+              font-weight: 500;
+              color: #fff;
+              line-height: 1.5;
+              text-align: center;
+              padding-bottom: 15px;
+              margin-bottom: 50px;
+              background-image: url("/images/campaign/vnshow/white_bar.jpg");
+              background-repeat: no-repeat;
+              background-position: center bottom; }
+              @media screen and (max-width: 1025px) {
+                #bubbles section#all .bubbles-list .list-item .list-content .content .title {
+                  margin-bottom: 20px; } }
+              @media screen and (max-width: 767px) {
+                #bubbles section#all .bubbles-list .list-item .list-content .content .title {
+                  font-size: 1.25em;
+                  margin-bottom: 0; } }
+            #bubbles section#all .bubbles-list .list-item .list-content .content .price-container {
+              width: 80%;
+              margin: 0 auto;
+              margin-top: 20px;
+              display: -webkit-box;
+              /* OLD - iOS 6-, Safari 3.1-6 */
+              display: -moz-box;
+              /* OLD - Firefox 19- (buggy but mostly works) */
+              display: -ms-flexbox;
+              /* TWEENER - IE 10 */
+              display: -webkit-flex;
+              /* NEW - Chrome */
+              display: flex;
+              /* NEW, Spec - Opera 12.1, Firefox 20+ */
+              justify-content: space-between; }
+              @media screen and (max-width: 1025px) {
+                #bubbles section#all .bubbles-list .list-item .list-content .content .price-container {
+                  width: 100%; } }
+              @media screen and (max-width: 767px) {
+                #bubbles section#all .bubbles-list .list-item .list-content .content .price-container {
+                  flex-wrap: wrap;
+                  justify-content: center; } }
+              #bubbles section#all .bubbles-list .list-item .list-content .content .price-container h3 {
+                flex: 0 0 50%;
+                color: #fff;
+                line-height: 1.5;
+                margin: 0; }
+                @media screen and (max-width: 991px) {
+                  #bubbles section#all .bubbles-list .list-item .list-content .content .price-container h3 {
+                    flex: 0 0 40%; } }
+                @media screen and (max-width: 767px) {
+                  #bubbles section#all .bubbles-list .list-item .list-content .content .price-container h3 {
+                    flex: 0 0 100%;
+                    margin-bottom: 5px;
+                    text-align: center;
+                    font-size: 1.25em; } }
+              #bubbles section#all .bubbles-list .list-item .list-content .content .price-container .btn {
+                flex: 0 0 50%;
+                padding: 5px 10px;
+                color: #fff;
+                background-color: #1ae0d4;
+                font-size: 1.5em;
+                height: 43px; }
+                #bubbles section#all .bubbles-list .list-item .list-content .content .price-container .btn .icon {
+                  margin-left: 15px; }
+                @media screen and (max-width: 991px) {
+                  #bubbles section#all .bubbles-list .list-item .list-content .content .price-container .btn {
+                    flex: 0 0 60%; } }
+                @media screen and (max-width: 767px) {
+                  #bubbles section#all .bubbles-list .list-item .list-content .content .price-container .btn {
+                    flex: 0 0 70%;
+                    font-size: 1.25em; } }
+    #bubbles section#all .logo-container {
+      width: 80%;
+      margin: 0 auto; }
+      #bubbles section#all .logo-container .loaded-list {
+        align-items: center; }
+        #bubbles section#all .logo-container .loaded-list .list-item {
+          flex: 0 0 33.33%;
+          text-align: center;
+          pointer-events: none; }
+          @media screen and (max-width: 767px) {
+            #bubbles section#all .logo-container .loaded-list .list-item {
+              flex: 0 0 100%; } }
+          #bubbles section#all .logo-container .loaded-list .list-item:hover {
+            cursor: pointer; }
+          #bubbles section#all .logo-container .loaded-list .list-item .img-50 {
+            width: 50%; }
+          #bubbles section#all .logo-container .loaded-list .list-item .img-80 {
+            width: 80%; }
+    #bubbles section#all .terms {
+      color: #fff;
+      font-size: 0.9em;
+      width: 80%;
+      margin-left: 10%;
+      margin-bottom: 30px;
+      text-align: center; }
+      #bubbles section#all .terms b {
+        color: #fff;
+        line-height: 4; }
+  #bubbles section#spotlight {
+    margin-bottom: 50px; }
+    #bubbles section#spotlight h2, #bubbles section#spotlight p {
+      color: #fff; }
+    #bubbles section#spotlight .destination-slick .list-item .list-content {
+      background-color: #18c5be; }
+      #bubbles section#spotlight .destination-slick .list-item .list-content h3 {
+        color: #fff; }
+    #bubbles section#spotlight .list-item.slick-current .list-content, #bubbles section#spotlight .list-item:hover .list-content, #bubbles section#spotlight .destinations .list-item .list-content {
+      background-color: #1ae0d4; }
+    @media screen and (max-width: 767px) {
+      #bubbles section#spotlight .main-logo-container {
+        justify-content: center;
+        text-align: center; }
+      #bubbles section#spotlight .drag-content {
+        width: 96%;
+        margin: 0 auto; } }
+
+body.zh-hk .overlay-header, body.zh-cn #bubbles .overlay-header {
+  width: 40% !important;
+  margin-left: 30% !important;
+  background-image: url("/images/campaign/bubbles/header_tc.png"); }
+  @media screen and (max-width: 550px) {
+    body.zh-hk .overlay-header, body.zh-cn #bubbles .overlay-header {
+      background-image: url("/images/campaign/bubbles/header_mobile_tc.png");
+      width: 70% !important;
+      margin-left: 15% !important; } }
+
+body.vi-vn #bubbles .overlay-header {
+  background-image: url("/images/campaign/bubbles/header_vn.png"); }
+  @media screen and (max-width: 550px) {
+    body.vi-vn #bubbles .overlay-header {
+      background-image: url("/images/campaign/bubbles/header_mobile_vn.png"); } }

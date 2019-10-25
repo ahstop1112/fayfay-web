@@ -1,0 +1,18 @@
+<% if (campaignData.sections) { %>
+<div class="btn-address section">
+        <% campaignData.sections.forEach(function (section, index) { %>
+            <div class="list-item section<%=index%>">
+                <a id="section<%=index%>" title="<%=section.name %>">
+                    <% if (section.iconMedia ) { %>
+                        <span class="address-icon" style='background-image: url("<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%=section.iconMedia.key%>.<%=section.iconMedia.format%>")'></span>
+                    <% } %>
+                    <span class="address-text"><%=section.name %></span>
+                </a>
+            </div>
+        <% })%>
+</div>
+<% } %>
+
+
+
+

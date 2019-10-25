@@ -1,0 +1,1406 @@
+@import '../include/variable';
+
+$green: #074221;
+$christmas-red: #be1c1e;
+$christmas-red2: #c01c2d;
+$christmas-deep-red: #720202;
+$christmas-green: #3abdaa;
+$christmas-yellow: #eec832;
+$christmas-light-yellow: #f7db91;
+
+body {
+    background-color: $christmas-red;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+#christmas2019 {
+
+    color: $white;
+    background-color: $christmas-red;
+    background-image: url('/images/campaign/christmas2019/bg.jpg');
+    background-size: contain;
+    background-position: center;
+
+    header {
+        height: 100%;
+
+        .header-top-area {
+            box-shadow: none;
+            background: $white;
+            border: 0;
+            position: static;
+
+            .header-container {
+                width: 100%;
+                padding: 0 2%;
+
+                .badge-notify{
+                    position: absolute;
+                }
+            }
+
+            .badge-notify{
+                position: absolute;
+            }
+
+            &.scroll {
+                box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
+                background-color: hsla(0, 0%, 100%, .9);
+
+                .logo {
+                    background-image: url('/images/logo_nobird.png');
+                }
+
+                .navbar-right {
+                    color: $main-font-color;
+
+                    li {
+                        a {
+                            color: $main-font-color;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .overlay-header {
+
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            position: absolute;
+            width: 40% !important;
+            margin-left: 30% !important;
+            padding-bottom: 30%;
+
+            @media screen and (max-width: $tablet-h) {
+                width: 70% !important;
+                margin-left: 15% !important;
+                padding-bottom: 25%;
+            }
+
+            @media screen and (max-width: $mobile-h) {
+                width: 80% !important;
+                margin-left: 10% !important;
+                padding-bottom: 45%;
+
+            }
+
+            h1 {
+                color: $white;
+                text-align: center;
+                font-size: 3em;
+                text-shadow: $text-shadow;
+                width: 100%;
+                display: none;
+
+                @media screen and (max-width: $mobile-h) {
+                    font-size: 2.2em;
+                }
+            }
+
+            p {
+                color: $white;
+                text-align: center;
+                font-size: 1.5em;
+                text-shadow: $text-shadow;
+                width: 100%;
+                display: none;
+
+                @media screen and (max-width: $mobile-h) {
+                    font-size: 1em;
+                }
+            }
+
+        }
+
+        .section-background {
+            padding-top: 0;
+            z-index: 0;
+
+            .bg-container {
+                background-color: $christmas-red;
+                max-height: 450px;
+
+                @media screen and (min-width: $desktop) {
+                    max-height: none;
+                }
+
+                &:before {
+                    padding-top: 28%;
+
+                    @media screen and (max-width: $mobile-v) {
+                        padding-top: 75%;
+                    }
+                }
+
+                .bg {
+                    top: -100%;
+                    min-height: 100%;
+
+                    &.expect-mobile-v {
+                        display: none;
+
+                        @media screen and (min-width: $mobile-v) {
+                            display: block;
+                        }
+                    }
+
+                    &.mobile-v {
+                        display: none;
+
+                        @media screen and (max-width: $mobile-v) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#coupon {
+        padding: 30px 0 0 0;
+
+        @media screen and (max-width: $mobile-v) {
+            padding: 15px 0 0 0;
+        }
+
+        p {
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            color: $white;
+            width: 90%;
+            text-align: center;
+            font-size: 1em;
+
+            @media screen and (max-width: $tablet-h) {
+                width: 90%;
+            }
+        }
+
+        .coupon-container {
+
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 50px;
+            margin-bottom: 20px;
+
+            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox; /* TWEENER - IE 10 */
+            display: -webkit-flex; /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            background: linear-gradient(to bottom left, rgba(166, 16, 16, 0.8), rgba(142, 4, 7, 0.8));
+            border: 3px solid rgba(115, 12, 14, 0.5);
+
+            @media screen and (max-width: $tablet-v) {
+                width: 100%;
+            }
+
+            @media screen and (max-width: $mobile-v) {
+                flex-wrap: wrap;
+            }
+
+            .coupon {
+                flex: 0 0 auto;
+                margin-left: 2%;
+
+                @media screen and (max-width: $mobile-v){
+                    margin-left: 0;
+                }
+
+                &:first-child{
+                    flex: 0 0 60%;
+                    margin-left: 0;
+
+                    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox; /* TWEENER - IE 10 */
+                    display: -webkit-flex; /* NEW - Chrome */
+                    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                    @media screen and (max-width: $desktop-s){
+                        flex: 0 0 52%;
+                    }
+
+                    @media screen and (max-width: $mobile-h){
+                        flex: 0 0 48%;
+                    }
+
+                    @media screen and (max-width: $mobile-v){
+                        flex: 0 0 100%;
+                    }
+                }
+
+                .coupon-bg {
+
+                    position: absolute;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+                    &.left {
+                        background-position: left;
+                        background-image: url('/images/campaign/christmas2019/sled.png');
+                        width: 18%;
+                        height: 250px;
+                        margin-top: 2%;
+                        margin-left: -5%;
+
+                        @media screen and (max-width: $desktop-s){
+                            margin-top: 5%;
+                        }
+
+                        @media screen and (max-width: $tablet-v) {
+                            margin-left: 0;
+                        }
+
+                        @media screen and (max-width: $mobile-v){
+                            width: 25%;
+                            margin-top: 45%;
+                        }
+                    }
+                    &.right-top{
+                        background-position: right;
+                        background-image: url('/images/campaign/christmas2019/flower.png');
+                        margin-left: 25%;
+                        margin-top: -5%;
+                        width: 8%;
+                        height: 100px;
+
+                        @media screen and (max-width: $desktop-s){
+                            margin-left: 33%;
+                        }
+
+                        @media screen and (max-width: $tablet-v) {
+                            margin-left: 36%;
+                        }
+
+                        @media screen and (max-width: $mobile-h){
+                            margin-top: -8%;
+                        }
+
+                        @media screen and (max-width: $mobile-v){
+                            width: 15%;
+                            margin-left: 78%;
+                            margin-top: -88%;
+                        }
+                    }
+                    &.right-bottom{
+                        background-position: right;
+                        background-image: url('/images/campaign/christmas2019/tree.png');
+                        margin-left: 20%;
+                        margin-top: 8%;
+                        width: 15%;
+                        height: 100px;
+
+                        @media screen and (max-width: $desktop-s){
+                            margin-left: 29%;
+                            margin-top: 10%;
+                        }
+
+                        @media screen and (max-width: $tablet-v){
+                            margin-left: 33%;
+                        }
+
+                        @media screen and (max-width: $mobile-h){
+                            margin-top: 12%;
+                        }
+
+                        @media screen and (max-width: $mobile-v){
+                            width: 25%;
+                            margin-left: 75%;
+                            margin-top: -20%;
+                        }
+                    }
+
+                }
+
+                .code-title, .code {
+                    width: 100%;
+
+                    flex-wrap: wrap;
+                    -webkit-flex-wrap: wrap;
+                    text-align: left;
+
+                    &.code-title{
+                        align-items: center;
+                        justify-content: center;
+                        margin-left: 15%;
+
+                        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                        display: -ms-flexbox; /* TWEENER - IE 10 */
+                        display: -webkit-flex; /* NEW - Chrome */
+                        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                        @media screen and (max-width: $mobile-v) {
+                            margin-top: 20px;
+                        }
+                    }
+
+                    &.code{
+                        margin: 20px 0;
+
+                        @media screen and (max-width: $mobile-v) {
+                            margin-left: 18%;
+                            margin-bottom: 20%;
+                        }
+                    }
+
+                    h1 {
+                        font-size: 4em;
+                        font-weight: 900;
+                        letter-spacing: 2px;
+                        color: $white;
+
+                        margin: 0;
+
+                        @media screen and (max-width: $desktop-s){
+                            font-size: 3.5em;
+                        }
+
+                        @media screen and (max-width: $tablet-h) {
+                            font-size: 3em;
+                            padding-top: 0;
+                        }
+
+                        @media screen and (max-width: $tablet-v) {
+                            font-size: 2.5em;
+                        }
+
+                        @media screen and (max-width: $mobile-v) {
+                            font-size: 3.5em;
+                        }
+
+                        span {
+                            font-size: 0.4em;
+                            font-weight: normal;
+
+                            margin: 0 5px;
+                        }
+
+                    }
+
+                    h3 {
+                        color: $white;
+                        font-weight: 300;
+                        margin-top: 5px;
+
+                        @media screen and (max-width: $tablet-v) {
+                            font-size: 1.2em;
+                        }
+                    }
+
+                    h4 {
+                        color: $white;
+                        font-weight: 900;
+                        font-size: 3.5em;
+
+                        margin: 0;
+
+                        @media screen and (max-width: $desktop-s){
+                            font-size: 3em;
+                        }
+
+                        @media screen and (max-width: $tablet-h) {
+                            padding-top: 0;
+                        }
+
+                        @media screen and (max-width: $tablet-v) {
+                            font-size: 2.5em;
+                        }
+
+                        @media screen and (max-width: $mobile-v) {
+                            font-size: 3.5em;
+                        }
+                    }
+
+                    .copy-btn, .copy-btn2 {
+                        background-color: $christmas-red2;
+                        border: none;
+
+                        padding: 0 30px;
+                        margin-top: 20px;
+                        position: relative;
+                        cursor: pointer;
+
+                        @media screen and (max-width: $mobile-v) {
+                            width: 60%;
+                            margin: 0;
+                            margin-top: 20px;
+                        }
+
+                        span {
+                            color: $white;
+                            font-size: 1.5em;
+                            line-height: 1.5;
+                            text-transform: uppercase;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        &.show {
+                            display: inline-block;
+                        }
+                    }
+
+                    p.desc {
+                        color: $white;
+                        font-weight: 300;
+
+                        margin-top: 10px;
+                        text-align: center;
+                    }
+
+                    /* Tooltip text */
+                    .tooltiptext, .tooltiptext2 {
+                        background-color: $christmas-red2;
+                        color: #f3d35d;
+                        text-align: center;
+                        margin-top: 10px;
+                        padding: 5px 30px;
+                        border-radius: 6px;
+                        position: absolute;
+                        z-index: 1;
+                        font-size: 0.9em;
+                        opacity: 0;
+
+                        transition: $fadeIn;
+                        -webkit-transition: $fadeIn;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            bottom: 100%;
+                            left: 50%;
+                            margin-left: -5px;
+                            border-width: 5px;
+                            border-style: solid;
+                            border-color: transparent transparent $christmas-red2 transparent;
+                        }
+
+                        &.show {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.experiences {
+        padding: $padding 0;
+
+        .btn-address {
+            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox; /* TWEENER - IE 10 */
+            display: -webkit-flex; /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            width: 80%;
+            margin: 0px auto;
+            margin-bottom: $padding;
+            justify-content: center;
+
+            @media screen and (max-width: $tablet-v) {
+                width: 100%;
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+                justify-content: flex-start;
+            }
+
+            .list-item {
+                flex: 0 0 24.5%;
+                text-align: center;
+                background: none;
+                cursor: pointer;
+                min-width: 0;
+
+                @media screen and (max-width: $tablet-v) {
+                    flex: 0 0 calc(100% / 4);
+                    min-width: 0;
+                    font-size: 1.1em;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    flex: 0 0 calc(100% / 3.5);
+                    min-width: 0;
+                }
+
+                @media screen and (max-width: $mobile-xs) {
+                    font-size: 0.8em;
+                }
+
+                .list-content {
+                    box-shadow: none;
+                }
+
+                &.section1 {
+                    .banner:before {
+                        background-image: url("https://res.fayfay.com/image/upload/w_640/fayfay-media/prod/j8mmxqhicrbputtqlyv3");
+                    }
+                }
+                &.section2 {
+                    .banner:before {
+                        background-image: url("https://res.fayfay.com/image/upload/w_640/fayfay-media/prod/quldev6tuxauzmhrknkk");
+                    }
+                }
+                &.section3 {
+                    .banner:before {
+                        background-image: url("https://res.fayfay.com/image/upload/w_640/fayfay-media/prod/wtyhn3r7uhvl9ahpmxsg");
+                    }
+                }
+                &.section4 {
+                    .banner:before {
+                        background-image: url("https://res.fayfay.com/image/upload/w_640/fayfay-media/prod/l8b9xnkz7bulywcj13pg");
+                    }
+                }
+
+                .banner-bg {
+                    width: 80%;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+
+                    padding: 5px;
+
+                    overflow: hidden !important;
+
+                    display: block;
+                    position: relative;
+
+                    //Gradient Yellow
+                    background: linear-gradient(to bottom right, $christmas-yellow, $christmas-light-yellow, $christmas-yellow);
+
+                }
+
+                .banner {
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+
+                    overflow: hidden;
+                    background-color: $christmas-red;
+
+                    &:before {
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+
+                        content: "";
+                        padding-top: 100%;
+                        display: block;
+                    }
+
+                    &:after {
+                        content: "";
+                        padding-top: 100%;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        position: absolute;
+                        z-index: -1;
+                    }
+
+                    @media screen and (max-width: $tablet-v) {
+                        background-size: 60%;
+                    }
+                }
+
+                h3.title-s {
+                    font-size: 1.25em;
+                    text-transform: uppercase;
+                    font-style: italic;
+                    font-weight: 600;
+
+                    background: linear-gradient(to bottom right, $christmas-yellow, $christmas-light-yellow, $christmas-yellow);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                    @media screen and (max-width: $mobile-h) {
+                        font-size: 0.7em;
+                    }
+                }
+            }
+        }
+
+        .section-experience {
+
+            background: linear-gradient(to bottom left, rgba(170, 11, 12, 0.8), rgba(115, 12, 14, 0.8));
+            padding: 30px 0;
+            margin: 0 5% 30px 5%;
+            width: 90%;
+
+            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox; /* TWEENER - IE 10 */
+            display: -webkit-flex; /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            flex-wrap: wrap;
+            align-items: center;
+
+            @media screen and (max-width: $tablet-v) {
+                width: 100%;
+                margin: 0 0 30px 0;
+                padding: 0 0 30px 0;
+            }
+
+            .experience-bg-left {
+                flex: 0 0 15%;
+                margin-top: -30px;
+
+                background-size: cover;
+                -moz-transform: scaleX(-1);
+                -o-transform: scaleX(-1);
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+
+                &:before {
+                    content: "";
+                    display: block;
+                    padding-top: 100%;
+                }
+
+                @media screen and (max-width: $tablet-v) {
+                    margin-top: -15px;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    margin-top: -40px;
+                    flex: 0 0 12%;
+                }
+            }
+
+            .experience-bg-right {
+                flex: 0 0 15%;
+                margin-top: -30px;
+
+                background-size: cover;
+
+                &:before {
+                    content: "";
+                    display: block;
+                    padding-top: 100%;
+                }
+
+                @media screen and (max-width: $tablet-v) {
+                    margin-top: -15px;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    margin-top: -40px;
+                    flex: 0 0 12%;
+                }
+
+            }
+
+            .experience-title {
+
+                flex: 0 0 60%;
+
+                text-align: center;
+                margin: 0 auto;
+
+                padding: $padding 0;
+
+                display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox; /* TWEENER - IE 10 */
+                display: -webkit-flex; /* NEW - Chrome */
+                display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                justify-content: center;
+                align-items: center;
+
+                @media screen and (max-width: $tablet-v) {
+                    flex: 0 0 70%;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    flex: 0 0 76%;
+                }
+
+                .title-bg-left {
+                    flex: 0 0 15%;
+                    margin-top: -30px;
+                    margin-right: -50px;
+
+                    background-image: url("/images/campaign/christmas2019/snowman.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    -moz-transform: scaleX(-1);
+                    -o-transform: scaleX(-1);
+                    -webkit-transform: scaleX(-1);
+                    transform: scaleX(-1);
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        padding-top: 100%;
+                    }
+
+                    @media screen and (max-width: $tablet-v) {
+                        flex: 0 0 20%;
+                        margin-top: 0;
+                    }
+
+                    @media screen and (max-width: $mobile-v) {
+                        margin-top: 0px;
+                        margin-right: -20px;
+                    }
+                }
+
+                .title-bg-right {
+                    flex: 0 0 15%;
+                    margin-top: -30px;
+                    margin-left: -50px;
+
+                    background-image: url("/images/campaign/christmas2019/snowman.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        padding-top: 100%;
+                    }
+
+                    @media screen and (max-width: $tablet-v) {
+                        flex: 0 0 20%;
+                        margin-top: 0;
+                    }
+
+                    @media screen and (max-width: $mobile-v) {
+                        margin-top: 0px;
+                        margin-left: -20px;
+                    }
+                }
+
+                .title-bg {
+                    background-color: $christmas-deep-red;
+                    flex: 0 0 70%;
+                }
+
+                h2 {
+                    background: linear-gradient(to bottom right, $christmas-yellow, $christmas-light-yellow, $christmas-yellow);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    text-transform: uppercase;
+                    font-weight: 900;
+
+                    @media screen and (max-width: $tablet-v) {
+                        font-size: 1.75em;
+                    }
+
+                    @media screen and (max-width: $mobile-v) {
+                        font-size: 1.25em;
+                    }
+                }
+
+                &.watersports {
+                    .address-icon {
+                        background-image: url("/images/campaign/christmas2019/icon_water.png");
+                    }
+                }
+                &.fnb {
+                    .address-icon {
+                        background-image: url("/images/campaign/christmas2019/icon_eat.png");
+                    }
+                }
+                &.naturalExploration {
+                    .address-icon {
+                        margin-top: -10px;
+                        background-image: url("/images/campaign/christmas2019/icon_natural.png");
+                    }
+                }
+                &.show {
+                    .address-icon {
+                        background-image: url("/images/campaign/christmas2019/icon_show.png");
+                    }
+                }
+                &.simcard {
+                    .address-icon {
+                        background-image: url("/images/campaign/christmas2019/icon_sim.png");
+                    }
+                }
+            }
+
+            .experience-title-s {
+
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 25px;
+
+                display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox; /* TWEENER - IE 10 */
+                display: -webkit-flex; /* NEW - Chrome */
+                display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+
+                @media screen and (max-width: $tablet-v) {
+                    width: 70%;
+                }
+
+                &.visa {
+                    margin-top: 20px;
+                }
+
+                &.activity {
+                    margin-top: -20px;
+
+                    @media screen and (max-width: $mobile-v) {
+                        margin: 0 15% 20px 15%;
+                    }
+                }
+
+                h5 {
+                    background: linear-gradient(to bottom right, $christmas-yellow, $christmas-light-yellow, $christmas-yellow);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    font-size: 1.75em;
+
+                    @media screen and (max-width: $tablet-v) {
+                        font-size: 1.25em;
+                    }
+
+                    @media screen and (max-width: $mobile-v) {
+                        font-size: 1.15em;
+                    }
+
+                }
+
+                .address-icon {
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 12%;
+                    margin-right: 3%;
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        padding-top: 100%;
+                    }
+
+                    @media screen and (max-width: $mobile-h) {
+                        width: 12%;
+                        margin-right: 3%;
+                    }
+                }
+
+                &.visa {
+                    .address-icon {
+                        background-image: url("/images/campaign/christmas2019/icon-visa.png");
+                    }
+                }
+                &.activity {
+                    .address-icon {
+                        background-image: url("/images/campaign/christmas2019/icon-activity.png");
+                    }
+                }
+            }
+
+            .experience-list-container {
+                flex: 0 0 100%;
+                overflow: hidden;
+
+                @media screen and (max-width: $mobile-h) {
+                    overflow-x: scroll;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+
+                .experience-list {
+                    margin: 0 auto;
+                    width: 96%;
+
+                    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox; /* TWEENER - IE 10 */
+                    display: -webkit-flex; /* NEW - Chrome */
+                    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                    @media screen and (max-width: $tablet-v) {
+                        width: 100%;
+                    }
+
+                    &.reverse {
+                        flex-flow: row-reverse;
+
+                        @media screen and (max-width: $mobile-h) {
+                            flex-flow: row;
+                        }
+                    }
+
+                    .list-col {
+                        width: 50%;
+                        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                        display: -ms-flexbox; /* TWEENER - IE 10 */
+                        display: -webkit-flex; /* NEW - Chrome */
+                        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        flex-flow: row wrap;
+
+                        @media screen and (max-width: $mobile-h) {
+                            width: 90%;
+                            margin-right: 1%;
+                            flex-wrap: nowrap;
+                        }
+
+                        .list-item {
+                            background: none;
+                            list-style: none;
+
+                            flex: 1 1 49.5%;
+                            margin-right: 0.5%;
+
+                            @media screen and (max-width: $mobile-h) {
+                                min-width: 300px;
+                                margin-right: 1%;
+                            }
+
+                            .list-content {
+                                position: relative;
+                                display: block;
+
+                                &:before {
+                                    padding-top: 50%;
+                                }
+
+                                .banner {
+                                    width: 100%;
+                                    overflow: hidden;
+                                    position: relative;
+
+                                    &:before {
+                                        content: "";
+                                        padding-top: 100%;
+                                        display: block;
+                                    }
+
+                                    .bg {
+                                        top: -100%;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: -100%;
+                                        margin: auto;
+                                        margin-left: 50%;
+                                        transform: translateX(-50%);
+                                        opacity: 0;
+                                        width: auto;
+                                        height: 100%;
+                                        position: absolute;
+                                    }
+                                }
+                                .content {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    z-index: 999;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: rgba(0, 0, 0, 0.2);
+
+                                    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                                    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                                    display: -ms-flexbox; /* TWEENER - IE 10 */
+                                    display: -webkit-flex; /* NEW - Chrome */
+                                    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                                    justify-content: center;
+                                    -webkit-justify-content: center;
+
+                                    flex-wrap: wrap;
+                                    -webkit-flex-wrap: wrap;
+
+                                    align-content: center;
+                                    align-items: center;
+
+                                    transition: $fadeIn;
+                                    -webkit-transition: $fadeIn;
+
+                                    padding: $padding 30px;
+
+                                    &:hover{
+                                        background-color: rgba(0, 0, 0, 0);
+                                    }
+
+                                    @media screen and (max-width: $tablet-v) {
+                                        padding: 10px;
+                                    }
+
+                                    @media screen and (max-width: $mobile-v) {
+                                        padding: $padding;
+                                    }
+
+                                    h3 {
+                                        font-weight: 500;
+                                        color: $white;
+                                        font-size: 1.3em;
+                                        line-height: 1.2;
+                                        overflow: hidden;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 5;
+                                        -webkit-box-orient: vertical;
+                                        text-shadow: rgba(0, 0, 0, 0.5) 0.1em 0.1em 0.1em;
+
+                                        width: 100%;
+
+                                        @media screen and (max-width: $tablet-h) {
+                                            font-size: 1.2em;
+                                        }
+
+                                        @media screen and (max-width: $mobile-h) {
+                                            font-size: 1.5em;
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    .desc {
+                                        font-size: 1em;
+                                        overflow: hidden;
+                                        display: -webkit-box;
+                                        -webkit-line-clamp: 2;
+                                        -webkit-box-orient: vertical;
+                                        text-align: left;
+                                        padding: 0;
+                                        margin: 0;
+                                        width: 100%;
+                                        display: none;
+
+                                        @media screen and (max-width: $tablet-h) {
+                                            font-size: 1em;
+                                        }
+
+                                        @media screen and (max-width: $mobile-v) {
+                                            font-size: 1em;
+                                            display: none;
+                                        }
+                                    }
+
+                                    .bottom {
+                                        width: 100%;
+                                        margin: 0;
+                                        padding: 0;
+
+                                        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                                        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                                        display: -ms-flexbox; /* TWEENER - IE 10 */
+                                        display: -webkit-flex; /* NEW - Chrome */
+                                        display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                                        flex-wrap: wrap;
+
+                                        @media screen and (max-width: $tablet-h) {
+                                            margin-top: 0;
+                                        }
+
+                                        @media screen and (max-width: $mobile-h) {
+                                            padding-top: 0;
+                                        }
+
+                                        .hashtag-container {
+                                            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+                                            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+                                            display: -ms-flexbox; /* TWEENER - IE 10 */
+                                            display: -webkit-flex; /* NEW - Chrome */
+                                            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                                            flex-wrap: wrap;
+                                            width: 100%;
+
+                                            .hashtag {
+                                                font-size: 0.8em;
+                                                color: $light-grey;
+                                                margin-right: 10px;
+
+                                                @media screen and (max-width: $mobile-v) {
+                                                    font-size: 0.8em;
+                                                }
+                                            }
+                                        }
+
+                                        .location {
+                                            color: $white;
+
+                                        }
+                                    }
+                                }
+
+                                .price-container {
+                                    background-color: $christmas-red;
+                                    color: $white;
+                                    padding: 5px $padding;
+                                    margin-top: 10px;
+                                    text-align: center;
+
+                                    .discount-price {
+                                        font-size: 1.2em;
+
+                                        @media screen and (max-width: $mobile-v) {
+                                            font-size: 1em;
+                                        }
+
+                                        @media screen and (max-width: $mobile-xs) {
+                                            font-size: 0.8em;
+                                        }
+
+                                        .ori-price {
+                                            font-size: 0.8em;
+                                            color: $white;
+                                            opacity: .5;
+                                            text-decoration: line-through;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.highlight {
+                                .content {
+
+                                    h3 {
+                                        font-size: 1.8em;
+                                        line-height: 1.5;
+
+                                        @media screen and (max-width: $mobile-h) {
+                                            font-size: 1.5em;
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.row-with-4-items {
+                    .list-col {
+                        width: 100%;
+
+                        .list-item {
+                            flex: 1 1 24.5%;
+                            margin-right: 0.5%;
+                            padding: $padding;
+                            background-color: $christmas-deep-red;
+
+                            &:last-child {
+                                margin-right: 0%;
+                            }
+
+                            .list-content{
+                                height: calc(100% - 35px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .terms {
+        color: $white;
+        line-height: 1.5;
+        word-break: break-word;
+        word-wrap: break-word;
+        font-size: 0.86em;
+        text-align: left;
+        font-weight: 400;
+
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 0 80px 0;
+
+        @media screen and (max-width: $tablet-h) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            width: 90%;
+        }
+
+        b {
+            color: $white;
+        }
+    }
+
+    .floating-icons {
+        font-size: 1.2em;
+        position: fixed;
+        right: 0;
+        bottom: 35%;
+        cursor: pointer;
+        z-index: 100000;
+        display: none;
+        opacity: 0;
+
+        @media screen and (max-width: $mobile-h) {
+            display: none !important;
+        }
+
+        &.show {
+            display: block;
+            opacity: 0.9;
+        }
+
+        & > div {
+            display: block;
+            background-color: $christmas-deep-red;
+            padding: 5px 30px;
+            margin-bottom: 2px;
+            box-shadow: $shadow;
+
+            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox; /* TWEENER - IE 10 */
+            display: -webkit-flex; /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            &.active {
+                h6 {
+                    background: linear-gradient(to bottom right, #eec832, #f7db91, #eec832);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            h6 {
+                font-size: 1.15em;
+                text-transform: uppercase;
+                color: $white;
+                font-weight: 800;
+            }
+        }
+    }
+
+    .gotoTop {
+        position: fixed;
+        right: 20px;
+        bottom: 100px;
+        cursor: pointer;
+        z-index: 100000;
+        opacity: 0;
+        -webkit-transition: $fadeIn;
+        transition: $fadeIn;
+        -webkit-transform: translate3d(0,0,0);
+
+        @media screen and (max-width: $mobile-h) {
+            right: 10px;
+            bottom: 50px;
+        }
+
+        &.show{
+            opacity: 0.8;
+        }
+
+        &:before{
+            content: "";
+            padding-left: 80px;
+            padding-bottom: 80px;
+            background-image: url("/images/campaign/christmas2019/top.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @media screen and (max-width: $mobile-h) {
+                padding-left: 60px;
+                padding-bottom: 60px;
+            }
+        }
+    }
+
+    section#spotlight {
+        margin-bottom: 20px;
+
+        .container-fluid {
+            background: linear-gradient(to bottom left, rgba(170, 11, 12, 0.8), rgba(115, 12, 14, 0.8));
+            padding: 30px 0;
+            width: 100%;
+
+            @media screen and (max-width: $tablet-v) {
+                width: calc(100% - 10px);
+                margin: 0 auto;
+            }
+        }
+
+        .main-logo-container {
+            -webkit-justify-content: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 10px;
+
+            h2 {
+                background: linear-gradient(to bottom right, $christmas-yellow, $christmas-light-yellow, $christmas-yellow);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-transform: uppercase;
+            }
+        }
+
+        .list-item {
+            flex: 1 1 24.5%;
+            margin-right: 0.5%;
+            padding: 15px;
+            background-color: $christmas-deep-red;
+
+            @media screen and (max-width: $tablet-h) {
+                flex: 0 0 calc(100% / 4.5);
+                min-width: 0;
+            }
+
+            @media screen and (max-width: $tablet-v) {
+                flex: 0 0 calc(100% / 3.5);
+                min-width: 0;
+            }
+
+            @media screen and (max-width: $mobile-h) {
+                min-width: 300px;
+            }
+
+            a {
+                background-color: $christmas-red;
+            }
+        }
+
+        .slick-slide{
+            flex: 1 1 24.3%;
+            margin-right: 0.2%;
+        }
+
+        h2, h3, p.desc {
+            color: $white;
+        }
+    }
+}
+
+.lis-flake{
+
+    .fa-snowflake{
+        z-index: 999;
+        color: $white;
+        font-size: 0.4em;
+        text-shadow: $shadow;
+
+        @media screen and (max-width: $tablet-h) {
+            font-size: 0.2em;
+        }
+    }
+}

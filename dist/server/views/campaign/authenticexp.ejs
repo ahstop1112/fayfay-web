@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['campaign.mothers.day.desc'] %>">
+    <meta name="keywords" content="<%= translations['campaign.mothers.day.title'] %>">
+    <title><%= translations['campaign.mothers.day.title'] %> | Fayfay.com</title>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/campaign/<%= translations['campaign.authenticexp.ogimage']%>"/>
+    <meta property="og:image:alt" content="<%= translations['campaign.mothers.day.title']  %>"/>
+    <meta property="og:title" content="<%= translations['campaign.mothers.day.title'] %>"/>
+    <meta property="og:description" content="<%= translations['campaign.mothers.day.desc'] %>"/>
+
+    <% include ../include/gtm.header.ejs %>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/authenticexp.css">
+</head>
+
+<body class="<%= locale%>">
+<% include ../include/gtm.body.ejs %>
+<div id="authenticexp">
+    <% include authenticexp.header.ejs %>
+
+    <section id="all">
+        <div class="container-fluid">
+            <div class="coupon-container">
+                <div class="discount">
+                    <h1>5%<span class="off">off</span></h1>
+                    <p class="desc"><%= translations['campaign.authenticexp.coupon.desc'] %></p>
+                </div>
+                <div class="code">
+                    <h3><%= translations['campaign.authenticexp.discountCode'] %></h3>
+                    <h1 class="promoCode">FAYMDMAY5</h1>
+                    <button class="btn btn-s copy-btn show" data-clipboard-action="copy" data-clipboard-text="FAYMDMAY5"
+                            aria-label="<%= translations['campaign.authenticexp.copy'] %>">
+                        <%= translations['campaign.authenticexp.copy'] %>
+                    </button>
+                    <span class="tooltiptext"><%= translations['campaign.authenticexp.copied'] %></span>
+                </div>
+            </div>
+            <p class="content_p"><%- translations['campaign.mothers.day.desc'] %></p>
+
+            <% if (campaignData.sections) { %>
+
+                <% include dynamic-circle.icons.ejs %>
+
+                <% campaignData.sections.forEach(function (section, index) { %>
+                    <div class="section-experience  section<%=index%>">
+                        <div class="experience-title section<%=index%>">
+                            <div class="title-bg-left"></div>
+                            <div class="title-bg">
+                                <h2><%= section.name %></h2>
+                            </div>
+                            <div class="title-bg-right"></div>
+
+                        </div>
+                        <% if (section.brief){ %>
+                            <div class="title-desc">
+                                <%= section.brief %>
+                            </div>
+                        <% } %>
+
+                        <% section.subSections.forEach(function (child, subIndex) { %>
+                            <% switch (child.layout) {
+                                case 'VERTICAL_LIST' : %>
+                                    <% include dynamic-vertical.list.ejs %>
+                                <% break;
+                                case 'HORIZONTAL_LIST' : %>
+                                    <% include dynamic-horizontal.list.ejs %>
+                                <% break;
+                                case '4_PLUS_1_HIGHLIGHTED_LEFT' : %>
+                                    <% include dynamic-4plus1_highlighted_left.ejs %>
+                                <% break;
+                                case '4_PLUS_1_HIGHLIGHTED_RIGHT' : %>
+                                    <% include dynamic-4plus1_highlighted_right.ejs %>
+                                <% break;
+                            } %>
+                        <% })%>
+                        <% if (section.seeMoreLink){ %>
+                            <div class="btn-container">
+                                <a class="btn btn-lg see-more" href="<%=section.seeMoreLink%>" target="_blank">
+                                    <%= translations['campaign.central.vietnam.travel.see.more'] %>
+                                </a>
+                            </div>
+                        <% } %>
+                    </div>
+                <% })%>
+            <% } %>
+            <p class="desc terms">
+
+                <b><%-translations['campaign.central.vietnam.travel.terms.title']%></b><br>
+                <%- translations['campaign.mothers.day.terms'] %>
+            </p>
+        </div>
+    </section>
+
+    <% if (campaignData.sections) { %>
+    <div class="floating-icons">
+        <% campaignData.sections.forEach(function (section, index) { %>
+        <div class="section<%=index%> <%=index===0 ? 'active' : ''%>"><div class="address-icon" style="background-image: url('<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%=section.iconMedia.key%>.<%=section.iconMedia.format%>')"></div><h6><%=section.name %></h6></div>
+        <% })%>
+    </div>
+    <% } %>
+    <% include campaign.destinations.ejs %>
+    <% include ../include/footer.ejs %>
+</div>
+
+<% include ../include/js.ejs %>
+<script src="/js/authenticexp-bundle.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.copy-btn');
+
+    clipboard.on('success', function(e) {
+        $('.tooltiptext').addClass("show");
+
+        setTimeout(function() {
+            $('.tooltiptext').removeClass("show");
+        }, 3000);
+    });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<section class="terms-tabs-content-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12">
+                <div class="tab-content">
+                    <% if (termPage === 'terms') { %>
+                    <div id="terms" class="tab-pane fade in active">
+                        <div class="whitebox">
+                            <h3><%= translations['common.terms.policies'] %></h3>
+                            <hr />
+                            <% include terms.conditions.ejs %>
+                        </div>
+                        <div class="whitebox">
+                            <% include terms.conditions.vn.ejs %>
+                        </div>
+                    </div>
+                    <% } else if (termPage === 'dispute-settlement') { %>
+                    <div id="dsm" class="tab-pane fade in active">
+                        <div class="whitebox">
+                            <h3><%= translations['common.dispute.settlement.mechanism'] %></h3>
+                            <hr />
+                            <% include terms.dispute.settlement.ejs %>
+                        </div>
+                        <div class="whitebox">
+                            <% include terms.dispute.settlement.vn.ejs %>
+                        </div>
+                    </div>
+                    <% } else if (termPage === 'privacy-policy') { %>
+                    <div id="policy" class="tab-pane fade in active">
+                        <div class="whitebox">
+                            <h3><%= translations['common.privacy.policy'] %></h3>
+                            <hr />
+                            <% include terms.policy.ejs %>
+                        </div>
+                        <div class="whitebox">
+                            <% include terms.policy.vn.ejs %>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

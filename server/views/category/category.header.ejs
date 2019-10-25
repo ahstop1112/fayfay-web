@@ -1,0 +1,17 @@
+<header class="city-header-section">
+    <% include ../include/header.ejs %>
+    <div class="section-background">
+        <div class="overlay-content">
+            <div class="overlay-wrap">
+                <div class="overlay">
+                    <div class="header-text">
+                        <h1 class="title"><%= subCategoryTxt || categoryTxt %></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-container">
+                <img src="/images/banner_category.jpg" alt="<%= subCategoryTxt || categoryTxt %>" data-speed="-0.5" class="bg">
+            </div>
+        </div>
+    </div>
+</header>

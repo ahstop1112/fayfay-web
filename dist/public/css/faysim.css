@@ -1,0 +1,760 @@
+@charset "UTF-8";
+/*Font*/
+@font-face {
+  font-family: city-font;
+  src: url(/fonts/olivier_demo.ttf); }
+
+/* font */
+@font-face {
+  font-family: rounded-font;
+  src: url(/fonts/gotham_bold.otf); }
+
+/*1920px - 1440px*/
+/*1440px - 1024px*/
+/* 1023px - 992px*/
+/* 991px - 768px */
+/* 767px - 481px */
+/* 480px - 320px */
+/* 320px */
+.faysim-header-section {
+  overflow: hidden;
+  background-color: #EE7E31; }
+  @media screen and (min-width: 1440px) {
+    .faysim-header-section .bg-container {
+      max-height: none !important; } }
+  .faysim-header-section .bg-container:before {
+    padding-top: 28% !important; }
+    @media screen and (max-width: 767px) {
+      .faysim-header-section .bg-container:before {
+        padding-top: 31% !important; } }
+    @media screen and (max-width: 550px) {
+      .faysim-header-section .bg-container:before {
+        padding-top: 75% !important; } }
+  .faysim-header-section .bg-container .bg {
+    top: -100% !important;
+    height: 100% !important;
+    width: auto !important; }
+    .faysim-header-section .bg-container .bg.except-mobile-v {
+      display: block; }
+      @media screen and (min-width: 550px) {
+        .faysim-header-section .bg-container .bg.except-mobile-v {
+          display: block; } }
+      @media screen and (max-width: 767px) {
+        .faysim-header-section .bg-container .bg.except-mobile-v {
+          height: auto !important;
+          width: 100% !important; } }
+    .faysim-header-section .bg-container .bg.mobile-v {
+      display: none; }
+      @media screen and (max-width: 550px) {
+        .faysim-header-section .bg-container .bg.mobile-v {
+          display: block;
+          top: -95% !important; } }
+
+.faysim-section.about {
+  padding: 30px 0;
+  text-align: center; }
+  @media screen and (max-width: 767px) {
+    .faysim-section.about {
+      padding: 15px 0; } }
+  @media screen and (max-width: 550px) {
+    .faysim-section.about {
+      padding: 10px 0; } }
+  .faysim-section.about h2.title {
+    color: #EE7E31;
+    font-family: rounded-font;
+    text-align: center;
+    line-height: 2; }
+    @media screen and (max-width: 550px) {
+      .faysim-section.about h2.title {
+        font-size: 1.5em;
+        line-height: 1;
+        margin: 20px 0; } }
+  .faysim-section.about .faysim-table {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #EE7E31;
+    margin: 0 auto;
+    width: 90%; }
+    @media screen and (max-width: 991px) {
+      .faysim-section.about .faysim-table {
+        width: 100%; } }
+    .faysim-section.about .faysim-table .header {
+      background-color: #EE7E31;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      padding: 2% 0; }
+      .faysim-section.about .faysim-table .header > div {
+        width: 33.33%;
+        text-align: center;
+        color: #fff;
+        font-size: 1.2em;
+        border-right: 1px solid #fff;
+        text-wrap: wrap; }
+        .faysim-section.about .faysim-table .header > div:last-child {
+          border: 0;
+          margin-bottom: 0; }
+        @media screen and (max-width: 767px) {
+          .faysim-section.about .faysim-table .header > div {
+            flex: 0 0 94%;
+            margin-left: 3%;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-right: 0;
+            border-bottom: 1px solid #fff; } }
+    .faysim-section.about .faysim-table .content {
+      color: #EE7E31;
+      font-size: 1.2em;
+      line-height: 1.5;
+      padding: 3% 0;
+      width: 80%;
+      margin: 0 auto; }
+      @media screen and (max-width: 767px) {
+        .faysim-section.about .faysim-table .content {
+          width: 90%;
+          font-size: 1em; } }
+      .faysim-section.about .faysim-table .content ul {
+        text-align: left;
+        margin: 0; }
+        .faysim-section.about .faysim-table .content ul li {
+          color: #EE7E31;
+          list-style-position: outside;
+          margin-left: 1em; }
+          .faysim-section.about .faysim-table .content ul li b {
+            color: #EE7E31; }
+          .faysim-section.about .faysim-table .content ul li span {
+            color: #999; }
+      .faysim-section.about .faysim-table .content .remarks {
+        margin-top: 30px;
+        font-size: 0.8em;
+        color: #999; }
+  .faysim-section.about .topup-table {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    align-items: center; }
+    @media screen and (max-width: 767px) {
+      .faysim-section.about .topup-table {
+        width: 90%;
+        flex-wrap: wrap;
+        font-size: 1em; } }
+    .faysim-section.about .topup-table .content-left {
+      flex: 0 0 70%; }
+      @media screen and (max-width: 767px) {
+        .faysim-section.about .topup-table .content-left {
+          flex: 0 0 60%;
+          margin-bottom: 10px; } }
+      @media screen and (max-width: 550px) {
+        .faysim-section.about .topup-table .content-left {
+          flex: 0 0 100%;
+          margin-bottom: 10px; } }
+      .faysim-section.about .topup-table .content-left ul {
+        text-align: left;
+        margin: 0; }
+        .faysim-section.about .topup-table .content-left ul li {
+          font-size: 1em;
+          color: #EE7E31;
+          list-style-position: outside;
+          margin-left: 1em; }
+          .faysim-section.about .topup-table .content-left ul li span, .faysim-section.about .topup-table .content-left ul li a {
+            color: #999; }
+          .faysim-section.about .topup-table .content-left ul li a, .faysim-section.about .topup-table .content-left ul li a:focus {
+            text-decoration: underline !important; }
+    .faysim-section.about .topup-table .content-right {
+      flex: 0 0 30%;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+      @media screen and (max-width: 767px) {
+        .faysim-section.about .topup-table .content-right {
+          flex: 0 0 40%;
+          margin-bottom: 10px; } }
+      @media screen and (max-width: 550px) {
+        .faysim-section.about .topup-table .content-right {
+          flex: 0 0 100%;
+          margin-bottom: 10px; } }
+      .faysim-section.about .topup-table .content-right > div {
+        flex: 0 0 100%;
+        text-align: center; }
+        .faysim-section.about .topup-table .content-right > div img {
+          width: 40%;
+          height: auto; }
+  .faysim-section.about .except-mobile-v {
+    display: none; }
+    @media screen and (min-width: 550px) {
+      .faysim-section.about .except-mobile-v {
+        display: block; } }
+  .faysim-section.about .mobile-v {
+    display: none; }
+    @media screen and (max-width: 550px) {
+      .faysim-section.about .mobile-v {
+        display: block; } }
+
+.faysim-section.exclusive {
+  padding: 30px 0;
+  background-color: #EE7E31;
+  color: #fff; }
+  @media screen and (max-width: 767px) {
+    .faysim-section.exclusive {
+      padding: 15px 0; } }
+  .faysim-section.exclusive h2.title {
+    color: #fff;
+    font-family: rounded-font;
+    text-align: center;
+    line-height: 2; }
+    @media screen and (max-width: 550px) {
+      .faysim-section.exclusive h2.title {
+        font-size: 1.5em;
+        line-height: 1;
+        margin: 20px 0; } }
+  .faysim-section.exclusive p.desc, .faysim-section.exclusive p.remarks {
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    @media screen and (max-width: 550px) {
+      .faysim-section.exclusive p.desc, .faysim-section.exclusive p.remarks {
+        width: 96%; } }
+    .faysim-section.exclusive p.desc.remarks, .faysim-section.exclusive p.remarks.remarks {
+      font-size: 0.96em;
+      width: 60%; }
+      @media screen and (max-width: 550px) {
+        .faysim-section.exclusive p.desc.remarks, .faysim-section.exclusive p.remarks.remarks {
+          width: 96%; } }
+  .faysim-section.exclusive .tick-table {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    @media screen and (max-width: 767px) {
+      .faysim-section.exclusive .tick-table {
+        flex-wrap: wrap;
+        width: 100%; } }
+    .faysim-section.exclusive .tick-table .list {
+      width: 40%; }
+      @media screen and (max-width: 767px) {
+        .faysim-section.exclusive .tick-table .list {
+          width: 80%;
+          margin-left: 20%;
+          margin-right: 0; } }
+      .faysim-section.exclusive .tick-table .list ul li {
+        list-style: none;
+        font-size: 1.2em;
+        color: #fff;
+        font-weight: normal; }
+        .faysim-section.exclusive .tick-table .list ul li:before {
+          display: inline-block;
+          font-family: "Font Awesome 5 Pro";
+          content: "\F00C";
+          color: #59f587;
+          margin-right: 15px; }
+    .faysim-section.exclusive .tick-table .img {
+      flex: 0 0 20%; }
+      @media screen and (max-width: 767px) {
+        .faysim-section.exclusive .tick-table .img {
+          display: none; } }
+  .faysim-section.exclusive .photo-table {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    @media screen and (max-width: 991px) {
+      .faysim-section.exclusive .photo-table {
+        width: 100%; } }
+    @media screen and (max-width: 550px) {
+      .faysim-section.exclusive .photo-table {
+        flex-wrap: wrap;
+        margin: 0; } }
+    .faysim-section.exclusive .photo-table > div {
+      width: 32.333%;
+      margin-right: 1%;
+      background-color: #fff; }
+      @media screen and (max-width: 550px) {
+        .faysim-section.exclusive .photo-table > div {
+          flex: 100%;
+          margin-right: 0;
+          margin-bottom: 10px; } }
+      .faysim-section.exclusive .photo-table > div .banner {
+        overflow: hidden;
+        width: 100%;
+        position: relative; }
+        .faysim-section.exclusive .photo-table > div .banner:before {
+          content: "";
+          padding-top: 56.25%;
+          display: block; }
+        .faysim-section.exclusive .photo-table > div .banner .bg {
+          position: absolute;
+          top: -100%;
+          left: 0;
+          right: 0;
+          bottom: -100%;
+          margin: auto;
+          margin-left: 50%;
+          transform: translateX(-50%);
+          width: auto;
+          height: 100%;
+          min-width: 100%;
+          min-height: 100%; }
+      .faysim-section.exclusive .photo-table > div .content {
+        background-color: #fff;
+        color: #EE7E31;
+        text-align: center;
+        padding: 0 15px; }
+        .faysim-section.exclusive .photo-table > div .content h3 {
+          color: #EE7E31;
+          font-family: rounded-font;
+          font-size: 1.25em; }
+
+.faysim-section.price {
+  padding: 30px 0; }
+  @media screen and (max-width: 550px) {
+    .faysim-section.price {
+      padding: 15px 0; } }
+  .faysim-section.price h2.title {
+    color: #EE7E31;
+    font-family: rounded-font;
+    text-align: center;
+    line-height: 2; }
+    @media screen and (max-width: 550px) {
+      .faysim-section.price h2.title {
+        font-size: 1.5em;
+        line-height: 1.5;
+        margin: 20px 0; } }
+  .faysim-section.price .faysim-table {
+    border-radius: 8px;
+    border: 1px solid #EE7E31;
+    width: 90%;
+    margin: auto; }
+    @media screen and (max-width: 991px) {
+      .faysim-section.price .faysim-table {
+        width: 100%; } }
+    .faysim-section.price .faysim-table .header {
+      background-color: #EE7E31;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      padding: 1% 0; }
+      .faysim-section.price .faysim-table .header > div {
+        width: 70%;
+        text-align: center;
+        color: #fff;
+        font-size: 1.25em;
+        padding: 0.5%;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        align-items: center;
+        justify-content: center; }
+        @media screen and (max-width: 550px) {
+          .faysim-section.price .faysim-table .header > div {
+            font-size: 1em;
+            line-height: 1.5; } }
+        .faysim-section.price .faysim-table .header > div:last-child {
+          width: 30%;
+          border: 0;
+          margin-bottom: 0; }
+    .faysim-section.price .faysim-table .content {
+      color: #EE7E31;
+      line-height: 1.5;
+      margin: 0 auto;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
+      display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap; }
+      .faysim-section.price .faysim-table .content > div {
+        width: 70%;
+        text-align: center;
+        font-size: 1.1em;
+        border-right: 1px solid #EE7E31;
+        border-bottom: 1px solid #EE7E31;
+        padding: 10px 0;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;
+        /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Chrome */
+        display: flex;
+        /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap; }
+        .faysim-section.price .faysim-table .content > div:nth-child(2), .faysim-section.price .faysim-table .content > div:nth-child(4), .faysim-section.price .faysim-table .content > div:nth-child(6), .faysim-section.price .faysim-table .content > div:nth-child(8), .faysim-section.price .faysim-table .content > div:nth-child(10) {
+          width: 30%;
+          border-right: 0;
+          margin-bottom: 0; }
+        .faysim-section.price .faysim-table .content > div:nth-child(9), .faysim-section.price .faysim-table .content > div:nth-child(10) {
+          border-bottom: 0; }
+        @media screen and (max-width: 767px) {
+          .faysim-section.price .faysim-table .content > div {
+            font-size: 1em;
+            line-height: 1.5;
+            padding: 10px 5px; } }
+        .faysim-section.price .faysim-table .content > div span {
+          width: 100%;
+          font-size: 0.86em; }
+
+.faysim-section.support {
+  padding: 30px 0; }
+  @media screen and (max-width: 550px) {
+    .faysim-section.support {
+      padding: 15px 0; } }
+  .faysim-section.support h2.title {
+    color: #EE7E31;
+    font-family: rounded-font;
+    text-align: center;
+    line-height: 2; }
+    @media screen and (max-width: 550px) {
+      .faysim-section.support h2.title {
+        font-size: 1.5em;
+        line-height: 1.5;
+        margin-bottom: 20px; } }
+  .faysim-section.support .btn-row {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    @media screen and (max-width: 991px) {
+      .faysim-section.support .btn-row {
+        width: 100%; } }
+    @media screen and (max-width: 550px) {
+      .faysim-section.support .btn-row {
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap; } }
+    .faysim-section.support .btn-row .support-btn {
+      border: 0;
+      width: 32.33%;
+      margin-right: 1%;
+      padding: 15px 20px;
+      text-align: center;
+      background-color: #f4f4f4; }
+      @media screen and (max-width: 550px) {
+        .faysim-section.support .btn-row .support-btn {
+          width: 100%;
+          flex-wrap: wrap;
+          margin-right: 0;
+          margin-bottom: 10px; } }
+      .faysim-section.support .btn-row .support-btn:last-child {
+        margin-right: 0;
+        width: 33.33%; }
+        @media screen and (max-width: 550px) {
+          .faysim-section.support .btn-row .support-btn:last-child {
+            flex: 100%;
+            margin-right: 0;
+            margin-bottom: 0; } }
+      @media screen and (max-width: 550px) {
+        .faysim-section.support .btn-row .support-btn {
+          flex: 0 0 100%; } }
+      @media screen and (max-width: 550px) {
+        .faysim-section.support .btn-row .support-btn {
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;
+          /* OLD - Firefox 19- (buggy but mostly works) */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Chrome */
+          display: flex;
+          /* NEW, Spec - Opera 12.1, Firefox 20+ */
+          align-items: center; } }
+      .faysim-section.support .btn-row .support-btn .img {
+        padding-bottom: 10px;
+        text-align: center; }
+        @media screen and (max-width: 550px) {
+          .faysim-section.support .btn-row .support-btn .img {
+            padding-bottom: 0;
+            flex: 0 0 100%; } }
+        .faysim-section.support .btn-row .support-btn .img img {
+          height: 80px;
+          width: auto;
+          max-width: 100%; }
+          @media screen and (max-width: 550px) {
+            .faysim-section.support .btn-row .support-btn .img img {
+              height: 60px;
+              margin: 15px; } }
+      @media screen and (max-width: 550px) {
+        .faysim-section.support .btn-row .support-btn .content {
+          width: 90%;
+          margin-left: 5%; } }
+      .faysim-section.support .btn-row .support-btn .content p {
+        text-align: center; }
+        @media screen and (max-width: 550px) {
+          .faysim-section.support .btn-row .support-btn .content p {
+            width: 100%; } }
+      .faysim-section.support .btn-row .support-btn .content h1 {
+        color: #EE7E31;
+        font-family: rounded-font;
+        font-size: 1.25em;
+        min-height: 40px; }
+      .faysim-section.support .btn-row .support-btn .content img {
+        width: 90%;
+        margin-top: 15px; }
+    .faysim-section.support .btn-row.press-row {
+      align-items: center;
+      border: 1px solid #f4f4f4; }
+    .faysim-section.support .btn-row.float-right {
+      flex-direction: row-reverse; }
+    .faysim-section.support .btn-row .press-img {
+      flex: 0 0 40%; }
+      @media screen and (max-width: 550px) {
+        .faysim-section.support .btn-row .press-img {
+          flex: 0 0 100%; } }
+    .faysim-section.support .btn-row .press-desc {
+      flex: 0 0 56%;
+      padding: 2%; }
+      @media screen and (max-width: 550px) {
+        .faysim-section.support .btn-row .press-desc {
+          flex: 0 0 100%; } }
+
+.faysim-section.recommmended, .faysim-section.buynow {
+  padding: 30px 0; }
+  @media screen and (max-width: 550px) {
+    .faysim-section.recommmended, .faysim-section.buynow {
+      padding: 15px 0; } }
+  .faysim-section.recommmended h2.title, .faysim-section.buynow h2.title {
+    color: #EE7E31;
+    font-family: rounded-font;
+    text-align: center;
+    line-height: 2; }
+    @media screen and (max-width: 550px) {
+      .faysim-section.recommmended h2.title, .faysim-section.buynow h2.title {
+        font-size: 1.5em; } }
+  .faysim-section.recommmended .drag-content, .faysim-section.buynow .drag-content {
+    width: 90%;
+    margin: 0 auto; }
+    @media screen and (max-width: 991px) {
+      .faysim-section.recommmended .drag-content, .faysim-section.buynow .drag-content {
+        width: 100%; } }
+    .faysim-section.recommmended .drag-content .drag-list, .faysim-section.buynow .drag-content .drag-list {
+      justify-content: center; }
+      @media screen and (max-width: 550px) {
+        .faysim-section.recommmended .drag-content .drag-list, .faysim-section.buynow .drag-content .drag-list {
+          padding: 0; } }
+      .faysim-section.recommmended .drag-content .drag-list .list-item, .faysim-section.buynow .drag-content .drag-list .list-item {
+        width: 33.33%;
+        flex: 0 0 33.33%; }
+        @media screen and (max-width: 550px) {
+          .faysim-section.recommmended .drag-content .drag-list .list-item, .faysim-section.buynow .drag-content .drag-list .list-item {
+            width: 99.5%;
+            flex: 0 0 99.5%; } }
+
+.faysim-section.bg-orange h1 {
+  font-family: rounded-font;
+  font-size: 2em; }
+  @media screen and (max-width: 550px) {
+    .faysim-section.bg-orange h1 {
+      font-size: 1.8em; } }
+
+#promotion, #promotion-mobile {
+  text-align: center;
+  padding: 30px 0; }
+  @media screen and (max-width: 550px) {
+    #promotion, #promotion-mobile {
+      padding: 15px 0; } }
+  #promotion#promotion-mobile, #promotion-mobile#promotion-mobile {
+    padding: 0; }
+  #promotion#promotion .bg-slick-container, #promotion-mobile#promotion .bg-slick-container {
+    margin: 7px; }
+  #promotion .bg-slick-container .promotion-slider, #promotion-mobile .bg-slick-container .promotion-slider {
+    width: 90%;
+    margin: 0 auto;
+    display: none; }
+    @media screen and (max-width: 991px) {
+      #promotion .bg-slick-container .promotion-slider, #promotion-mobile .bg-slick-container .promotion-slider {
+        width: 100%; } }
+  #promotion .bg-slick-container .banner, #promotion-mobile .bg-slick-container .banner {
+    max-height: none; }
+    #promotion .bg-slick-container .banner:before, #promotion-mobile .bg-slick-container .banner:before {
+      padding-top: 38.7%; }
+      @media screen and (max-width: 550px) {
+        #promotion .bg-slick-container .banner:before, #promotion-mobile .bg-slick-container .banner:before {
+          padding-top: 75%; } }
+  #promotion .bg-slick-container .bg, #promotion-mobile .bg-slick-container .bg {
+    top: -100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0; }
+    #promotion .bg-slick-container .bg.expect-mobile-v, #promotion-mobile .bg-slick-container .bg.expect-mobile-v {
+      display: none; }
+      @media screen and (min-width: 550px) {
+        #promotion .bg-slick-container .bg.expect-mobile-v, #promotion-mobile .bg-slick-container .bg.expect-mobile-v {
+          display: block; } }
+    #promotion .bg-slick-container .bg.mobile-v, #promotion-mobile .bg-slick-container .bg.mobile-v {
+      display: none; }
+      @media screen and (max-width: 550px) {
+        #promotion .bg-slick-container .bg.mobile-v, #promotion-mobile .bg-slick-container .bg.mobile-v {
+          display: block; } }
+
+.terms {
+  color: #163A4D;
+  line-height: 1.5;
+  word-break: break-word;
+  word-wrap: break-word;
+  font-size: 0.86em;
+  text-align: left;
+  font-weight: 400;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 20px 0; }
+  @media screen and (max-width: 1025px) {
+    .terms {
+      width: 100%; } }
+  @media screen and (max-width: 767px) {
+    .terms {
+      width: 100%; } }
+  .terms b {
+    color: #163A4D; }
+
+.bg-orange h1, .bg-orange p {
+  color: #fff;
+  text-align: center; }
+
+.bg-orange .btn.white:hover {
+  background-color: #fff;
+  border: 1px solid #fff;
+  opacity: 1;
+  color: #EE7E31; }
+
+.floating-icons {
+  font-size: 1em;
+  position: fixed;
+  right: 0;
+  bottom: 12%;
+  cursor: pointer;
+  z-index: 100000; }
+  @media screen and (max-width: 767px) {
+    .floating-icons {
+      display: none !important; } }
+  .floating-icons .address-icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: contain;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin-right: 10px;
+    display: none; }
+    @media screen and (max-width: 767px) {
+      .floating-icons .address-icon {
+        width: 30px;
+        height: 30px; } }
+  .floating-icons > div {
+    display: block;
+    background-color: #F4A41D;
+    padding: 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
+    .floating-icons > div.active {
+      background-color: #EE7E31; }
+    .floating-icons > div.hcmc .address-icon {
+      background-image: url("/images/campaign/double11/icon-5.png"); }
+    .floating-icons > div.hanoi .address-icon {
+      background-image: url("/images/campaign/double11/icon-1.png"); }
+    .floating-icons > div.daNang .address-icon {
+      background-image: url("/images/campaign/double11/icon-2.png"); }
+    .floating-icons > div.nhaTrang .address-icon {
+      background-image: url("/images/campaign/double11/icon-3.png"); }
+    .floating-icons > div h6 {
+      color: #fff;
+      font-size: 1em; }
+
+body.zh-hk .faysim-section.about h2.title, body.zh-hk .faysim-section.about .content h3, body.zh-hk .faysim-section.about .content, body.zh-hk .faysim-section.about h1, body.zh-hk .faysim-section.exclusive h2.title, body.zh-hk .faysim-section.exclusive .content h3, body.zh-hk .faysim-section.exclusive .content, body.zh-hk .faysim-section.exclusive h1, body.zh-hk .faysim-section.support h2.title, body.zh-hk .faysim-section.support .content h3, body.zh-hk .faysim-section.support .content, body.zh-hk .faysim-section.support h1, body.zh-hk .faysim-section.price h2.title, body.zh-hk .faysim-section.price .content h3, body.zh-hk .faysim-section.price .content, body.zh-hk .faysim-section.price h1, body.zh-hk .faysim-section.buynow h2.title, body.zh-hk .faysim-section.buynow .content h3, body.zh-hk .faysim-section.buynow .content, body.zh-hk .faysim-section.buynow h1, body.zh-hk .faysim-section.recommmended h2.title, body.zh-hk .faysim-section.recommmended .content h3, body.zh-hk .faysim-section.recommmended .content, body.zh-hk .faysim-section.recommmended h1, body.zh-hk .faysim-section.bg-orange h2.title, body.zh-hk .faysim-section.bg-orange .content h3, body.zh-hk .faysim-section.bg-orange .content, body.zh-hk .faysim-section.bg-orange h1, body.zh-cn .faysim-section.about h2.title, body.zh-cn .faysim-section.about .content h3, body.zh-cn .faysim-section.about .content, body.zh-cn .faysim-section.about h1, body.zh-cn .faysim-section.exclusive h2.title, body.zh-cn .faysim-section.exclusive .content h3, body.zh-cn .faysim-section.exclusive .content, body.zh-cn .faysim-section.exclusive h1, body.zh-cn .faysim-section.support h2.title, body.zh-cn .faysim-section.support .content h3, body.zh-cn .faysim-section.support .content, body.zh-cn .faysim-section.support h1, body.zh-cn .faysim-section.price h2.title, body.zh-cn .faysim-section.price .content h3, body.zh-cn .faysim-section.price .content, body.zh-cn .faysim-section.price h1, body.zh-cn .faysim-section.buynow h2.title, body.zh-cn .faysim-section.buynow .content h3, body.zh-cn .faysim-section.buynow .content, body.zh-cn .faysim-section.buynow h1, body.zh-cn .faysim-section.recommmended h2.title, body.zh-cn .faysim-section.recommmended .content h3, body.zh-cn .faysim-section.recommmended .content, body.zh-cn .faysim-section.recommmended h1, body.zh-cn .faysim-section.bg-orange h2.title, body.zh-cn .faysim-section.bg-orange .content h3, body.zh-cn .faysim-section.bg-orange .content, body.zh-cn .faysim-section.bg-orange h1 {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", "PingFang TC", "\5FAE\8F6F\6B63\9ED1", "Microsoft JhengHei", "\534E\6587\7EC6\9ED1", "STHeiti", sans-serif !important; }
+
+@media screen and (max-width: 550px) {
+  body.zh-hk .faysim-section.exclusive .tick-table, body.zh-cn .faysim-section.exclusive .tick-table {
+    flex: 0 0 90%; } }

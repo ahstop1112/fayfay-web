@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['faysim.og.desc'] %>">
+    <meta name="keywords" content="<%= translations['faysim.og.title'] %>">
+    <title><%= translations['faysim.og.title'] %> | Fayfay.com</title>
+    <%
+        if (locale == 'zh-hk' || locale == 'zh-cn'){
+    %>
+        <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/faysim-og-tc.jpg"/>
+    <%
+        }else{
+    %>
+        <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/faysim-og-en.jpg"/>
+
+    <% } %>
+    <meta property="og:image:alt" content="<%= translations['faysim.og.title']  %>"/>
+    <meta property="og:title" content="<%= translations['faysim.og.title'] %>"/>
+    <meta property="og:description" content="<%= translations['faysim.og.desc'] %>"/>
+
+    <% include include/gtm.header.ejs %>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/faysim.css">
+</head>
+
+<body class="<%= locale%>">
+<% include include/gtm.body.ejs %>
+
+    <div id="faysim">
+        <% include faysim/faysim.header.ejs %>
+        <% include faysim/faysim.buy.now.ejs %>
+        <% include faysim/faysim.about.ejs %>
+        <% include faysim/faysim.exclusive.ejs %>
+        <% include faysim/faysim.price.ejs %>
+        <% include faysim/faysim.support.ejs %>
+        <% include faysim/faysim.recommended.ejs %>
+        <section name="promotion" id="promotion">
+            <div class="container-fluid">
+                <% include home/home.promotion.ejs %>
+            </div>
+        </section>
+        <% include faysim/faysim.partner.with.us.ejs %>
+
+        <section>
+            <div class="container-fluid">
+                <p class="desc terms">
+                    <b><%-translations['faysim.terms.title']%></b><br>
+                    <%- translations['faysim.terms'] %>
+                </p>
+            </div>
+        </section>
+
+        <div class="floating-icons">
+            <div class="section0 active"><div class="address-icon"></div><h6><%= translations['faysim.buy.now'] %></h6></div>
+            <div class="section1"><div class="address-icon"></div><h6><%= translations['about.faysim']  %></h6></div>
+            <div class="section2"><div class="address-icon"></div><h6><%= translations['faysim.exclusive.short'] %></h6></div>
+            <div class="section3"><div class="address-icon"></div><h6><%= translations['faysim.thereafter.charge'] %></h6></div>
+            <div class="section4"><div class="address-icon"></div><h6><%= translations['faysim.support'] %></h6></div>
+            <div class="section5"><div class="address-icon"></div><h6><%= translations['package.fayfay.recommended'] %></h6></div>
+            <div class="section6"><div class="address-icon"></div><h6><%= translations['faysim.partner.with.us'] %></h6></div>
+        </div>
+
+        <% include include/footer.ejs %>
+    </div>
+    <% include include/js.ejs %>
+    <script src="/js/faysim-bundle.js"></script>
+</body>
+</html>

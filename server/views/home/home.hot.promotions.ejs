@@ -1,0 +1,33 @@
+<% if (promotionsSlider && promotionsSlider.length > 0) { %>
+    <section name="hot-promotion" class="hot-promotions">
+        <div class="container-fluid">
+            <div class="main-logo-container destination">
+                <div class="main-logo">
+                    <img src="/images/icons/icon-deals.png"/>
+                </div>
+                <h2><%= translations['index.hot.promotions'] %></h2>
+            </div>
+            <div class="drag-content">
+                <ul class="drag-list recommend-list hotPromotions-slider">
+                    <% promotionsSlider.forEach(function (activity, index) { %>
+                        <li class="list-item">
+                            <a href="<%= activity.link%>"
+                               title="<%= activity.name %>" target="<%= activity.target %>">
+                                <div class="list-content">
+                                    <div class="banner">
+                                        <img data-lazy="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%=activity.image.key%>.<%=activity.image.format%>"
+                                             alt="<%= activity.name %>" class="bg" />
+                                    </div>
+                                    <div class="content">
+                                        <h3><%= activity.name %></h3>
+                                        <p class="desc"><%= activity.description %></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+    </section>
+<% } %>

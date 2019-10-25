@@ -1,0 +1,33 @@
+<section id="coupon">
+    <div class="container-fluid">
+        <p class="content_p">
+            <% if (campaignData.headerDescription) { %>
+                <%- converter.makeHtml(campaignData.headerDescription) %>
+            <% } %>
+        </p>
+        <div class="coupon-container">
+            <div class="coupon">
+                <div class="coupon-bg left"></div>
+                <div class="code-title">
+                    <h1 class="price">
+                        <%= translations['campaign.christmas2019.free.simcard'] %>
+                    </h1>
+                </div>
+            </div>
+            <div class="coupon">
+                <div class="code">
+                    <h3><%= translations['campaign.common.use.promo.code'] %></h3>
+                    <h4 class="promoCode">FayfayXmas</h4>
+                    <button class="btn btn-s copy-btn2 show" data-clipboard-action="copy"
+                            data-clipboard-text="FayfayXmas"
+                            aria-label="<%= translations['campaign.common.copied'] %>">
+                        <span><%= translations['campaign.common.copy'] %></span>
+                    </button>
+                    <div class="tooltiptext2"><%= translations['campaign.common.copied'] %></div>
+                </div>
+                <div class="coupon-bg right-top"></div>
+                <div class="coupon-bg right-bottom"></div>
+            </div>
+        </div>
+    </div>
+</section>

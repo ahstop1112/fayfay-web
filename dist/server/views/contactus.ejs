@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['common.contact.us'] %>">
+    <meta name="keywords" content="<%= translations['common.contact.us'] %>">
+    <title><%= translations['common.contact.us'] %> | Fayfay.com</title>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/indexog.jpg"/>
+    <meta property="og:image:alt" content="<%= translations['home.og.image.alt']  %>"/>
+    <meta property="og:title" content="<%= translations['home.og.title'] %>"/>
+    <meta property="og:description" content="<%= translations['home.og.desc'] %>"/>
+
+    <% include include/gtm.header.ejs %>
+
+    <% include include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/contactus.css">
+</head>
+
+<body class="<%= locale%>">
+<% include include/gtm.body.ejs %>
+
+    <div id="page">
+        <% include contactus/contactus.header.ejs %>
+        <section class="contactus-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 contactus-content">
+                        <% include contactus/contactus.content.ejs %>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <% include include/footer.ejs %>
+    </div>
+
+    <% include include/js.ejs %>
+    <script src="/js/components/ContactUsContainer-bundle.js"></script>
+
+</body>
+</html>

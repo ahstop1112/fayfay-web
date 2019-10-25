@@ -1,0 +1,380 @@
+<%
+const currencyList = ['USD', 'VND', 'HKD', 'TWD', 'CNY', 'SGD', 'MYR', 'THB'];
+const languageList = [
+    { name: 'English', locale: 'en-us' },
+    { name: '繁體中文', locale: 'zh-hk' },
+    { name: '简体中文', locale: 'zh-cn' },
+    { name: 'Tiếng Việt', locale: 'vi-vn' }
+];
+%>
+%>
+<nav class="navigation-menu left-menu visible-lg">
+    <div class="navbar">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <div class="btn-group">
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <%= translations['common.category.must.haves'] %>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="<%= langUrl %>/vietnam-visa"><%= translations['common.category.visa.on.arrival'] %></a>
+                                <a class="dropdown-item" href="<%= langUrl %>/faysim"><%= translations['common.category.sim.card'] %></a>
+                                <a class="dropdown-item" href="<%= langUrl %>/category/transportation"><%= translations['common.category.transportation'] %></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group">
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <%= translations['common.category.travel.deals'] %>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="<%= langUrl %>/category/package/"><%= translations['common.category.package'] %></a>
+                                    <a class="dropdown-item" href="<%= langUrl %>/category/package/special-offer"><%= translations['common.category.specialOffer'] %></a>
+                                    <a class="dropdown-item" href="<%= langUrl %>/category/package/hotel-deal"><%= translations['common.category.hotel.deal'] %> </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group">
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <%= translations['common.category.experience.and.tours'] %>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="<%= langUrl %>/category/tour-activity"><%= translations['common.category.tour.activity'] %></a>
+                                    <a class="dropdown-item" href="<%= langUrl %>/category/ticket"><%= translations['common.category.ticket'] %></a>
+                                    <a class="dropdown-item" href="<%= langUrl %>/category/ticket/f1"><%= translations['common.category.ticket.f1'] %></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group">
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <%= translations['common.category.destinations'] %>
+                            </button>
+                            <div class="dropdown-menu txt-center hot-destinations" aria-labelledby="dropdownMenuButton">
+                                <ul class="drag-list">
+                                <li class="list-item">
+                                    <a href="<%= langUrl %>/city/4">
+                                        <div class="list-content">
+                                            <div class="banner">
+                                                <img
+                                                    class="bg" src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_320/fayfay-media/prod/eidymdngueprzuzmqsmw"
+                                                     alt="<%= translations['activity.hoChiMinh'] %>"
+                                                />
+                                            </div>
+                                            <p class="city-name"><%= translations['activity.hoChiMinh'] %></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="<%= langUrl %>/city/3">
+                                        <div class="list-content">
+                                            <div class="banner">
+                                                <img
+                                                    class="bg" src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_320/fayfay-media/prod/l8b9xnkz7bulywcj13pg"
+                                                    alt="<%= translations['activity.hanoi.halongBay'] %>"
+                                                />
+                                            </div>
+                                            <p class="city-name"><%= translations['activity.hanoi.halongBay'] %></p>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="list-item">
+                                    <a href="<%= langUrl %>/city/6">
+                                        <div class="list-content">
+                                            <div class="banner">
+                                                <img
+                                                    class="bg" src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_320/fayfay-media/prod/ep16astm4qjoafxagygy"
+                                                    alt="<%= translations['activity.daNang'] %>"
+                                                />
+                                            </div>
+                                            <p class="city-name"><%= translations['activity.daNang'] %></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="<%= langUrl %>/city/7">
+                                        <div class="list-content">
+                                            <div class="banner">
+                                                <img
+                                                   class="bg" src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_320/fayfay-media/prod/d7r4rlqqroo9edstus7s"
+                                                   alt="<%= translations['activity.hoiAn'] %>"
+                                                />
+                                            </div>
+                                            <p class="city-name"><%= translations['activity.hoiAn'] %></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="<%= langUrl %>/city/5">
+                                        <div class="list-content">
+                                            <div class="banner">
+                                                <img
+                                                   class="bg" src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_320/fayfay-media/prod/jf1flm6ojezmokqtgqzc"
+                                                   alt="<%= translations['activity.hoiAn'] %>"
+                                                />
+                                            </div>
+                                            <p class="city-name"><%= translations['activity.hue'] %></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="<%= langUrl %>/city/19">
+                                        <div class="list-content">
+                                            <div class="banner">
+                                                <img
+                                                    class="bg" src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_320/fayfay-media/prod/cc0i41ic0r6pyoupw1oc"
+                                                    alt="<%= translations['activity.phuQuoc'] %>"
+                                                />
+                                            </div>
+                                            <p class="city-name"><%= translations['activity.phuQuoc'] %></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="<%= langUrl %>/city/2">
+                                        <div class="list-content">
+                                            <div class="banner">
+                                                <img
+                                                    class="bg" src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_320/fayfay-media/prod/qwqf3rai6kqpzfjekfp8"
+                                                    alt="<%= translations['activity.quangBinh'] %>"
+                                                />
+                                            </div>
+                                            <p class="city-name"><%= translations['activity.quangBinh'] %></p>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="list-item">
+                                    <a href="<%= langUrl %>/city/20">
+                                        <div class="list-content">
+                                            <div class="banner">
+                                                <img
+                                                    class="bg" src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_320/fayfay-media/prod/wtyhn3r7uhvl9ahpmxsg"
+                                                    alt="<%= translations['activity.nhaTrang'] %>"
+                                                />
+                                            </div>
+                                            <p class="city-name"><%= translations['activity.nhaTrang'] %></p>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="list-item">
+                                    <a href="<%= langUrl %>/city/21">
+                                        <div class="list-content">
+                                            <div class="banner">
+                                                <img
+                                                    class="bg" src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_320/fayfay-media/prod/r4phgbh06hyyu6iqb9tv"
+                                                    alt="<%= translations['activity.daLat'] %>"
+                                                />
+                                            </div>
+                                            <p class="city-name"><%= translations['activity.daLat'] %></p>
+                                        </div>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group">
+                            <a class="txt-toggle" href="<%=PROPERTY_WEB_URL%>/<%=locale%>/"><%= translations['common.vietnam.property'] %></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+</nav>
+<nav class="navigation-menu right-menu">
+    <div class="navbar">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right visible-lg">
+                <li class="">
+                    <div class="btn-group currency">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            <i class="icon dollar-sign"></i><%= ccy %>
+                        </button>
+                        <div class="dropdown-menu txt-center" aria-labelledby="dropdownMenuButton">
+                            <% currencyList.forEach(function (currency) {
+                               if (ccy === currency) {
+                            %>
+                                <span class="dropdown-item active"><%= currency %></span>
+                            <%  } else { %>
+                                <a class="dropdown-item>" href="/change-ccy/<%= currency %>"><%= currency %></a>
+                            <% }}); %>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="btn-group">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            <i class="icon language"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <% languageList.forEach(function (language) {
+                                if (language.locale ===  locale) {
+                            %>
+                                <span class="dropdown-item  active"><%= language.name %></span>
+                            <% } else { %>
+                                <a class="dropdown-item" href="/change-lang/<%= language.locale %>"><%= language.name %></a>
+                            <% }}); %>
+                        </div>
+                    </div>
+                </li>
+                <% if (userInfo) { %>
+                    <li>
+                        <div class="btn-group">
+                            <button class="dropdown-toggle" type="button" id="menu-user-top" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                <% if (userInfo.profileImage) { %>
+                                    <img src="<%- userInfo.profileImage %>" class="user-photo"/>
+                                <% } else { %>
+                                    <img src="/images/avatar-sign.jpg" class="user-photo">
+                                <% } %>
+                                <span><%- userInfo.firstName.truncate(15) %></span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item"
+                                   href="<%= langUrl %>/my-account"><%= translations['account.my.account'] %></a>
+                                <a class="dropdown-item" href="<%= langUrl %>/logout"><%= translations['common.log.out'] %></a>
+                            </div>
+                        </div>
+                    </li>
+                <% }else{ %>
+                    <li class="account">
+                        <i class="icon user"></i>
+                        <a class="smoth-scroll" href="<%= langUrl %>/login"><%= translations['login'] %></a>
+                        <span> / </span>
+                        <a class="smoth-scroll" href="<%= langUrl %>/register"><%= translations['register'] %></a>
+                    </li>
+                <% } %>
+                <% if (userInfo) { %>
+                    <li class="cart-container"
+                        id="shopping-cart-preview-container"><%- shoppingCartPreviewContainerHtml %></li>
+                <% } else { %>
+                    <li class="cart-container">
+                        <a class="smoth-scroll" href="<%= langUrl %>/cart">
+                            <i class="icon cart"></i>
+                            <%= translations['common.cart'] %>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</nav>
+<nav id="mainNav-mobile">
+    <ul>
+        <li class="user-area-top">
+            <table>
+                <tr>
+                    <% if (userInfo) { %>
+                        <% if (userInfo.profileImage) { %>
+                            <td class="user-photo"><img src="<%- userInfo.profileImage %>"/></td>
+                        <% } else { %>
+                            <td class="user-photo"><img src="/images/avatar-sign.jpg"></td>
+                        <% } %>
+                        <td class="user-name">
+                            <%- userInfo.firstName %>
+                        </td>
+                        <td class="user-logout"><a href="<%= langUrl %>/logout"><i
+                                    class="icon sign-out"></i><%= translations['common.log.out'] %></a></td>
+                    <% }else{ %>
+                        <td class="user-login"><i class="icon user"></i><a
+                                href="<%= langUrl %>/login"><%= translations['login'] %></a>|<a
+                                href="<%= langUrl %>/register"><%= translations['register'] %></a></td>
+                    <% } %>
+                </tr>
+            </table>
+        </li>
+        <li>
+            <a href="<%= langUrl %>/"><i class="icon home"></i><%= translations['common.home'] %></a>
+        </li>
+        <li>
+           <a><i class="icon stars"></i><%= translations['common.category.must.haves'] %></a>
+           <ul class="Vertical">
+                <li><a href="<%= langUrl %>/category/visa-sim-card/visa-on-arrival"><%= translations['common.category.visa.on.arrival'] %></a></li>
+                <li><a href="<%= langUrl %>/category/visa-sim-card/sim-card"><%= translations['common.category.sim.card'] %></a></li>
+                <li><a href="<%= langUrl %>/category/transportation"><%= translations['common.category.transportation'] %></a></li>
+            </ul>
+        </li>
+        <li>
+            <a><i class="icon badge-precent"></i><%= translations['common.category.travel.deals'] %></a>
+            <ul class="Vertical">
+                <li><a href="<%= langUrl %>/category/package"><%= translations['common.category.package'] %></a></li>
+                <li><a href="<%= langUrl %>/category/package/special-offer"><%= translations['common.category.specialOffer'] %></a></li>
+                <li><a href="<%= langUrl %>/category/package/hotel-deal"><%= translations['common.category.hotel.deal'] %></a></li>
+            </ul>
+        </li>
+        <li>
+            <a><i class="icon pennant"></i><%= translations['common.category.experience.and.tours'] %></a>
+            <ul class="Vertical">
+                <li><a href="<%= langUrl %>/category/tour-activity"><%= translations['common.category.tour.activity'] %></a></li>
+                <li><a href="<%= langUrl %>/category/ticket"><%= translations['common.category.ticket'] %></a></li>
+                <li><a href="<%= langUrl %>/category/ticket/f1"><%= translations['common.category.ticket.f1'] %></a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="<%=PROPERTY_WEB_URL%>/<%=locale%>/"><i class="icon home"></i><%= translations['common.vietnam.property'] %></a>
+        </li>
+        <% if (userInfo) { %>
+            <li>
+                <a href="<%= langUrl %>/my-account"><i class="icon user"></i><%= translations['account.my.account'] %>
+                </a>
+            </li>
+            <li>
+                <a href="<%= langUrl %>/my-bookings"><i
+                        class="icon booking"></i><%= translations['account.my.bookings'] %></a>
+            </li>
+            <li>
+                <a href="<%= langUrl %>/wish-list"><i class="icon wishlist"></i><%= translations['account.wish.list'] %>
+                </a>
+            </li>
+            <li>
+                <a href="<%= langUrl %>/my-coupons"><i class="icon coupons"></i><%= translations['account.coupons'] %>
+                </a>
+            </li>
+            <li>
+                <a href="<%= langUrl %>/my-reviews"><i class="icon comments"></i><%= translations['common.reviews'] %>
+                </a>
+            </li>
+            <li>
+                <a href="<%= langUrl %>/settings"><i class="icon setting"></i><%= translations['common.settings'] %></a>
+            </li>
+        <% } %>
+        <li>
+            <a href="<%= langUrl %>/help"><i class="icon question"></i><%= translations['common.help'] %></a>
+        </li>
+        <li>
+            <a href="#"><i class="icon globe"></i><%= translations['common.language.list'] %> <span
+                    class="menu-right"><%= languageText %></span></a>
+            <ul class="Vertical">
+                <% languageList.forEach(function (language) {
+                if (language.locale !== locale ) { %>
+                    <li><a href="/change-lang/<%= language.locale %>"><%= language.name %></a></li>
+                <% } }); %>
+            </ul>
+        </li>
+        <li>
+            <a><i class="icon dollar-sign"></i><%= translations['common.currency'] %> <span
+                    class="menu-right"><%= ccy %></span></a>
+            <ul class="Vertical">
+                <% currencyList.forEach(function (currency) {
+                if (ccy !== currency ) { %>
+                    <li><a href="/change-ccy/<%= currency %>"><%= currency %></a></li>
+                <% } }); %>
+            </ul>
+        </li>
+    </ul>
+</nav>

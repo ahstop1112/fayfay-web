@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['campaign.central.vietnam.travel.desc'] %>">
+    <meta name="keywords" content="<%= campaignData.ogTitle %>">
+    <title><%= campaignData.ogTitle %> | Fayfay.com</title>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%= campaignData.ogMedia ? (campaignData.ogMedia.key+'.'+campaignData.ogMedia.format) : '' %>"/>
+    <meta property="og:image:alt" content="<%= campaignData.ogTitle  %>"/>
+    <meta property="og:title" content="<%= campaignData.ogTitle %>"/>
+    <meta property="og:description" content="<%= translations['campaign.central.vietnam.travel.desc'] %>"/>
+
+    <% include ../include/gtm.header.ejs %>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/central.vietnam.travel.css">
+</head>
+
+<body class="<%= locale%>">
+<% include ../include/gtm.body.ejs %>
+<div id="central-vietnam-travel">
+    <% include central-vietnam-travel.header.ejs %>
+
+    <section id="all">
+        <div class="container-fluid">
+            <p class="content_p">
+                <%- translations['campaign.central.vietnam.travel.desc']  %>
+            </p>
+            <% if (campaignData.sections) { %>
+
+                <% include dynamic-circle.icons.ejs %>
+
+                <% campaignData.sections.forEach(function (section, index) { %>
+                    <div class="section-experience  section<%=index%>">
+                        <div class="experience-title section<%=index%>">
+                            <div class="title-bg-left"></div>
+                            <div class="title-bg">
+                                <h2><%= section.name %></h2>
+                            </div>
+                            <div class="title-bg-right"></div>
+
+                        </div>
+                        <% if (section.brief){ %>
+                            <div class="title-desc">
+                                <%= section.brief %>
+                            </div>
+                        <% } %>
+                        <% if (section.name == translations['activity.hue'] && new Date() < new Date('2019-05-03T00:00:00+08:00')){ %>
+                            <% if (locale == 'zh-hk') { %>
+                                <a class="banner" href="https://blog.fayfay.com/blog/2019/04/23/2019年順化傳統工藝節指南/" target="_blank">
+                                    <img src="/images/campaign/centralvntravel/banner_hue_tc.jpg" class="bg except-mobile-v">
+                                    <img src="/images/campaign/centralvntravel/banner_hue_mobile_tc.jpg" class="bg mobile-v">
+                                </a>
+                            <% } else { %>
+                                <a class="banner" href="https://en-blog.fayfay.com/blog/2019/04/22/hue-craft-festival-2019-guide/" target="_blank">
+                                    <img src="/images/campaign/centralvntravel/banner_hue_en.jpg" class="bg except-mobile-v">
+                                    <img src="/images/campaign/centralvntravel/banner_hue_mobile_en.jpg" class="bg mobile-v">
+                                </a>
+                            <% } %>
+                        <% } %>
+                        <% section.subSections.forEach(function (child, subIndex) { %>
+                            <% switch (child.layout) {
+                                case 'VERTICAL_LIST' : %>
+                                    <% include dynamic-vertical.list.ejs %>
+                                <% break;
+                                case 'HORIZONTAL_LIST' : %>
+                                    <% include dynamic-horizontal.list.ejs %>
+                                <% break;
+                                case '4_PLUS_1_HIGHLIGHTED_LEFT' : %>
+                                    <% include dynamic-4plus1_highlighted_left.ejs %>
+                                <% break;
+                                case '4_PLUS_1_HIGHLIGHTED_RIGHT' : %>
+                                    <% include dynamic-4plus1_highlighted_right.ejs %>
+                                <% break;
+                            } %>
+                        <% })%>
+                        <% if (section.seeMoreLink){ %>
+                            <a class="btn btn-lg see-more" href="<%=section.seeMoreLink%>" target="_blank">
+                                <%= translations['campaign.common.see.more'] %>
+                            </a>
+                        <% } %>
+                    </div>
+                <% })%>
+            <% } %>
+            <p class="desc terms">
+                <b><%= translations['campaign.common.terms.title']  %></b><br>
+                <%- translations['campaign.central.vietnam.travel.terms.desc'] %>
+            </p>
+        </div>
+    </section>
+
+    <% if (campaignData.sections) { %>
+    <div class="floating-icons">
+        <% campaignData.sections.forEach(function (section, index) { %>
+        <div class="section<%=index%> <%=index===0 ? 'active' : ''%>"><div class="address-icon" style="background-image: url('<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%=section.iconMedia.key%>.<%=section.iconMedia.format%>')"></div><h6><%=section.name %></h6></div>
+        <% })%>
+    </div>
+    <% } %>
+    <% include campaign.destinations.ejs %>
+    <% include ../include/footer.ejs %>
+</div>
+
+<% include ../include/js.ejs %>
+<script src="/js/central-vietnam-travel-bundle.js"></script>
+
+</body>
+</html>

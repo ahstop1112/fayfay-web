@@ -1,0 +1,725 @@
+@import '../include/variable';
+
+#double11{
+
+    background-color: #fac87a;
+    color: $white;
+
+    header{
+        .header-top-area {
+            position: static;
+            box-shadow: none;
+            background-color: $main-color;
+            color: $white;
+            border: 0;
+
+            .header-container{
+                background-color: $main-color;
+                width: 100%;
+                padding: 0 2%;
+            }
+
+            .logo{
+                background-image: url('/images/campaign/double11/logo_text_orangebg.png');
+            }
+
+            .icon:before{
+                color: $white;
+            }
+        }
+
+        .section-background{
+            padding-top: 0;
+
+
+            .bg-container{
+                background-color: $main-color;
+                max-height: 450px;
+
+                &:before{
+                    padding-top: 28.12%;
+
+                    @media screen and (max-width: $mobile-v) {
+                        padding-top: 75%;
+                    }
+                }
+
+                .bg{
+                    top: -100%;
+                    max-width: 1600px;
+
+                    &.expect-mobile-v{
+                        display: none;
+
+                        @media screen and (min-width: $mobile-v) {
+                            display: block;
+                        }
+                    }
+
+                    &.mobile-v{
+                        display: none;
+
+                        @media screen and (max-width: $mobile-v) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav>li{
+            font-size: 1.2em;
+            display: inline-block;
+
+            a{
+                color: $white;
+
+                &:hover{
+                    background: none;
+                    text-decoration: underline;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    section#promoCode{
+        margin: 30px 0 15px 0;
+
+        @media screen and (max-width: $mobile-v) {
+            margin: 20px 0;
+        }
+
+        p{
+            color: #ae6a38;
+            width: 80%;
+            margin: 0px auto;
+            font-size: 1em;
+
+            @media screen and (max-width: $tablet-h) {
+                width: 90%;
+            }
+        }
+
+        .coupon-container{
+            background-image: url('/images/campaign/double11/coupon.png');
+            background-position-x: 35%;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            width: 80%;
+            //height: calc(80% / 4.12 );
+            margin: 0px auto;
+            margin-bottom: $padding;
+
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            align-items: center;
+
+            &:before{
+                content: "";
+                padding-top: 24%;
+            }
+
+            @media screen and (max-width: $tablet-h) {
+                width: 90%;
+            }
+
+            @media screen and (max-width: $mobile-v) {
+                width: 100%;
+                background-position-x: 40%;
+            }
+
+            .discount{
+                width: 45%;
+                margin-right: 10%;
+                padding: 15px 30px;
+                text-align: center;
+
+                @media screen and (max-width: $tablet-h) {
+                    width: 40%;
+                    margin-right: 8%;
+                    padding: 15px;
+                }
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 35%;
+                    margin-right: 8%;
+                    padding: $padding;
+                }
+
+                h1{
+                    font-size: 6em;
+                    font-weight: 900;
+                    color: $white;
+
+                    @media screen and (max-width: $tablet-v) {
+                        font-size: 4em;
+                    }
+
+                    @media screen and (max-width: $mobile-v) {
+                        font-size: 2.8em;
+                    }
+
+                    .off{
+                        font-size: 0.6em;
+                        font-weight: 300;
+                        margin-left: 5px;
+                    }
+                }
+
+                p.desc{
+                    color: $white;
+                    font-size: 1.1em;
+
+                    @media screen and (max-width: $mobile-v) {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+
+            .code{
+                padding: 0 30px;
+
+                @media screen and (max-width: $mobile-h) {
+                    padding: 15px 30px;
+                }
+
+                h1{
+                    font-size: 4em;
+                    font-weight: 900;
+                    color: $white;
+
+                    @media screen and (max-width: $tablet-v) {
+                        font-size: 2.5em;
+                    }
+
+                    @media screen and (max-width: $mobile-v) {
+                        font-size: 2em;
+                    }
+                }
+
+                h3{
+                    color: $white;
+                    font-weight: 400;
+                    margin-top: 0;
+
+                    @media screen and (max-width: $tablet-v) {
+                        font-size: 1.2em;
+                    }
+                }
+
+                button{
+                    border: 1px solid $white;
+                    padding: 0 30px;
+                    background: none;
+                    display: none;
+
+                    &.copied-btn{
+                        background-color: $white;
+                        color: $second-color;
+
+                        &:hover{
+                            background-color: $white !important;
+                            color: $second-color;
+                            opacity: 1;
+                        }
+                    }
+
+                    &.show{
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+
+    section#selectedExperiences{
+        .btn-address{
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+            width: 80%;
+            margin: 0px auto;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: $tablet-h) {
+                width: 100%;
+            }
+
+            @media screen and (max-width: $mobile-h) {
+                flex-wrap: wrap;
+            }
+
+
+            &>div{
+                width: 24%;
+                margin: 0 0.5%;
+                padding: 10px $padding 10px 45px;
+                text-align: center;
+                background-color: $second-color;
+                color: $white;
+                font-size: 1.5em;
+                text-transform: uppercase;
+                font-style: italic;
+                cursor: pointer;
+
+                @media screen and (max-width: $tablet-v) {
+                    font-size: 1.2em;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    width: 49%;
+                    margin: 2% 0.5%;
+                }
+
+                .address-icon{
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    margin-top: -15px;
+                    margin-left: -55px;
+                    position: absolute;
+                    height: 50px;
+
+                    &:before{
+                        content: "";
+                        padding-left: 50px;
+                    }
+
+                    @media screen and (max-width: $mobile-h) {
+                        margin-top: -10px;
+                        height: 40px;
+                    }
+                }
+
+                &.active{
+                    background-color: $main-color;
+                }
+
+                &.hcmc{
+                    .address-icon{
+                        background-image: url("/images/campaign/double11/icon-5.png");
+                    }
+                }
+                &.hanoi{
+                    .address-icon{
+                        background-image: url("/images/campaign/double11/icon-1.png");
+                    }
+                }
+                &.daNang{
+                    .address-icon{
+                        margin-top: -10px;
+                        background-image: url("/images/campaign/double11/icon-2.png");
+                    }
+                }
+                &.nhaTrang{
+                    .address-icon{
+                        background-image: url("/images/campaign/double11/icon-3.png");
+                    }
+                }
+            }
+        }
+
+        .experience-list{
+            width: 80%;
+            margin: 0px auto;
+            margin-top: 20px;
+
+            @media screen and (max-width: $tablet-h) {
+                width: 100%;
+            }
+
+            .list-item{
+                background-color: $white;
+                list-style: none;
+                margin-bottom: 10px;
+
+                .list-content{
+                    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                    display: -ms-flexbox;      /* TWEENER - IE 10 */
+                    display: -webkit-flex;     /* NEW - Chrome */
+                    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+                    .banner{
+                        width: 25%;
+                        overflow: hidden;
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            padding-top: 75%;
+                            display: block;
+                        }
+
+                        @media screen and (max-width: $tablet-v) {
+                            width: 32%;
+                        }
+
+                        @media screen and (max-width: $mobile-h) {
+                            width: 30%;
+                        }
+
+                        .bg{
+                            top: -100%;
+                            left: 0;
+                            right: 0;
+                            bottom: -100%;
+                            margin: auto;
+                            margin-left: 50%;
+                            transform: translateX(-50%);
+                            opacity: 0;
+                            width: auto;
+                            height: 100%;
+                            position: absolute;
+                        }
+
+                        .overlay-txt{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            z-index: 999;
+                            width: 100%;
+                            height: 100%;
+
+
+                            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                            display: -ms-flexbox;      /* TWEENER - IE 10 */
+                            display: -webkit-flex;     /* NEW - Chrome */
+                            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                            justify-content: flex-end;
+                            align-items: flex-end;
+
+                            display: none;
+
+                            span{
+                                padding: 5px $padding;
+                                background: rgba(244, 164, 29, 0.5);
+                                color: $white;
+                                font-weight: 700;
+                                font-style: italic;
+                            }
+
+                        }
+                    }
+                    .content{
+                        width: 75%;
+                        padding: $padding;
+
+                        @media screen and (max-width: $tablet-v) {
+                            width: 65%;
+                        }
+
+                        .award{
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-image: url("/images/campaign/double11/icon-4.png");
+                            margin-top: -25px;
+                            margin-right: -10px;
+                            float: right;
+                            height: 80px;
+
+                            &:before{
+                                content: "";
+                                padding-left: 50px;
+                            }
+
+                            @media screen and (max-width: $tablet-h) {
+                                height: 60px;
+                                margin-right: -10px;
+                                margin-top: -15px;
+                            }
+
+                            @media screen and (max-width: $tablet-v) {
+                                margin-right: -30px;
+                            }
+
+                            @media screen and (max-width: $mobile-h) {
+                                height: 40px;
+                                margin-right: -30px;
+                                margin-top: -15px;
+                            }
+                        }
+
+                        h3{
+                            font-weight: 500;
+                            color: $main-color;
+                            font-size: 1.5em;
+                            line-height: 1.5;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+
+                            width: 90%;
+
+                            @media screen and (max-width: $tablet-h) {
+                                font-size: 1.2em;
+                            }
+
+                            @media screen and (max-width: $mobile-h) {
+                                font-size: 1em;
+                                width: 90%;
+                            }
+                        }
+
+                        .desc{
+                            color: $light-grey;
+                            font-size: 1.2em;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+
+                            @media screen and (max-width: $tablet-h) {
+                                font-size: 1em;
+                            }
+
+                            @media screen and (max-width: $mobile-v) {
+                                font-size: 1em;
+                                display: none;
+                            }
+                        }
+
+                        .bottom{
+                            width: 100%;
+                            margin-left: 0;
+                            margin-top: 10px;
+
+                            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                            display: -ms-flexbox;      /* TWEENER - IE 10 */
+                            display: -webkit-flex;     /* NEW - Chrome */
+                            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                            flex-wrap: wrap;
+
+                            @media screen and (max-width: $tablet-h) {
+                                margin-top: 0;
+                            }
+
+                            @media screen and (max-width: $mobile-h) {
+                                padding-top: 0;
+                            }
+
+                            .hashtag-container{
+                                display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                                display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                                display: -ms-flexbox;      /* TWEENER - IE 10 */
+                                display: -webkit-flex;     /* NEW - Chrome */
+                                display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                                flex-wrap: wrap;
+                                width: 100%;
+
+                                .hashtag{
+                                    font-size: 0.9em;
+                                    color: #75cee2;
+                                    margin-right: 10px;
+
+                                    @media screen and (max-width: $mobile-v) {
+                                        font-size: 0.8em;
+                                    }
+                                }
+                            }
+
+                            .price-container{
+                                background-color: $main-color;
+                                color: $white;
+                                padding: 5px $padding;
+                                margin-top: 10px;
+
+                                .discount-price{
+                                    font-size: 1.2em;
+
+                                    @media screen and (max-width: $mobile-v) {
+                                        font-size: 1em;
+                                    }
+
+                                    .ori-price{
+                                        font-size: 0.8em;
+                                        color: $white;
+                                        opacity: .5;
+                                        text-decoration: line-through;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .experience-title{
+
+            text-align: center;
+            margin: 30px 0;
+
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            justify-content: center;
+
+            h3{
+                color: $white;
+                font-size: 1.8em;
+                text-transform: uppercase;
+                font-style: italic;
+            }
+
+            .address-icon{
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 50px;
+                width: 80px;
+
+                &:before{
+                    content: "";
+                    padding-top: 20px;
+                    padding-left: 20px;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    height: 40px;
+                    width: 60px;
+                }
+            }
+
+            &.hcmc{
+                .address-icon{
+                    background-image: url("/images/campaign/double11/icon-5.png");
+                }
+            }
+            &.hanoi{
+                .address-icon{
+                    background-image: url("/images/campaign/double11/icon-1.png");
+                }
+            }
+            &.daNang{
+                .address-icon{
+                    background-image: url("/images/campaign/double11/icon-2.png");
+                }
+            }
+            &.nhaTrang{
+                .address-icon{
+                    background-image: url("/images/campaign/double11/icon-3.png");
+                }
+            }
+        }
+    }
+
+    .terms{
+        color: #a55f28;
+        line-height: 1.5;
+        word-break: break-word;
+        word-wrap: break-word;
+        font-size: 0.86em;
+
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 0;
+
+        @media screen and (max-width: $tablet-h) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $mobile-h) {
+            width: 100%;
+        }
+
+        b{
+            color: #a55f28;
+        }
+    }
+
+    .floating-icons {
+        font-size: 1.2em;
+        position: fixed;
+        right: 0;
+        bottom: 35%;
+        cursor: pointer;
+        z-index: 100000;
+
+        @media screen and (max-width: $mobile-h) {
+            display: none !important;
+        }
+
+        .address-icon{
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: contain;
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+            margin-right: 10px;
+
+            @media screen and (max-width: $mobile-h) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &>div{
+            display: block;
+            background-color: $second-color;
+            padding: 5px 30px 5px 5px;
+            box-shadow: $shadow;
+
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+
+            &.active{
+                background-color: $main-color;
+            }
+
+            &.hcmc{
+                .address-icon{
+                    background-image: url("/images/campaign/double11/icon-5.png");
+                }
+            }
+            &.hanoi{
+                .address-icon{
+                    background-image: url("/images/campaign/double11/icon-1.png");
+                }
+            }
+            &.daNang{
+                .address-icon{
+                    background-image: url("/images/campaign/double11/icon-2.png");
+                }
+            }
+            &.nhaTrang{
+                .address-icon{
+                    background-image: url("/images/campaign/double11/icon-3.png");
+                }
+            }
+
+            h6{
+                font-size: 1em;
+                color: $white;
+            }
+        }
+    }
+}
+
+body.zh-hk{
+    #double11 section#selectedExperiences .btn-address > div, #double11 section#selectedExperiences .experience-title h3{
+        font-style: normal !important;
+    }
+}

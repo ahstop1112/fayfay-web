@@ -1,0 +1,15 @@
+<section class="f1-section bigTitle go-section section1">
+    <div class="container-fluid">
+       <div class="bigTitle-container">
+            <div class="logo"><img src="/images/f1-header.png"></div>
+            <div class="bigTitle">
+                <% if (useragent.isDesktop) { %>
+                    <h2><%= translations['f1.big.title'] %></h2>
+                <% }else{ %>
+                    <h2><%- translations['f1.big.title.mobile'] %></h2>
+                <% } %>
+            </div>
+            <div class="reseller-logo"><img src="/images/f1-exclusive-logo.png"></div>
+       </div>
+    </div>
+</section>

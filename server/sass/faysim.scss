@@ -1,0 +1,980 @@
+@import 'include/variable';
+
+.faysim-header-section {
+    overflow: hidden;
+    background-color: $main-color;
+
+    .bg-container{
+        @media screen and (min-width: $desktop) {
+            max-height: none !important;
+        }
+
+        &:before{
+            padding-top: 28% !important;
+
+            @media screen and (max-width: $mobile-h) {
+                padding-top: 31% !important;
+            }
+
+            @media screen and (max-width: $mobile-v) {
+                padding-top: 75% !important;
+            }
+        }
+
+        .bg{
+            top: -100% !important;
+            height: 100% !important;
+            width: auto !important;
+
+            &.except-mobile-v {
+                display: block;
+
+                @media screen and (min-width: $mobile-v) {
+                    display: block;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    height: auto !important;
+                    width: 100% !important;
+                }
+            }
+
+            &.mobile-v {
+                display: none;
+
+                @media screen and (max-width: $mobile-v) {
+                    display: block;
+                    top: -95% !important;
+                }
+            }
+        }
+
+    }
+}
+
+.faysim-section.about {
+    padding: 30px 0;
+    text-align: center;
+
+    @media screen and (max-width: $mobile-h) {
+        padding: $padding 0;
+    }
+
+    @media screen and (max-width: $mobile-v) {
+        padding: 10px 0;
+    }
+
+    h2.title{
+        color: $main-color;
+        font-family: $rounded-font;
+        text-align: center;
+        line-height: 2;
+
+        @media screen and (max-width: $mobile-v) {
+            font-size: 1.5em;
+            line-height: 1;
+            margin: 20px 0;
+        }
+    }
+
+    .faysim-table{
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid $main-color;
+        margin: 0 auto;
+        width: 90%;
+
+        @media screen and (max-width: $tablet-v){
+            width: 100%;
+        }
+
+        .header{
+            background-color: $main-color;
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            padding: 2% 0;
+
+            &>div{
+                width: 33.33%;
+                text-align: center;
+                color: $white;
+                font-size: 1.2em;
+                border-right: 1px solid $white;
+                text-wrap: wrap;
+
+                &:last-child{
+                    border: 0;
+                    margin-bottom: 0;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    flex: 0 0 94%;
+                    margin-left: 3%;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    border-right: 0;
+                    border-bottom: 1px solid $white;
+                }
+            }
+        }
+
+        .content{
+            color: $main-color;
+            font-size: 1.2em;
+            line-height: 1.5;
+            padding: 3% 0;
+            width: 80%;
+            margin: 0 auto;
+
+            @media screen and (max-width: $mobile-h) {
+                width:90%;
+                font-size: 1em;
+            }
+
+            ul{
+                text-align: left;
+                margin: 0;
+
+                li{
+                    color: $main-color;
+                    list-style-position: outside;
+                    margin-left: 1em;
+
+                    b{
+                        color: $main-color;
+                    }
+                    span{
+                        color: $light-grey;
+                    }
+                }
+            }
+
+            .remarks{
+                margin-top: 30px;
+
+                font-size: 0.8em;
+                color: $light-grey;
+            }
+        }
+    }
+
+    .topup-table{
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1.2em;
+
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        align-items: center;
+
+        @media screen and (max-width: $mobile-h) {
+            width: 90%;
+            flex-wrap: wrap;
+            font-size: 1em;
+        }
+
+        .content-left{
+            flex: 0 0 70%;
+
+            @media screen and (max-width: $mobile-h) {
+                flex: 0 0 60%;
+                margin-bottom: 10px;
+            }
+
+            @media screen and (max-width: $mobile-v) {
+                flex: 0 0 100%;
+                margin-bottom: 10px;
+            }
+
+            ul {
+                text-align: left;
+                margin: 0;
+
+                li {
+                    font-size: 1em;
+                    color: $main-color;
+                    list-style-position: outside;
+                    margin-left: 1em;
+
+                    span, a{
+                        color: $light-grey;
+                    }
+
+                    a, a:focus{
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+        }
+
+        .content-right{
+            flex: 0 0 30%;
+
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            @media screen and (max-width: $mobile-h) {
+                flex: 0 0 40%;
+                margin-bottom: 10px;
+            }
+
+            @media screen and (max-width: $mobile-v) {
+                flex: 0 0 100%;
+                margin-bottom: 10px;
+            }
+
+            &>div{
+                flex: 0 0 100%;
+                text-align: center;
+
+                img{
+                    width: 40%;
+                    height: auto;
+                }
+            }
+        }
+
+
+    }
+
+    .except-mobile-v {
+        display: none;
+
+        @media screen and (min-width: $mobile-v) {
+            display: block;
+        }
+    }
+
+    .mobile-v {
+        display: none;
+
+        @media screen and (max-width: $mobile-v) {
+            display: block;
+        }
+    }
+}
+
+.faysim-section.exclusive{
+    padding: 30px 0;
+    background-color: $main-color;
+    color: $white;
+
+    @media screen and (max-width: $mobile-h) {
+        padding: $padding 0;
+    }
+
+    h2.title{
+        color: $white;
+        font-family: $rounded-font;
+        text-align: center;
+        line-height: 2;
+
+        @media screen and (max-width: $mobile-v) {
+            font-size: 1.5em;
+            line-height: 1;
+            margin: 20px 0;
+        }
+    }
+
+    p.desc, p.remarks{
+        text-align: center;
+        color: $white;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: $mobile-v) {
+            width: 96%;
+        }
+
+        &.remarks{
+            font-size: 0.96em;
+            width: 60%;
+
+            @media screen and (max-width: $mobile-v) {
+                width: 96%;
+            }
+        }
+    }
+
+    .tick-table{
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+        align-items: center;
+
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: $mobile-h) {
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .list{
+            width: 40%;
+
+            @media screen and (max-width: $mobile-h) {
+                width: 80%;
+                margin-left: 20%;
+                margin-right: 0;
+            }
+
+            ul li{
+                list-style: none;
+                font-size: 1.2em;
+                color: $white;
+                font-weight: normal;
+
+                &:before{
+                    display: inline-block;
+                    font-family: "Font Awesome 5 Pro";
+                    content: "\F00C";
+                    color: #59f587;
+                    margin-right: $padding;
+                }
+            }
+        }
+
+        .img{
+            flex: 0 0 20%;
+
+            @media screen and (max-width: $mobile-h) {
+                display: none;
+            }
+        }
+    }
+
+    .photo-table{
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        @media screen and (max-width: $tablet-v){
+            width: 100%;
+        }
+
+        @media screen and (max-width: $mobile-v) {
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
+        &>div{
+            width: 32.333%;
+            margin-right: 1%;
+            background-color: $white;
+
+            @media screen and (max-width: $mobile-v) {
+                flex: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .banner{
+                overflow: hidden;
+                width: 100%;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    padding-top: 56.25%;
+                    display: block;
+                }
+
+                .bg{
+                    position: absolute;
+                    top: -100%;
+                    left: 0;
+                    right: 0;
+                    bottom: -100%;
+                    margin: auto;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    width: auto;
+                    height: 100%;
+                    min-width: 100%;
+                    min-height: 100%;
+                }
+            }
+
+            .content{
+                background-color: $white;
+                color: $main-color;
+                text-align: center;
+                padding: 0 $padding;
+
+                h3{
+                    color: $main-color;
+                    font-family: $rounded-font;
+                    font-size: 1.25em;
+                }
+
+            }
+        }
+    }
+}
+
+.faysim-section.price{
+
+    padding: 30px 0;
+
+    @media screen and (max-width: $mobile-v) {
+        padding: $padding 0;
+    }
+
+    h2.title{
+        color: $main-color;
+        font-family: $rounded-font;
+        text-align: center;
+        line-height: 2;
+
+        @media screen and (max-width: $mobile-v) {
+            font-size: 1.5em;
+            line-height: 1.5;
+            margin: 20px 0;
+        }
+    }
+    .faysim-table{
+        border-radius: 8px;
+        border: 1px solid $main-color;
+        width: 90%;
+        margin: auto;
+
+        @media screen and (max-width: $tablet-v){
+            width: 100%;
+        }
+
+        .header{
+            background-color: $main-color;
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            padding: 1% 0;
+
+            &>div{
+                width: 70%;
+                text-align: center;
+                color: $white;
+                font-size: 1.25em;
+                padding: 0.5%;
+
+                display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;      /* TWEENER - IE 10 */
+                display: -webkit-flex;     /* NEW - Chrome */
+                display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                align-items: center;
+                justify-content: center;
+
+                @media screen and (max-width: $mobile-v) {
+                    font-size: 1em;
+                    line-height: 1.5;
+                }
+
+                &:last-child{
+                    width: 30%;
+                    border: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .content{
+            color: $main-color;
+            line-height: 1.5;
+            margin: 0 auto;
+
+            display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+            display: -webkit-flex;     /* NEW - Chrome */
+            display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+            flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+
+            &>div{
+                width: 70%;
+                text-align: center;
+                font-size: 1.1em;
+                border-right: 1px solid $main-color;
+                border-bottom: 1px solid $main-color;
+                padding:  10px 0;
+
+                display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;      /* TWEENER - IE 10 */
+                display: -webkit-flex;     /* NEW - Chrome */
+                display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+
+
+                &:nth-child(2), &:nth-child(4), &:nth-child(6), &:nth-child(8), &:nth-child(10){
+                    width: 30%;
+                    border-right: 0;
+                    margin-bottom: 0;
+                }
+
+                &:nth-child(9), &:nth-child(10){
+                    border-bottom: 0;
+                }
+
+                @media screen and (max-width: $mobile-h) {
+                    font-size: 1em;
+                    line-height: 1.5;
+                    padding: 10px 5px;
+                }
+
+                span{
+                    width: 100%;
+                    font-size: 0.86em;
+                }
+            }
+        }
+    }
+}
+
+.faysim-section.support{
+
+    padding: 30px 0;
+
+    @media screen and (max-width: $mobile-v) {
+        padding: $padding 0;
+    }
+
+    h2.title{
+        color: $main-color;
+        font-family: $rounded-font;
+        text-align: center;
+        line-height: 2;
+
+        @media screen and (max-width: $mobile-v) {
+            font-size: 1.5em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+    }
+    .btn-row{
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        @media screen and (max-width: $tablet-v){
+            width: 100%;
+        }
+
+        @media screen and (max-width: $mobile-v) {
+            flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+        }
+
+        .support-btn{
+            border: 0;
+            width: 32.33%;
+            margin-right: 1%;
+            padding: $padding 20px;
+            text-align: center;
+            background-color: $bg-grey;
+
+            @media screen and (max-width: $mobile-v) {
+                width: 100%;
+                flex-wrap: wrap;
+
+                margin-right: 0;
+                margin-bottom: 10px;
+
+            }
+
+            &:last-child{
+                margin-right: 0;
+                width: 33.33%;
+
+                @media screen and (max-width: $mobile-v) {
+                    flex: 100%;
+                    margin-right: 0;
+                    margin-bottom: 0;
+                }
+            }
+
+            @media screen and (max-width: $mobile-v) {
+                flex: 0 0 100%;
+            }
+
+
+            @media screen and (max-width: $mobile-v) {
+                display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+                display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+                display: -ms-flexbox;      /* TWEENER - IE 10 */
+                display: -webkit-flex;     /* NEW - Chrome */
+                display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+                align-items: center;
+            }
+
+            .img{
+                padding-bottom: 10px;
+                text-align: center;
+
+                @media screen and (max-width: $mobile-v) {
+                    padding-bottom: 0;
+                    flex: 0 0 100%;
+                }
+
+                img{
+                    height: 80px;
+                    width: auto;
+                    max-width: 100%;
+
+                    @media screen and (max-width: $mobile-v) {
+                        height: 60px;
+                        margin: $padding;
+                    }
+                }
+            }
+            .content{
+                @media screen and (max-width: $mobile-v) {
+                    width: 90%;
+                    margin-left: 5%;
+                }
+
+                p{
+                    text-align: center;
+
+                    @media screen and (max-width: $mobile-v) {
+                        width: 100%;
+                    }
+                }
+                h1{
+                    color: $main-color;
+                    font-family: $rounded-font;
+                    font-size: 1.25em;
+                    min-height: 40px;
+                }
+
+                img{
+                    width: 90%;
+                    margin-top: $padding;
+                }
+            }
+        }
+
+        &.press-row{
+            align-items: center;
+            border: 1px solid #f4f4f4;
+        }
+
+        &.float-right{
+            flex-direction: row-reverse;
+        }
+
+        .press-img{
+            flex: 0 0 40%;
+
+            @media screen and (max-width: $mobile-v) {
+                flex: 0 0 100%;
+            }
+        }
+
+        .press-desc{
+            flex: 0 0 56%;
+            padding: 2%;
+
+            @media screen and (max-width: $mobile-v) {
+                flex: 0 0 100%;
+            }
+        }
+    }
+
+}
+
+.faysim-section.recommmended, .faysim-section.buynow{
+
+    padding: 30px 0;
+
+    @media screen and (max-width: $mobile-v) {
+        padding: $padding 0;
+    }
+
+    h2.title{
+        color: $main-color;
+        font-family: $rounded-font;
+        text-align: center;
+        line-height: 2;
+
+        @media screen and (max-width: $mobile-v) {
+            font-size: 1.5em;
+        }
+    }
+
+    .drag-content{
+
+        width: 90%;
+        margin: 0 auto;
+
+        @media screen and (max-width: $tablet-v){
+            width: 100%;
+        }
+
+        .drag-list{
+
+            justify-content: center;
+
+            @media screen and (max-width: $mobile-v) {
+                padding: 0;
+            }
+
+            .list-item{
+                width: 33.33%;
+                flex: 0 0 33.33%;
+
+                @media screen and (max-width: $mobile-v) {
+                    width: 99.5%;
+                    flex: 0 0 99.5%;
+                }
+            }
+        }
+    }
+}
+
+.faysim-section.bg-orange{
+    h1{
+        font-family: $rounded-font;
+        font-size: 2em;
+
+        @media screen and (max-width: $mobile-v) {
+            font-size: 1.8em;
+        }
+    }
+}
+
+#promotion, #promotion-mobile {
+    text-align: center;
+    padding: 30px 0;
+
+    @media screen and (max-width: $mobile-v) {
+        padding: $padding 0;
+    }
+
+    &#promotion-mobile{
+        padding: 0;
+    }
+
+    &#promotion{
+        .bg-slick-container{
+            margin: 7px;
+        }
+    }
+
+    .bg-slick-container{
+
+        .promotion-slider{
+            width: 90%;
+            margin: 0 auto;
+            display: none;
+
+            @media screen and (max-width: $tablet-v){
+                width: 100%;
+            }
+        }
+
+        .banner{
+            max-height: none;
+
+            &:before{
+                padding-top: 38.7%;
+
+                @media screen and (max-width: $mobile-v) {
+                    padding-top: 75%;
+                }
+            }
+        }
+
+        .bg{
+            top: -100%;
+            height: 100%;
+            min-width: 0;
+            min-height: 0;
+
+            &.expect-mobile-v{
+                display: none;
+
+                @media screen and (min-width: $mobile-v) {
+                    display: block;
+                }
+            }
+
+            &.mobile-v{
+                display: none;
+
+                @media screen and (max-width: $mobile-v) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.terms{
+    color: $main-font-color;
+    line-height: 1.5;
+    word-break: break-word;
+    word-wrap: break-word;
+    font-size: 0.86em;
+    text-align: left;
+    font-weight: 400;
+
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px 0;
+
+    @media screen and (max-width: $tablet-h) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: $mobile-h) {
+        width: 100%;
+    }
+
+    b{
+        color: $main-font-color;
+    }
+}
+
+.bg-orange{
+
+    h1, p{
+        color: $white;
+        text-align: center;
+    }
+
+    .btn.white:hover{
+        background-color: $white;
+        border: 1px solid $white;
+        opacity: 1;
+        color: $main-color;
+    }
+}
+
+.floating-icons {
+    font-size: 1em;
+    position: fixed;
+    right: 0;
+    bottom: 12%;
+    cursor: pointer;
+    z-index: 100000;
+
+    @media screen and (max-width: $mobile-h) {
+        display: none !important;
+    }
+
+    .address-icon{
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: contain;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        margin-right: 10px;
+        display: none;
+
+        @media screen and (max-width: $mobile-h) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &>div{
+        display: block;
+        background-color: $second-color;
+        padding: 5px 15px;
+        box-shadow: $shadow;
+
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+
+        &.active{
+            background-color: $main-color;
+        }
+
+        &.hcmc{
+            .address-icon{
+                background-image: url("/images/campaign/double11/icon-5.png");
+            }
+        }
+        &.hanoi{
+            .address-icon{
+                background-image: url("/images/campaign/double11/icon-1.png");
+            }
+        }
+        &.daNang{
+            .address-icon{
+                background-image: url("/images/campaign/double11/icon-2.png");
+            }
+        }
+        &.nhaTrang{
+            .address-icon{
+                background-image: url("/images/campaign/double11/icon-3.png");
+            }
+        }
+
+        h6{
+            color: $white;
+            font-size: 1em;
+        }
+    }
+}
+
+body.zh-hk, body.zh-cn{
+    .faysim-section.about, .faysim-section.exclusive, .faysim-section.support, .faysim-section.price, .faysim-section.buynow, .faysim-section.recommmended, .faysim-section.bg-orange {
+        h2.title, .content h3, .content, h1{
+            font-family: $main-font !important;
+        }
+    }
+    .faysim-section.exclusive{
+        .tick-table{
+            @media screen and (max-width: $mobile-v) {
+                flex: 0 0 90%;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,77 @@
+<div class="experience-title-s subSection<%=subIndex%>">
+    <% if (child.iconMedia ) { %>
+        <div class="address-icon" style="background-image: url('<%= CLOUDINARY_IMAGE_URL_PREFIX %>/<%=child.iconMedia.key%>.<%=child.iconMedia.format%>')"></div>
+    <% } %>
+    <h5><%=child.name %></h5>
+</div>
+<div class="experience-list-container row-with-<%=child.activities.length%>-items section<%=index%>">
+    <div class="experience-list <%=subIndex===section.subSections.length-1 ? 'paddingBottom-30px' : ''%>">
+        <div class="list-col">
+            <% child.activities.forEach(function (activity) { %>
+                <li class="list-item">
+                    <% if (activity.packageId){ %>
+                        <a href="/<%=locale%>/experience/<%=activity.activityId%>-<%=activity.slug%>?packageId=<%=activity.packageId%>" target="_blank" title="<%=activity.title %>">
+                    <% }else{ %>
+                        <a href="/<%=locale%>/experience/<%=activity.activityId%>-<%=activity.slug%>" target="_blank" title="<%=activity.title %>">
+                    <% } %>
+                        <div class="list-content">
+                            <% if (activity.title.indexOf('Fayfay 12% off') > -1 || activity.title.indexOf('Fayfay 88折') > -1) { %>
+                                <div class="badge-container">
+                                    <div class="priceRange-icon">
+                                        <div class="priceRange-type-img"></div>
+                                        <div class="priceRange-type-text">12% off</div>
+                                    </div>
+                                </div>
+                            <% } %>
+                            <div class="banner">
+                                <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_800,q_auto,f_auto/<%=activity.imageMedia.key%>.<%=activity.imageMedia.format%>" alt="<%=activity.title%>" class="bg"/>
+                            </div>
+                            <div class="content">
+                                <h3><%=activity.title %></h3>
+                                <div class="price">
+                                    <span class="discount-price">
+                                          <% if (ccy != 'VND') { %>
+                                                 <%- formatMoney(activity.priceText, ccy, locale, 0)%> <%= translations['common.up']  %>
+                                          <% }else{ %>
+                                                 Từ <%- formatMoney(activity.priceText, ccy, locale, 0)%>
+                                          <% } %>
+                                         <% if (activity.originalPrice) { %>
+                                            <span class="ori-price">
+                                                <%- formatMoney(activity.originalPrice, ccy, locale, 0)%>
+                                            </span>
+                                         <% } %>
+                                    </span>
+                                </div>
+                                <div class="bottom">
+                                    <ul class="location">
+                                        <li>
+                                            <i class="icon bold-800 map-marker-alt"></i><%=activity.location %>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-container">
+                                        <div class="btn btn-s"><%= translations['common.book.now']  %></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="price-container">
+                                <span class="discount-price">
+                                    <% if (ccy != 'VND') { %>
+                                           <%- formatMoney(activity.priceText, ccy, locale, 0)%> <%= translations['common.up']  %>
+                                     <% }else{ %>
+                                           Từ <%- formatMoney(activity.priceText, ccy, locale, 0)%>
+                                     <% } %>
+                                     <% if (activity.originalPrice) { %>
+                                        <span class="ori-price">
+                                            <%- formatMoney(activity.originalPrice, ccy, locale, 0)%>
+                                        </span>
+                                     <% } %>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            <% })%>
+        </div>
+    </div>
+</div>

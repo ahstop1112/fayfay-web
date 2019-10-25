@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="<%= translations['campaign.christmas.terms1'] %>">
+    <meta name="keywords" content="<%= translations['campaign.christmas.title'] %>">
+    <title><%= translations['campaign.christmas.title'] %> | Fayfay.com</title>
+    <meta property="og:image" content="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_1200/fayfay-media/common/campaign/<%= translations['campaign.christmas.ogimage']%>"/>
+    <meta property="og:image:alt" content="<%= translations['campaign.christmas.title']  %>"/>
+    <meta property="og:title" content="<%= translations['campaign.christmas.title'] %>"/>
+    <meta property="og:description" content="<%= translations['campaign.christmas.terms1'] %>"/>
+
+    <% include ../include/gtm.header.ejs %>
+    <% include ../include/css.ejs %>
+    <link rel="stylesheet" type="text/css" href="/css/christmas.css">
+</head>
+
+<body class="<%= locale%>">
+<% include ../include/gtm.body.ejs %>
+    <div id="christmas">
+        <% include christmas.header.ejs %>
+        <% include christmas.all.ejs %>
+
+        <div class="floating-icons">
+            <div class="watersports active"><div class="address-icon"></div></div>
+            <div class="fnb"><div class="address-icon"></div></div>
+            <div class="naturalExploration"><div class="address-icon"></div></div>
+            <div class="show"><div class="address-icon"></div></div>
+            <div class="simcard"><div class="address-icon"></div></div>
+        </div>
+        <% include ../include/footer.ejs %>
+    </div>
+
+    <% include ../include/js.ejs %>
+    <script src="/js/christmas-bundle.js"></script>
+    <script>
+        $.fn.snowit({
+            speed: $(document).height() / 70,
+            total: 300, minSize : 30,
+            maxSize : 50,
+        });
+
+        var clipboard = new ClipboardJS('.copy-btn');
+        clipboard.on('success', function(e) {
+            $('.tooltiptext').addClass("show");
+
+            setTimeout(function() {
+                $('.tooltiptext').removeClass("show");
+            }, 3000);
+        });
+
+    </script>
+    </body>
+</html>

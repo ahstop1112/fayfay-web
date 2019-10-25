@@ -1,0 +1,23 @@
+<section class="f1-section tickets">
+    <div class="container-fluid">
+        <div class="tickets-container">
+            <h2 class="title"><div>
+                <% if (useragent.isDesktop) { %>
+                    <%= translations['f1.tickets.title'] %>
+                <% }else{ %>
+                    <%- translations['f1.tickets.title.mobile'] %>
+                <% } %>
+            </div></h2>
+            <div class="title-deco"></div>
+            <div class="circuit-map">
+                <% if (locale == 'zh-hk' || locale == 'zh-cn'){ %>
+                    <img data-src="/images/f1-map-tc.jpg" class="lazy" alt="<%= translations['f1.tickets.title'] %>">
+                <% }else if (locale == 'vi-vn'){ %>
+                    <img data-src="/images/f1-map-vn.jpg" class="lazy" alt="<%= translations['f1.tickets.title'] %>">
+                <% }else{ %>
+                    <img data-src="/images/f1-map-en.jpg" class="lazy" alt="<%= translations['f1.tickets.title'] %>">
+                <% } %>
+            </div>
+        </div>
+    </div>
+</section>

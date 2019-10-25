@@ -1,0 +1,15 @@
+<!-- What to Expect -->
+<div class="whitebox">
+    <h4><%= translations['package.what.to.expect'] %></h4>
+    <p><%- converter.makeHtml(tplData.whatToExpect) %></p>
+    <% if (tplData.galleries.length > 0){ %>
+    <div class="photos-container">
+        <% for (var prop in tplData.galleries ) { %>
+            <div class="photo">
+                <img src="<%= CLOUDINARY_IMAGE_URL_PREFIX %>/w_640/<%=tplData.galleries[prop].key%>.<%=tplData.galleries[prop].format%>" class="img">
+                <i class="fas fa-caret-up"></i><%- converter.makeHtml(tplData.galleries[prop].description) %>
+            </div>
+        <% } %>
+    </div>
+    <% } %>
+</div>

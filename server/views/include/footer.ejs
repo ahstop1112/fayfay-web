@@ -1,0 +1,52 @@
+<footer id="footer" class="<%=locale%>">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-3 col-xs-6">
+                <a href="<%= langUrl %>/about"><%= translations['common.about.fayfay.com'] %></a><br>
+                <a href="<%= langUrl %>/partner"><%= translations['partner.with.us'] %></a><br>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+                <a href="<%= langUrl %>/vietnam-travel-planning"><%= translations['travel.planning'] %></a><br>
+                <a href="<%= langUrl %>/contactus"><%= translations['common.contact.us'] %></a><br>
+                <a href="<%= MERCHANT_URL %>" target="_blank"><%= translations['common.merchant.portal']  %></a><br>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+                <a href="<%= langUrl %>/press/coverage"><%= translations['press.room']  %></a><br>
+                <a href="<%= langUrl %>/joinus"><%= translations['common.careers']  %></a><br>
+                <a href="<%= translations['common.fayfay.blogUrl'] %>" target="_blank"><%= translations['common.fayfay.blog'] %></a>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6" >
+                <a href="<%= langUrl %>/terms"><%= translations['common.terms.policies']  %></a><br>
+                <a href="<%= langUrl %>/dispute-settlement"><%= translations['common.dispute.settlement.mechanism']  %></a><br>
+                <a href="<%= langUrl %>/privacy-policy"><%= translations['common.privacy.policy']  %></a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 payment-container">
+                <h5><%- translations['common.payment.power.by'] %></h5>
+                <img src="/images/icons/paypal.png" alt="PayPal" class="marginRight-15px" style="width: 50px;"/>
+                <img src="/images/icons/onepay.png" alt="OnePay" style="width: 50px;"/>
+            </div>
+            <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-5 col-xs-12 address-container">
+                <p><%- translations['common.headoffice.address'] %></p>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-6 btn-container">
+                <a class="btn btn-lg yellow" href="<%= langUrl %>/help"><%= translations['package.fayfay.help.center'] %></a><br>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 icon-container">
+                <a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=47560" target="_blank">
+                    <img src="/images/icons/icon_gov.png" alt="Bo Cong Thuong" style="width: 120px;"/>
+                </a><br>
+            </div>
+            <div class="col-lg-3 col-lg-offset-1 col-md-3 col-sm-4 col-xs-6 icon-container">
+                <h5 class="hidden-xs hidden-sm"><%= translations['common.stay.tuned'] %>:</h5>
+                <a class="icon-brand facebook" href="<%= translations['common.facebook.link'] %>" target="_blank"></a>
+                <a class="icon-brand instagram" href="<%= translations['common.instagram.link'] %>" target="_blank"></a>
+            </div>
+        </div>
+        <div class="row paddingBottom-30px">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 txt-center copyright-container">
+                <%- translations['common.erc.no'] %><br>
+                <%- translations['common.copyright'] %>
+            </div>
+        </div>
+    </div>
+</footer>
